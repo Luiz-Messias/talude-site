@@ -1,141 +1,455 @@
-/* ---------------- traduções ---------------- */
+/* ---------------- traduções (PT = HTML · EN / ES = interface) ---------------- */
 const I18N = {
-br:{
- "nav.home":"Início","nav.about":"A empresa","nav.services":"Serviços","nav.work":"Obras",
- "nav.brasil":"Você está no Brasil","nav.imig":"Consultoria de imigração","nav.jobs":"Vagas",
- "nav.docs":"Documentos","nav.contact":"Contato",
- "hero.origin":"Serralheria e construção civil em Braga","hero.origin.b":"Desde 1999.",
- "hero.h1a":"Soluções completas em metal","hero.h1b":"e construção civil.",
- "hero.lede":"Estrutura metálica, caixilharia e obra civil com padrão europeu. Recrutamos com contrato registrado — e a consultoria da casa cuida do processo de visto para quem quer vir trabalhar com a gente.",
- "hero.cta1":"Conhecer os serviços","hero.cta2":"Mandar currículo",
- "tv.title":"Da sua casa até o primeiro dia na obra","tv.sub":"Cinco etapas. Dizemos em cada uma quem paga o quê.",
- "tv.s1":"Você manda o currículo","tv.s1d":"Do Brasil mesmo, pelo formulário ou WhatsApp. Não precisa ter documento nenhum ainda.","tv.w1":"Sem custo",
- "tv.s2":"Conversamos por vídeo","tv.s2d":"Em até 5 dias úteis. Falamos da vaga, do salário real e do custo de vida aqui.","tv.w2":"Sem custo",
- "tv.s3":"Carta de trabalho","tv.s3d":"Se der certo, emitimos promessa de contrato em seu nome. É o documento que abre o processo.","tv.w3":"Sem custo",
- "tv.s4":"Processo de visto","tv.s4d":"A consultoria monta e acompanha o pedido junto ao consulado e à AIMA.","tv.w4":"Serviço cobrado",
- "tv.s5":"Chegada e primeiro dia","tv.s5d":"Buscamos no aeroporto, ajudamos com NIF, NISS e banco. Alojamento nos primeiros 30 dias por nossa conta.","tv.w5":"Por nossa conta",
- "who.pays":"Quem paga",
- "split.h":"Duas empresas, uma porta de entrada","split.p1":"A Solution Metal Group é serralheria e construção civil. Fazemos estruturas metálicas, caixilharia, portões e obra civil no norte de Portugal — e é aqui que estão as vagas.",
- "split.p2":"A SMG Vistos é a consultoria de imigração da nossa sócia. Cuida do processo de quem está fora e quer vir trabalhar. São empresas separadas, com contas separadas, e dizemos sempre qual delas cobra o quê.",
- "split.cta":"Ver preços da consultoria",
- "f1":"Anos de atividade","f2":"Pessoas na equipe","f3":"Brasileiros contratados","f4":"Países onde temos obra",
- "svc.h":"O que fazemos","svc.eyebrow":"Serviços",
- "svc.t1":"Serralheria e estrutura metálica","svc.d1":"Estruturas, mezaninos, escadas e guarda-corpos. Corte, dobra e solda em oficina própria.",
- "svc.t2":"Caixilharia e fechamentos","svc.d2":"Alumínio e aço para fachadas, portões, gradis e portas corta-fogo.",
- "svc.t3":"Construção civil","svc.d3":"Obra nova, ampliação e reforma, do concreto aos acabamentos.",
- "svc.t4":"Manutenção","svc.d4":"Contratos anuais para indústria, condomínios e comércio.",
- "work.h":"Obras entregues","work.eyebrow":"Obras",
- "work.t1":"Escola de Palmeira","work.m1":"Obra nova · 4 200 m² · Braga",
- "work.t2":"Galpão logístico A-52","work.m2":"Estrutura metálica · 9 800 m² · Ourense",
- "work.t3":"Quarteirão do Souto","work.m3":"Reforma · 11 unidades · Guimarães",
- "work.t4":"Résidence Les Ormes","work.m4":"Prédio residencial · 46 apartamentos · Bordeaux",
- "jobs.h":"Vagas abertas","jobs.eyebrow":"Vagas",
- "jobs.lede":"Contrato registrado, seguro e treinamento pago. As vagas marcadas aceitam candidatura de quem ainda está no Brasil.",
- "jobs.t1":"Serralheiro / Soldador","jobs.g1":"Braga · Efetivo","jobs.t2":"Montador de estrutura metálica","jobs.g2":"Norte de Portugal · Efetivo",
- "jobs.t3":"Pedreiro / Carpinteiro de forma","jobs.g3":"Braga · Efetivo","jobs.t4":"Encarregado de obra","jobs.g4":"Braga · Efetivo",
- "jobs.br":"Aceita candidato no Brasil","jobs.apply":"Quero me candidatar",
- "doc.eyebrow":"Documentos","doc.h":"Os documentos que você vai precisar",
- "doc.lede":"Divididos em dois momentos: o que você junta ainda no Brasil e o que a gente resolve junto quando você chegar. Imprima e vá marcando.",
- "doc.sheet":"Solution Metal Group · Ficha de admissão","doc.rev":"Rev. 01/2026","doc.title":"Checklist do candidato",
- "doc.intro":"Não precisa ter nada disso pronto para se candidatar. Esta lista serve para você saber o caminho inteiro antes de decidir.",
- "doc.g1":"Ainda no Brasil","doc.g2":"Depois de chegar em Portugal",
- "doc.tagbr":"No Brasil","doc.tagpt":"Em Portugal",
- "doc.d1t":"Passaporte válido","doc.d1d":"Com pelo menos 12 meses de validade. Se não tiver, comece por aqui — costuma ser o que mais demora.",
- "doc.d2t":"Certidão de antecedentes criminais","doc.d2d":"Federal e estadual, com apostila de Haia.",
- "doc.d3t":"Comprovante de qualificação","doc.d3d":"Certificado do SENAI, NR-35, carteira de trabalho ou qualquer coisa que mostre sua experiência.",
- "doc.d4t":"Promessa de contrato de trabalho","doc.d4d":"Emitida por nós depois da entrevista. É o documento central do pedido de visto.",
- "doc.d5t":"Visto de trabalho","doc.d5d":"Solicitado no consulado português. A consultoria monta e acompanha o processo.",
- "doc.d6t":"NIF — número de contribuinte","doc.d6d":"Tirado nas Finanças assim que você chegar. Vamos com você.",
- "doc.d7t":"NISS — número da segurança social","doc.d7d":"Necessário para registrar o contrato. A empresa dá entrada.",
- "doc.d8t":"Conta bancária em Portugal","doc.d8d":"O salário só pode ser pago por transferência. Nunca em dinheiro.",
- "doc.d9t":"Exame médico admissional","doc.d9d":"Feito por nós, sem custo, antes de você entrar na obra.",
- "doc.note":"A Solution Metal Group não cobra nada de trabalhador nenhum por vaga, contrato, treinamento ou equipamento. O serviço de imigração é da SMG Vistos, tem preço tabelado nesta página e é opcional — você pode fazer o processo por conta própria ou com outro escritório.",
- "doc.print":"Imprimir esta folha",
- "imig.eyebrow":"SMG Vistos","imig.h":"Consultoria de imigração","imig.lede":"Preço fechado, publicado, sem surpresa no meio do caminho. Se você não gostar do que ler aqui, faça o processo com outra pessoa — a vaga continua sua.",
- "imig.tab":"Tabela de serviços","imig.inc":"Incluído no valor","imig.exc":"Não incluído","imig.state":"Taxas do Estado (não ficam conosco)",
- "imig.p1":"Análise do seu caso e plano do processo","imig.p1d":"Uma hora de conversa, lista do que você tem e do que falta.",
- "imig.p2":"Montagem completa do pedido de visto","imig.p2d":"Formulários, tradução juramentada, conferência de documentos e agendamento no consulado.",
- "imig.p3":"Acompanhamento até a decisão","imig.p3d":"Interlocução com consulado e AIMA, e refazer o pedido se houver exigência.",
- "imig.p4":"Reagrupamento familiar","imig.p4d":"Processo para trazer cônjuge e filhos depois que você estiver instalado.",
- "imig.s1":"Taxa consular do visto","imig.s2":"Taxa da AIMA na chegada","imig.s3":"Apostila e certidões no Brasil",
- "imig.warn":"O que a gente nunca faz","imig.warnd":"Não garantimos aprovação de visto — ninguém pode. Não cobramos porcentagem do seu salário. Não retemos passaporte nem documento original. Não prendemos você ao emprego: se quiser sair da empresa depois de chegar, você não deve nada.",
- "imig.legal":"Processos que exigem representação jurídica são conduzidos por advogado inscrito na Ordem dos Advogados.",
- "form.eyebrow":"Formulário","form.h":"Mande seu currículo",
- "form.lede":"Leva três minutos. Não precisa anexar documento nenhum agora.",
- "form.name":"Nome completo","form.email":"E-mail","form.phone":"WhatsApp com DDI","form.where":"Você está onde agora?",
- "form.w1":"No Brasil","form.w2":"Em Portugal","form.w3":"Em outro país",
- "form.role":"Vaga de interesse","form.spont":"Qualquer vaga da minha área","form.exp":"Anos de experiência na função",
- "form.cv":"Currículo (opcional)","form.cvh":"PDF, Word ou foto. Se não tiver currículo pronto, conte sua experiência no campo abaixo.",
- "form.port":"Fotos de trabalhos seus (opcional)","form.porth":"Serve foto de obra feita, solda, estrutura montada. Até 25 MB.",
- "form.msg":"Conte um pouco da sua experiência","form.send":"Enviar candidatura",
- "form.company":"Empresa","form.person":"Pessoa de contato","form.type":"Tipo de trabalho","form.place":"Local da obra",
- "form.start":"Início previsto","form.brief":"Descrição do trabalho","form.files":"Projeto ou memorial (PDF, DWG)","form.sendq":"Pedir orçamento",
- "form.o1":"Estrutura metálica","form.o2":"Caixilharia","form.o3":"Construção civil","form.o4":"Manutenção",
- "ct.eyebrow":"Contato","ct.h":"Fale com a gente","ct.hours":"Segunda a sexta · 08:30–18:00 (horário de Portugal)",
- "ct.br":"Se você está no Brasil, o WhatsApp é o caminho mais rápido.",
- "next.label":"A seguir","next.k1":"Ver as obras","next.k2":"Ver as vagas","next.k3":"Preparar os documentos",
- "next.k4":"Pedir orçamento","next.k5":"Conhecer a empresa","next.k6":"Falar com a gente","next.k7":"Ver preços da consultoria","next.k8":"Mandar currículo",
- "ok.c":"Candidatura recebida. Respondemos em até 5 dias úteis pelo WhatsApp.","ok.o":"Pedido enviado. Respondemos em 2 dias úteis.",
- "err":"Confira os campos obrigatórios.",
- "ft.privacy":"Política de privacidade","ft.book":"Livro de reclamações",
- "crumb.home":"Início"
-},
-es:{"nav.home": "Inicio","nav.about": "La empresa","nav.services": "Servicios","nav.work": "Obras","nav.brasil": "Está fuera de Portugal","nav.imig": "Consultoría de inmigración","nav.jobs": "Vacantes","nav.docs": "Documentos","nav.contact": "Contacto","hero.origin": "Metalistería y construcción civil en Braga","hero.origin.b": "Desde 1999.","hero.h1a": "Soluciones completas en metal","hero.h1b": "y construcción civil.","hero.lede": "Estructura metálica, carpintería de aluminio y obra civil con estándar europeo. También contratamos con contrato legal — y nuestra consultoría se encarga del visado para quien quiera venir a trabajar con nosotros.","hero.cta1": "Conocer los servicios","hero.cta2": "Enviar currículum","tv.title": "De su casa al primer día en la obra","tv.sub": "Cinco etapas. En cada una decimos quién paga qué.","tv.s1": "Usted envía el currículum","tv.s1d": "Desde donde esté, por formulario o WhatsApp. Aún no necesita ningún documento.","tv.w1": "Sin coste","tv.s2": "Hablamos por videollamada","tv.s2d": "En un plazo de 5 días laborables. Hablamos del puesto, del salario real y del coste de vida aquí.","tv.w2": "Sin coste","tv.s3": "Promesa de contrato","tv.s3d": "Si encaja, emitimos una promesa de contrato a su nombre. Es el documento que abre el proceso.","tv.w3": "Sin coste","tv.s4": "Trámite del visado","tv.s4d": "La consultoría prepara y sigue la solicitud ante el consulado y la AIMA.","tv.w4": "Servicio de pago","tv.s5": "Llegada y primer día","tv.s5d": "Le recogemos en el aeropuerto y le ayudamos con NIF, NISS y banco. Alojamiento los primeros 30 días por nuestra cuenta.","tv.w5": "Por nuestra cuenta","who.pays": "Quién paga","split.h": "Dos empresas, una sola puerta de entrada","split.p1": "Solution Metal Group es cerrajería y construcción. Hacemos estructura metálica, carpintería de aluminio, portones y obra civil en el norte de Portugal — y aquí es donde están las vacantes.","split.p2": "SMG Vistos es la consultoría de inmigración de nuestra socia. Se ocupa del trámite de quien está fuera y quiere venir a trabajar. Son empresas separadas, con cuentas separadas, y siempre decimos cuál de las dos cobra qué.","split.cta": "Ver precios de la consultoría","f1": "Años de actividad","f2": "Personas en plantilla","f3": "Extranjeros contratados","f4": "Países donde trabajamos","svc.h": "Qué hacemos","svc.eyebrow": "Servicios","svc.t1": "Cerrajería y estructura metálica","svc.d1": "Estructuras, altillos, escaleras y barandillas. Corte, plegado y soldadura en taller propio.","svc.t2": "Carpintería metálica y cerramientos","svc.d2": "Aluminio y acero para fachadas, portones, vallados y puertas cortafuegos.","svc.t3": "Construcción","svc.d3": "Obra nueva, ampliación y reforma, del hormigón a los acabados.","svc.t4": "Mantenimiento","svc.d4": "Contratos anuales para industria, comunidades y comercio.","work.h": "Obras entregadas","work.eyebrow": "Obras","work.t1": "Colegio de Palmeira","work.m1": "Obra nueva · 4 200 m² · Braga","work.t2": "Nave logística A-52","work.m2": "Estructura metálica · 9 800 m² · Ourense","work.t3": "Manzana do Souto","work.m3": "Rehabilitación · 11 viviendas · Guimarães","work.t4": "Résidence Les Ormes","work.m4": "Vivienda colectiva · 46 pisos · Burdeos","jobs.h": "Vacantes abiertas","jobs.eyebrow": "Vacantes","jobs.lede": "Contrato legal, seguro y formación pagada. Las vacantes marcadas aceptan candidaturas desde el extranjero.","jobs.t1": "Cerrajero / Soldador","jobs.g1": "Braga · Indefinido","jobs.t2": "Montador de estructura metálica","jobs.g2": "Norte de Portugal · Indefinido","jobs.t3": "Albañil / Encofrador","jobs.g3": "Braga · Indefinido","jobs.t4": "Jefe de obra","jobs.g4": "Braga · Indefinido","jobs.br": "Acepta candidatos desde el extranjero","jobs.apply": "Quiero inscribirme","doc.eyebrow": "Documentos","doc.h": "Los documentos que va a necesitar","doc.lede": "Divididos en dos momentos: lo que reúne antes de venir y lo que resolvemos juntos al llegar. Imprima y vaya marcando.","doc.sheet": "Solution Metal Group · Ficha de admisión","doc.rev": "Rev. 01/2026","doc.title": "Checklist del candidato","doc.intro": "No necesita tener nada de esto listo para inscribirse. Esta lista sirve para que conozca el camino completo antes de decidir.","doc.g1": "Antes de venir","doc.g2": "Después de llegar a Portugal","doc.tagbr": "En origen","doc.tagpt": "En Portugal","doc.d1t": "Pasaporte en vigor","doc.d1d": "Con al menos 12 meses de validez. Si no lo tiene, empiece por aquí: suele ser lo que más tarda.","doc.d2t": "Certificado de antecedentes penales","doc.d2d": "De su país, con apostilla de La Haya.","doc.d3t": "Justificante de cualificación","doc.d3d": "Certificados de formación, carnets profesionales o cualquier cosa que acredite su experiencia.","doc.d4t": "Promesa de contrato de trabajo","doc.d4d": "La emitimos nosotros tras la entrevista. Es el documento central de la solicitud de visado.","doc.d5t": "Visado de trabajo","doc.d5d": "Se solicita en el consulado portugués. La consultoría prepara y sigue el trámite.","doc.d6t": "NIF — número fiscal","doc.d6d": "Se saca en Hacienda nada más llegar. Vamos con usted.","doc.d7t": "NISS — número de la Seguridad Social","doc.d7d": "Necesario para registrar el contrato. Lo tramita la empresa.","doc.d8t": "Cuenta bancaria en Portugal","doc.d8d": "El salario solo puede pagarse por transferencia. Nunca en efectivo.","doc.d9t": "Reconocimiento médico laboral","doc.d9d": "Lo hacemos nosotros, sin coste, antes de entrar en obra.","doc.note": "Solution Metal Group no cobra nada a ningún trabajador por la vacante, el contrato, la formación ni el equipo. El servicio de inmigración es de SMG Vistos, tiene precio publicado en esta página y es opcional — puede hacer el trámite por su cuenta o con otro despacho.","doc.print": "Imprimir esta hoja","imig.eyebrow": "SMG Vistos","imig.h": "Consultoría de inmigración","imig.lede": "Precio cerrado, publicado, sin sorpresas a mitad de camino. Si no le convence lo que lee aquí, haga el trámite con otro — la vacante sigue siendo suya.","imig.tab": "Tabla de servicios","imig.inc": "Incluido en el precio","imig.exc": "No incluido","imig.state": "Tasas oficiales (no se quedan con nosotros)","imig.p1": "Análisis de su caso y plan del trámite","imig.p1d": "Una hora de conversación, lista de lo que tiene y lo que falta.","imig.p2": "Preparación completa de la solicitud de visado","imig.p2d": "Formularios, traducción jurada, revisión de documentos y cita en el consulado.","imig.p3": "Seguimiento hasta la resolución","imig.p3d": "Interlocución con consulado y AIMA, y repetición de la solicitud si hay requerimiento.","imig.p4": "Reagrupación familiar","imig.p4d": "Trámite para traer a cónyuge e hijos una vez instalado.","imig.s1": "Tasa consular del visado","imig.s2": "Tasa de la AIMA a la llegada","imig.s3": "Apostillas y certificados en origen","imig.warn": "Lo que nunca hacemos","imig.warnd": "No garantizamos la aprobación del visado: nadie puede. No cobramos un porcentaje de su salario. No retenemos pasaportes ni documentos originales. No le atamos al empleo: si tras llegar quiere dejar la empresa, no nos debe nada.","imig.legal": "Los trámites que exigen representación jurídica los lleva un abogado colegiado.","form.eyebrow": "Formulario","form.h": "Envíe su currículum","form.lede": "Tarda tres minutos. No necesita adjuntar ningún documento ahora.","form.name": "Nombre completo","form.email": "Email","form.phone": "WhatsApp con prefijo","form.where": "¿Dónde se encuentra ahora?","form.w1": "Fuera de Portugal","form.w2": "En Portugal","form.w3": "En otro país","form.role": "Puesto de interés","form.spont": "Cualquier puesto de mi especialidad","form.exp": "Años de experiencia en el puesto","form.cv": "Currículum (opcional)","form.cvh": "PDF, Word o foto. Si no tiene currículum, cuente su experiencia en el campo de abajo.","form.port": "Fotos de trabajos suyos (opcional)","form.porth": "Vale foto de obra terminada, soldadura o estructura montada. Hasta 25 MB.","form.msg": "Cuéntenos su experiencia","form.send": "Enviar candidatura","form.company": "Empresa","form.person": "Persona de contacto","form.type": "Tipo de trabajo","form.place": "Ubicación de la obra","form.start": "Inicio previsto","form.brief": "Descripción del trabajo","form.files": "Proyecto o pliego (PDF, DWG)","form.sendq": "Pedir presupuesto","form.o1": "Estructura metálica","form.o2": "Carpintería metálica","form.o3": "Construcción","form.o4": "Mantenimiento","ct.eyebrow": "Contacto","ct.h": "Hable con nosotros","ct.hours": "Lunes a viernes · 08:30–18:00 (hora de Portugal)","ct.br": "Si está fuera de Portugal, el WhatsApp es la vía más rápida.","next.label": "A continuación","next.k1": "Ver las obras","next.k2": "Ver las vacantes","next.k3": "Preparar los documentos","next.k4": "Pedir presupuesto","next.k5": "Conocer la empresa","next.k6": "Hablar con nosotros","next.k7": "Ver precios de la consultoría","next.k8": "Enviar currículum","ok.c": "Candidatura recibida. Respondemos en 5 días laborables por WhatsApp.","ok.o": "Solicitud enviada. Respondemos en 2 días laborables.","err": "Revise los campos obligatorios.","ft.privacy": "Política de privacidad","ft.book": "Hoja de reclamaciones","crumb.home": "Inicio"},
-fr:{"nav.home": "Accueil","nav.about": "L'entreprise","nav.services": "Services","nav.work": "Réalisations","nav.brasil": "Vous êtes à l'étranger","nav.imig": "Conseil en immigration","nav.jobs": "Postes","nav.docs": "Documents","nav.contact": "Contact","hero.origin": "Métallerie et construction à Braga","hero.origin.b": "Depuis 1999.","hero.h1a": "Des solutions complètes en métal","hero.h1b": "et en construction.","hero.lede": "Charpente métallique, menuiserie aluminium et gros œuvre aux normes européennes. Nous recrutons aussi avec un contrat en règle — et notre cabinet s'occupe du visa pour celles et ceux qui veulent venir travailler avec nous.","hero.cta1": "Découvrir nos services","hero.cta2": "Envoyer mon CV","tv.title": "De chez vous au premier jour sur le chantier","tv.sub": "Cinq étapes. À chacune, nous disons qui paie quoi.","tv.s1": "Vous envoyez votre CV","tv.s1d": "D'où que vous soyez, par formulaire ou WhatsApp. Aucun document n'est encore nécessaire.","tv.w1": "Gratuit","tv.s2": "Nous faisons un appel vidéo","tv.s2d": "Sous 5 jours ouvrés. On parle du poste, du salaire réel et du coût de la vie ici.","tv.w2": "Gratuit","tv.s3": "Promesse d'embauche","tv.s3d": "Si ça correspond, nous établissons une promesse d'embauche à votre nom. C'est le document qui ouvre le dossier.","tv.w3": "Gratuit","tv.s4": "Demande de visa","tv.s4d": "Le cabinet monte et suit le dossier auprès du consulat et de l'AIMA.","tv.w4": "Prestation payante","tv.s5": "Arrivée et premier jour","tv.s5d": "Nous venons vous chercher à l'aéroport et vous aidons pour le NIF, le NISS et la banque. Logement pris en charge les 30 premiers jours.","tv.w5": "À notre charge","who.pays": "Qui paie","split.h": "Deux sociétés, une seule porte d'entrée","split.p1": "Solution Metal Group, c'est la métallerie et la construction. Charpente métallique, menuiserie aluminium, portails et gros œuvre dans le nord du Portugal — c'est là que sont les postes.","split.p2": "SMG Vistos est le cabinet d'immigration de notre associée. Il s'occupe des démarches de ceux qui sont à l'étranger et veulent venir travailler. Deux sociétés distinctes, deux comptabilités, et nous disons toujours laquelle facture quoi.","split.cta": "Voir les tarifs du cabinet","f1": "Ans d'activité","f2": "Personnes dans l'équipe","f3": "Salariés étrangers recrutés","f4": "Pays où nous intervenons","svc.h": "Nos métiers","svc.eyebrow": "Services","svc.t1": "Métallerie et charpente métallique","svc.d1": "Charpentes, mezzanines, escaliers et garde-corps. Découpe, pliage et soudure dans notre atelier.","svc.t2": "Menuiserie métallique et fermetures","svc.d2": "Aluminium et acier pour façades, portails, clôtures et portes coupe-feu.","svc.t3": "Construction","svc.d3": "Neuf, extension et rénovation, du béton aux finitions.","svc.t4": "Maintenance","svc.d4": "Contrats annuels pour l'industrie, les copropriétés et le commerce.","work.h": "Réalisations","work.eyebrow": "Chantiers","work.t1": "École de Palmeira","work.m1": "Construction neuve · 4 200 m² · Braga","work.t2": "Plateforme logistique A-52","work.m2": "Charpente métallique · 9 800 m² · Ourense","work.t3": "Îlot do Souto","work.m3": "Réhabilitation · 11 logements · Guimarães","work.t4": "Résidence Les Ormes","work.m4": "Logement collectif · 46 logements · Bordeaux","jobs.h": "Postes ouverts","jobs.eyebrow": "Recrutement","jobs.lede": "Contrat en règle, mutuelle et formation prise en charge. Les postes signalés acceptent les candidatures depuis l'étranger.","jobs.t1": "Métallier / Soudeur","jobs.g1": "Braga · CDI","jobs.t2": "Monteur en charpente métallique","jobs.g2": "Nord du Portugal · CDI","jobs.t3": "Maçon / Coffreur","jobs.g3": "Braga · CDI","jobs.t4": "Chef de chantier","jobs.g4": "Braga · CDI","jobs.br": "Candidatures depuis l'étranger acceptées","jobs.apply": "Je postule","doc.eyebrow": "Documents","doc.h": "Les documents dont vous aurez besoin","doc.lede": "En deux temps : ce que vous réunissez avant de venir et ce que nous réglons ensemble à votre arrivée. Imprimez et cochez au fur et à mesure.","doc.sheet": "Solution Metal Group · Fiche d'embauche","doc.rev": "Rév. 01/2026","doc.title": "Checklist du candidat","doc.intro": "Rien de tout cela n'est requis pour candidater. Cette liste sert à connaître le parcours complet avant de décider.","doc.g1": "Avant de venir","doc.g2": "Après l'arrivée au Portugal","doc.tagbr": "Depuis l'étranger","doc.tagpt": "Au Portugal","doc.d1t": "Passeport en cours de validité","doc.d1d": "Au moins 12 mois de validité restants. Si vous n'en avez pas, commencez par là : c'est souvent le plus long.","doc.d2t": "Extrait de casier judiciaire","doc.d2d": "De votre pays, avec apostille de La Haye.","doc.d3t": "Justificatif de qualification","doc.d3d": "Certificats de formation, titres professionnels ou tout document attestant votre expérience.","doc.d4t": "Promesse d'embauche","doc.d4d": "Établie par nous après l'entretien. C'est la pièce maîtresse de la demande de visa.","doc.d5t": "Visa de travail","doc.d5d": "Demandé au consulat du Portugal. Le cabinet monte et suit le dossier.","doc.d6t": "NIF — numéro fiscal","doc.d6d": "Obtenu aux Finanças dès votre arrivée. Nous vous accompagnons.","doc.d7t": "NISS — numéro de Sécurité sociale","doc.d7d": "Nécessaire pour déclarer le contrat. L'entreprise fait la demande.","doc.d8t": "Compte bancaire au Portugal","doc.d8d": "Le salaire ne peut être versé que par virement. Jamais en espèces.","doc.d9t": "Visite médicale d'embauche","doc.d9d": "Réalisée par nos soins, sans frais, avant l'entrée sur chantier.","doc.note": "Solution Metal Group ne facture rien à aucun salarié : ni le poste, ni le contrat, ni la formation, ni les équipements. La prestation d'immigration relève de SMG Vistos, son tarif est publié sur cette page et elle est facultative — vous pouvez faire les démarches seul ou avec un autre cabinet.","doc.print": "Imprimer cette fiche","imig.eyebrow": "SMG Vistos","imig.h": "Conseil en immigration","imig.lede": "Tarif fixe, publié, sans surprise en cours de route. Si ce que vous lisez ici ne vous convient pas, faites les démarches ailleurs — le poste reste le vôtre.","imig.tab": "Grille de prestations","imig.inc": "Compris dans le tarif","imig.exc": "Non compris","imig.state": "Taxes officielles (elles ne nous reviennent pas)","imig.p1": "Analyse de votre situation et plan du dossier","imig.p1d": "Une heure d'échange, inventaire de ce que vous avez et de ce qui manque.","imig.p2": "Montage complet de la demande de visa","imig.p2d": "Formulaires, traduction assermentée, vérification des pièces et prise de rendez-vous au consulat.","imig.p3": "Suivi jusqu'à la décision","imig.p3d": "Échanges avec le consulat et l'AIMA, et reprise du dossier en cas de demande de pièces.","imig.p4": "Regroupement familial","imig.p4d": "Démarche pour faire venir conjoint et enfants une fois installé.","imig.s1": "Frais consulaires du visa","imig.s2": "Taxe AIMA à l'arrivée","imig.s3": "Apostilles et actes dans le pays d'origine","imig.warn": "Ce que nous ne faisons jamais","imig.warnd": "Nous ne garantissons pas l'obtention du visa — personne ne le peut. Nous ne prélevons aucun pourcentage sur votre salaire. Nous ne conservons ni passeport ni document original. Nous ne vous lions pas à l'emploi : si vous souhaitez quitter l'entreprise après votre arrivée, vous ne nous devez rien.","imig.legal": "Les démarches nécessitant une représentation juridique sont assurées par un avocat inscrit au barreau.","form.eyebrow": "Formulaire","form.h": "Envoyez votre CV","form.lede": "Trois minutes suffisent. Aucun document à joindre pour l'instant.","form.name": "Nom complet","form.email": "E-mail","form.phone": "WhatsApp avec indicatif","form.where": "Où vous trouvez-vous actuellement ?","form.w1": "Hors du Portugal","form.w2": "Au Portugal","form.w3": "Dans un autre pays","form.role": "Poste visé","form.spont": "N'importe quel poste de mon métier","form.exp": "Années d'expérience dans le métier","form.cv": "CV (facultatif)","form.cvh": "PDF, Word ou photo. Sans CV, décrivez votre expérience dans le champ ci-dessous.","form.port": "Photos de vos travaux (facultatif)","form.porth": "Photo de chantier terminé, de soudure ou de structure montée. Jusqu'à 25 Mo.","form.msg": "Parlez-nous de votre expérience","form.send": "Envoyer ma candidature","form.company": "Société","form.person": "Interlocuteur","form.type": "Type de travaux","form.place": "Lieu du chantier","form.start": "Démarrage prévu","form.brief": "Description des travaux","form.files": "Plans ou CCTP (PDF, DWG)","form.sendq": "Demander un devis","form.o1": "Charpente métallique","form.o2": "Menuiserie métallique","form.o3": "Construction","form.o4": "Maintenance","ct.eyebrow": "Contact","ct.h": "Écrivez-nous","ct.hours": "Du lundi au vendredi · 08h30–18h00 (heure du Portugal)","ct.br": "Depuis l'étranger, WhatsApp est le moyen le plus rapide.","next.label": "Ensuite","next.k1": "Voir les chantiers","next.k2": "Voir les postes","next.k3": "Préparer les documents","next.k4": "Demander un devis","next.k5": "Découvrir l'entreprise","next.k6": "Nous écrire","next.k7": "Voir les tarifs du cabinet","next.k8": "Envoyer mon CV","ok.c": "Candidature reçue. Nous répondons sous 5 jours ouvrés par WhatsApp.","ok.o": "Demande envoyée. Nous répondons sous 2 jours ouvrés.","err": "Vérifiez les champs obligatoires.","ft.privacy": "Politique de confidentialité","ft.book": "Registre des réclamations","crumb.home": "Accueil"}
+  en: {
+    /* navegação */
+    "nav.home": "Home",
+    "nav.services": "Areas of activity",
+    "nav.portfolio": "Portfolio",
+    "nav.about": "About us",
+    "nav.contact": "Contact",
+    "nav.imig": "Immigration support",
+    "nav.workUs": "Work with us",
+    /* hero */
+    "hero.origin": "Steel structures and civil construction",
+    "hero.origin.b": "Portugal · Spain · France",
+    "hero.h1a": "Complete solutions in metal",
+    "hero.h1b": "and construction.",
+    "hero.lede":
+      "We design, fabricate and erect steel structures and deliver civil construction to European standards — one single point of contact, from estimate to handover.",
+    "hero.cta1": "Request a quote",
+    "hero.cta2": "Talk to us",
+    /* áreas de atuação */
+    "act.eyebrow": "Areas of activity",
+    "act.h": "What we do",
+    "act.t1": "Steel structures",
+    "act.d1":
+      "Industrial buildings, mezzanines, stairs and roof structures. Cutting, bending and welding in our own workshop.",
+    "act.t2": "Metalwork",
+    "act.d2": "Metalworking, fabrication and machining with in-house means.",
+    "act.t3": "Civil construction",
+    "act.d3":
+      "New build, extension and refurbishment, from concrete to finishes.",
+    "act.t4": "More areas",
+    "act.d4": "Additional services to be confirmed with the company.",
+    "act.cta": "See all areas",
+    "act.h2": "Areas of activity",
+    "act.lede":
+      "Metalworking and civil construction carried out by our own team, in Portugal, Spain and France.",
+    "comp.eyebrow": "Complementary services",
+    "comp.h": "Other services",
+    "comp.p": "Services kept in a secondary role — details to be confirmed.",
+    "comp.c1": "HR management",
+    "comp.c2": "Immigration support",
+    "comp.c3": "Other services",
+    "comp.c1d": "Details to be confirmed.",
+    "comp.c2d": "Separate service, provided by a partner entity.",
+    "comp.c3d": "Details to be confirmed.",
+    /* portfólio */
+    "pf.eyebrow": "Portfolio",
+    "pf.h": "Work delivered",
+    "pf.p":
+      "A selection of real projects. Captions to be confirmed with the company.",
+    "pf.cta": "See the full portfolio",
+    "pf.video": "On site — video",
+    "pf.caption": "Caption to be confirmed",
+    /* sobre nós */
+    "ab.eyebrow": "About us",
+    "ab.h": "Who we are",
+    "ab.lede": "A company focused on serving other companies.",
+    "ab.p":
+      "Institutional content to be confirmed — the company's portfolio text will be added here.",
+    "ab.cta": "Get to know Solution Metal Group",
+    "ab.story.h": "Our story",
+    "ab.presence": "Where we work",
+    "ab.presence.p": "Portugal · Spain · France",
+    "team.eyebrow": "Team",
+    "team.h": "Our team",
+    "team.lede": "The four partners — names, roles and bios to be confirmed.",
+    "team.m1n": "Partner 1",
+    "team.m1r": "Role",
+    "team.m1b": "Bio to be confirmed.",
+    "team.m2n": "Partner 2",
+    "team.m2r": "Role",
+    "team.m2b": "Bio to be confirmed.",
+    "team.m3n": "Partner 3",
+    "team.m3r": "Role",
+    "team.m3b": "Bio to be confirmed.",
+    "team.m4n": "Partner 4",
+    "team.m4r": "Role",
+    "team.m4b": "Bio to be confirmed.",
+    "cl.eyebrow": "Clients",
+    "cl.h": "Companies we work with",
+    "cl.p": "Client logos and references to be confirmed.",
+    "cl.l1": "Client 01",
+    "cl.l2": "Client 02",
+    "cl.l3": "Client 03",
+    "cl.l4": "Client 04",
+    "cl.l5": "Client 05",
+    "cl.l6": "Client 06",
+    /* contato */
+    "ct.eyebrow": "Contact",
+    "ct.h": "Contact",
+    "ct.lede": "Send us a message or talk directly on WhatsApp.",
+    "ct.addr": "Address to be confirmed",
+    "ct.hours": "Opening hours to be confirmed",
+    "ct.note": "We reply to quote requests within 2 working days.",
+    "cta.eyebrow": "Contact",
+    "cta.h": "Talk to us about your project",
+    "cta.p": "Quote within 2 working days. Choose your preferred channel.",
+    "cta.wa": "WhatsApp",
+    "cta.mail": "Send an e-mail",
+    "cta.quote": "Request a quote",
+    /* formulários */
+    "form.eyebrow": "Form",
+    "form.send": "Send message",
+    "form.sendq": "Request a quote",
+    "form.company": "Company",
+    "form.person": "Contact person",
+    "form.email": "E-mail",
+    "form.phone": "Phone",
+    "form.subject": "Subject",
+    "form.message": "Message",
+    "form.name": "Full name",
+    "form.type": "Type of work",
+    "form.o1": "Steel structure",
+    "form.o2": "Metalwork",
+    "form.o3": "Civil construction",
+    "form.o4": "Maintenance",
+    "form.place": "Site location",
+    "form.start": "Expected start",
+    "form.brief": "Description of the work",
+    "form.files": "Project or specifications (PDF, DWG)",
+    "tw.area": "Area of interest",
+    "tw.a1": "Metalwork",
+    "tw.a2": "Civil construction",
+    "tw.a3": "Administrative / management",
+    "tw.a4": "Other area",
+    "tw.msg": "Tell us about your experience",
+    "tw.send": "Send application",
+    /* trabalhe conosco */
+    "tw.eyebrow": "Work with us",
+    "tw.h": "Work with us",
+    "tw.lede":
+      "Spontaneous application. Send your area of interest and we keep your contact on file.",
+    /* assessoria de imigração */
+    "imig.eyebrow": "Immigration support",
+    "imig.h": "Immigration support",
+    "imig.lede":
+      "Complementary service, provided by a partner entity and separate from the core activity.",
+    "imig.sep": "Separate service",
+    "imig.sepd":
+      "Immigration support is provided by SMG Vistos, an independent partner entity with its own management. It is not part of Solution Metal Group's core offer and is not the focus of this website.",
+    "imig.tab": "Service table",
+    "imig.todo": "To be completed before publishing",
+    "imig.todod":
+      "The values in this table are intentionally blank. Fill them with the real prices.",
+    "imig.inc": "Included in the price",
+    "imig.state": "State fees (not kept by us)",
+    "imig.p1": "Case analysis and process plan",
+    "imig.p1d":
+      "One hour of conversation, list of what you have and what is missing.",
+    "imig.p2": "Full visa application assembly",
+    "imig.p2d":
+      "Forms, certified translation, document check and consulate appointment.",
+    "imig.p3": "Follow-up until the decision",
+    "imig.p3d": "Liaison with the consulate and AIMA.",
+    "imig.p4": "Family reunification",
+    "imig.p4d": "Process to bring spouse and children after being settled.",
+    "imig.s1": "Consular visa fee",
+    "imig.s2": "AIMA fee on arrival",
+    "imig.s3": "Apostille and certificates",
+    "imig.warn": "What we never do",
+    "imig.warnd":
+      "We do not guarantee visa approval — nobody can. We do not charge a percentage of salary. We do not keep passports or original documents.",
+    "imig.legal":
+      "Cases requiring legal representation are handled by a registered lawyer.",
+    "imig.back": "Back to the main website",
+    /* rodapé */
+    "ft.tag": "Steel structures and civil construction",
+    "ft.sitemap": "Sitemap",
+    "ft.legal": "Legal",
+    "ft.privacy": "Privacy policy",
+    "ft.book": "Complaints book",
+    /* próximos passos */
+    "next.label": "Next",
+    "next.k1": "See the portfolio",
+    "next.k4": "Request a quote",
+    "next.k5": "About us",
+    "next.k6": "Talk to us",
+    "crumb.home": "Home",
+    /* mensagens */
+    "ok.form": "Message sent. We will reply shortly.",
+    "ok.o": "Request sent. We reply within 2 working days.",
+    "ok.tw":
+      "Application received. We keep your contact for future opportunities.",
+    err: "Please check the required fields.",
+  },
+  es: {
+    /* navegación */
+    "nav.home": "Inicio",
+    "nav.services": "Áreas de actuación",
+    "nav.portfolio": "Portafolio",
+    "nav.about": "Nosotros",
+    "nav.contact": "Contacto",
+    "nav.imig": "Asesoría de inmigración",
+    "nav.workUs": "Trabaja con nosotros",
+    /* hero */
+    "hero.origin": "Estructuras metálicas y construcción civil",
+    "hero.origin.b": "Portugal · España · Francia",
+    "hero.h1a": "Soluciones completas en metal",
+    "hero.h1b": "y construcción.",
+    "hero.lede":
+      "Proyectamos, fabricamos y montamos estructuras metálicas y ejecutamos obra civil con estándar europeo — un único interlocutor, del presupuesto a la entrega.",
+    "hero.cta1": "Pedir presupuesto",
+    "hero.cta2": "Hable con nosotros",
+    /* áreas de actuación */
+    "act.eyebrow": "Áreas de actuación",
+    "act.h": "Qué hacemos",
+    "act.t1": "Estructuras metálicas",
+    "act.d1":
+      "Naves industriales, entreplantas, escaleras y cubiertas. Corte, plegado y soldadura en taller propio.",
+    "act.t2": "Metalistería",
+    "act.d2": "Metalurgia, fabricación y mecanizado con medios propios.",
+    "act.t3": "Construcción civil",
+    "act.d3":
+      "Obra nueva, ampliación y rehabilitación, del hormigón a los acabados.",
+    "act.t4": "Más áreas",
+    "act.d4": "Servicios adicionales a confirmar con la empresa.",
+    "act.cta": "Ver todas las áreas",
+    "act.h2": "Áreas de actuación",
+    "act.lede":
+      "Metalistería y construcción civil ejecutadas por nuestro propio equipo en Portugal, España y Francia.",
+    "comp.eyebrow": "Servicios complementarios",
+    "comp.h": "Otros servicios",
+    "comp.p":
+      "Servicios mantenidos en un papel secundario — detalles a confirmar.",
+    "comp.c1": "Gestión de RR. HH.",
+    "comp.c2": "Asesoría de inmigración",
+    "comp.c3": "Otros servicios",
+    "comp.c1d": "Detalles a confirmar.",
+    "comp.c2d": "Servicio separado, prestado por una entidad colaboradora.",
+    "comp.c3d": "Detalles a confirmar.",
+    /* portafolio */
+    "pf.eyebrow": "Portafolio",
+    "pf.h": "Obra entregada",
+    "pf.p":
+      "Una selección de proyectos reales. Textos a confirmar con la empresa.",
+    "pf.cta": "Ver el portafolio completo",
+    "pf.video": "En obra — vídeo",
+    "pf.caption": "Texto a confirmar",
+    /* nosotros */
+    "ab.eyebrow": "Nosotros",
+    "ab.h": "Quiénes somos",
+    "ab.lede": "Una empresa enfocada en atender a otras empresas.",
+    "ab.p":
+      "Contenido institucional a confirmar — aquí se añadirá el texto del portafolio de la empresa.",
+    "ab.cta": "Conozca Solution Metal Group",
+    "ab.story.h": "Nuestra historia",
+    "ab.presence": "Dónde trabajamos",
+    "ab.presence.p": "Portugal · España · Francia",
+    "team.eyebrow": "Equipo",
+    "team.h": "Nuestro equipo",
+    "team.lede":
+      "Los cuatro socios — nombres, cargos y biografías a confirmar.",
+    "team.m1n": "Socio 1",
+    "team.m1r": "Cargo",
+    "team.m1b": "Bio a confirmar.",
+    "team.m2n": "Socio 2",
+    "team.m2r": "Cargo",
+    "team.m2b": "Bio a confirmar.",
+    "team.m3n": "Socio 3",
+    "team.m3r": "Cargo",
+    "team.m3b": "Bio a confirmar.",
+    "team.m4n": "Socio 4",
+    "team.m4r": "Cargo",
+    "team.m4b": "Bio a confirmar.",
+    "cl.eyebrow": "Clientes",
+    "cl.h": "Empresas con las que trabajamos",
+    "cl.p": "Logotipos y referencias de clientes a confirmar.",
+    "cl.l1": "Cliente 01",
+    "cl.l2": "Cliente 02",
+    "cl.l3": "Cliente 03",
+    "cl.l4": "Cliente 04",
+    "cl.l5": "Cliente 05",
+    "cl.l6": "Cliente 06",
+    /* contacto */
+    "ct.eyebrow": "Contacto",
+    "ct.h": "Contacto",
+    "ct.lede": "Envíenos un mensaje o hable directamente por WhatsApp.",
+    "ct.addr": "Dirección a confirmar",
+    "ct.hours": "Horario a confirmar",
+    "ct.note": "Respondemos solicitudes de presupuesto en 2 días laborables.",
+    "cta.eyebrow": "Contacto",
+    "cta.h": "Hable con nosotros sobre su proyecto",
+    "cta.p": "Presupuesto en 2 días laborables. Elija su canal preferido.",
+    "cta.wa": "WhatsApp",
+    "cta.mail": "Enviar correo",
+    "cta.quote": "Pedir presupuesto",
+    /* formularios */
+    "form.eyebrow": "Formulario",
+    "form.send": "Enviar mensaje",
+    "form.sendq": "Pedir presupuesto",
+    "form.company": "Empresa",
+    "form.person": "Persona de contacto",
+    "form.email": "Correo",
+    "form.phone": "Teléfono",
+    "form.subject": "Asunto",
+    "form.message": "Mensaje",
+    "form.name": "Nombre completo",
+    "form.type": "Tipo de trabajo",
+    "form.o1": "Estructura metálica",
+    "form.o2": "Metalistería",
+    "form.o3": "Construcción civil",
+    "form.o4": "Mantenimiento",
+    "form.place": "Lugar de la obra",
+    "form.start": "Inicio previsto",
+    "form.brief": "Descripción del trabajo",
+    "form.files": "Proyecto o pliego (PDF, DWG)",
+    "tw.area": "Área de interés",
+    "tw.a1": "Metalistería",
+    "tw.a2": "Construcción civil",
+    "tw.a3": "Administrativo / gestión",
+    "tw.a4": "Otra área",
+    "tw.msg": "Cuéntenos su experiencia",
+    "tw.send": "Enviar candidatura",
+    /* trabaja con nosotros */
+    "tw.eyebrow": "Trabaja con nosotros",
+    "tw.h": "Trabaja con nosotros",
+    "tw.lede":
+      "Candidatura espontánea. Envíe su área de interés y guardamos su contacto.",
+    /* asesoría de inmigración */
+    "imig.eyebrow": "Asesoría de inmigración",
+    "imig.h": "Asesoría de inmigración",
+    "imig.lede":
+      "Servicio complementario, prestado por una entidad colaboradora y separado de la actividad principal.",
+    "imig.sep": "Servicio separado",
+    "imig.sepd":
+      "La asesoría de inmigración la presta SMG Vistos, entidad colaboradora independiente con gestión propia. No forma parte de la oferta principal de Solution Metal Group y no es el foco de este sitio.",
+    "imig.tab": "Tabla de servicios",
+    "imig.todo": "Por rellenar antes de publicar",
+    "imig.todod":
+      "Los valores de esta tabla están en blanco a propósito. Complételos con los precios reales.",
+    "imig.inc": "Incluido en el valor",
+    "imig.state": "Tasas del Estado (no se quedan con nosotros)",
+    "imig.p1": "Análisis del caso y plan del proceso",
+    "imig.p1d":
+      "Una hora de conversación, lista de lo que tiene y de lo que falta.",
+    "imig.p2": "Montaje completo de la solicitud de visado",
+    "imig.p2d":
+      "Formularios, traducción jurada, revisión de documentos y cita en el consulado.",
+    "imig.p3": "Seguimiento hasta la decisión",
+    "imig.p3d": "Interlocución con consulado y AIMA.",
+    "imig.p4": "Reagrupación familiar",
+    "imig.p4d": "Proceso para traer cónyuge e hijos.",
+    "imig.s1": "Tasa consular del visado",
+    "imig.s2": "Tasa de la AIMA a la llegada",
+    "imig.s3": "Apostilla y certificados",
+    "imig.warn": "Lo que nunca hacemos",
+    "imig.warnd":
+      "No garantizamos la aprobación del visado — nadie puede. No cobramos porcentaje del salario. No retenemos pasaportes ni documentos originales.",
+    "imig.legal":
+      "Los procesos que exigen representación jurídica son conducidos por abogado colegiado.",
+    "imig.back": "Volver al sitio principal",
+    /* pie */
+    "ft.tag": "Estructuras metálicas y construcción civil",
+    "ft.sitemap": "Mapa del sitio",
+    "ft.legal": "Legal",
+    "ft.privacy": "Política de privacidad",
+    "ft.book": "Libro de reclamaciones",
+    /* próximos pasos */
+    "next.label": "A continuación",
+    "next.k1": "Ver el portafolio",
+    "next.k4": "Pedir presupuesto",
+    "next.k5": "Nosotros",
+    "next.k6": "Hable con nosotros",
+    "crumb.home": "Inicio",
+    /* mensajes */
+    "ok.form": "Mensaje enviado. Responderemos en breve.",
+    "ok.o": "Solicitud enviada. Respondemos en 2 días laborables.",
+    "ok.tw":
+      "Candidatura recibida. Guardamos su contacto para futuras oportunidades.",
+    err: "Revise los campos obligatorios.",
+  },
 };
 
 /* ---------------- motor ---------------- */
-const PT_FALLBACK = {"ok.c":"Candidatura recebida. Respondemos em 5 dias úteis pelo WhatsApp.","ok.o":"Pedido enviado. Respondemos em 2 dias úteis.","err":"Verifique os campos obrigatórios."};
-const nodes = document.querySelectorAll('[data-i18n]');
-nodes.forEach(n => n.dataset.pt = n.textContent);
-let lang = 'pt';
-try { const s = localStorage.getItem('lang'); if (s) lang = s; } catch(e) {}
+const PT_FALLBACK = {
+  "ok.form": "Mensagem enviada. Responderemos em breve.",
+  "ok.o": "Pedido enviado. Respondemos em 2 dias úteis.",
+  "ok.tw":
+    "Candidatura recebida. Guardamos o seu contacto para futuras oportunidades.",
+  err: "Verifique os campos obrigatórios.",
+};
+const nodes = document.querySelectorAll("[data-i18n]");
+nodes.forEach((n) => (n.dataset.pt = n.textContent));
+let lang = "pt";
+try {
+  const s = localStorage.getItem("lang");
+  if (s) lang = s;
+} catch (e) {}
 
-function setLang(l){
+function setLang(l) {
   lang = l;
-  document.documentElement.lang = (l === 'br') ? 'pt-BR' : l;
+  document.documentElement.lang = l === "en" ? "en" : l === "es" ? "es" : "pt";
   const d = I18N[l];
-  nodes.forEach(n => { n.textContent = d ? (d[n.dataset.i18n] ?? n.dataset.pt) : n.dataset.pt; });
-  document.querySelectorAll('.langs button').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === l));
-  try { localStorage.setItem('lang', l); } catch(e) {}
+  nodes.forEach((n) => {
+    n.textContent = d ? (d[n.dataset.i18n] ?? n.dataset.pt) : n.dataset.pt;
+  });
+  document
+    .querySelectorAll(".langs button")
+    .forEach((b) => b.setAttribute("aria-pressed", b.dataset.lang === l));
+  try {
+    localStorage.setItem("lang", l);
+  } catch (e) {}
 }
-const t = k => (lang === 'pt' ? PT_FALLBACK[k] : (I18N[lang][k] || PT_FALLBACK[k]));
-document.querySelectorAll('.langs button').forEach(b => b.onclick = () => setLang(b.dataset.lang));
-if (lang !== 'pt') setLang(lang);
+const t = (k) =>
+  lang === "pt" ? PT_FALLBACK[k] : I18N[lang][k] || PT_FALLBACK[k];
+document
+  .querySelectorAll(".langs button")
+  .forEach((b) => (b.onclick = () => setLang(b.dataset.lang)));
+if (lang !== "pt") setLang(lang);
 
 /* menu */
-const burger = document.getElementById('burger'), links = document.getElementById('links');
-if (burger){
-  burger.onclick = () => { const o = links.classList.toggle('open'); burger.setAttribute('aria-expanded', o); };
-  links.addEventListener('click', e => { if (e.target.tagName === 'A'){ links.classList.remove('open'); burger.setAttribute('aria-expanded','false'); } });
-}
-
-/* travessia: preenche o trilho e acende as paragens em sequência */
-const rail = document.querySelector('.rail');
-if (rail){
-  const stops = [...rail.querySelectorAll('.stop')];
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const run = () => {
-    rail.style.setProperty('--fill', '100%');
-    stops.forEach((s, i) => reduce ? s.classList.add('on') : setTimeout(() => s.classList.add('on'), 220 + i * 190));
+const burger = document.getElementById("burger"),
+  links = document.getElementById("links");
+if (burger) {
+  burger.onclick = () => {
+    const o = links.classList.toggle("open");
+    burger.setAttribute("aria-expanded", o);
   };
-  new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting){ run(); o.disconnect(); } }), {threshold:.25}).observe(rail);
+  links.addEventListener("click", (e) => {
+    if (e.target.tagName === "A") {
+      links.classList.remove("open");
+      burger.setAttribute("aria-expanded", "false");
+    }
+  });
 }
 
 /* formulários (demo, sem backend) */
-function wire(formId, msgId, okKey){
-  const f = document.getElementById(formId); if (!f) return;
+function wire(formId, msgId, okKey) {
+  const f = document.getElementById(formId);
+  if (!f) return;
   const m = document.getElementById(msgId);
-  f.addEventListener('submit', e => {
+  f.addEventListener("submit", (e) => {
     e.preventDefault();
-    m.className = 'msg on';
-    if (!f.checkValidity()){ m.classList.add('err'); m.textContent = t('err'); f.reportValidity(); return; }
-    m.textContent = t(okKey); f.reset();
+    m.className = "msg on";
+    if (!f.checkValidity()) {
+      m.classList.add("err");
+      m.textContent = t("err");
+      f.reportValidity();
+      return;
+    }
+    m.textContent = t(okKey);
+    f.reset();
   });
 }
-wire('form-cv','msg-cv','ok.c');
-wire('form-orc','msg-orc','ok.o');
+wire("form-orc", "msg-orc", "ok.o");
+wire("form-ct", "msg-ct", "ok.form");
+wire("form-tw", "msg-tw", "ok.tw");
 
 /* revelação */
-const io = new IntersectionObserver(es => es.forEach(x => x.isIntersecting && x.target.classList.add('in')), {threshold:.08});
-document.querySelectorAll('.rv').forEach(el => io.observe(el));
+const io = new IntersectionObserver(
+  (es) => es.forEach((x) => x.isIntersecting && x.target.classList.add("in")),
+  { threshold: 0.08 },
+);
+document.querySelectorAll(".rv").forEach((el) => io.observe(el));

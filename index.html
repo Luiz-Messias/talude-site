@@ -1,114 +1,372 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Solution Metal Group — Metalomecânica e Construção em Braga | Soluções em aço e obra civil</title>
-<meta name="description" content="Serralharia, estrutura metálica e construção civil em Braga. Contratamos com contrato legal quem ainda está no Brasil, e tratamos do processo de visto. Veja como funciona.">
-<link rel="canonical" href="https://www.smg.pt/">
-<meta property="og:type" content="website"><meta property="og:title" content="Solution Metal Group — Metalomecânica e Construção em Braga | Soluções em aço e obra civil">
-<meta property="og:description" content="Serralharia, estrutura metálica e construção civil em Braga. Contratamos com contrato legal quem ainda está no Brasil, e tratamos do processo de visto. Veja como funciona."><meta property="og:locale" content="pt_PT">
-<meta property="og:locale:alternate" content="pt_BR"><meta property="og:locale:alternate" content="es_ES">
-<meta property="og:locale:alternate" content="fr_FR">
-<meta name="theme-color" content="#252525">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"GeneralContractor","name":"Solution Metal Group","url":"https://www.smg.pt/","telephone":"+351 253 000 000","email":"geral@smg.pt","address":{"@type":"PostalAddress","streetAddress":"Zona Industrial de Palmeira, Lote 14","addressLocality":"Braga","postalCode":"4700-000","addressCountry":"PT"},"areaServed":["PT","ES","FR","BR"],"sameAs":["https://www.linkedin.com/company/solution-metal-group"]}
-</script>
-</head>
-<body>
-<header>
-  <nav class="wrap nav" aria-label="Principal">
-    <a class="logo" href="index.html"><i>SMG</i><span class="full">Solution Metal<em> Group</em></span></a>
-    <div class="links" id="links">
-      <a href="index.html" data-i18n="nav.home" aria-current="page">Início</a>
-      <a href="brasil.html" data-i18n="nav.brasil">Está no Brasil</a>
-      <a href="vagas.html" data-i18n="nav.jobs">Vagas</a>
-      <a href="imigracao.html" data-i18n="nav.imig">Imigração</a>
-      <a href="documentos.html" data-i18n="nav.docs">Documentos</a>
-      <a href="servicos.html" data-i18n="nav.services">Serviços</a>
-      <a href="obras.html" data-i18n="nav.work">Obras</a>
-      <a href="empresa.html" data-i18n="nav.about">Empresa</a>
-      <a href="contactos.html" data-i18n="nav.contact">Contactos</a>
-    </div>
-    <div class="langs" role="group" aria-label="Idioma">
-      <button data-lang="pt" aria-pressed="true">PT</button>
-      <button data-lang="br" aria-pressed="false">BR</button>
-      <button data-lang="es" aria-pressed="false">ES</button>
-      <button data-lang="fr" aria-pressed="false">FR</button>
-    </div>
-    <button class="burger" id="burger" aria-expanded="false" aria-controls="links" aria-label="Menu">☰</button>
-  </nav>
-</header>
-<main>
-<section class="band hero">
-  <div class="wrap">
-    <p class="origin mono"><span data-i18n="hero.origin">Metalomecânica e construção civil em Braga</span> <b data-i18n="hero.origin.b">Desde 1999.</b></p>
-    <h1><span data-i18n="hero.h1a">Soluções completas em metal</span> <mark data-i18n="hero.h1b">e construção civil.</mark></h1>
-    <p class="lede" data-i18n="hero.lede">Estrutura metálica, caixilharia e obra civil com padrão europeu. Recrutamos com contrato legal — e a consultoria da casa trata do processo de visto para quem quer vir trabalhar connosco.</p>
-    <div class="actions">
-      <a class="btn btn--spark btn--lg" href="servicos.html" data-i18n="hero.cta1">Conhecer os serviços</a>
-      <a class="btn btn--ghost btn--lg" style="border-color:#555;color:#fff" href="candidatura.html" data-i18n="hero.cta2">Enviar currículo</a>
-    </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      Solution Metal Group — Estruturas metálicas e construção civil para
+      empresas
+    </title>
+    <meta
+      name="description"
+      content="A Solution Metal Group projeta, fabrica e monta estruturas metálicas e executa obra civil para empresas em Portugal, Espanha e França. Um único interlocutor, do orçamento à entrega."
+    />
+    <link rel="canonical" href="https://www.smg.pt/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Solution Metal Group — Estruturas metálicas e construção civil"
+    />
+    <meta
+      property="og:description"
+      content="Estruturas metálicas, metalomecânica e construção civil para empresas em Portugal, Espanha e França."
+    />
+    <meta property="og:image" content="assets/img/hero.jpg" />
+    <meta property="og:locale" content="pt_PT" />
+    <meta name="theme-color" content="#151515" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "GeneralContractor",
+        "name": "Solution Metal Group",
+        "url": "https://www.smg.pt/",
+        "email": "geral@smg.pt",
+        "areaServed": ["PT", "ES", "FR"]
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class="wrap nav" aria-label="Principal">
+        <a class="logo" href="index.html"
+          ><img
+            src="assets/img/logo-sm.png"
+            alt="Solution Metal Group"
+            width="200"
+            height="200"
+        /></a>
+        <div class="links" id="links">
+          <a href="index.html" data-i18n="nav.home" aria-current="page"
+            >Início</a
+          >
+          <a href="servicos.html" data-i18n="nav.services">Áreas de atuação</a>
+          <a href="obras.html" data-i18n="nav.portfolio">Portfólio</a>
+          <a href="empresa.html" data-i18n="nav.about">Sobre nós</a>
+          <a href="contactos.html" data-i18n="nav.contact">Contactos</a>
+          <!-- <a class="nav-sep" href="imigracao.html" data-i18n="nav.imig">Assessoria de imigração</a> -->
+        </div>
+        <div class="langs" role="group" aria-label="Idioma">
+          <button data-lang="pt" aria-pressed="true">🇵🇹 PT</button>
+          <button data-lang="en" aria-pressed="false">🇬🇧 EN</button>
+          <button data-lang="es" aria-pressed="false">🇪🇸 ES</button>
+        </div>
+        <button
+          class="burger"
+          id="burger"
+          aria-expanded="false"
+          aria-controls="links"
+          aria-label="Menu"
+        >
+          ☰
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <picture class="hero-bg">
+          <source srcset="assets/img/hero.webp" type="image/webp" />
+          <img
+            src="assets/img/hero.jpg"
+            alt="Estrutura metálica em montagem com grua e equipa em obra"
+            fetchpriority="high"
+          />
+        </picture>
+        <div class="wrap hero-inner">
+          <p class="origin mono">
+            <span data-i18n="hero.origin"
+              >Estruturas metálicas e construção civil</span
+            >
+            <b data-i18n="hero.origin.b">Portugal · Espanha · França</b>
+          </p>
+          <h1>
+            <span data-i18n="hero.h1a">Soluções completas em metal</span>
+            <mark data-i18n="hero.h1b">e construção.</mark>
+          </h1>
+          <p class="lede" data-i18n="hero.lede">
+            Projetamos, fabricamos e montamos estruturas metálicas e executamos
+            obra civil com padrão europeu. Um único interlocutor, do orçamento à
+            entrega — para empresas que não podem perder prazos.
+          </p>
+          <div class="actions">
+            <a class="btn btn--lg" href="orcamento.html" data-i18n="hero.cta1"
+              >Pedir orçamento</a
+            >
+            <a
+              class="btn btn--ghost btn--lg"
+              href="contactos.html"
+              data-i18n="hero.cta2"
+              >Falar connosco</a
+            >
+          </div>
+        </div>
+      </section>
 
-    <div class="travessia">
-      <h2 style="color:#fff;font-size:clamp(1.4rem,3vw,2rem)" data-i18n="tv.title">Da sua casa até ao primeiro dia na obra</h2>
-      <p class="mono" style="color:#8E8E8E;margin-top:10px" data-i18n="tv.sub">Cinco etapas. Em cada uma dizemos quem paga o quê.</p>
-      <div class="rail">
-        <div class="stop"><b>1</b><h3 data-i18n="tv.s1">Envia o currículo</h3><p data-i18n="tv.s1d">De onde estiver, por formulário ou WhatsApp. Ainda não precisa de documento nenhum.</p><span class="who" data-i18n="tv.w1">Sem custo</span></div>
-        <div class="stop"><b>2</b><h3 data-i18n="tv.s2">Falamos por vídeo</h3><p data-i18n="tv.s2d">Em até 5 dias úteis. Falamos da vaga, do salário real e do custo de vida aqui.</p><span class="who" data-i18n="tv.w2">Sem custo</span></div>
-        <div class="stop"><b>3</b><h3 data-i18n="tv.s3">Promessa de contrato</h3><p data-i18n="tv.s3d">Se encaixar, emitimos promessa de contrato em seu nome. É o documento que abre o processo.</p><span class="who" data-i18n="tv.w3">Sem custo</span></div>
-        <div class="stop"><b>4</b><h3 data-i18n="tv.s4">Processo de visto</h3><p data-i18n="tv.s4d">A consultoria trata e acompanha o pedido junto do consulado e da AIMA.</p><span class="who pago" data-i18n="tv.w4">Serviço pago</span></div>
-        <div class="stop"><b>5</b><h3 data-i18n="tv.s5">Chegada e primeiro dia</h3><p data-i18n="tv.s5d">Vamos buscá-lo ao aeroporto e ajudamos com NIF, NISS e banco. Alojamento nos primeiros 30 dias por nossa conta.</p><span class="who" data-i18n="tv.w5">Por nossa conta</span></div>
+      <section class="band rv">
+        <div class="wrap split">
+          <div>
+            <p class="mono eyebrow" data-i18n="ab.eyebrow">Sobre nós</p>
+            <h2 data-i18n="ab.h">Quem somos</h2>
+            <p class="lede" data-i18n="ab.lede">
+              Uma empresa focada em servir outras empresas.
+            </p>
+            <p style="margin-top: 20px" data-i18n="ab.p">
+              <!-- CONTEÚDO A CONFIRMAR: texto institucional do portfólio da empresa -->
+              A Solution Metal Group atua no fabrico e montagem de estruturas
+              metálicas, na metalomecânica e na construção civil, com obra
+              executada em Portugal, Espanha e França. Conteúdo institucional
+              completo a confirmar com a empresa.
+            </p>
+            <div class="actions">
+              <a class="btn" href="empresa.html" data-i18n="ab.cta"
+                >Conheça a Solution Metal Group</a
+              >
+            </div>
+          </div>
+          <figure class="edge">
+            <picture
+              ><source srcset="assets/img/obra-05.webp" type="image/webp" />
+              <img
+                src="assets/img/obra-05.jpg"
+                alt="Estrutura metálica em perspetiva"
+                loading="lazy"
+                width="941"
+                height="1671"
+            /></picture>
+          </figure>
+        </div>
+      </section>
+
+      <section class="band band--tint rv">
+        <div class="wrap">
+          <p class="mono eyebrow" data-i18n="act.eyebrow">Áreas de atuação</p>
+          <h2 data-i18n="act.h">O que fazemos</h2>
+          <div class="grid g3" style="margin-top: 38px">
+            <div class="card">
+              <span class="tag">01</span>
+              <h3 data-i18n="act.t1">Estruturas metálicas</h3>
+              <p data-i18n="act.d1">
+                Naves industriais, mezaninos, escadas e estruturas de cobertura.
+                Corte, quinagem e soldadura em oficina própria.
+              </p>
+            </div>
+            <div class="card">
+              <span class="tag">02</span>
+              <h3 data-i18n="act.t2">Metalomecânica</h3>
+              <p data-i18n="act.d2">
+                Serralharia, fabrico e maquinagem com meios próprios.
+              </p>
+            </div>
+            <div class="card">
+              <span class="tag">03</span>
+              <h3 data-i18n="act.t3">Construção civil</h3>
+              <p data-i18n="act.d3">
+                Obra nova, ampliação e reabilitação, do betão aos acabamentos.
+              </p>
+            </div>
+            <div class="card">
+              <span class="tag">04</span>
+              <h3 data-i18n="act.t4">Outras frentes</h3>
+              <p data-i18n="act.d4">
+                Serviços adicionais a confirmar com a empresa.
+              </p>
+            </div>
+          </div>
+          <div class="actions">
+            <a class="btn btn--ghost" href="servicos.html" data-i18n="act.cta"
+              >Ver todas as áreas</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="band rv">
+        <div class="wrap">
+          <p class="mono eyebrow" data-i18n="pf.eyebrow">Portfólio</p>
+          <h2 data-i18n="pf.h">Trabalho entregue</h2>
+          <p class="lede" data-i18n="pf.p">
+            Uma seleção de projetos reais. Legendas a confirmar com a empresa.
+          </p>
+          <div class="works" style="margin-top: 38px">
+            <article class="work">
+              <div class="ph">
+                <i>PT</i
+                ><picture
+                  ><source srcset="assets/img/obra-01.webp" type="image/webp" />
+                  <img
+                    src="assets/img/obra-01.jpg"
+                    alt="Montagem de estrutura metálica com gruas"
+                    loading="lazy"
+                    width="2040"
+                    height="1148"
+                /></picture>
+              </div>
+              <div class="txt">
+                <h3>Estrutura metálica em montagem</h3>
+                <p class="muted" data-i18n="pf.caption">Legenda a confirmar</p>
+              </div>
+            </article>
+            <article class="work">
+              <div class="ph">
+                <i>PT</i
+                ><picture
+                  ><source srcset="assets/img/obra-02.webp" type="image/webp" />
+                  <img
+                    src="assets/img/obra-02.jpg"
+                    alt="Estrutura metálica e plataformas elevatórias em obra"
+                    loading="lazy"
+                    width="2040"
+                    height="1148"
+                /></picture>
+              </div>
+              <div class="txt">
+                <h3>Estrutura metálica em montagem</h3>
+                <p class="muted" data-i18n="pf.caption">Legenda a confirmar</p>
+              </div>
+            </article>
+            <article class="work">
+              <div class="ph">
+                <i>PT</i
+                ><picture
+                  ><source srcset="assets/img/obra-03.webp" type="image/webp" />
+                  <img
+                    src="assets/img/obra-03.jpg"
+                    alt="Estrutura metálica com isolamento em obra"
+                    loading="lazy"
+                    width="1670"
+                    height="942"
+                /></picture>
+              </div>
+              <div class="txt">
+                <h3>Estrutura metálica com isolamento</h3>
+                <p class="muted" data-i18n="pf.caption">Legenda a confirmar</p>
+              </div>
+            </article>
+            <article class="work">
+              <div class="ph">
+                <i>PT</i
+                ><picture
+                  ><source srcset="assets/img/obra-06.webp" type="image/webp" />
+                  <img
+                    src="assets/img/obra-06.jpg"
+                    alt="Estrutura metálica em montagem com gruas e equipa"
+                    loading="lazy"
+                    width="1672"
+                    height="941"
+                /></picture>
+              </div>
+              <div class="txt">
+                <h3>Montagem com gruas e equipa</h3>
+                <p class="muted" data-i18n="pf.caption">Legenda a confirmar</p>
+              </div>
+            </article>
+          </div>
+          <div class="actions">
+            <a class="btn btn--ghost" href="obras.html" data-i18n="pf.cta"
+              >Ver o portfólio completo</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="band band--dark rv">
+        <div class="wrap split" style="align-items: center">
+          <div>
+            <p
+              class="mono eyebrow"
+              style="color: var(--on-dark)"
+              data-i18n="cta.eyebrow"
+            >
+              Contacto
+            </p>
+            <h2 style="color: #fff" data-i18n="cta.h">
+              Fale connosco sobre o seu projeto
+            </h2>
+            <p
+              style="color: var(--on-dark); margin-top: 16px"
+              data-i18n="cta.p"
+            >
+              Orçamento em até 2 dias úteis. Escolha o canal que preferir.
+            </p>
+          </div>
+          <div class="cta-btns">
+            <a
+              class="btn btn--lg"
+              href="https://wa.me/351930000000"
+              data-i18n="cta.wa"
+              >WhatsApp</a
+            >
+            <a
+              class="btn btn--ghost btn--lg"
+              style="border-color: rgba(255, 255, 255, 0.45); color: #fff"
+              href="mailto:geral@smg.pt"
+              data-i18n="cta.mail"
+              >Enviar e-mail</a
+            >
+            <a class="btn btn--lg" href="orcamento.html" data-i18n="cta.quote"
+              >Pedir orçamento</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">
+        <div class="fcol">
+          <a class="logo" href="index.html"
+            ><img
+              src="assets/img/logo.png"
+              alt="Solution Metal Group"
+              width="560"
+              height="560"
+          /></a>
+          <span>© 2026 Solution Metal Group, Lda</span>
+          <span class="mono" style="color: var(--on-dark-2)" data-i18n="ft.tag"
+            >Estruturas metálicas e construção civil</span
+          >
+        </div>
+        <div class="fcol">
+          <span class="mono" style="color: var(--brand)" data-i18n="ft.sitemap"
+            >Mapa do site</span
+          >
+          <a href="servicos.html" data-i18n="nav.services">Áreas de atuação</a>
+          <a href="obras.html" data-i18n="nav.portfolio">Portfólio</a>
+          <a href="empresa.html" data-i18n="nav.about">Sobre nós</a>
+          <a href="contactos.html" data-i18n="nav.contact">Contactos</a>
+          <!-- <a href="trabalhe.html" data-i18n="nav.workUs">Trabalhe connosco</a> -->
+        </div>
+        <div class="fcol">
+          <span class="mono" style="color: var(--brand)" data-i18n="ft.legal"
+            >Legal</span
+          >
+          <a href="#" data-i18n="ft.privacy">Política de privacidade</a>
+          <!-- <a href="#" data-i18n="ft.book">Livro de reclamações</a> -->
+          <!-- <a href="imigracao.html" data-i18n="nav.imig">Assessoria de imigração</a> -->
+        </div>
       </div>
-    </div>
-  </div>
-</section><section class="band band--white rv">
-  <div class="wrap split">
-    <div>
-      <p class="mono eyebrow" data-i18n="split.h">Duas empresas, uma porta de entrada</p>
-      <h2 data-i18n="split.h">Duas empresas, uma porta de entrada</h2>
-      <p style="margin-top:22px" data-i18n="split.p1">A Solution Metal Group é serralharia e construção civil. Fazemos estrutura metálica, caixilharia, portões e obra civil no norte de Portugal — e é aqui que estão as vagas.</p>
-      <p data-i18n="split.p2">A SMG Vistos é a consultoria de imigração da nossa sócia. Trata do processo de quem está fora e quer vir trabalhar. São empresas separadas, com contas separadas, e dizemos sempre qual delas cobra o quê.</p>
-      <div class="actions"><a class="btn" href="imigracao.html" data-i18n="split.cta">Ver preços da consultoria</a></div>
-    </div>
-    <div class="figs">
-      <div><b>27</b><span class="mono" data-i18n="f1">Anos de atividade</span></div>
-      <div><b>140</b><span class="mono" data-i18n="f2">Pessoas na equipa</span></div>
-      <div><b>38</b><span class="mono" data-i18n="f3">Estrangeiros contratados</span></div>
-      <div><b>3</b><span class="mono" data-i18n="f4">Países onde temos obra</span></div>
-    </div>
-  </div>
-</section><section class="band rv">
-  <div class="wrap">
-    <p class="mono eyebrow" data-i18n="svc.eyebrow">Serviços</p>
-    <h2 data-i18n="svc.h">O que fazemos</h2>
-    <div class="grid g4" style="margin-top:38px">
-      <div class="card"><span class="tag">01</span><h3 data-i18n="svc.t1">Serralharia e estrutura metálica</h3><p data-i18n="svc.d1">Estruturas, mezaninos, escadas e guardas. Corte, quinagem e soldadura em oficina própria.</p></div>
-      <div class="card"><span class="tag">02</span><h3 data-i18n="svc.t2">Caixilharia e fechamentos</h3><p data-i18n="svc.d2">Alumínio e aço para fachadas, portões, gradeamentos e portas corta-fogo.</p></div>
-      <div class="card"><span class="tag">03</span><h3 data-i18n="svc.t3">Construção civil</h3><p data-i18n="svc.d3">Obra nova, ampliação e reabilitação, do betão aos acabamentos.</p></div>
-      <div class="card"><span class="tag">04</span><h3 data-i18n="svc.t4">Manutenção</h3><p data-i18n="svc.d4">Contratos anuais para indústria, condomínios e comércio.</p></div>
-    </div>
-  </div>
-</section><section class="band">
-  <div class="wrap">
-    <div class="next">
-      <a href="vagas.html"><span class="mono" data-i18n="next.label">A seguir</span><b data-i18n="next.k2">Ver as vagas</b></a>
-      <a href="documentos.html"><span class="mono" data-i18n="next.label">A seguir</span><b data-i18n="next.k3">Preparar os documentos</b></a>
-      <a href="imigracao.html"><span class="mono" data-i18n="next.label">A seguir</span><b data-i18n="next.k7">Ver preços da consultoria</b></a>
-    </div>
-  </div>
-</section>
-</main>
-<footer>
-  <div class="wrap">
-    <span>© 2026 Solution Metal Group, Lda · NIPC 500 000 000<br>SMG Vistos, Unipessoal Lda · NIPC 510 000 000</span>
-    <span><a href="#" data-i18n="ft.privacy">Política de privacidade</a> · <a href="#" data-i18n="ft.book">Livro de reclamações</a></span>
-  </div>
-</footer>
-<a class="wa" href="https://wa.me/351930000000" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5 0-1.1.2-3.5-.8-2.9-1.3-4.7-4.3-4.9-4.5-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.5-.1 1z"/></svg><span>WhatsApp</span></a>
-<script src="assets/site.js" defer></script>
-</body>
+    </footer>
+    <a class="wa" href="https://wa.me/351930000000" aria-label="WhatsApp"
+      ><svg viewBox="0 0 24 24">
+        <path
+          d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5 0-1.1.2-3.5-.8-2.9-1.3-4.7-4.3-4.9-4.5-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.5-.1 1z"
+        /></svg
+      ><span>WhatsApp</span></a
+    >
+    <script src="assets/site.js" defer></script>
+  </body>
 </html>

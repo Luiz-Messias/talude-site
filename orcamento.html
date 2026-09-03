@@ -1,90 +1,213 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pedir orçamento | Solution Metal Group</title>
-<meta name="description" content="Peça orçamento para estrutura metálica, caixilharia, construção civil ou manutenção. Resposta em 2 dias úteis.">
-<link rel="canonical" href="https://www.smg.pt/orcamento.html">
-<meta property="og:type" content="website"><meta property="og:title" content="Pedir orçamento | Solution Metal Group">
-<meta property="og:description" content="Peça orçamento para estrutura metálica, caixilharia, construção civil ou manutenção. Resposta em 2 dias úteis."><meta property="og:locale" content="pt_PT">
-<meta property="og:locale:alternate" content="pt_BR"><meta property="og:locale:alternate" content="es_ES">
-<meta property="og:locale:alternate" content="fr_FR">
-<meta name="theme-color" content="#252525">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"GeneralContractor","name":"Solution Metal Group","url":"https://www.smg.pt/","telephone":"+351 253 000 000","email":"geral@smg.pt","address":{"@type":"PostalAddress","streetAddress":"Zona Industrial de Palmeira, Lote 14","addressLocality":"Braga","postalCode":"4700-000","addressCountry":"PT"},"areaServed":["PT","ES","FR","BR"],"sameAs":["https://www.linkedin.com/company/solution-metal-group"]}
-</script>
-</head>
-<body>
-<header>
-  <nav class="wrap nav" aria-label="Principal">
-    <a class="logo" href="index.html"><i>SMG</i><span class="full">Solution Metal<em> Group</em></span></a>
-    <div class="links" id="links">
-      <a href="index.html" data-i18n="nav.home">Início</a>
-      <a href="brasil.html" data-i18n="nav.brasil">Está no Brasil</a>
-      <a href="vagas.html" data-i18n="nav.jobs">Vagas</a>
-      <a href="imigracao.html" data-i18n="nav.imig">Imigração</a>
-      <a href="documentos.html" data-i18n="nav.docs">Documentos</a>
-      <a href="servicos.html" data-i18n="nav.services">Serviços</a>
-      <a href="obras.html" data-i18n="nav.work">Obras</a>
-      <a href="empresa.html" data-i18n="nav.about">Empresa</a>
-      <a href="contactos.html" data-i18n="nav.contact">Contactos</a>
-    </div>
-    <div class="langs" role="group" aria-label="Idioma">
-      <button data-lang="pt" aria-pressed="true">PT</button>
-      <button data-lang="br" aria-pressed="false">BR</button>
-      <button data-lang="es" aria-pressed="false">ES</button>
-      <button data-lang="fr" aria-pressed="false">FR</button>
-    </div>
-    <button class="burger" id="burger" aria-expanded="false" aria-controls="links" aria-label="Menu">☰</button>
-  </nav>
-</header>
-<main>
-<section class="phead">
-  <div class="wrap">
-    <p class="mono crumb"><a href="index.html" data-i18n="crumb.home">Início</a> · <span data-i18n="form.eyebrow">Orçamento</span></p>
-    <h1 data-i18n="form.sendq">Pedir orçamento</h1>
-  </div>
-</section><section class="band rv">
-  <div class="wrap">
-    <form id="form-orc" novalidate>
-      <div class="two">
-        <div class="field"><label for="o1" data-i18n="form.company">Empresa</label><input id="o1" required></div>
-        <div class="field"><label for="o2" data-i18n="form.person">Pessoa de contacto</label><input id="o2" required></div>
-        <div class="field"><label for="o3" data-i18n="form.email">E-mail</label><input id="o3" type="email" required></div>
-        <div class="field"><label for="o4" data-i18n="form.phone">Telefone</label><input id="o4" type="tel"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pedir orçamento | Solution Metal Group</title>
+    <meta
+      name="description"
+      content="Peça orçamento para estruturas metálicas, metalomecânica, construção civil ou manutenção. Resposta em até 2 dias úteis."
+    />
+    <link rel="canonical" href="https://www.smg.pt/orcamento.html" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Pedir orçamento | Solution Metal Group"
+    />
+    <meta
+      property="og:description"
+      content="Peça orçamento para estruturas metálicas, metalomecânica, construção civil ou manutenção."
+    />
+    <meta property="og:image" content="assets/img/obra-07.jpg" />
+    <meta property="og:locale" content="pt_PT" />
+    <meta name="theme-color" content="#151515" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "GeneralContractor",
+        "name": "Solution Metal Group",
+        "url": "https://www.smg.pt/",
+        "email": "geral@smg.pt",
+        "areaServed": ["PT", "ES", "FR"]
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class="wrap nav" aria-label="Principal">
+        <a class="logo" href="index.html"
+          ><img
+            src="assets/img/logo-sm.png"
+            alt="Solution Metal Group"
+            width="200"
+            height="200"
+        /></a>
+        <div class="links" id="links">
+          <a href="index.html" data-i18n="nav.home">Início</a>
+          <a href="servicos.html" data-i18n="nav.services">Áreas de atuação</a>
+          <a href="obras.html" data-i18n="nav.portfolio">Portfólio</a>
+          <a href="empresa.html" data-i18n="nav.about">Sobre nós</a>
+          <a href="contactos.html" data-i18n="nav.contact">Contactos</a>
+          <!-- <a class="nav-sep" href="imigracao.html" data-i18n="nav.imig">Assessoria de imigração</a> -->
+        </div>
+        <div class="langs" role="group" aria-label="Idioma">
+          <button data-lang="pt" aria-pressed="true">🇵🇹 PT</button>
+          <button data-lang="en" aria-pressed="false">🇬🇧 EN</button>
+          <button data-lang="es" aria-pressed="false">🇪🇸 ES</button>
+        </div>
+        <button
+          class="burger"
+          id="burger"
+          aria-expanded="false"
+          aria-controls="links"
+          aria-label="Menu"
+        >
+          ☰
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section class="phead">
+        <img
+          class="phead-bg"
+          src="assets/img/obra-07.jpg"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="wrap">
+          <p class="mono crumb">
+            <a href="index.html" data-i18n="crumb.home">Início</a> ·
+            <span data-i18n="form.eyebrow">Orçamento</span>
+          </p>
+          <h1 data-i18n="form.sendq">Pedir orçamento</h1>
+          <p class="lede" data-i18n="ct.note">
+            Respondemos em até 2 dias úteis.
+          </p>
+        </div>
+      </section>
+
+      <section class="band rv">
+        <div class="wrap">
+          <form id="form-orc" novalidate>
+            <div class="two">
+              <div class="field">
+                <label for="o1" data-i18n="form.company">Empresa</label
+                ><input id="o1" required />
+              </div>
+              <div class="field">
+                <label for="o2" data-i18n="form.person"
+                  >Pessoa de contacto</label
+                ><input id="o2" required />
+              </div>
+              <div class="field">
+                <label for="o3" data-i18n="form.email">E-mail</label
+                ><input id="o3" type="email" required />
+              </div>
+              <div class="field">
+                <label for="o4" data-i18n="form.phone">Telefone</label
+                ><input id="o4" type="tel" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="o5" data-i18n="form.type">Tipo de trabalho</label>
+              <select id="o5">
+                <option data-i18n="form.o1">Estrutura metálica</option>
+                <option data-i18n="form.o2">Metalomecânica</option>
+                <option data-i18n="form.o3">Construção civil</option>
+                <option data-i18n="form.o4">Manutenção</option>
+              </select>
+            </div>
+            <div class="two">
+              <div class="field">
+                <label for="o6" data-i18n="form.place">Local da obra</label
+                ><input id="o6" />
+              </div>
+              <div class="field">
+                <label for="o7" data-i18n="form.start">Início previsto</label
+                ><input id="o7" type="month" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="o8" data-i18n="form.brief"
+                >Descrição do trabalho</label
+              ><textarea id="o8" required></textarea>
+            </div>
+            <div class="field">
+              <label for="o9" data-i18n="form.files"
+                >Projeto ou caderno de encargos (PDF, DWG)</label
+              ><input id="o9" type="file" multiple accept=".pdf,.dwg,.zip" />
+            </div>
+            <button class="btn btn--lg" type="submit" data-i18n="form.sendq">
+              Pedir orçamento
+            </button>
+            <p class="msg" id="msg-orc"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap">
+          <div class="next">
+            <a href="servicos.html"
+              ><span class="mono" data-i18n="next.label">A seguir</span
+              ><b data-i18n="nav.services">Áreas de atuação</b></a
+            >
+            <a href="obras.html"
+              ><span class="mono" data-i18n="next.label">A seguir</span
+              ><b data-i18n="next.k1">Ver o portfólio</b></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">
+        <div class="fcol">
+          <a class="logo" href="index.html"
+            ><img
+              src="assets/img/logo.png"
+              alt="Solution Metal Group"
+              width="560"
+              height="560"
+          /></a>
+          <span>© 2026 Solution Metal Group, Lda</span>
+          <span class="mono" style="color: var(--on-dark-2)" data-i18n="ft.tag"
+            >Estruturas metálicas e construção civil</span
+          >
+        </div>
+        <div class="fcol">
+          <span class="mono" style="color: var(--brand)" data-i18n="ft.sitemap"
+            >Mapa do site</span
+          >
+          <a href="servicos.html" data-i18n="nav.services">Áreas de atuação</a>
+          <a href="obras.html" data-i18n="nav.portfolio">Portfólio</a>
+          <a href="empresa.html" data-i18n="nav.about">Sobre nós</a>
+          <a href="contactos.html" data-i18n="nav.contact">Contactos</a>
+          <!-- <a href="trabalhe.html" data-i18n="nav.workUs">Trabalhe connosco</a> -->
+        </div>
+        <div class="fcol">
+          <span class="mono" style="color: var(--brand)" data-i18n="ft.legal"
+            >Legal</span
+          >
+          <a href="#" data-i18n="ft.privacy">Política de privacidade</a>
+          <!-- <a href="#" data-i18n="ft.book">Livro de reclamações</a> -->
+          <!-- <a href="imigracao.html" data-i18n="nav.imig">Assessoria de imigração</a> -->
+        </div>
       </div>
-      <div class="field"><label for="o5" data-i18n="form.type">Tipo de trabalho</label>
-        <select id="o5"><option data-i18n="form.o1">Estrutura metálica</option><option data-i18n="form.o2">Caixilharia</option><option data-i18n="form.o3">Construção civil</option><option data-i18n="form.o4">Manutenção</option></select></div>
-      <div class="two">
-        <div class="field"><label for="o6" data-i18n="form.place">Local da obra</label><input id="o6"></div>
-        <div class="field"><label for="o7" data-i18n="form.start">Início previsto</label><input id="o7" type="month"></div>
-      </div>
-      <div class="field"><label for="o8" data-i18n="form.brief">Descrição do trabalho</label><textarea id="o8" required></textarea></div>
-      <div class="field"><label for="o9" data-i18n="form.files">Projeto ou caderno de encargos (PDF, DWG)</label><input id="o9" type="file" multiple accept=".pdf,.dwg,.zip"></div>
-      <button class="btn btn--lg" type="submit" data-i18n="form.sendq">Pedir orçamento</button>
-      <p class="msg" id="msg-orc"></p>
-    </form>
-  </div>
-</section><section class="band">
-  <div class="wrap">
-    <div class="next">
-      <a href="servicos.html"><span class="mono" data-i18n="next.label">A seguir</span><b data-i18n="nav.services">Serviços</b></a>
-      <a href="obras.html"><span class="mono" data-i18n="next.label">A seguir</span><b data-i18n="next.k1">Ver as obras</b></a>
-    </div>
-  </div>
-</section>
-</main>
-<footer>
-  <div class="wrap">
-    <span>© 2026 Solution Metal Group, Lda · NIPC 500 000 000<br>SMG Vistos, Unipessoal Lda · NIPC 510 000 000</span>
-    <span><a href="#" data-i18n="ft.privacy">Política de privacidade</a> · <a href="#" data-i18n="ft.book">Livro de reclamações</a></span>
-  </div>
-</footer>
-<a class="wa" href="https://wa.me/351930000000" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5 0-1.1.2-3.5-.8-2.9-1.3-4.7-4.3-4.9-4.5-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.5-.1 1z"/></svg><span>WhatsApp</span></a>
-<script src="assets/site.js" defer></script>
-</body>
+    </footer>
+    <a class="wa" href="https://wa.me/351930000000" aria-label="WhatsApp"
+      ><svg viewBox="0 0 24 24">
+        <path
+          d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5 0-1.1.2-3.5-.8-2.9-1.3-4.7-4.3-4.9-4.5-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.5-.1 1z"
+        /></svg
+      ><span>WhatsApp</span></a
+    >
+    <script src="assets/site.js" defer></script>
+  </body>
 </html>
