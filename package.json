@@ -1,0 +1,13 @@
+{
+  "name": "talude-site",
+  "version": "1.0.0",
+  "description": "Solution Metal Group website",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^1.1.0"
+  },
+  "devDependencies": {}
+}
