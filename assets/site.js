@@ -10,27 +10,35 @@ const I18N = {
     "nav.imig": "Immigration support",
     "nav.workUs": "Work with us",
     /* hero */
-    "hero.origin": "Steel structures and civil construction",
-    "hero.origin.b": "Portugal · Spain · France",
+    "hero.origin": "Industrial assembly · steel structures · welding",
+    "hero.origin.b": "Industrial projects across Europe",
     "hero.h1a": "Complete solutions in metal",
     "hero.h1b": "and construction.",
     "hero.lede":
-      "We design, fabricate and erect steel structures and deliver civil construction to European standards — one single point of contact, from estimate to handover.",
+      "Specialists in industrial assembly, steel structures and welding, with skilled teams mobilised for industrial projects across Europe. Focused on quality, safety and meeting deadlines.",
     "hero.cta1": "Request a quote",
     "hero.cta2": "Talk to us",
     /* áreas de atuação */
-    "act.eyebrow": "Areas of activity",
-    "act.h": "What we do",
-    "act.t1": "Steel structures",
+    "act.eyebrow": "Services",
+    "act.h": "Our services",
+    "act.t1": "Industrial assembly",
     "act.d1":
-      "Industrial buildings, mezzanines, stairs and roof structures. Cutting, bending and welding in our own workshop.",
-    "act.t2": "Metalwork",
-    "act.d2": "Metalworking, fabrication and machining with in-house means.",
-    "act.t3": "Civil construction",
+      "Assembly of structures and industrial equipment on site, with skilled teams and rigorous deadlines.",
+    "act.t2": "Steel structures",
+    "act.d2":
+      "Fabrication and erection of steel structures for industrial buildings, warehouses and roofs, with welding in the workshop and on site.",
+    "act.t3": "Welding",
     "act.d3":
-      "New build, extension and refurbishment, from concrete to finishes.",
-    "act.t4": "More areas",
-    "act.d4": "Additional services to be confirmed with the company.",
+      "MIG, MAG, TIG and stick welding, carried out by qualified professionals, in our own workshop and directly on site.",
+    "act.t4": "Industrial maintenance",
+    "act.d4":
+      "Maintenance and repair of industrial structures and equipment, ensuring safety and operational continuity.",
+    "act.t5": "Specialised technical support",
+    "act.d5":
+      "Planning, coordination and technical follow-up of industrial works, from study to execution.",
+    "act.t6": "Teams across Europe",
+    "act.d6":
+      "Skilled teams mobilised for industrial projects anywhere in Europe.",
     "act.cta": "See all areas",
     "act.h2": "Areas of activity",
     "act.lede":
@@ -55,11 +63,13 @@ const I18N = {
     /* sobre nós */
     "ab.eyebrow": "About us",
     "ab.h": "Who we are",
-    "ab.lede": "A company focused on serving other companies.",
+    "ab.lede": "Specialists serving industrial projects across Europe.",
     "ab.p":
-      "Institutional content to be confirmed — the company's portfolio text will be added here.",
+      "Solution Metal Group is specialised in industrial assembly, steel structures, welding and technical support for industrial projects across Europe — working with a focus on quality, safety and meeting deadlines, with skilled teams for industrial works, maintenance and assembly of steel structures.",
     "ab.cta": "Get to know Solution Metal Group",
-    "ab.story.h": "Our story",
+    "ab.story.h": "Solution Metal Group",
+    "ab.p3":
+      "We believe every project should be carried out with professionalism, organisation and commitment, building lasting relationships based on trust.",
     "ab.presence": "Where we work",
     "ab.presence.p": "Portugal · Spain · France",
     "team.eyebrow": "Team",
@@ -79,7 +89,16 @@ const I18N = {
     "team.m4b": "Bio to be confirmed.",
     "cl.eyebrow": "Clients",
     "cl.h": "Companies we work with",
-    "cl.p": "Client logos and references to be confirmed.",
+    "cl.p":
+      "Over the course of our activity, companies from different industries across Europe have trusted us with their industrial assembly and steel structure projects.",
+    "cl.p2":
+      "Out of a commitment to confidentiality, we do not disclose our clients' names or logos — we prefer that the delivered work speaks for us. On request, we present references and visits to completed projects.",
+    "cl.b1": "Confidentiality and discretion guaranteed",
+    "cl.b2": "Long-term relationships and repeat work",
+    "cl.b3": "References and site visits presented on request",
+    "cl.n": "30+",
+    "cl.nlabel": "industrial clients served",
+    "cl.nsub": "with projects across Europe",
     "cl.l1": "Client 01",
     "cl.l2": "Client 02",
     "cl.l3": "Client 03",
@@ -111,10 +130,10 @@ const I18N = {
     "form.message": "Message",
     "form.name": "Full name",
     "form.type": "Type of work",
-    "form.o1": "Steel structure",
-    "form.o2": "Metalwork",
-    "form.o3": "Civil construction",
-    "form.o4": "Maintenance",
+    "form.o1": "Industrial assembly",
+    "form.o2": "Steel structures",
+    "form.o3": "Welding",
+    "form.o4": "Industrial maintenance",
     "form.place": "Site location",
     "form.start": "Expected start",
     "form.brief": "Description of the work",
@@ -165,7 +184,7 @@ const I18N = {
       "Cases requiring legal representation are handled by a registered lawyer.",
     "imig.back": "Back to the main website",
     /* rodapé */
-    "ft.tag": "Steel structures and civil construction",
+    "ft.tag": "Industrial assembly and steel structures",
     "ft.sitemap": "Sitemap",
     "ft.legal": "Legal",
     "ft.privacy": "Privacy policy",
@@ -194,27 +213,35 @@ const I18N = {
     "nav.imig": "Asesoría de inmigración",
     "nav.workUs": "Trabaja con nosotros",
     /* hero */
-    "hero.origin": "Estructuras metálicas y construcción civil",
-    "hero.origin.b": "Portugal · España · Francia",
+    "hero.origin": "Montaje industrial · estructuras metálicas · soldadura",
+    "hero.origin.b": "Proyectos industriales en toda Europa",
     "hero.h1a": "Soluciones completas en metal",
     "hero.h1b": "y construcción.",
     "hero.lede":
-      "Proyectamos, fabricamos y montamos estructuras metálicas y ejecutamos obra civil con estándar europeo — un único interlocutor, del presupuesto a la entrega.",
+      "Especialistas en montaje industrial, estructuras metálicas y soldadura, con equipos cualificados movilizados para proyectos industriales en toda Europa. Enfoque en la calidad, la seguridad y el cumplimiento de plazos.",
     "hero.cta1": "Pedir presupuesto",
     "hero.cta2": "Hable con nosotros",
     /* áreas de actuación */
-    "act.eyebrow": "Áreas de actuación",
-    "act.h": "Qué hacemos",
-    "act.t1": "Estructuras metálicas",
+    "act.eyebrow": "Servicios",
+    "act.h": "Nuestros servicios",
+    "act.t1": "Montaje industrial",
     "act.d1":
-      "Naves industriales, entreplantas, escaleras y cubiertas. Corte, plegado y soldadura en taller propio.",
-    "act.t2": "Metalistería",
-    "act.d2": "Metalurgia, fabricación y mecanizado con medios propios.",
-    "act.t3": "Construcción civil",
+      "Montaje de estructuras y equipos industriales en obra, con equipos cualificados y cumplimiento riguroso de plazos.",
+    "act.t2": "Estructuras metálicas",
+    "act.d2":
+      "Fabricación y montaje de estructuras metálicas para naves, cubiertas y edificios industriales, con soldadura en taller y en obra.",
+    "act.t3": "Soldadura",
     "act.d3":
-      "Obra nueva, ampliación y rehabilitación, del hormigón a los acabados.",
-    "act.t4": "Más áreas",
-    "act.d4": "Servicios adicionales a confirmar con la empresa.",
+      "Soldadura MIG, MAG, TIG y electrodo, realizada por profesionales cualificados, en taller propio y directamente en obra.",
+    "act.t4": "Mantenimiento industrial",
+    "act.d4":
+      "Mantenimiento y reparación de estructuras y equipos industriales, garantizando seguridad y continuidad de operación.",
+    "act.t5": "Soporte técnico especializado",
+    "act.d5":
+      "Planificación, coordinación y seguimiento técnico de trabajos industriales, del estudio a la ejecución.",
+    "act.t6": "Equipos para toda Europa",
+    "act.d6":
+      "Equipos cualificados movilizados para proyectos industriales en cualquier punto de Europa.",
     "act.cta": "Ver todas las áreas",
     "act.h2": "Áreas de actuación",
     "act.lede":
@@ -240,11 +267,14 @@ const I18N = {
     /* nosotros */
     "ab.eyebrow": "Nosotros",
     "ab.h": "Quiénes somos",
-    "ab.lede": "Una empresa enfocada en atender a otras empresas.",
+    "ab.lede":
+      "Especialistas al servicio de proyectos industriales en toda Europa.",
     "ab.p":
-      "Contenido institucional a confirmar — aquí se añadirá el texto del portafolio de la empresa.",
+      "Solution Metal Group es una empresa especializada en montaje industrial, estructuras metálicas, soldadura y soporte técnico para proyectos industriales en toda Europa. Trabajamos con enfoque en la calidad, la seguridad y el cumplimiento de plazos, con equipos cualificados para obras industriales, mantenimiento y montaje de estructuras metálicas.",
     "ab.cta": "Conozca Solution Metal Group",
-    "ab.story.h": "Nuestra historia",
+    "ab.story.h": "Solution Metal Group",
+    "ab.p3":
+      "Creemos que cada proyecto debe ejecutarse con profesionalismo, organización y compromiso, construyendo relaciones duraderas basadas en la confianza.",
     "ab.presence": "Dónde trabajamos",
     "ab.presence.p": "Portugal · España · Francia",
     "team.eyebrow": "Equipo",
@@ -265,7 +295,16 @@ const I18N = {
     "team.m4b": "Bio a confirmar.",
     "cl.eyebrow": "Clientes",
     "cl.h": "Empresas con las que trabajamos",
-    "cl.p": "Logotipos y referencias de clientes a confirmar.",
+    "cl.p":
+      "A lo largo de nuestra actividad, empresas de distintas industrias en toda Europa nos han confiado sus proyectos de montaje industrial y estructuras metálicas.",
+    "cl.p2":
+      "Por compromiso de confidencialidad, no divulgamos los nombres ni los logotipos de nuestros clientes — preferimos que el trabajo entregado hable por nosotros. A petición, presentamos referencias y visitas a proyectos ya concluidos.",
+    "cl.b1": "Confidencialidad y discreción garantizadas",
+    "cl.b2": "Relaciones de largo plazo y trabajo recurrente",
+    "cl.b3": "Referencias y visitas a obras presentadas a petición",
+    "cl.n": "30+",
+    "cl.nlabel": "clientes industriales atendidos",
+    "cl.nsub": "con proyectos en toda Europa",
     "cl.l1": "Cliente 01",
     "cl.l2": "Cliente 02",
     "cl.l3": "Cliente 03",
@@ -297,10 +336,10 @@ const I18N = {
     "form.message": "Mensaje",
     "form.name": "Nombre completo",
     "form.type": "Tipo de trabajo",
-    "form.o1": "Estructura metálica",
-    "form.o2": "Metalistería",
-    "form.o3": "Construcción civil",
-    "form.o4": "Mantenimiento",
+    "form.o1": "Montaje industrial",
+    "form.o2": "Estructuras metálicas",
+    "form.o3": "Soldadura",
+    "form.o4": "Mantenimiento industrial",
     "form.place": "Lugar de la obra",
     "form.start": "Inicio previsto",
     "form.brief": "Descripción del trabajo",
@@ -351,7 +390,7 @@ const I18N = {
       "Los procesos que exigen representación jurídica son conducidos por abogado colegiado.",
     "imig.back": "Volver al sitio principal",
     /* pie */
-    "ft.tag": "Estructuras metálicas y construcción civil",
+    "ft.tag": "Montaje industrial y estructuras metálicas",
     "ft.sitemap": "Mapa del sitio",
     "ft.legal": "Legal",
     "ft.privacy": "Política de privacidad",
@@ -453,3 +492,46 @@ const io = new IntersectionObserver(
   { threshold: 0.08 },
 );
 document.querySelectorAll(".rv").forEach((el) => io.observe(el));
+
+/* lightbox — abre a foto em tamanho maior ao clicar */
+(function () {
+  const items = document.querySelectorAll(".gallery figure, .works .work");
+  if (!items.length) return;
+  let box = null;
+
+  function close() {
+    if (!box) return;
+    box.classList.remove("on");
+    document.body.style.overflow = "";
+  }
+  function open(fig) {
+    const img = fig.querySelector("img");
+    if (!img) return;
+    const cap = fig.querySelector("figcaption") || fig.querySelector(".txt");
+    if (!box) {
+      box = document.createElement("div");
+      box.className = "lightbox";
+      box.setAttribute("role", "dialog");
+      box.setAttribute("aria-modal", "true");
+      box.innerHTML =
+        '<button class="lb-close" aria-label="Fechar">&times;</button>' +
+        '<figure class="lb-frame"><img alt="" /><figcaption class="lb-cap"></figcaption></figure>';
+      box.addEventListener("click", (e) => {
+        if (e.target === box || e.target.classList.contains("lb-close"))
+          close();
+      });
+      document.body.appendChild(box);
+    }
+    const im = box.querySelector("img");
+    im.src = img.currentSrc || img.src;
+    im.alt = img.alt || "";
+    const capEl = box.querySelector(".lb-cap");
+    capEl.textContent = cap ? cap.textContent.trim() : "";
+    box.classList.add("on");
+    document.body.style.overflow = "hidden";
+  }
+  items.forEach((f) => f.addEventListener("click", () => open(f)));
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") close();
+  });
+})();

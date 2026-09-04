@@ -8,3 +8,10 @@ node_modules/
 .DS_Store
 Thumbs.db
 .vercel
+
+# Desenvolvimento local (não vai para produção)
+serve_dev.py
+
+# Originais/fontes pesadas (não usados pelo site publicado)
+assets/Projeto-Portuga/
+assets/fotos-profissional/
