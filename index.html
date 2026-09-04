@@ -24,7 +24,19 @@
     <meta property="og:image" content="assets/img/hero.jpg" />
     <meta property="og:locale" content="pt_PT" />
     <meta name="theme-color" content="#151515" />
-    <link rel="stylesheet" />
+    <link
+      rel="preload"
+      as="image"
+      type="image/avif"
+      imagesrcset="
+        assets/img/hero-480.avif   480w,
+        assets/img/hero-800.avif   800w,
+        assets/img/hero-1280.avif 1280w,
+        assets/img/hero-1600.avif 1600w
+      "
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
     <link rel="stylesheet" href="assets/style.css" />
     <script type="application/ld+json">
       {
@@ -42,7 +54,7 @@
       <nav class="wrap nav" aria-label="Principal">
         <a class="logo" href="index.html"
           ><img
-            src="assets/img/logo-sm.png"
+            src="assets/img/logo-sm.webp"
             alt="Solution Metal Group"
             width="200"
             height="200"
@@ -76,6 +88,16 @@
     <main>
       <section class="hero">
         <picture class="hero-bg">
+          <source
+            type="image/avif"
+            srcset="
+              assets/img/hero-480.avif   480w,
+              assets/img/hero-800.avif   800w,
+              assets/img/hero-1280.avif 1280w,
+              assets/img/hero-1600.avif 1600w
+            "
+            sizes="100vw"
+          />
           <source
             type="image/webp"
             srcset="
@@ -151,7 +173,14 @@
           </div>
           <figure class="edge">
             <picture
-              ><source srcset="assets/img/obra-05.webp" type="image/webp" />
+              ><source
+                type="image/avif"
+                srcset="
+                  assets/img/obra-05-480.avif 480w,
+                  assets/img/obra-05.avif       788w
+                "
+                sizes="(min-width: 861px) 460px, 354px"
+              /><source srcset="assets/img/obra-05.webp" type="image/webp" />
               <img
                 src="assets/img/obra-05.jpg"
                 alt="Estrutura metálica em perspetiva"
