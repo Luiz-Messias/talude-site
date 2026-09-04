@@ -74,7 +74,7 @@ const I18N = {
     "ab.presence.p": "Portugal · Spain · France",
     "team.eyebrow": "Team",
     "team.h": "Our team",
-    "team.lede": "The four partners — names, roles and bios to be confirmed.",
+    "team.lede": "The Solution Metal Group leadership team.",
     "team.m1n": "Partner 1",
     "team.m1r": "Role",
     "team.m1b": "Bio to be confirmed.",
@@ -201,6 +201,33 @@ const I18N = {
     "ok.o": "Request sent. We reply within 2 working days.",
     "ok.tw":
       "Application received. We keep your contact for future opportunities.",
+    /* portfólio — títulos e galeria */
+    "pf.w1": "Steel structure being erected",
+    "pf.w2": "Steel structure with insulation",
+    "pf.w3": "Assembly with cranes and crew",
+    "obr.cat": "Steel structure",
+    "obr.catR": "Steel roofing",
+    "obr.s1": "Assembly on site",
+    "obr.s2": "Truss detail",
+    "obr.s3": "Cladding and insulation",
+    "obr.s4": "Worksite perspective",
+    "obr.s5": "Assembly with platforms",
+    "obr.s6": "Roofing",
+    "obr.s7": "In front of an industrial building",
+    "obr.s8": "Industrial extension",
+    "obr.s9": "High-level assembly",
+    /* equipa — cargos e funções */
+    "team.r_adm": "Administrative Director",
+    "team.r_fin": "Financial Director",
+    "team.r_com": "Commercial Director",
+    "team.b_adm": "Responsible for the company's administrative management.",
+    "team.b_fin":
+      "Responsible for the company's financial and budget management.",
+    "team.b_com": "Responsible for commercial relationships and client quotes.",
+    /* contactos — escritórios */
+    "ct.offices": "Offices",
+    "ct.off1": "Office 1",
+    "ct.off2": "Office 2",
     err: "Please check the required fields.",
   },
   es: {
@@ -279,8 +306,7 @@ const I18N = {
     "ab.presence.p": "Portugal · España · Francia",
     "team.eyebrow": "Equipo",
     "team.h": "Nuestro equipo",
-    "team.lede":
-      "Los cuatro socios — nombres, cargos y biografías a confirmar.",
+    "team.lede": "El equipo directivo de Solution Metal Group.",
     "team.m1n": "Socio 1",
     "team.m1r": "Cargo",
     "team.m1b": "Bio a confirmar.",
@@ -407,6 +433,34 @@ const I18N = {
     "ok.o": "Solicitud enviada. Respondemos en 2 días laborables.",
     "ok.tw":
       "Candidatura recibida. Guardamos su contacto para futuras oportunidades.",
+    /* portafolio — títulos y galería */
+    "pf.w1": "Estructura metálica en montaje",
+    "pf.w2": "Estructura metálica con aislamiento",
+    "pf.w3": "Montaje con grúas y equipo",
+    "obr.cat": "Estructura metálica",
+    "obr.catR": "Cubierta metálica",
+    "obr.s1": "Montaje en obra",
+    "obr.s2": "Detalle de cerchas",
+    "obr.s3": "Cierre y aislamiento",
+    "obr.s4": "Perspectiva de obra",
+    "obr.s5": "Montaje con plataformas",
+    "obr.s6": "Cubierta",
+    "obr.s7": "Frente a edificio industrial",
+    "obr.s8": "Ampliación industrial",
+    "obr.s9": "Montaje en altura",
+    /* equipo — cargos y funciones */
+    "team.r_adm": "Directora Administrativa",
+    "team.r_fin": "Director Financiero",
+    "team.r_com": "Director Comercial",
+    "team.b_adm": "Responsable de la gestión administrativa de la empresa.",
+    "team.b_fin":
+      "Responsable de la gestión financiera y presupuestaria de la empresa.",
+    "team.b_com":
+      "Responsable de las relaciones comerciales y los presupuestos a clientes.",
+    /* contacto — oficinas */
+    "ct.offices": "Oficinas",
+    "ct.off1": "Oficina 1",
+    "ct.off2": "Oficina 2",
     err: "Revise los campos obligatorios.",
   },
 };

@@ -1,3 +1,37 @@
+@font-face {
+  font-family: "Bricolage Grotesque";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("fonts/bricolage-400800.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "DM Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/dmono-400.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("fonts/instrument-400700.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
 /* ============================================================
    SOLUTION METAL GROUP — design system
    grafite + laranja · minimalista · industrial · fotográfico
@@ -32,17 +66,18 @@
   /* ---------- Alias semânticos ---------- */
   --ink: #282220; /* texto principal sobre claro */
   --ink-2: #5a524e; /* texto secundário sobre claro */
-  --steel: #8a817d; /* metadados */
+  --steel: #6d6865; /* metadados (contraste AA sobre claro) */
   --paper: #ffffff; /* fundo base (mantém branco) */
   --paper-2: #f5f5f5; /* fundo alternado (cinza-neutro) */
   --white: #ffffff; /* texto sobre fundo escuro */
   --brand: var(--color-accent); /* acento principal (cobre) */
   --brand-2: var(--color-accent-deep); /* hover do acento */
+  --brand-on-dark: #cf8a52; /* cobre claro p/ texto sobre fundo escuro (AA) */
   --dark: var(--color-dark); /* fundo escuro principal */
   --dark-2: #3b3432; /* superfícies sobre fundo escuro */
   --dark-line: #463e3c; /* bordas sobre fundo escuro */
   --on-dark: var(--color-light); /* texto secundário sobre escuro */
-  --on-dark-2: #9a8f8c; /* texto terciário sobre escuro */
+  --on-dark-2: #a89c98; /* texto terciário sobre escuro (contraste AA) */
   --zinc: #e3e3e3; /* linha/divisor */
   --hair: #ececec; /* bordas leves */
   --line-light: rgba(255, 255, 255, 0.32); /* bordas claras sobre escuro */
@@ -54,7 +89,7 @@
     rgba(7, 7, 7, 0.82) 100%
   );
   --err-bg: #f7ece8; /* fundo de mensagem de erro */
-  --wa: #1faf54; /* cor funcional WhatsApp */
+  --wa: #0c7f3c; /* cor funcional WhatsApp (contraste AA c/ texto branco) */
   --maxw: 1200px;
   --sp: clamp(20px, 5vw, 60px);
   --r: 12px;
@@ -273,6 +308,7 @@ header {
   padding: 6px 8px;
   cursor: pointer;
   border-radius: var(--r);
+  white-space: nowrap;
 }
 .langs button:hover {
   color: var(--ink);
@@ -281,6 +317,15 @@ header {
   color: var(--brand);
   border-color: var(--brand);
   font-weight: 600;
+}
+@media (max-width: 400px) {
+  .langs {
+    gap: 2px;
+  }
+  .langs button {
+    padding: 6px 6px;
+    font-size: 0.62rem;
+  }
 }
 .burger {
   display: none;
@@ -706,7 +751,7 @@ header {
   bottom: 14px;
   width: 62px;
   height: 40px;
-  background: url("img/logo-mark.png") no-repeat center / contain;
+  background: url("img/logo-mark.webp") no-repeat center / contain;
   opacity: 0.65;
   pointer-events: none;
   z-index: 2;
@@ -769,7 +814,7 @@ header {
 }
 .member .mono {
   margin: 0 0 8px;
-  color: var(--brand);
+  color: #9e5a2c; /* cobre ligeiramente mais escuro p/ AA sobre fundo tint */
 }
 .member p {
   font-size: 0.93rem;
@@ -1338,4 +1383,69 @@ footer .fcol .logo img {
 }
 .lb-close:hover {
   opacity: 1;
+}
+
+/* acessibilidade — títulos das colunas de rodapé sobre fundo escuro */
+footer .fcol > span.mono[data-i18n]:first-child {
+  color: var(--brand-on-dark) !important;
+}
+
+/* botões em largura total no telemóvel */
+@media (max-width: 560px) {
+  .btn,
+  form button[type="submit"] {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ---------- mobile: flexibilidade e respiro ---------- */
+img,
+svg,
+video {
+  max-width: 100%;
+}
+/* evitar que conteúdo longo alargue grelhas/flex (ex.: emails e telefones) */
+.split > *,
+.grid > *,
+.two > *,
+.chan {
+  min-width: 0;
+}
+.chan span {
+  overflow-wrap: anywhere;
+}
+p,
+li,
+a,
+span,
+td,
+h1,
+h2,
+h3 {
+  overflow-wrap: break-word;
+}
+/* em ecrãs muito pequenos, grelhas de cartões passam a 1 coluna */
+@media (max-width: 400px) {
+  .works,
+  .gallery,
+  .g2,
+  .g3,
+  .g4,
+  .areas {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .actions,
+  .cta-btns {
+    row-gap: 14px;
+  }
+}
+/* mobile: mais respiro lateral — conteúdo centrado, nunca colado às bordas */
+@media (max-width: 600px) {
+  .wrap {
+    padding-left: clamp(26px, 7vw, 38px);
+    padding-right: clamp(26px, 7vw, 38px);
+  }
 }

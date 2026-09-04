@@ -24,11 +24,7 @@
     <meta property="og:image" content="assets/img/hero.jpg" />
     <meta property="og:locale" content="pt_PT" />
     <meta name="theme-color" content="#151515" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400&family=DM+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" />
     <link rel="stylesheet" href="assets/style.css" />
     <script type="application/ld+json">
       {
@@ -80,10 +76,21 @@
     <main>
       <section class="hero">
         <picture class="hero-bg">
-          <source srcset="assets/img/hero.webp" type="image/webp" />
+          <source
+            type="image/webp"
+            srcset="
+              assets/img/hero-480.webp   480w,
+              assets/img/hero-800.webp   800w,
+              assets/img/hero-1280.webp 1280w,
+              assets/img/hero.webp      1600w
+            "
+            sizes="100vw"
+          />
           <img
             src="assets/img/hero.jpg"
             alt="Estrutura metálica em montagem com grua e equipa em obra"
+            width="1600"
+            height="900"
             fetchpriority="high"
           />
         </picture>
@@ -352,7 +359,7 @@
                 /></picture>
               </div>
               <div class="txt">
-                <h3>Estrutura metálica em montagem</h3>
+                <h3 data-i18n="pf.w1">Estrutura metálica em montagem</h3>
                 <p class="muted" data-i18n="pf.caption">Legenda a confirmar</p>
               </div>
             </article>
@@ -370,7 +377,7 @@
                 /></picture>
               </div>
               <div class="txt">
-                <h3>Estrutura metálica em montagem</h3>
+                <h3 data-i18n="pf.w1">Estrutura metálica em montagem</h3>
                 <p class="muted" data-i18n="pf.caption">Legenda a confirmar</p>
               </div>
             </article>
@@ -388,7 +395,7 @@
                 /></picture>
               </div>
               <div class="txt">
-                <h3>Estrutura metálica com isolamento</h3>
+                <h3 data-i18n="pf.w2">Estrutura metálica com isolamento</h3>
                 <p class="muted" data-i18n="pf.caption">Legenda a confirmar</p>
               </div>
             </article>
@@ -406,7 +413,7 @@
                 /></picture>
               </div>
               <div class="txt">
-                <h3>Montagem com gruas e equipa</h3>
+                <h3 data-i18n="pf.w3">Montagem com gruas e equipa</h3>
                 <p class="muted" data-i18n="pf.caption">Legenda a confirmar</p>
               </div>
             </article>
