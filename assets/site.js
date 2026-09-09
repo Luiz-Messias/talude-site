@@ -10,36 +10,63 @@ const I18N = {
     "nav.imig": "Immigration support",
     "nav.workUs": "Work with us",
     /* hero */
-    "hero.origin": "Industrial assembly · steel structures · welding",
-    "hero.origin.b": "Industrial projects across Europe",
-    "hero.h1a": "Complete solutions in metal",
-    "hero.h1b": "and construction.",
+    "hero.origin": "Specialist teams for industrial projects",
+    "hero.origin.b": "Portugal · Spain · Europe",
+    "hero.h1a": "Specialist teams for industrial projects.",
+    "hero.h1b": "Assembly, steel structures and welding.",
     "hero.lede":
-      "Specialists in industrial assembly, steel structures and welding, with skilled teams mobilised for industrial projects across Europe. Focused on quality, safety and meeting deadlines.",
+      "We place specialist teams on your project, in Portugal and across Europe.",
     "hero.cta1": "Request a quote",
-    "hero.cta2": "Talk to us",
+    "hero.cta2": "Talk on WhatsApp",
     /* áreas de atuação */
     "act.eyebrow": "Services",
-    "act.h": "Our services",
-    "act.t1": "Industrial assembly",
+    "act.h": "What can we put on your project?",
+    "act.t1": "Specialist teams",
     "act.d1":
-      "Assembly of structures and industrial equipment on site, with skilled teams and rigorous deadlines.",
-    "act.t2": "Steel structures",
+      "Fitters, welders and complete teams mobilised for industrial work.",
+    "act.t2": "Industrial assembly",
     "act.d2":
-      "Fabrication and erection of steel structures for industrial buildings, warehouses and roofs, with welding in the workshop and on site.",
-    "act.t3": "Welding",
+      "Assembly of structures and industrial equipment on site, with skilled teams and rigorous deadlines.",
+    "act.t3": "Welders",
     "act.d3":
-      "MIG, MAG, TIG and stick welding, carried out by qualified professionals, in our own workshop and directly on site.",
-    "act.t4": "Industrial maintenance",
+      "Qualified MIG, MAG, TIG and stick welders for industrial work on site and in the workshop.",
+    "act.t4": "Fitters",
     "act.d4":
-      "Maintenance and repair of industrial structures and equipment, ensuring safety and operational continuity.",
-    "act.t5": "Specialised technical support",
+      "Experienced fitters for structures, equipment and industrial assembly work.",
+    "act.t5": "Steel structures",
     "act.d5":
-      "Planning, coordination and technical follow-up of industrial works, from study to execution.",
-    "act.t6": "Teams across Europe",
+      "Fabrication and erection of steel structures for industrial buildings, warehouses and roofs.",
+    "act.t6": "Steel fabrication",
     "act.d6":
-      "Skilled teams mobilised for industrial projects anywhere in Europe.",
+      "Specialist preparation, assembly and adaptation of metal components.",
+    "act.t7": "Industrial maintenance",
+    "act.d7":
+      "Maintenance and repair of industrial structures and equipment, ensuring safety and operational continuity.",
+    "act.t8": "Complete teams",
+    "act.d8":
+      "Coordinated teams assembled around the needs, schedule and scope of your project.",
+    "act.t9": "Other",
+    "act.d9":
+      "Tell us what your project needs and we will assess the right solution.",
     "act.cta": "See all areas",
+    "proof.eyebrow": "How we work",
+    "proof.h": "The right team for the right job.",
+    "proof.p":
+      "We join the project with people ready to move the work forward, at the right place and time.",
+    "proof.i1": "Qualified teams for industrial work",
+    "proof.i2": "Assembly, welding and steel structures",
+    "proof.i3": "Portugal · Spain · Europe",
+    "proof.i4": "Replies to requests within 2 working days",
+    "proof.t1": "People on site",
+    "proof.d1": "Fitters, welders and complete teams for industrial needs.",
+    "proof.t2": "Where you need us",
+    "proof.d2":
+      "Portugal, Spain and Europe, according to the scope of the project.",
+    "proof.t3": "The work required",
+    "proof.d3":
+      "Assembly, steel structures, welding, steel fabrication and maintenance.",
+    "proof.t4": "A clear response",
+    "proof.d4": "We reply to quote requests within 2 working days.",
     "act.h2": "Areas of activity",
     "act.lede":
       "Metalworking and civil construction carried out by our own team, in Portugal, Spain and France.",
@@ -55,11 +82,10 @@ const I18N = {
     /* portfólio */
     "pf.eyebrow": "Portfolio",
     "pf.h": "Work delivered",
-    "pf.p":
-      "A selection of real projects. Captions to be confirmed with the company.",
+    "pf.p": "Assembly and steel structure work delivered by SMG.",
     "pf.cta": "See the full portfolio",
     "pf.video": "On site — video",
-    "pf.caption": "Caption to be confirmed",
+    "pf.caption": "Industrial assembly · Steel structure",
     /* sobre nós */
     "ab.eyebrow": "About us",
     "ab.h": "Who we are",
@@ -113,8 +139,8 @@ const I18N = {
     "ct.hours": "Opening hours to be confirmed",
     "ct.note": "We reply to quote requests within 2 working days.",
     "cta.eyebrow": "Contact",
-    "cta.h": "Talk to us about your project",
-    "cta.p": "Quote within 2 working days. Choose your preferred channel.",
+    "cta.h": "Do you need a team for your project?",
+    "cta.p": "Send us your request. We reply within 2 working days.",
     "cta.wa": "WhatsApp",
     "cta.mail": "Send an e-mail",
     "cta.quote": "Request a quote",
@@ -240,36 +266,64 @@ const I18N = {
     "nav.imig": "Asesoría de inmigración",
     "nav.workUs": "Trabaja con nosotros",
     /* hero */
-    "hero.origin": "Montaje industrial · estructuras metálicas · soldadura",
-    "hero.origin.b": "Proyectos industriales en toda Europa",
-    "hero.h1a": "Soluciones completas en metal",
-    "hero.h1b": "y construcción.",
+    "hero.origin": "Equipos especializados para proyectos industriales",
+    "hero.origin.b": "Portugal · España · Europa",
+    "hero.h1a": "Equipos especializados para proyectos industriales.",
+    "hero.h1b": "Montaje, estructuras metálicas y soldadura.",
     "hero.lede":
-      "Especialistas en montaje industrial, estructuras metálicas y soldadura, con equipos cualificados movilizados para proyectos industriales en toda Europa. Enfoque en la calidad, la seguridad y el cumplimiento de plazos.",
+      "Colocamos equipos especializados en su proyecto, en Portugal y en toda Europa.",
     "hero.cta1": "Pedir presupuesto",
-    "hero.cta2": "Hable con nosotros",
+    "hero.cta2": "Hable por WhatsApp",
     /* áreas de actuación */
     "act.eyebrow": "Servicios",
-    "act.h": "Nuestros servicios",
-    "act.t1": "Montaje industrial",
+    "act.h": "¿Qué podemos poner en su proyecto?",
+    "act.t1": "Equipos especializados",
     "act.d1":
-      "Montaje de estructuras y equipos industriales en obra, con equipos cualificados y cumplimiento riguroso de plazos.",
-    "act.t2": "Estructuras metálicas",
+      "Montadores, soldadores y equipos completos movilizados para trabajos industriales.",
+    "act.t2": "Montaje industrial",
     "act.d2":
-      "Fabricación y montaje de estructuras metálicas para naves, cubiertas y edificios industriales, con soldadura en taller y en obra.",
-    "act.t3": "Soldadura",
+      "Montaje de estructuras y equipos industriales en obra, con equipos cualificados y cumplimiento riguroso de plazos.",
+    "act.t3": "Soldadores",
     "act.d3":
-      "Soldadura MIG, MAG, TIG y electrodo, realizada por profesionales cualificados, en taller propio y directamente en obra.",
-    "act.t4": "Mantenimiento industrial",
+      "Soldadores MIG, MAG, TIG y electrodo cualificados para obra y taller.",
+    "act.t4": "Montadores",
     "act.d4":
-      "Mantenimiento y reparación de estructuras y equipos industriales, garantizando seguridad y continuidad de operación.",
-    "act.t5": "Soporte técnico especializado",
+      "Montadores con experiencia en estructuras, equipos y trabajos de montaje industrial.",
+    "act.t5": "Estructuras metálicas",
     "act.d5":
-      "Planificación, coordinación y seguimiento técnico de trabajos industriales, del estudio a la ejecución.",
-    "act.t6": "Equipos para toda Europa",
+      "Fabricación y montaje de estructuras metálicas para naves, cubiertas y edificios industriales.",
+    "act.t6": "Calderería",
     "act.d6":
-      "Equipos cualificados movilizados para proyectos industriales en cualquier punto de Europa.",
+      "Preparación, montaje y adaptación especializada de componentes metálicos.",
+    "act.t7": "Mantenimiento industrial",
+    "act.d7":
+      "Mantenimiento y reparación de estructuras y equipos industriales, garantizando seguridad y continuidad de operación.",
+    "act.t8": "Equipos completos",
+    "act.d8":
+      "Equipos coordinados según las necesidades, el calendario y el alcance de su proyecto.",
+    "act.t9": "Otros",
+    "act.d9":
+      "Cuéntenos qué necesita su proyecto y evaluaremos la solución adecuada.",
     "act.cta": "Ver todas las áreas",
+    "proof.eyebrow": "Cómo trabajamos",
+    "proof.h": "El equipo adecuado para el trabajo adecuado.",
+    "proof.p":
+      "Entramos en el proyecto con personas preparadas para que el trabajo avance, en el lugar y el momento adecuados.",
+    "proof.i1": "Equipos cualificados para trabajos industriales",
+    "proof.i2": "Montaje, soldadura y estructuras metálicas",
+    "proof.i3": "Portugal · España · Europa",
+    "proof.i4": "Respondemos en 2 días laborables",
+    "proof.t1": "Personas en obra",
+    "proof.d1":
+      "Montadores, soldadores y equipos completos para necesidades industriales.",
+    "proof.t2": "Donde nos necesite",
+    "proof.d2": "Portugal, España y Europa, según el alcance del proyecto.",
+    "proof.t3": "El trabajo necesario",
+    "proof.d3":
+      "Montaje, estructuras metálicas, soldadura, calderería y mantenimiento.",
+    "proof.t4": "Una respuesta clara",
+    "proof.d4":
+      "Respondemos a las solicitudes de presupuesto en 2 días laborables.",
     "act.h2": "Áreas de actuación",
     "act.lede":
       "Metalistería y construcción civil ejecutadas por nuestro propio equipo en Portugal, España y Francia.",
@@ -286,11 +340,10 @@ const I18N = {
     /* portafolio */
     "pf.eyebrow": "Portafolio",
     "pf.h": "Obra entregada",
-    "pf.p":
-      "Una selección de proyectos reales. Textos a confirmar con la empresa.",
+    "pf.p": "Trabajos de montaje y estructuras metálicas realizados por SMG.",
     "pf.cta": "Ver el portafolio completo",
     "pf.video": "En obra — vídeo",
-    "pf.caption": "Texto a confirmar",
+    "pf.caption": "Montaje industrial · Estructura metálica",
     /* nosotros */
     "ab.eyebrow": "Nosotros",
     "ab.h": "Quiénes somos",
@@ -345,8 +398,8 @@ const I18N = {
     "ct.hours": "Horario a confirmar",
     "ct.note": "Respondemos solicitudes de presupuesto en 2 días laborables.",
     "cta.eyebrow": "Contacto",
-    "cta.h": "Hable con nosotros sobre su proyecto",
-    "cta.p": "Presupuesto en 2 días laborables. Elija su canal preferido.",
+    "cta.h": "¿Necesita un equipo para su proyecto?",
+    "cta.p": "Envíenos su solicitud. Respondemos en 2 días laborables.",
     "cta.wa": "WhatsApp",
     "cta.mail": "Enviar correo",
     "cta.quote": "Pedir presupuesto",
@@ -465,6 +518,136 @@ const I18N = {
   },
 };
 
+I18N.fr = {
+  ...I18N.en,
+  "nav.home": "Accueil",
+  "nav.services": "Domaines d'activité",
+  "nav.portfolio": "Réalisations",
+  "nav.about": "À propos",
+  "nav.contact": "Contact",
+  "nav.workUs": "Travailler avec nous",
+  "hero.origin": "Équipes spécialisées pour projets industriels",
+  "hero.origin.b": "Portugal · Espagne · Europe",
+  "hero.h1a": "Des équipes spécialisées pour vos projets industriels.",
+  "hero.h1b": "Montage, structures métalliques et soudage.",
+  "hero.lede":
+    "Nous mettons des équipes spécialisées à votre service, au Portugal et en Europe.",
+  "hero.cta1": "Demander un devis",
+  "hero.cta2": "Parler sur WhatsApp",
+  "act.eyebrow": "Services",
+  "act.h": "Que pouvons-nous mettre sur votre projet ?",
+  "act.t1": "Équipes spécialisées",
+  "act.d1":
+    "Monteurs, soudeurs et équipes complètes mobilisés pour les travaux industriels.",
+  "act.t2": "Montage industriel",
+  "act.d2":
+    "Montage de structures et d'équipements industriels sur site, avec des équipes qualifiées.",
+  "act.t3": "Structures métalliques",
+  "act.d3":
+    "Fabrication et montage de structures métalliques pour bâtiments, couvertures et installations industrielles.",
+  "act.t4": "Soudage",
+  "act.d4":
+    "Monteurs expérimentés pour les structures, les équipements et les travaux de montage industriel.",
+  "act.t3": "Soudeurs",
+  "act.d3":
+    "Des soudeurs MIG, MAG, TIG et à l'électrode qualifiés pour les travaux sur site et en atelier.",
+  "act.t4": "Monteurs",
+  "act.d6":
+    "Préparation, montage et adaptation de composants métalliques spécialisés.",
+  "act.t7": "Maintenance industrielle",
+  "act.d7":
+    "Maintenance et réparation de structures et d'équipements industriels.",
+  "act.t8": "Équipes complètes",
+  "act.d8":
+    "Des équipes coordonnées selon les besoins, le calendrier et le périmètre de votre projet.",
+  "act.t9": "Autres",
+  "act.d9":
+    "Dites-nous ce dont votre projet a besoin et nous évaluerons la solution adaptée.",
+  "act.cta": "Voir tous les domaines",
+  "proof.eyebrow": "Notre façon de travailler",
+  "proof.h": "La bonne équipe pour le bon travail.",
+  "proof.p":
+    "Nous rejoignons le projet avec des personnes prêtes à faire avancer les travaux, au bon endroit et au bon moment.",
+  "proof.i1": "Équipes qualifiées pour les travaux industriels",
+  "proof.i2": "Montage, soudage et structures métalliques",
+  "proof.i3": "Portugal · Espagne · Europe",
+  "proof.i4": "Réponse aux demandes sous 2 jours ouvrés",
+  "proof.t1": "Des personnes sur site",
+  "proof.d1":
+    "Monteurs, soudeurs et équipes complètes pour les besoins industriels.",
+  "proof.t2": "Là où vous en avez besoin",
+  "proof.d2": "Portugal, Espagne et Europe, selon le périmètre du projet.",
+  "proof.t3": "Le travail nécessaire",
+  "proof.d3":
+    "Montage, structures métalliques, soudage, chaudronnerie et maintenance.",
+  "proof.t4": "Une réponse claire",
+  "proof.d4": "Nous répondons aux demandes de devis sous 2 jours ouvrés.",
+  "pf.eyebrow": "Réalisations",
+  "pf.h": "Travaux réalisés",
+  "pf.p": "Travaux de montage et de structures métalliques réalisés par SMG.",
+  "pf.cta": "Voir toutes les réalisations",
+  "pf.caption": "Montage industriel · Structure métallique",
+  "pf.w1": "Structure métallique en montage",
+  "pf.w2": "Structure métallique avec isolation",
+  "pf.w3": "Montage avec grues et équipe",
+  "ab.eyebrow": "À propos",
+  "ab.h": "Qui sommes-nous ?",
+  "ab.lede": "Des spécialistes au service des projets industriels en Europe.",
+  "ab.p":
+    "Solution Metal Group est spécialisée dans le montage industriel, les structures métalliques, le soudage et l'assistance technique pour les projets industriels en Europe.",
+  "ab.cta": "Découvrir Solution Metal Group",
+  "act.h2": "Domaines d'activité",
+  "act.lede":
+    "Métallerie et construction réalisées par nos équipes au Portugal, en Espagne et en France.",
+  "cta.eyebrow": "Contact",
+  "cta.h": "Besoin d'une équipe pour votre projet ?",
+  "cta.p": "Envoyez-nous votre demande. Nous répondons sous 2 jours ouvrés.",
+  "cta.wa": "WhatsApp",
+  "cta.mail": "Envoyer un e-mail",
+  "cta.quote": "Demander un devis",
+  "ct.eyebrow": "Contact",
+  "ct.h": "Contact",
+  "ct.lede":
+    "Envoyez-nous un message ou contactez-nous directement sur WhatsApp.",
+  "ct.note": "Nous répondons aux demandes de devis sous 2 jours ouvrés.",
+  "ct.hours": "Horaires à confirmer",
+  "ct.offices": "Bureaux",
+  "ct.off1": "Bureau 1",
+  "ct.off2": "Bureau 2",
+  "form.eyebrow": "Formulaire",
+  "form.send": "Envoyer le message",
+  "form.sendq": "Demander un devis",
+  "form.company": "Entreprise",
+  "form.person": "Personne à contacter",
+  "form.email": "E-mail",
+  "form.phone": "Téléphone",
+  "form.subject": "Objet",
+  "form.message": "Message",
+  "form.name": "Nom complet",
+  "form.type": "Type de travaux",
+  "form.place": "Lieu du chantier",
+  "form.start": "Début prévu",
+  "form.brief": "Description des travaux",
+  "form.files": "Projet ou cahier des charges (PDF, DWG)",
+  "form.o1": "Montage industriel",
+  "form.o2": "Structures métalliques",
+  "form.o3": "Soudage",
+  "form.o4": "Maintenance industrielle",
+  "ft.tag": "Montage industriel et structures métalliques",
+  "ft.sitemap": "Plan du site",
+  "ft.legal": "Mentions légales",
+  "ft.privacy": "Politique de confidentialité",
+  "next.label": "Suivant",
+  "next.k1": "Voir les réalisations",
+  "next.k4": "Demander un devis",
+  "next.k5": "À propos",
+  "next.k6": "Nous contacter",
+  "crumb.home": "Accueil",
+  "ok.form": "Message envoyé. Nous vous répondrons rapidement.",
+  "ok.o": "Demande envoyée. Nous répondons sous 2 jours ouvrés.",
+  err: "Vérifiez les champs obligatoires.",
+};
+
 /* ---------------- motor ---------------- */
 const PT_FALLBACK = {
   "ok.form": "Mensagem enviada. Responderemos em breve.",
@@ -483,7 +666,8 @@ try {
 
 function setLang(l) {
   lang = l;
-  document.documentElement.lang = l === "en" ? "en" : l === "es" ? "es" : "pt";
+  document.documentElement.lang =
+    l === "en" ? "en" : l === "es" ? "es" : l === "fr" ? "fr" : "pt";
   const d = I18N[l];
   nodes.forEach((n) => {
     n.textContent = d ? (d[n.dataset.i18n] ?? n.dataset.pt) : n.dataset.pt;
@@ -491,6 +675,18 @@ function setLang(l) {
   document
     .querySelectorAll(".langs button")
     .forEach((b) => b.setAttribute("aria-pressed", b.dataset.lang === l));
+  const french = l === "fr";
+  document.querySelectorAll('a[href*="wa.me/"]').forEach((a) => {
+    a.href = french
+      ? "https://wa.me/33687860122"
+      : "https://wa.me/351923371932";
+  });
+  document.querySelectorAll('a[href^="tel:"]').forEach((a) => {
+    a.href = french ? "tel:+33687860122" : "tel:+351923371932";
+  });
+  document.querySelectorAll("[data-phone-label]").forEach((n) => {
+    n.textContent = french ? "+33 6 87 86 01 22" : "+351 923 371 932";
+  });
   try {
     localStorage.setItem("lang", l);
   } catch (e) {}
