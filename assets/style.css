@@ -1536,3 +1536,74 @@ h3 {
     padding-right: clamp(26px, 7vw, 38px);
   }
 }
+
+/* ===== RESPONSIVO — auditoria 09/2026 (não remover) ===== */
+/* idiomas: em ecrãs pequenos o grupo .langs é movido para o menu (ver site.js) */
+@media (max-width: 960px) {
+  .nav {
+    gap: 10px;
+  }
+  .links .langs--menu {
+    display: flex;
+    gap: 6px;
+    padding-top: 16px;
+  }
+  .links .langs--menu button {
+    flex: 1;
+    padding: 11px 4px;
+    border-color: var(--hair);
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 560px) {
+  .logo img {
+    height: 42px;
+  }
+  .nav-proposal {
+    padding: 8px 11px !important;
+    font-size: 0.68rem !important;
+  }
+  .burger {
+    padding: 8px 10px;
+  }
+  /* espaço para o botão flutuante do WhatsApp não tapar o rodapé */
+  footer {
+    padding-bottom: 96px;
+  }
+}
+@media (max-width: 400px) {
+  .nav {
+    gap: 8px;
+  }
+  .logo img {
+    height: 38px;
+  }
+  .nav-proposal {
+    padding: 7px 9px !important;
+    font-size: 0.62rem !important;
+    letter-spacing: 0.02em;
+  }
+}
+/* nada pode exceder o container em ecrãs estreitos */
+select,
+input,
+textarea,
+figure,
+picture {
+  max-width: 100%;
+}
+
+/* ===== BANDEIRAS — SVG próprio em vez de emoji (auditoria 09/2026, não remover) ===== */
+.langs button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.langs button svg {
+  width: 16px;
+  height: 11px;
+  flex: none;
+  display: block;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px rgba(47, 43, 42, 0.18);
+}

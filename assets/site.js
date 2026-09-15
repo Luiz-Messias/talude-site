@@ -766,6 +766,50 @@ document
   .forEach((b) => (b.onclick = () => setLang(b.dataset.lang)));
 if (lang !== "pt") setLang(lang);
 
+/* idiomas: em ecrãs pequenos o grupo move-se para dentro do menu */
+const navBar = document.querySelector(".nav"),
+  langBox = document.querySelector(".nav .langs"),
+  menuBox = document.getElementById("links"),
+  burgerBtn = document.getElementById("burger");
+if (navBar && langBox && menuBox && burgerBtn) {
+  const mqSmall = window.matchMedia("(max-width: 960px)");
+  const placeLangs = () => {
+    if (mqSmall.matches) {
+      menuBox.appendChild(langBox);
+      langBox.classList.add("langs--menu");
+    } else {
+      navBar.insertBefore(langBox, burgerBtn);
+      langBox.classList.remove("langs--menu");
+    }
+  };
+  placeLangs();
+  mqSmall.addEventListener("change", placeLangs);
+  /* escolher idioma fecha o menu no telemóvel */
+  langBox.addEventListener("click", (e) => {
+    if (e.target.closest("button") && mqSmall.matches) {
+      menuBox.classList.remove("open");
+      burgerBtn.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
+/* bandeiras em SVG (emoji não renderiza no Windows) */
+const FLAGS = {
+  pt: '<rect width="3" height="2" fill="#d52b1e"/><rect width="1.2" height="2" fill="#046a38"/><circle cx="1.2" cy="1" r=".42" fill="#ffd100"/>',
+  en: '<rect width="3" height="2" fill="#012169"/><path d="M0 0 3 2M3 0 0 2" stroke="#fff" stroke-width=".42"/><path d="M0 0 3 2M3 0 0 2" stroke="#c8102e" stroke-width=".2"/><path d="M1.5 0v2M0 1h3" stroke="#fff" stroke-width=".72"/><path d="M1.5 0v2M0 1h3" stroke="#c8102e" stroke-width=".4"/>',
+  es: '<rect width="3" height="2" fill="#aa151b"/><rect y=".5" width="3" height="1" fill="#f1bf00"/>',
+  fr: '<rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ed2939"/>',
+};
+document.querySelectorAll(".langs button").forEach((b) => {
+  const f = FLAGS[b.dataset.lang];
+  if (f && !b.querySelector("svg")) {
+    b.insertAdjacentHTML(
+      "afterbegin",
+      '<svg viewBox="0 0 3 2" aria-hidden="true">' + f + "</svg>",
+    );
+  }
+});
+
 /* menu */
 const burger = document.getElementById("burger"),
   links = document.getElementById("links");
