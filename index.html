@@ -461,6 +461,11 @@
         background: var(--ink);
         color: var(--white);
       }
+      .nav-proposal {
+        padding: 9px 14px !important;
+        font-size: 0.74rem !important;
+        white-space: nowrap;
+      }
       .btn--lg {
         padding: 16px 30px;
         font-size: 1.04rem;
@@ -1322,98 +1327,75 @@
         color: var(--zinc) !important;
       }
 
-      /* ---------- áreas de atuação (cards com ícones) ---------- */
+      /* ---------- áreas de atuação (cards com imagem + ícone) ---------- */
       .areas {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: clamp(18px, 2.6vw, 30px);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(18px, 2.2vw, 26px);
       }
       .area {
-        position: relative;
         display: flex;
         flex-direction: column;
         overflow: hidden;
         background: var(--paper);
         border: 1px solid var(--hair);
         border-radius: var(--r);
-        padding: 30px 28px 34px;
         transition:
           transform 0.22s ease,
           border-color 0.22s ease,
           box-shadow 0.22s ease;
       }
-      .area::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        height: 3px;
-        border-radius: var(--r) var(--r) 0 0;
-        opacity: 0;
-        transition: opacity 0.22s ease;
-        background: linear-gradient(
-          90deg,
-          var(--color-accent),
-          var(--color-accent-deep)
-        );
-        pointer-events: none;
-      }
       .area:hover {
-        transform: translateY(-5px);
-        border-color: var(--brand-2);
-        box-shadow: 0 22px 44px rgba(47, 43, 42, 0.1);
+        transform: translateY(-4px);
+        border-color: rgba(168, 96, 47, 0.38);
+        box-shadow: 0 20px 40px rgba(47, 43, 42, 0.1);
       }
-      .area:hover::before {
-        opacity: 1;
+      .area-media {
+        margin: 0;
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+        background: #dfe7ee;
       }
-      .area > * {
-        position: relative;
-        z-index: 1;
+      .area-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
       }
-      .area-head {
+      .area:hover .area-media img {
+        transform: scale(1.05);
+      }
+      .area-body {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 26px;
-      }
-      .area-num {
-        font-family: "DM Mono", monospace;
-        font-size: 0.72rem;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        color: var(--color-accent);
-        background: rgba(168, 96, 47, 0.08);
-        border: 1px solid rgba(168, 96, 47, 0.3);
-        padding: 7px 13px;
-        border-radius: 100px;
+        flex: 1;
+        flex-direction: column;
+        gap: 12px;
+        padding: clamp(20px, 2.2vw, 26px);
       }
       .area-ico {
-        width: 52px;
-        height: 52px;
-        padding: 12px;
+        width: 34px;
+        height: 34px;
         color: var(--color-accent);
-        border-radius: 50%;
-        border: 1px solid rgba(168, 96, 47, 0.32);
-        background: rgba(168, 96, 47, 0.07);
-        transition:
-          color 0.2s ease,
-          transform 0.2s ease,
-          background 0.2s ease;
-      }
-      .area:hover .area-ico {
-        color: var(--color-accent-deep);
-        transform: scale(1.07);
       }
       .area h3 {
-        margin: 0 0 10px;
-        font-size: 1.28rem;
+        margin: 0;
+        font-size: clamp(1.12rem, 1.4vw, 1.28rem);
       }
       .area p {
         margin: 0;
-        font-size: 0.97rem;
-        line-height: 1.66;
+        font-size: 0.94rem;
+        line-height: 1.65;
         color: var(--ink-2);
+      }
+      @media (max-width: 860px) {
+        .areas {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 560px) {
+        .areas {
+          grid-template-columns: 1fr;
+        }
       }
       .workvideo {
         display: block;
@@ -1584,9 +1566,12 @@
           <a href="servicos.html" data-i18n="nav.services">Áreas de atuação</a>
           <a href="obras.html" data-i18n="nav.portfolio">Portfólio</a>
           <a href="empresa.html" data-i18n="nav.about">Sobre nós</a>
-          <a href="contactos.html" data-i18n="nav.contact">Contactos</a>
+
           <!-- <a class="nav-sep" href="imigracao.html" data-i18n="nav.imig">Assessoria de imigração</a> -->
         </div>
+        <a class="btn nav-proposal" href="orcamento.html" data-i18n="nav.quote"
+          >Pedir proposta</a
+        >
         <div class="langs" role="group" aria-label="Idioma">
           <button data-lang="pt" aria-pressed="true">🇵🇹 PT</button>
           <button data-lang="en" aria-pressed="false">🇬🇧 EN</button>
@@ -1766,16 +1751,21 @@
 
       <section class="band band--tint rv">
         <div class="wrap">
-          <p class="mono eyebrow" data-i18n="act.eyebrow">Serviços</p>
-          <h2 data-i18n="act.h">O que podemos colocar no seu projeto?</h2>
+          <p class="mono eyebrow" data-i18n="act.eyebrow">Áreas de atuação</p>
+          <h2 data-i18n="act.h">Soluções industriais para cada necessidade.</h2>
+
           <div class="areas" style="margin-top: 38px">
-            <article class="area">
-              <div class="area-head">
-                <span class="area-num">01</span>
+            <article class="area area--image">
+              <div class="area-media">
+                <img
+                  src="assets/img/hero-480.avif"
+                  alt="Equipas especializadas"
+                  loading="lazy"
+                />
+              </div>
+              <div class="area-body">
                 <svg
                   class="area-ico"
-                  width="52"
-                  height="52"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -1784,79 +1774,34 @@
                   stroke-linejoin="round"
                   aria-hidden="true"
                 >
-                  <path d="M3 21h18" />
-                  <path d="M9 21V4" />
-                  <path d="M9 4h11" />
-                  <path d="M20 4v8" />
-                  <path d="M17 12h6" />
-                  <path d="M20 12v2" />
-                  <path d="M4.5 21v-5h4v5" />
+                  <circle cx="9" cy="8" r="3.2" />
+                  <path d="M2.5 20a6.5 6.5 0 0 1 13 0" />
+                  <path d="M16 5.2a3.2 3.2 0 0 1 0 5.9" />
+                  <path d="M17.5 20h4a5.5 5.5 0 0 0-3.2-5" />
                 </svg>
-              </div>
-              <h3 data-i18n="act.t1">Equipas especializadas</h3>
-              <p data-i18n="act.d1">
-                Montadores, soldadores e equipas completas mobilizadas para
-                trabalhos industriais.
-              </p>
-            </article>
-            <article class="area">
-              <div class="area-head">
-                <span class="area-num">02</span>
-                <svg
-                  class="area-ico"
-                  width="52"
-                  height="52"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.6"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
+                <h3 data-i18n="act.t1">Equipas especializadas</h3>
+                <p data-i18n="act.d1">
+                  Disponibilizamos profissionais qualificados e equipas
+                  completas para reforçar a sua produção, adaptar a equipa às
+                  exigências do seu projeto.
+                </p>
+                <a href="servicos.html" class="more-link"
+                  >Saber mais <span aria-hidden="true">→</span></a
                 >
-                  <path d="M3 21h18" />
-                  <path d="M5 21V8.5L12 3l7 5.5V21" />
-                  <path d="M12 3v8.5" />
-                  <path d="M8 21v-4h8v4" />
-                </svg>
               </div>
-              <h3 data-i18n="act.t2">Montagem industrial</h3>
-              <p data-i18n="act.d2">
-                Montagem de estruturas e equipamentos industriais em obra, com
-                equipas qualificadas e cumprimento rigoroso de prazos.
-              </p>
             </article>
-            <article class="area">
-              <div class="area-head">
-                <span class="area-num">03</span>
+
+            <article class="area area--image">
+              <div class="area-media">
+                <img
+                  src="assets/img/obra-05.avif"
+                  alt="Montagem industrial"
+                  loading="lazy"
+                />
+              </div>
+              <div class="area-body">
                 <svg
                   class="area-ico"
-                  width="52"
-                  height="52"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.6"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" />
-                </svg>
-              </div>
-              <h3 data-i18n="act.t3">Soldadores</h3>
-              <p data-i18n="act.d3">
-                Soldadores MIG, MAG, TIG e elétrodo qualificados para obra e
-                oficina.
-              </p>
-            </article>
-            <article class="area">
-              <div class="area-head">
-                <span class="area-num">04</span>
-                <svg
-                  class="area-ico"
-                  width="52"
-                  height="52"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -1870,20 +1815,28 @@
                     d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8"
                   />
                 </svg>
+                <h3 data-i18n="act.t2">Montagem industrial</h3>
+                <p data-i18n="act.d2">
+                  Executamos trabalhos de montagem e instalação industrial, com
+                  equipas preparadas para trabalhar em obra e cumprir prazos.
+                </p>
+                <a href="servicos.html" class="more-link"
+                  >Saber mais <span aria-hidden="true">→</span></a
+                >
               </div>
-              <h3 data-i18n="act.t4">Montadores</h3>
-              <p data-i18n="act.d4">
-                Montadores experientes para estruturas, equipamentos e trabalhos
-                de montagem industrial.
-              </p>
             </article>
-            <article class="area">
-              <div class="area-head">
-                <span class="area-num">05</span>
+
+            <article class="area area--image">
+              <div class="area-media">
+                <img
+                  src="assets/img/hero-800.avif"
+                  alt="Estruturas metálicas"
+                  loading="lazy"
+                />
+              </div>
+              <div class="area-body">
                 <svg
                   class="area-ico"
-                  width="52"
-                  height="52"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -1892,23 +1845,31 @@
                   stroke-linejoin="round"
                   aria-hidden="true"
                 >
-                  <circle cx="12" cy="8" r="4" />
-                  <path d="M4 21a8 8 0 0 1 16 0" />
+                  <path d="M3 15 15 3l6 6L9 21z" />
+                  <path d="M7 11l2 2M11 7l2 2" />
                 </svg>
+                <h3 data-i18n="act.t5">Estruturas metálicas</h3>
+                <p data-i18n="act.d5">
+                  Montagem e adaptação de estruturas metálicas, coberturas,
+                  plataformas e elementos estruturais para projetos industriais.
+                </p>
+                <a href="servicos.html" class="more-link"
+                  >Saber mais <span aria-hidden="true">→</span></a
+                >
               </div>
-              <h3 data-i18n="act.t5">Estruturas metálicas</h3>
-              <p data-i18n="act.d5">
-                Fabrico e montagem de estruturas metálicas para naves,
-                coberturas e edifícios industriais.
-              </p>
             </article>
-            <article class="area">
-              <div class="area-head">
-                <span class="area-num">06</span>
+
+            <article class="area area--image">
+              <div class="area-media">
+                <img
+                  src="assets/img/hero-1280.avif"
+                  alt="Soldadura"
+                  loading="lazy"
+                />
+              </div>
+              <div class="area-body">
                 <svg
                   class="area-ico"
-                  width="52"
-                  height="52"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -1917,51 +1878,93 @@
                   stroke-linejoin="round"
                   aria-hidden="true"
                 >
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M3 12h18" />
-                  <path d="M12 3a15.3 15.3 0 0 1 0 18a15.3 15.3 0 0 1 0-18" />
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                  />
                 </svg>
+                <h3 data-i18n="act.t3">Soldadura</h3>
+                <p data-i18n="act.d3">
+                  Soldadores qualificados para processos MIG/MAG/TIG e trabalhos
+                  em estrutura metálica, de acordo com as exigências do projeto.
+                </p>
+                <a href="servicos.html" class="more-link"
+                  >Saber mais <span aria-hidden="true">→</span></a
+                >
               </div>
-              <h3 data-i18n="act.t6">Caldeiraria</h3>
-              <p data-i18n="act.d6">
-                Trabalho especializado de preparação, montagem e adaptação de
-                componentes metálicos.
-              </p>
             </article>
-            <article class="area">
-              <div class="area-head">
-                <span class="area-num">07</span>
-                <span class="area-ico" aria-hidden="true">+</span>
+
+            <article class="area area--image">
+              <div class="area-media">
+                <img
+                  src="assets/img/hero-1600.avif"
+                  alt="Caldeiraria e tubagem"
+                  loading="lazy"
+                />
               </div>
-              <h3 data-i18n="act.t7">Manutenção industrial</h3>
-              <p data-i18n="act.d7">
-                Manutenção e reparação de estruturas e equipamentos industriais,
-                garantindo segurança e continuidade de operação.
-              </p>
+              <div class="area-body">
+                <svg
+                  class="area-ico"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M6 3v6a5 5 0 0 0 5 5h7" />
+                  <circle cx="6" cy="3" r="1.6" />
+                  <circle cx="20" cy="14" r="2.2" />
+                </svg>
+                <h3 data-i18n="act.t6">Caldeiraria e tubagem</h3>
+                <p data-i18n="act.d6">
+                  Execução de montagem, preparação e adaptação de componentes
+                  metálicos e sistemas em obra, com rigor de qualidade e
+                  segurança.
+                </p>
+                <a href="servicos.html" class="more-link"
+                  >Saber mais <span aria-hidden="true">→</span></a
+                >
+              </div>
             </article>
-            <article class="area">
-              <div class="area-head">
-                <span class="area-num">08</span>
-                <span class="area-ico" aria-hidden="true">+</span>
+
+            <article class="area area--image">
+              <div class="area-media">
+                <img
+                  src="assets/img/hero-480.avif"
+                  alt="Manutenção industrial"
+                  loading="lazy"
+                />
               </div>
-              <h3 data-i18n="act.t8">Equipas completas</h3>
-              <p data-i18n="act.d8">
-                Equipas coordenadas de acordo com as necessidades, o calendário
-                e o âmbito do seu projeto.
-              </p>
-            </article>
-            <article class="area">
-              <div class="area-head">
-                <span class="area-num">09</span>
-                <span class="area-ico" aria-hidden="true">+</span>
+              <div class="area-body">
+                <svg
+                  class="area-ico"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M21 2v6h-6" />
+                  <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+                  <path d="M3 22v-6h6" />
+                  <path d="M21 12a9 9 0 0 1-15 6.7L3 16" />
+                </svg>
+                <h3 data-i18n="act.t7">Manutenção industrial</h3>
+                <p data-i18n="act.d7">
+                  Apoiamos a manutenção e reparação de ativos industriais, com
+                  resposta ágil e intervenção focada na continuidade de
+                  operação.
+                </p>
+                <a href="servicos.html" class="more-link"
+                  >Saber mais <span aria-hidden="true">→</span></a
+                >
               </div>
-              <h3 data-i18n="act.t9">Outros</h3>
-              <p data-i18n="act.d9">
-                Diga-nos o que o seu projeto precisa e avaliamos a solução
-                certa.
-              </p>
             </article>
           </div>
+
           <div class="actions">
             <a class="btn btn--ghost" href="servicos.html" data-i18n="act.cta"
               >Ver todas as áreas</a
@@ -2160,7 +2163,7 @@
               width="260"
               height="161"
           /></a>
-          <span>© 2026 Solution Metal Group, Lda</span>
+          <span>© 2026 Solution Metal Group (SMG)</span>
           <span class="mono" style="color: var(--on-dark-2)" data-i18n="ft.tag"
             >Montagem industrial e estruturas metálicas</span
           >
@@ -2172,7 +2175,7 @@
           <a href="servicos.html" data-i18n="nav.services">Áreas de atuação</a>
           <a href="obras.html" data-i18n="nav.portfolio">Portfólio</a>
           <a href="empresa.html" data-i18n="nav.about">Sobre nós</a>
-          <a href="contactos.html" data-i18n="nav.contact">Contactos</a>
+          <a href="orcamento.html" data-i18n="nav.quote">Pedir proposta</a>
           <!-- <a href="trabalhe.html" data-i18n="nav.workUs">Trabalhe connosco</a> -->
         </div>
         <div class="fcol">

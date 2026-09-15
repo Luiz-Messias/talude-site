@@ -1,0 +1,7 @@
+stdout is not a tty
+11.11.0
+npm error npx canceled due to missing packages and no YES option: ["lighthouse@13.4.1"]
+npm error A complete log of this run can be found in: C:\Users\Cliente\AppData\Local\npm-cache\_logs\2026-09-04T01_51_10_381Z-debug-0.log
+ls: cannot access 'C:/Program Files/Microsoft/Edge/Application/msedge.exe': No such file or directory
+C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe*
+C:/Program Files/Google/Chrome/Application/chrome.exe*

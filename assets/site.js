@@ -7,6 +7,7 @@ const I18N = {
     "nav.portfolio": "Portfolio",
     "nav.about": "About us",
     "nav.contact": "Contact",
+    "nav.quote": "Request a proposal",
     "nav.imig": "Immigration support",
     "nav.workUs": "Work with us",
     /* hero */
@@ -49,6 +50,18 @@ const I18N = {
     "act.d9":
       "Tell us what your project needs and we will assess the right solution.",
     "act.cta": "See all areas",
+    "svc.h1": "Experience that",
+    "svc.h2": "drives your project.",
+    "svc.p":
+      "We bring together qualified professionals, the right equipment and experience across different industrial sectors, delivering safe and efficient solutions adapted to each client's needs.",
+    "svc.more": "Learn more",
+    "why.eyebrow": "Why choose SMG",
+    "why.h1": "More than services,",
+    "why.h2": "we deliver results.",
+    "why.t1": "Qualified teams",
+    "why.t2": "Flexibility and speed",
+    "why.t3": "Safety first",
+    "why.t4": "Commitment to the client",
     "proof.eyebrow": "How we work",
     "proof.h": "The right team for the right job.",
     "proof.p":
@@ -98,6 +111,9 @@ const I18N = {
       "We believe every project should be carried out with professionalism, organisation and commitment, building lasting relationships based on trust.",
     "ab.presence": "Where we work",
     "ab.presence.p": "Portugal · Spain · France",
+    "ab.loc1": "Valença · headquarters",
+    "ab.loc2": "Commercial office",
+    "ab.loc3": "Local partner",
     "team.eyebrow": "Team",
     "team.h": "Our team",
     "team.lede": "The Solution Metal Group leadership team.",
@@ -131,6 +147,12 @@ const I18N = {
     "cl.l4": "Client 04",
     "cl.l5": "Client 05",
     "cl.l6": "Client 06",
+    "metric.eyebrow": "By the numbers",
+    "metric.h": "Capacity to support your project.",
+    "metric.c1": "industrial clients",
+    "metric.c2": "professionals mobilised",
+    "metric.c3": "projects delivered",
+    "metric.c4": "countries served",
     /* contato */
     "ct.eyebrow": "Contact",
     "ct.h": "Contact",
@@ -263,6 +285,7 @@ const I18N = {
     "nav.portfolio": "Portafolio",
     "nav.about": "Nosotros",
     "nav.contact": "Contacto",
+    "nav.quote": "Pedir propuesta",
     "nav.imig": "Asesoría de inmigración",
     "nav.workUs": "Trabaja con nosotros",
     /* hero */
@@ -305,6 +328,18 @@ const I18N = {
     "act.d9":
       "Cuéntenos qué necesita su proyecto y evaluaremos la solución adecuada.",
     "act.cta": "Ver todas las áreas",
+    "svc.h1": "Experiencia que",
+    "svc.h2": "impulsa su proyecto.",
+    "svc.p":
+      "Reunimos profesionales cualificados, equipos adecuados y experiencia en diferentes sectores industriales, garantizando soluciones seguras, eficientes y adaptadas a las necesidades de cada cliente.",
+    "svc.more": "Saber más",
+    "why.eyebrow": "Por qué elegir SMG",
+    "why.h1": "Más que servicios,",
+    "why.h2": "entregamos resultados.",
+    "why.t1": "Equipos cualificados",
+    "why.t2": "Flexibilidad y rapidez",
+    "why.t3": "Seguridad en primer lugar",
+    "why.t4": "Compromiso con el cliente",
     "proof.eyebrow": "Cómo trabajamos",
     "proof.h": "El equipo adecuado para el trabajo adecuado.",
     "proof.p":
@@ -357,6 +392,9 @@ const I18N = {
       "Creemos que cada proyecto debe ejecutarse con profesionalismo, organización y compromiso, construyendo relaciones duraderas basadas en la confianza.",
     "ab.presence": "Dónde trabajamos",
     "ab.presence.p": "Portugal · España · Francia",
+    "ab.loc1": "Valença · sede",
+    "ab.loc2": "Oficina comercial",
+    "ab.loc3": "Socio local",
     "team.eyebrow": "Equipo",
     "team.h": "Nuestro equipo",
     "team.lede": "El equipo directivo de Solution Metal Group.",
@@ -390,6 +428,12 @@ const I18N = {
     "cl.l4": "Cliente 04",
     "cl.l5": "Cliente 05",
     "cl.l6": "Cliente 06",
+    "metric.eyebrow": "En cifras",
+    "metric.h": "Capacidad para acompañar su proyecto.",
+    "metric.c1": "clientes industriales",
+    "metric.c2": "profesionales movilizados",
+    "metric.c3": "proyectos realizados",
+    "metric.c4": "países de actuación",
     /* contacto */
     "ct.eyebrow": "Contacto",
     "ct.h": "Contacto",
@@ -520,11 +564,17 @@ const I18N = {
 
 I18N.fr = {
   ...I18N.en,
+  /* secção "sobre nós" */
+  "ab.presence": "Où nous travaillons",
+  "ab.loc1": "Valença · siège",
+  "ab.loc2": "Bureau commercial",
+  "ab.loc3": "Partenaire local",
   "nav.home": "Accueil",
   "nav.services": "Domaines d'activité",
   "nav.portfolio": "Réalisations",
   "nav.about": "À propos",
   "nav.contact": "Contact",
+  "nav.quote": "Demander une proposition",
   "nav.workUs": "Travailler avec nous",
   "hero.origin": "Équipes spécialisées pour projets industriels",
   "hero.origin.b": "Portugal · Espagne · Europe",
@@ -564,6 +614,18 @@ I18N.fr = {
   "act.d9":
     "Dites-nous ce dont votre projet a besoin et nous évaluerons la solution adaptée.",
   "act.cta": "Voir tous les domaines",
+  "svc.h1": "Une expérience qui",
+  "svc.h2": "fait avancer votre projet.",
+  "svc.p":
+    "Nous réunissons des professionnels qualifiés, des équipements adaptés et une expérience dans différents secteurs industriels, en garantissant des solutions sûres, efficaces et adaptées aux besoins de chaque client.",
+  "svc.more": "En savoir plus",
+  "why.eyebrow": "Pourquoi choisir SMG",
+  "why.h1": "Plus que des services,",
+  "why.h2": "nous livrons des résultats.",
+  "why.t1": "Équipes qualifiées",
+  "why.t2": "Flexibilité et rapidité",
+  "why.t3": "La sécurité avant tout",
+  "why.t4": "Engagement envers le client",
   "proof.eyebrow": "Notre façon de travailler",
   "proof.h": "La bonne équipe pour le bon travail.",
   "proof.p":
@@ -582,6 +644,12 @@ I18N.fr = {
     "Montage, structures métalliques, soudage, chaudronnerie et maintenance.",
   "proof.t4": "Une réponse claire",
   "proof.d4": "Nous répondons aux demandes de devis sous 2 jours ouvrés.",
+  "metric.eyebrow": "En chiffres",
+  "metric.h": "La capacité d'accompagner votre projet.",
+  "metric.c1": "clients industriels",
+  "metric.c2": "professionnels mobilisés",
+  "metric.c3": "projets réalisés",
+  "metric.c4": "pays d'intervention",
   "pf.eyebrow": "Réalisations",
   "pf.h": "Travaux réalisés",
   "pf.p": "Travaux de montage et de structures métalliques réalisés par SMG.",
@@ -714,11 +782,12 @@ if (burger) {
   });
 }
 
-/* formulários (demo, sem backend) */
+/* formulários: envio direto ao e-mail comercial, sem base de dados */
 function wire(formId, msgId, okKey) {
   const f = document.getElementById(formId);
   if (!f) return;
   const m = document.getElementById(msgId);
+  const startedAt = Date.now();
   f.addEventListener("submit", (e) => {
     e.preventDefault();
     m.className = "msg on";
@@ -726,6 +795,32 @@ function wire(formId, msgId, okKey) {
       m.classList.add("err");
       m.textContent = t("err");
       f.reportValidity();
+      return;
+    }
+    if (f.elements.website?.value || Date.now() - startedAt < 1800) {
+      m.classList.add("err");
+      m.textContent = t("err");
+      return;
+    }
+    if (formId === "form-orc") {
+      const data = new FormData(f);
+      const lines = [];
+      const services = [];
+      for (const [key, value] of data.entries()) {
+        if (key === "website" || key === "consentimento" || key === "ficheiros")
+          continue;
+        if (key === "servico") {
+          services.push(value);
+          continue;
+        }
+        lines.push(`${key}: ${value}`);
+      }
+      if (services.length) lines.push(`Serviços: ${services.join(", ")}`);
+      const files = [...f.elements.ficheiros.files].map((file) => file.name);
+      if (files.length) lines.push(`Ficheiros: ${files.join(", ")}`);
+      const subject = `Pedido de proposta — ${data.get("empresa") || "novo projeto"}`;
+      window.location.href = `mailto:${f.dataset.mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+      m.textContent = t(okKey);
       return;
     }
     m.textContent = t(okKey);
