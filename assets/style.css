@@ -229,7 +229,7 @@ header {
   display: flex;
   align-items: center;
   gap: 16px;
-  height: 72px;
+  height: 84px;
 }
 .logo {
   margin-right: auto;
@@ -239,7 +239,7 @@ header {
   color: var(--ink);
 }
 .logo img {
-  height: 50px;
+  height: 66px;
   width: auto;
   display: block;
 }
@@ -341,7 +341,7 @@ header {
 @media (max-width: 960px) {
   .links {
     position: fixed;
-    inset: 72px 0 auto 0;
+    inset: 84px 0 auto 0;
     background: var(--white);
     flex-direction: column;
     align-items: stretch;
@@ -349,7 +349,7 @@ header {
     padding: 6px var(--sp) 20px;
     border-bottom: 1px solid var(--hair);
     display: none;
-    max-height: calc(100vh - 72px);
+    max-height: calc(100vh - 84px);
     overflow: auto;
   }
   .links.open {
@@ -374,7 +374,7 @@ header {
 }
 @media (max-width: 520px) {
   .logo img {
-    height: 42px;
+    height: 52px;
   }
 }
 
@@ -429,7 +429,7 @@ header {
 /* ---------- hero ---------- */
 .hero {
   position: relative;
-  min-height: 86vh;
+  min-height: 118vh;
   display: flex;
   align-items: flex-end;
   color: var(--white);
@@ -440,7 +440,8 @@ header {
   inset: 0;
   z-index: 0;
 }
-.hero-bg img {
+.hero-bg img,
+video.hero-bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -457,11 +458,14 @@ header {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding: clamp(40px, 6vw, 90px) 0;
+  padding: clamp(72px, 11vw, 170px) 0 clamp(72px, 11vw, 140px);
 }
 .hero h1 {
   color: var(--white);
-  max-width: 15ch;
+  max-width: 18ch;
+  font-size: clamp(4rem, 7.2vw, 9.2rem);
+  line-height: 0.84;
+  letter-spacing: -0.072em;
 }
 .hero h1 mark {
   background: none;
@@ -469,8 +473,9 @@ header {
 }
 .hero .lede {
   color: var(--on-dark);
-  margin-top: 24px;
-  max-width: 52ch;
+  margin-top: 30px;
+  max-width: 62ch;
+  font-size: clamp(1.16rem, 2vw, 1.7rem);
 }
 .origin {
   display: inline-flex;
@@ -480,7 +485,7 @@ header {
   border-radius: 100px;
   padding: 7px 16px;
   color: var(--on-dark);
-  margin-bottom: 26px;
+  margin-bottom: 30px;
   text-align: left;
 }
 .origin b {
@@ -498,7 +503,7 @@ header {
 }
 @media (max-width: 600px) {
   .hero {
-    min-height: 78vh;
+    min-height: 90vh;
   }
   .origin {
     border-radius: 6px;
@@ -585,12 +590,48 @@ header {
   border-radius: var(--r);
 }
 
+/* painel com o logo da marca (substitui a foto) */
+.edge--logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: clamp(28px, 4vw, 56px);
+  background: var(--white);
+  border-radius: var(--r);
+}
+.edge--logo img {
+  width: clamp(190px, 24vw, 260px);
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+/* ---------- logo IMPIC (credenciais) ---------- */
+.cred-logo {
+  margin: 28px 0 0;
+}
+.cred-logo img {
+  width: clamp(140px, 17vw, 186px);
+  height: auto;
+}
+
+/* ---------- figura larga (equipa SMG) ---------- */
+.wide-figure {
+  margin: clamp(30px, 4.4vw, 56px) 0 0;
+}
+.wide-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--r);
+}
+
 /* "sobre nós": placa de marca + presença da empresa */
 .brandplate {
   display: inline-block;
   padding: 18px 20px;
   background: var(--paper);
-  border: 1px solid var(--hair);
   border-radius: var(--r);
   margin: 0 0 30px;
 }
@@ -1557,7 +1598,7 @@ h3 {
 }
 @media (max-width: 560px) {
   .logo img {
-    height: 42px;
+    height: 52px;
   }
   .nav-proposal {
     padding: 8px 11px !important;
@@ -1576,7 +1617,7 @@ h3 {
     gap: 8px;
   }
   .logo img {
-    height: 38px;
+    height: 46px;
   }
   .nav-proposal {
     padding: 7px 9px !important;

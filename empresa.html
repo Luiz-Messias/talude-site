@@ -21,7 +21,7 @@
       property="og:description"
       content="Especialistas em montagem industrial, estruturas metálicas e soldadura para projetos industriais em toda a Europa."
     />
-    <meta property="og:image" content="assets/img/obra-03.jpg" />
+    <meta property="og:image" content="assets/img/imagens-nova/banner.webp" />
     <meta property="og:locale" content="pt_PT" />
     <meta name="theme-color" content="#151515" />
     <link rel="stylesheet" />
@@ -627,11 +627,29 @@
         border-radius: var(--r);
       }
       /* "sobre nós": placa de marca + presença da empresa */
+      /* ---------- logo IMPIC (credenciais) ---------- */
+      .cred-logo {
+        margin: 28px 0 0;
+      }
+      .cred-logo img {
+        width: clamp(140px, 17vw, 186px);
+        height: auto;
+      }
+
+      /* ---------- figura larga (equipa SMG) ---------- */
+      .wide-figure {
+        margin: clamp(30px, 4.4vw, 56px) 0 0;
+      }
+      .wide-figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: var(--r);
+      }
       .brandplate {
         display: inline-block;
         padding: 18px 20px;
         background: var(--paper);
-        border: 1px solid var(--hair);
         border-radius: var(--r);
         margin: 0 0 30px;
       }
@@ -659,6 +677,150 @@
         margin: 0;
         color: var(--brand);
         letter-spacing: 0.08em;
+      }
+
+      /* ===== globo de atuação — biblioteca cobe (09/2026) ===== */
+      .globe-layout {
+        display: grid;
+        grid-template-columns: 0.92fr 1.08fr;
+        gap: clamp(30px, 5vw, 72px);
+        align-items: center;
+      }
+      /* a cena do globo não pode esticar a coluna (evita overflow em mobile) */
+      .globe-layout > * {
+        min-width: 0;
+      }
+      @media (max-width: 860px) {
+        .globe-layout {
+          grid-template-columns: 1fr;
+        }
+      }
+      .globe-stage {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 560px;
+        min-width: 0;
+      }
+      .globe-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1;
+        cursor: grab;
+        touch-action: pan-y;
+        overflow: hidden;
+      }
+      .globe-frame.is-dragging {
+        cursor: grabbing;
+      }
+      .globe-canvas {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .globe-canvas canvas {
+        display: block;
+      }
+      /* marcadores (elementos HTML projetados sobre o globo) */
+      .gpin {
+        position: relative;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #e08a4c;
+        box-shadow:
+          0 0 0 3px rgba(224, 138, 76, 0.3),
+          0 0 12px rgba(224, 138, 76, 0.85);
+        pointer-events: none;
+      }
+      .gpin span {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        white-space: nowrap;
+        font-family: "DM Mono", monospace;
+        font-size: 0.62rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #fff;
+        text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);
+      }
+      .gpin.s-left span {
+        left: auto;
+        right: 15px;
+      }
+      .gpin.s-up span {
+        left: 50%;
+        top: auto;
+        bottom: 15px;
+        transform: translateX(-50%);
+      }
+      .gpin.s-down span {
+        left: 50%;
+        top: 15px;
+        transform: translateX(-50%);
+      }
+      /* marca SMG no globo (fallback sem WebGL) */
+      .globe-logo {
+        display: none;
+      }
+      .globe-frame.no-webgl .globe-logo {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 46%;
+        height: auto;
+        transform: translate(-50%, -50%);
+        opacity: 0.92;
+        filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.5));
+      }
+      .globe-frame.no-webgl {
+        cursor: default;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle at 34% 26%,
+          #363b42 0%,
+          #1b1e22 48%,
+          #0d0f11 100%
+        );
+        box-shadow:
+          inset -16px -20px 44px rgba(0, 0, 0, 0.6),
+          0 24px 56px rgba(0, 0, 0, 0.45);
+      }
+      .globe-frame.no-webgl .globe-canvas {
+        display: none;
+      }
+      .globe-legend {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 24px;
+        margin: 20px 0 0;
+        font-family: "DM Mono", monospace;
+        font-size: 0.62rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--on-dark);
+      }
+      .globe-key {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .globe-key::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #d08a52;
+        box-shadow: 0 0 0 3px rgba(168, 96, 47, 0.22);
+      }
+      .globe-hint {
+        margin: 20px 0 0;
+        color: var(--on-dark);
+        opacity: 0.75;
       }
 
       /* cartões (minimalistas) */
@@ -1524,75 +1686,75 @@
           padding-right: clamp(26px, 7vw, 38px);
         }
       }
-    /* ===== RESPONSIVO — auditoria 09/2026 (não remover) ===== */
-    /* idiomas: em ecrãs pequenos o grupo .langs é movido para o menu (ver site.js) */
-    @media (max-width: 960px) {
-      .nav {
-        gap: 10px;
+      /* ===== RESPONSIVO — auditoria 09/2026 (não remover) ===== */
+      /* idiomas: em ecrãs pequenos o grupo .langs é movido para o menu (ver site.js) */
+      @media (max-width: 960px) {
+        .nav {
+          gap: 10px;
+        }
+        .links .langs--menu {
+          display: flex;
+          gap: 6px;
+          padding-top: 16px;
+        }
+        .links .langs--menu button {
+          flex: 1;
+          padding: 11px 4px;
+          border-color: var(--hair);
+          font-size: 0.7rem;
+        }
       }
-      .links .langs--menu {
-        display: flex;
+      @media (max-width: 560px) {
+        .logo img {
+          height: 42px;
+        }
+        .nav-proposal {
+          padding: 8px 11px !important;
+          font-size: 0.68rem !important;
+        }
+        .burger {
+          padding: 8px 10px;
+        }
+        /* espaço para o botão flutuante do WhatsApp não tapar o rodapé */
+        footer {
+          padding-bottom: 96px;
+        }
+      }
+      @media (max-width: 400px) {
+        .nav {
+          gap: 8px;
+        }
+        .logo img {
+          height: 38px;
+        }
+        .nav-proposal {
+          padding: 7px 9px !important;
+          font-size: 0.62rem !important;
+          letter-spacing: 0.02em;
+        }
+      }
+      /* nada pode exceder o container em ecrãs estreitos */
+      select,
+      input,
+      textarea,
+      figure,
+      picture {
+        max-width: 100%;
+      }
+      /* ===== BANDEIRAS — SVG próprio em vez de emoji (auditoria 09/2026, não remover) ===== */
+      .langs button {
+        display: inline-flex;
+        align-items: center;
         gap: 6px;
-        padding-top: 16px;
       }
-      .links .langs--menu button {
-        flex: 1;
-        padding: 11px 4px;
-        border-color: var(--hair);
-        font-size: 0.7rem;
+      .langs button svg {
+        width: 16px;
+        height: 11px;
+        flex: none;
+        display: block;
+        border-radius: 2px;
+        box-shadow: inset 0 0 0 1px rgba(47, 43, 42, 0.18);
       }
-    }
-    @media (max-width: 560px) {
-      .logo img {
-        height: 42px;
-      }
-      .nav-proposal {
-        padding: 8px 11px !important;
-        font-size: 0.68rem !important;
-      }
-      .burger {
-        padding: 8px 10px;
-      }
-      /* espaço para o botão flutuante do WhatsApp não tapar o rodapé */
-      footer {
-        padding-bottom: 96px;
-      }
-    }
-    @media (max-width: 400px) {
-      .nav {
-        gap: 8px;
-      }
-      .logo img {
-        height: 38px;
-      }
-      .nav-proposal {
-        padding: 7px 9px !important;
-        font-size: 0.62rem !important;
-        letter-spacing: 0.02em;
-      }
-    }
-    /* nada pode exceder o container em ecrãs estreitos */
-    select,
-    input,
-    textarea,
-    figure,
-    picture {
-      max-width: 100%;
-    }
-    /* ===== BANDEIRAS — SVG próprio em vez de emoji (auditoria 09/2026, não remover) ===== */
-    .langs button {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .langs button svg {
-      width: 16px;
-      height: 11px;
-      flex: none;
-      display: block;
-      border-radius: 2px;
-      box-shadow: inset 0 0 0 1px rgba(47, 43, 42, 0.18);
-    }
     </style>
     <script type="application/ld+json">
       {
@@ -1607,7 +1769,7 @@
   </head>
   <body>
     <header>
-      <nav class="wrap nav" aria-label="Principal">
+      <nav class="wrap nav" aria-label="Principal" data-i18n-aria="aria.nav">
         <a class="logo" href="index.html"
           ><img
             src="assets/img/logo-sm.webp"
@@ -1626,9 +1788,14 @@
           <!-- <a class="nav-sep" href="imigracao.html" data-i18n="nav.imig">Assessoria de imigração</a> -->
         </div>
         <a class="btn nav-proposal" href="orcamento.html" data-i18n="nav.quote"
-          >Pedir proposta</a
+          >Pedir orçamento</a
         >
-        <div class="langs" role="group" aria-label="Idioma">
+        <div
+          class="langs"
+          role="group"
+          aria-label="Idioma"
+          data-i18n-aria="aria.lang"
+        >
           <button data-lang="pt" aria-pressed="true">PT</button>
           <button data-lang="en" aria-pressed="false">EN</button>
           <button data-lang="es" aria-pressed="false">ES</button>
@@ -1640,6 +1807,7 @@
           aria-expanded="false"
           aria-controls="links"
           aria-label="Menu"
+          data-i18n-aria="aria.menu"
         >
           ☰
         </button>
@@ -1649,7 +1817,13 @@
       <section class="phead">
         <img
           class="phead-bg"
-          src="assets/img/obra-03.webp"
+          src="assets/img/imagens-nova/banner-mapa-1600.webp"
+          srcset="
+            assets/img/imagens-nova/banner-mapa-1080.webp 1080w,
+            assets/img/imagens-nova/banner-mapa-1600.webp 1600w,
+            assets/img/imagens-nova/banner-mapa.webp      2171w
+          "
+          sizes="100vw"
           alt=""
           aria-hidden="true"
         />
@@ -1700,15 +1874,21 @@
             <ul class="presence">
               <li>
                 <span class="mono">PT</span
-                ><span data-i18n="ab.loc1">Valença · sede</span>
+                ><span data-i18n="ab.loc1"
+                  >R. Comércio 1146, 4505-515 Lobão — Santa Maria da Feira,
+                  Aveiro, Portugal</span
+                >
               </li>
               <li>
-                <span class="mono">ES</span
-                ><span data-i18n="ab.loc2">Escritório comercial</span>
+                <span class="mono">PT</span
+                ><span data-i18n="ab.loc2"
+                  >Centro Comercial Europa, Av. Sá Carneiro, 4930-648, Piso 2,
+                  Sala 37 — Valença do Minho, Viana do Castelo, Portugal</span
+                >
               </li>
               <li>
                 <span class="mono">FR</span
-                ><span data-i18n="ab.loc3">Parceria local</span>
+                ><span data-i18n="ab.loc3">Perpinhã, Occitânia, França</span>
               </li>
             </ul>
           </div>
@@ -1741,12 +1921,50 @@
               >
             </div>
             <div class="stat">
-              <span class="stat-num">3</span
+              <span class="stat-num">4</span
               ><span class="mono stat-tag" data-i18n="metric.c4"
                 >países de atuação</span
               >
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="band band--dark rv">
+        <div class="wrap globe-layout">
+          <div>
+            <p class="mono eyebrow" data-i18n="globe.eyebrow">
+              Regiões de atuação
+            </p>
+            <h2 data-i18n="globe.h">Presença em Portugal, Espanha e França.</h2>
+            <p class="lede" data-i18n="globe.p">
+              Mobilizamos equipas no local do projeto, com base em Portugal e
+              resposta em Espanha e França, e noutros países da Europa conforme
+              o alcance de cada projeto.
+            </p>
+            <p class="mono globe-hint" data-i18n="globe.hint">
+              Arraste para girar
+            </p>
+          </div>
+          <figure class="globe-stage">
+            <div class="globe-frame">
+              <div class="globe-canvas" aria-hidden="true"></div>
+              <img
+                class="globe-logo"
+                src="assets/img/logo-mark.webp"
+                alt="Solution Metal Group"
+                width="248"
+                height="160"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="globe-legend">
+              <span class="globe-key" data-i18n="globe.c1">Portugal</span>
+              <span class="globe-key" data-i18n="globe.c2">Espanha</span>
+              <span class="globe-key" data-i18n="globe.c3">França</span>
+              <span class="globe-key" data-i18n="globe.c4">Holanda</span>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -1771,13 +1989,13 @@
                     loading="lazy"
                   />
                 </picture>
-                <!-- TODO LinkedIn: colar o URL do perfil de Jessica Silva -->
                 <a
                   class="li"
-                  href="#"
+                  href="https://www.linkedin.com/in/jessica-moura-da-silva-020708353"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn de Jessica Silva"
+                  data-i18n-aria="aria.j"
                   ><svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95C20.1 8.75 21 11 21 14.1V21h-4v-6.1c0-1.45-.52-2.45-1.8-2.45-1.1 0-1.75.74-2.03 1.45-.1.25-.13.6-.13.95V21H9z"
@@ -1803,13 +2021,13 @@
                     loading="lazy"
                   />
                 </picture>
-                <!-- TODO LinkedIn: colar o URL do perfil de Bruna Santos -->
                 <a
                   class="li"
-                  href="#"
+                  href="https://www.linkedin.com/in/bruna-santos-1ba07752"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn de Bruna Santos"
+                  data-i18n-aria="aria.b"
                   ><svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95C20.1 8.75 21 11 21 14.1V21h-4v-6.1c0-1.45-.52-2.45-1.8-2.45-1.1 0-1.75.74-2.03 1.45-.1.25-.13.6-.13.95V21H9z"
@@ -1835,13 +2053,13 @@
                     loading="lazy"
                   />
                 </picture>
-                <!-- TODO LinkedIn: colar o URL do perfil de Lucas Ribeiro -->
                 <a
                   class="li"
-                  href="#"
+                  href="https://www.linkedin.com/in/lucas-ribeiro-a65a96219"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn de Lucas Ribeiro"
+                  data-i18n-aria="aria.l"
                   ><svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95C20.1 8.75 21 11 21 14.1V21h-4v-6.1c0-1.45-.52-2.45-1.8-2.45-1.1 0-1.75.74-2.03 1.45-.1.25-.13.6-.13.95V21H9z"
@@ -1867,13 +2085,13 @@
                     loading="lazy"
                   />
                 </picture>
-                <!-- TODO LinkedIn: colar o URL do perfil de Marcio Santos -->
                 <a
                   class="li"
-                  href="#"
+                  href="https://www.linkedin.com/in/marcio-santos-303815429"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn de Marcio Santos"
+                  data-i18n-aria="aria.m"
                   ><svg viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95C20.1 8.75 21 11 21 14.1V21h-4v-6.1c0-1.45-.52-2.45-1.8-2.45-1.1 0-1.75.74-2.03 1.45-.1.25-.13.6-.13.95V21H9z"
@@ -1933,6 +2151,40 @@
         </div>
       </section>
 
+      <section class="band band--tint rv">
+        <div class="wrap">
+          <p class="mono eyebrow" data-i18n="cred.eyebrow">Credenciais</p>
+          <h2 data-i18n="cred.h">
+            Habilitada para obras públicas e particulares.
+          </h2>
+          <p class="lede" data-i18n="cred.p">
+            Alvarás e certificados atribuídos pelo IMPIC — Instituto dos
+            Mercados Públicos, do Imobiliário e da Construção.
+          </p>
+          <figure class="cred-logo">
+            <img
+              src="assets/img/logo-impic.png"
+              alt="IMPIC — Instituto dos Mercados Públicos, do Imobiliário e da Construção"
+              width="300"
+              height="97"
+              loading="lazy"
+            />
+          </figure>
+          <div class="grid g2" style="margin-top: 34px">
+            <div class="card">
+              <span class="tag" data-i18n="cred.t1">Alvará</span>
+              <h3 data-i18n="cred.h1">Empreiteiro de obras particulares</h3>
+              <p class="mono" data-i18n="cred.n1">118935 - PAR</p>
+            </div>
+            <div class="card">
+              <span class="tag" data-i18n="cred.t2">Certificado</span>
+              <h3 data-i18n="cred.h2">Empreiteiro de obras públicas</h3>
+              <p class="mono" data-i18n="cred.n2">159355 - PUB</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="band">
         <div class="wrap">
           <div class="next">
@@ -1974,7 +2226,7 @@
           <a href="servicos.html" data-i18n="nav.services">Áreas de atuação</a>
           <a href="obras.html" data-i18n="nav.portfolio">Portfólio</a>
           <a href="empresa.html" data-i18n="nav.about">Sobre nós</a>
-          <a href="orcamento.html" data-i18n="nav.quote">Pedir proposta</a>
+          <a href="orcamento.html" data-i18n="nav.quote">Pedir orçamento</a>
           <!-- <a href="trabalhe.html" data-i18n="nav.workUs">Trabalhe connosco</a> -->
         </div>
         <div class="fcol">
@@ -1987,7 +2239,11 @@
         </div>
       </div>
     </footer>
-    <a class="wa" href="https://wa.me/351923371932" aria-label="WhatsApp"
+    <a
+      class="wa"
+      href="https://wa.me/351923371932"
+      aria-label="WhatsApp"
+      data-i18n-aria="aria.wa"
       ><svg viewBox="0 0 24 24">
         <path
           d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5 0-1.1.2-3.5-.8-2.9-1.3-4.7-4.3-4.9-4.5-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.5-.1 1z"
@@ -1995,5 +2251,6 @@
       ><span>WhatsApp</span></a
     >
     <script src="assets/site.js" defer></script>
+    <script src="assets/globe.js" defer></script>
   </body>
 </html>

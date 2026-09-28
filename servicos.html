@@ -21,7 +21,7 @@
       property="og:description"
       content="Montagem industrial, estruturas metálicas, soldadura e apoio técnico para projetos industriais em toda a Europa."
     />
-    <meta property="og:image" content="assets/img/obra-01.jpg" />
+    <meta property="og:image" content="assets/img/imagens-nova/banner.webp" />
     <meta property="og:locale" content="pt_PT" />
     <meta name="theme-color" content="#151515" />
     <link rel="stylesheet" />
@@ -1387,6 +1387,36 @@
       }
 
       /* ---------- porque escolher a SMG ---------- */
+      /* fundo: foto de fábrica escurecida (mantém o texto legível) */
+      .band--dark.why-band {
+        background-color: var(--dark);
+        background-image:
+          linear-gradient(rgba(47, 43, 42, 0.86), rgba(47, 43, 42, 0.86)),
+          url("assets/img/bg-porque.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .why-head {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: clamp(24px, 3vw, 52px);
+        align-items: center;
+      }
+      .why-logo {
+        width: clamp(138px, 15vw, 196px);
+        height: auto;
+        opacity: 0.92;
+      }
+      @media (max-width: 760px) {
+        .why-head {
+          grid-template-columns: 1fr;
+        }
+        .why-logo {
+          width: 138px;
+          margin-top: 6px;
+        }
+      }
       .why-grid {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1562,75 +1592,75 @@
           padding-right: clamp(26px, 7vw, 38px);
         }
       }
-    /* ===== RESPONSIVO — auditoria 09/2026 (não remover) ===== */
-    /* idiomas: em ecrãs pequenos o grupo .langs é movido para o menu (ver site.js) */
-    @media (max-width: 960px) {
-      .nav {
-        gap: 10px;
+      /* ===== RESPONSIVO — auditoria 09/2026 (não remover) ===== */
+      /* idiomas: em ecrãs pequenos o grupo .langs é movido para o menu (ver site.js) */
+      @media (max-width: 960px) {
+        .nav {
+          gap: 10px;
+        }
+        .links .langs--menu {
+          display: flex;
+          gap: 6px;
+          padding-top: 16px;
+        }
+        .links .langs--menu button {
+          flex: 1;
+          padding: 11px 4px;
+          border-color: var(--hair);
+          font-size: 0.7rem;
+        }
       }
-      .links .langs--menu {
-        display: flex;
+      @media (max-width: 560px) {
+        .logo img {
+          height: 42px;
+        }
+        .nav-proposal {
+          padding: 8px 11px !important;
+          font-size: 0.68rem !important;
+        }
+        .burger {
+          padding: 8px 10px;
+        }
+        /* espaço para o botão flutuante do WhatsApp não tapar o rodapé */
+        footer {
+          padding-bottom: 96px;
+        }
+      }
+      @media (max-width: 400px) {
+        .nav {
+          gap: 8px;
+        }
+        .logo img {
+          height: 38px;
+        }
+        .nav-proposal {
+          padding: 7px 9px !important;
+          font-size: 0.62rem !important;
+          letter-spacing: 0.02em;
+        }
+      }
+      /* nada pode exceder o container em ecrãs estreitos */
+      select,
+      input,
+      textarea,
+      figure,
+      picture {
+        max-width: 100%;
+      }
+      /* ===== BANDEIRAS — SVG próprio em vez de emoji (auditoria 09/2026, não remover) ===== */
+      .langs button {
+        display: inline-flex;
+        align-items: center;
         gap: 6px;
-        padding-top: 16px;
       }
-      .links .langs--menu button {
-        flex: 1;
-        padding: 11px 4px;
-        border-color: var(--hair);
-        font-size: 0.7rem;
+      .langs button svg {
+        width: 16px;
+        height: 11px;
+        flex: none;
+        display: block;
+        border-radius: 2px;
+        box-shadow: inset 0 0 0 1px rgba(47, 43, 42, 0.18);
       }
-    }
-    @media (max-width: 560px) {
-      .logo img {
-        height: 42px;
-      }
-      .nav-proposal {
-        padding: 8px 11px !important;
-        font-size: 0.68rem !important;
-      }
-      .burger {
-        padding: 8px 10px;
-      }
-      /* espaço para o botão flutuante do WhatsApp não tapar o rodapé */
-      footer {
-        padding-bottom: 96px;
-      }
-    }
-    @media (max-width: 400px) {
-      .nav {
-        gap: 8px;
-      }
-      .logo img {
-        height: 38px;
-      }
-      .nav-proposal {
-        padding: 7px 9px !important;
-        font-size: 0.62rem !important;
-        letter-spacing: 0.02em;
-      }
-    }
-    /* nada pode exceder o container em ecrãs estreitos */
-    select,
-    input,
-    textarea,
-    figure,
-    picture {
-      max-width: 100%;
-    }
-    /* ===== BANDEIRAS — SVG próprio em vez de emoji (auditoria 09/2026, não remover) ===== */
-    .langs button {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .langs button svg {
-      width: 16px;
-      height: 11px;
-      flex: none;
-      display: block;
-      border-radius: 2px;
-      box-shadow: inset 0 0 0 1px rgba(47, 43, 42, 0.18);
-    }
     </style>
     <script type="application/ld+json">
       {
@@ -1645,7 +1675,7 @@
   </head>
   <body>
     <header>
-      <nav class="wrap nav" aria-label="Principal">
+      <nav class="wrap nav" aria-label="Principal" data-i18n-aria="aria.nav">
         <a class="logo" href="index.html"
           ><img
             src="assets/img/logo-sm.webp"
@@ -1664,9 +1694,14 @@
           <!-- <a class="nav-sep" href="imigracao.html" data-i18n="nav.imig">Assessoria de imigração</a> -->
         </div>
         <a class="btn nav-proposal" href="orcamento.html" data-i18n="nav.quote"
-          >Pedir proposta</a
+          >Pedir orçamento</a
         >
-        <div class="langs" role="group" aria-label="Idioma">
+        <div
+          class="langs"
+          role="group"
+          aria-label="Idioma"
+          data-i18n-aria="aria.lang"
+        >
           <button data-lang="pt" aria-pressed="true">PT</button>
           <button data-lang="en" aria-pressed="false">EN</button>
           <button data-lang="es" aria-pressed="false">ES</button>
@@ -1678,6 +1713,7 @@
           aria-expanded="false"
           aria-controls="links"
           aria-label="Menu"
+          data-i18n-aria="aria.menu"
         >
           ☰
         </button>
@@ -1687,7 +1723,13 @@
       <section class="phead">
         <img
           class="phead-bg"
-          src="assets/img/obra-01.webp"
+          src="assets/img/imagens-nova/banner-1600.webp"
+          srcset="
+            assets/img/imagens-nova/banner-1080.webp 1080w,
+            assets/img/imagens-nova/banner-1600.webp 1600w,
+            assets/img/imagens-nova/banner.webp      2172w
+          "
+          sizes="100vw"
           alt=""
           aria-hidden="true"
         />
@@ -1726,13 +1768,13 @@
           <div class="areas" style="margin-top: 44px">
             <article class="area">
               <picture class="area-media">
-                <source srcset="assets/img/obra-01.webp" type="image/webp" />
                 <img
-                  src="assets/img/obra-01.jpg"
+                  src="assets/img/obra-11.webp"
                   alt="Equipa especializada em trabalho industrial"
                   loading="lazy"
-                  width="2040"
-                  height="1148"
+                  width="788"
+                  height="1400"
+                  style="object-position: center 26%"
                 />
               </picture>
               <div class="area-body">
@@ -1766,13 +1808,12 @@
 
             <article class="area">
               <picture class="area-media">
-                <source srcset="assets/img/obra-02.webp" type="image/webp" />
                 <img
-                  src="assets/img/obra-02.jpg"
+                  src="assets/img/obra-01.webp"
                   alt="Montagem industrial em obra"
                   loading="lazy"
-                  width="2040"
-                  height="1148"
+                  width="788"
+                  height="1400"
                 />
               </picture>
               <div class="area-body">
@@ -1806,13 +1847,13 @@
 
             <article class="area">
               <picture class="area-media">
-                <source srcset="assets/img/obra-03.webp" type="image/webp" />
                 <img
-                  src="assets/img/obra-03.jpg"
+                  src="assets/img/obra-03.webp"
                   alt="Estruturas metálicas em obra"
                   loading="lazy"
-                  width="1670"
-                  height="942"
+                  width="788"
+                  height="1400"
+                  style="object-position: center 40%"
                 />
               </picture>
               <div class="area-body">
@@ -1844,13 +1885,13 @@
 
             <article class="area">
               <picture class="area-media">
-                <source srcset="assets/img/obra-04.webp" type="image/webp" />
                 <img
-                  src="assets/img/obra-04.jpg"
+                  src="assets/img/obra-06.webp"
                   alt="Soldadura industrial em oficina"
                   loading="lazy"
-                  width="2040"
-                  height="1148"
+                  width="630"
+                  height="1400"
+                  style="object-position: center 34%"
                 />
               </picture>
               <div class="area-body">
@@ -1883,13 +1924,12 @@
 
             <article class="area">
               <picture class="area-media">
-                <source srcset="assets/img/obra-06.webp" type="image/webp" />
                 <img
-                  src="assets/img/obra-06.jpg"
+                  src="assets/img/obra-07.webp"
                   alt="Caldeiraria e tubagem industrial"
                   loading="lazy"
-                  width="2040"
-                  height="1148"
+                  width="1197"
+                  height="1400"
                 />
               </picture>
               <div class="area-body">
@@ -1922,13 +1962,13 @@
 
             <article class="area">
               <picture class="area-media">
-                <source srcset="assets/img/obra-07.webp" type="image/webp" />
                 <img
-                  src="assets/img/obra-07.jpg"
+                  src="assets/img/obra-09.webp"
                   alt="Manutenção industrial em equipamento"
                   loading="lazy"
-                  width="2040"
-                  height="1148"
+                  width="788"
+                  height="1400"
+                  style="object-position: center 60%"
                 />
               </picture>
               <div class="area-body">
@@ -1963,18 +2003,28 @@
         </div>
       </section>
 
-      <section class="band band--dark rv">
+      <section class="band band--dark why-band rv">
         <div class="wrap">
           <div class="why-head">
-            <p class="mono eyebrow" data-i18n="why.eyebrow">
-              Porque escolher a SMG
-            </p>
-            <h2>
-              <span data-i18n="why.h1">Mais do que serviços,</span>
-              <span class="accent" data-i18n="why.h2"
-                >entregamos resultados.</span
-              >
-            </h2>
+            <div class="why-head-txt">
+              <p class="mono eyebrow" data-i18n="why.eyebrow">
+                Porque escolher a SMG
+              </p>
+              <h2>
+                <span data-i18n="why.h1">Mais do que serviços,</span>
+                <span class="accent" data-i18n="why.h2"
+                  >entregamos resultados.</span
+                >
+              </h2>
+            </div>
+            <img
+              class="why-logo"
+              src="assets/img/logo-mark.webp"
+              alt="Solution Metal Group"
+              width="248"
+              height="160"
+              loading="lazy"
+            />
           </div>
           <div class="why-grid">
             <article class="why-item">
@@ -2084,7 +2134,7 @@
           <a href="servicos.html" data-i18n="nav.services">Áreas de atuação</a>
           <a href="obras.html" data-i18n="nav.portfolio">Portfólio</a>
           <a href="empresa.html" data-i18n="nav.about">Sobre nós</a>
-          <a href="orcamento.html" data-i18n="nav.quote">Pedir proposta</a>
+          <a href="orcamento.html" data-i18n="nav.quote">Pedir orçamento</a>
           <!-- <a href="trabalhe.html" data-i18n="nav.workUs">Trabalhe connosco</a> -->
         </div>
         <div class="fcol">
@@ -2097,7 +2147,11 @@
         </div>
       </div>
     </footer>
-    <a class="wa" href="https://wa.me/351923371932" aria-label="WhatsApp"
+    <a
+      class="wa"
+      href="https://wa.me/351923371932"
+      aria-label="WhatsApp"
+      data-i18n-aria="aria.wa"
       ><svg viewBox="0 0 24 24">
         <path
           d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5 0-1.1.2-3.5-.8-2.9-1.3-4.7-4.3-4.9-4.5-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.5-.1 1z"

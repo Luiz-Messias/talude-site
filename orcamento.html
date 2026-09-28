@@ -21,7 +21,7 @@
       property="og:description"
       content="Peça orçamento para montagem industrial, estruturas metálicas, soldadura ou manutenção industrial."
     />
-    <meta property="og:image" content="assets/img/obra-07.jpg" />
+    <meta property="og:image" content="assets/img/imagens-nova/banner.webp" />
     <meta property="og:locale" content="pt_PT" />
     <meta name="theme-color" content="#151515" />
     <link rel="stylesheet" />
@@ -1622,75 +1622,75 @@
           padding-right: clamp(26px, 7vw, 38px);
         }
       }
-    /* ===== RESPONSIVO — auditoria 09/2026 (não remover) ===== */
-    /* idiomas: em ecrãs pequenos o grupo .langs é movido para o menu (ver site.js) */
-    @media (max-width: 960px) {
-      .nav {
-        gap: 10px;
+      /* ===== RESPONSIVO — auditoria 09/2026 (não remover) ===== */
+      /* idiomas: em ecrãs pequenos o grupo .langs é movido para o menu (ver site.js) */
+      @media (max-width: 960px) {
+        .nav {
+          gap: 10px;
+        }
+        .links .langs--menu {
+          display: flex;
+          gap: 6px;
+          padding-top: 16px;
+        }
+        .links .langs--menu button {
+          flex: 1;
+          padding: 11px 4px;
+          border-color: var(--hair);
+          font-size: 0.7rem;
+        }
       }
-      .links .langs--menu {
-        display: flex;
+      @media (max-width: 560px) {
+        .logo img {
+          height: 42px;
+        }
+        .nav-proposal {
+          padding: 8px 11px !important;
+          font-size: 0.68rem !important;
+        }
+        .burger {
+          padding: 8px 10px;
+        }
+        /* espaço para o botão flutuante do WhatsApp não tapar o rodapé */
+        footer {
+          padding-bottom: 96px;
+        }
+      }
+      @media (max-width: 400px) {
+        .nav {
+          gap: 8px;
+        }
+        .logo img {
+          height: 38px;
+        }
+        .nav-proposal {
+          padding: 7px 9px !important;
+          font-size: 0.62rem !important;
+          letter-spacing: 0.02em;
+        }
+      }
+      /* nada pode exceder o container em ecrãs estreitos */
+      select,
+      input,
+      textarea,
+      figure,
+      picture {
+        max-width: 100%;
+      }
+      /* ===== BANDEIRAS — SVG próprio em vez de emoji (auditoria 09/2026, não remover) ===== */
+      .langs button {
+        display: inline-flex;
+        align-items: center;
         gap: 6px;
-        padding-top: 16px;
       }
-      .links .langs--menu button {
-        flex: 1;
-        padding: 11px 4px;
-        border-color: var(--hair);
-        font-size: 0.7rem;
+      .langs button svg {
+        width: 16px;
+        height: 11px;
+        flex: none;
+        display: block;
+        border-radius: 2px;
+        box-shadow: inset 0 0 0 1px rgba(47, 43, 42, 0.18);
       }
-    }
-    @media (max-width: 560px) {
-      .logo img {
-        height: 42px;
-      }
-      .nav-proposal {
-        padding: 8px 11px !important;
-        font-size: 0.68rem !important;
-      }
-      .burger {
-        padding: 8px 10px;
-      }
-      /* espaço para o botão flutuante do WhatsApp não tapar o rodapé */
-      footer {
-        padding-bottom: 96px;
-      }
-    }
-    @media (max-width: 400px) {
-      .nav {
-        gap: 8px;
-      }
-      .logo img {
-        height: 38px;
-      }
-      .nav-proposal {
-        padding: 7px 9px !important;
-        font-size: 0.62rem !important;
-        letter-spacing: 0.02em;
-      }
-    }
-    /* nada pode exceder o container em ecrãs estreitos */
-    select,
-    input,
-    textarea,
-    figure,
-    picture {
-      max-width: 100%;
-    }
-    /* ===== BANDEIRAS — SVG próprio em vez de emoji (auditoria 09/2026, não remover) ===== */
-    .langs button {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .langs button svg {
-      width: 16px;
-      height: 11px;
-      flex: none;
-      display: block;
-      border-radius: 2px;
-      box-shadow: inset 0 0 0 1px rgba(47, 43, 42, 0.18);
-    }
     </style>
     <script type="application/ld+json">
       {
@@ -1705,7 +1705,7 @@
   </head>
   <body>
     <header>
-      <nav class="wrap nav" aria-label="Principal">
+      <nav class="wrap nav" aria-label="Principal" data-i18n-aria="aria.nav">
         <a class="logo" href="index.html"
           ><img
             src="assets/img/logo-sm.webp"
@@ -1726,9 +1726,14 @@
           href="orcamento.html"
           data-i18n="nav.quote"
           aria-current="page"
-          >Pedir proposta</a
+          >Pedir orçamento</a
         >
-        <div class="langs" role="group" aria-label="Idioma">
+        <div
+          class="langs"
+          role="group"
+          aria-label="Idioma"
+          data-i18n-aria="aria.lang"
+        >
           <button data-lang="pt" aria-pressed="true">PT</button>
           <button data-lang="en" aria-pressed="false">EN</button>
           <button data-lang="es" aria-pressed="false">ES</button>
@@ -1740,6 +1745,7 @@
           aria-expanded="false"
           aria-controls="links"
           aria-label="Menu"
+          data-i18n-aria="aria.menu"
         >
           ☰
         </button>
@@ -1749,7 +1755,13 @@
       <section class="phead">
         <img
           class="phead-bg"
-          src="assets/img/obra-07.webp"
+          src="assets/img/imagens-nova/banner-1600.webp"
+          srcset="
+            assets/img/imagens-nova/banner-1080.webp 1080w,
+            assets/img/imagens-nova/banner-1600.webp 1600w,
+            assets/img/imagens-nova/banner.webp      2172w
+          "
+          sizes="100vw"
           alt=""
           aria-hidden="true"
         />
@@ -1782,42 +1794,43 @@
                 aria-hidden="true"
               />
               <fieldset>
-                <legend>1. Sobre o projeto</legend>
+                <legend data-i18n="q.s1">1. Sobre o projeto</legend>
                 <div class="two">
                   <div class="field">
-                    <label for="o1">Empresa *</label
+                    <label for="o1" data-i18n="q.f1">Empresa *</label
                     ><input id="o1" name="empresa" required />
                   </div>
                   <div class="field">
-                    <label for="o2">Nome e referência do projeto *</label
+                    <label for="o2" data-i18n="q.f2"
+                      >Nome e referência do projeto *</label
                     ><input id="o2" name="projeto" required />
                   </div>
                   <div class="field">
-                    <label for="o3">Local da obra *</label
+                    <label for="o3" data-i18n="q.f3">Local da obra *</label
                     ><input id="o3" name="local" required />
                   </div>
                   <div class="field">
-                    <label for="o4">País *</label
+                    <label for="o4" data-i18n="q.f4">País *</label
                     ><select id="o4" name="pais" required>
-                      <option value="">Selecione</option>
-                      <option>Portugal</option>
-                      <option>Espanha</option>
-                      <option>França</option>
-                      <option>Outro</option>
+                      <option value="" data-i18n="q.sel">Selecione</option>
+                      <option data-i18n="q.pt">Portugal</option>
+                      <option data-i18n="q.es">Espanha</option>
+                      <option data-i18n="q.fr">França</option>
+                      <option data-i18n="q.outro">Outro</option>
                     </select>
                   </div>
                 </div>
               </fieldset>
               <fieldset>
-                <legend>2. O que precisa?</legend>
+                <legend data-i18n="q.s2">2. O que precisa?</legend>
                 <div class="choice-grid">
                   <label class="choice"
                     ><input type="checkbox" name="servico" value="Soldadores" />
-                    Soldadores</label
+                    <span data-i18n="q.c1">Soldadores</span></label
                   >
                   <label class="choice"
                     ><input type="checkbox" name="servico" value="Montadores" />
-                    Montadores</label
+                    <span data-i18n="q.c2">Montadores</span></label
                   >
                   <label class="choice"
                     ><input
@@ -1825,11 +1838,11 @@
                       name="servico"
                       value="Caldeireiros"
                     />
-                    Caldeireiros</label
+                    <span data-i18n="q.c3">Caldeireiros</span></label
                   >
                   <label class="choice"
                     ><input type="checkbox" name="servico" value="Tubistas" />
-                    Tubistas</label
+                    <span data-i18n="q.c4">Tubistas</span></label
                   >
                   <label class="choice"
                     ><input
@@ -1837,7 +1850,7 @@
                       name="servico"
                       value="Equipa completa"
                     />
-                    Equipa completa</label
+                    <span data-i18n="q.c5">Equipa completa</span></label
                   >
                   <label class="choice"
                     ><input
@@ -1845,7 +1858,7 @@
                       name="servico"
                       value="Estruturas metálicas"
                     />
-                    Estruturas metálicas</label
+                    <span data-i18n="q.c6">Estruturas metálicas</span></label
                   >
                   <label class="choice"
                     ><input
@@ -1853,23 +1866,24 @@
                       name="servico"
                       value="Montagem industrial"
                     />
-                    Montagem industrial</label
+                    <span data-i18n="q.c7">Montagem industrial</span></label
                   >
                   <label class="choice"
                     ><input type="checkbox" name="servico" value="Manutenção" />
-                    Manutenção</label
+                    <span data-i18n="q.c8">Manutenção</span></label
                   >
                   <label class="choice"
                     ><input type="checkbox" name="servico" value="Outros" />
-                    Outros</label
+                    <span data-i18n="q.c9">Outros</span></label
                   >
                 </div>
               </fieldset>
               <fieldset>
-                <legend>3. Dimensão do trabalho</legend>
+                <legend data-i18n="q.s3">3. Dimensão do trabalho</legend>
                 <div class="two">
                   <div class="field">
-                    <label for="o5">Número de profissionais *</label
+                    <label for="o5" data-i18n="q.f5"
+                      >Número de profissionais *</label
                     ><input
                       id="o5"
                       name="profissionais"
@@ -1879,73 +1893,88 @@
                     />
                   </div>
                   <div class="field">
-                    <label for="o6">Data prevista de início</label
+                    <label for="o6" data-i18n="q.f6"
+                      >Data prevista de início</label
                     ><input id="o6" name="inicio" type="date" />
                   </div>
                   <div class="field">
-                    <label for="o7">Duração prevista</label
-                    ><input id="o7" name="duracao" placeholder="Ex.: 3 meses" />
+                    <label for="o7" data-i18n="q.f7">Duração prevista</label
+                    ><input
+                      id="o7"
+                      name="duracao"
+                      data-i18n-ph="q.f7ph"
+                      placeholder="Ex.: 3 meses"
+                    />
                   </div>
                   <div class="field">
-                    <label for="o8">Turnos</label
+                    <label for="o8" data-i18n="q.f8">Turnos</label
                     ><select id="o8" name="turnos">
-                      <option>Selecione</option>
-                      <option>Diurno</option>
-                      <option>Noturno</option>
-                      <option>Rotativo</option>
-                      <option>A confirmar</option>
+                      <option data-i18n="q.sel">Selecione</option>
+                      <option data-i18n="q.t1">Diurno</option>
+                      <option data-i18n="q.t2">Noturno</option>
+                      <option data-i18n="q.t3">Rotativo</option>
+                      <option data-i18n="q.tbc">A confirmar</option>
                     </select>
                   </div>
                 </div>
                 <div class="field">
-                  <label for="o9">Descrição e dimensão do trabalho *</label
+                  <label for="o9" data-i18n="q.f9"
+                    >Descrição e dimensão do trabalho *</label
                   ><textarea id="o9" name="descricao" required></textarea>
                 </div>
               </fieldset>
               <fieldset>
-                <legend>4. Alojamento e apoio logístico</legend>
+                <legend data-i18n="q.s4">
+                  4. Alojamento e apoio logístico
+                </legend>
                 <div class="two">
                   <div class="field">
-                    <label for="o10">Alojamento necessário?</label
+                    <label for="o10" data-i18n="q.f10"
+                      >Alojamento necessário?</label
                     ><select id="o10" name="alojamento">
-                      <option>Não</option>
-                      <option>Sim, a cargo da SMG</option>
-                      <option>Sim, a cargo da contratante</option>
-                      <option>A confirmar</option>
+                      <option data-i18n="q.n1">Não</option>
+                      <option data-i18n="q.n2">Sim, a cargo da SMG</option>
+                      <option data-i18n="q.n3">
+                        Sim, a cargo da contratante
+                      </option>
+                      <option data-i18n="q.tbc">A confirmar</option>
                     </select>
                   </div>
                   <div class="field">
-                    <label for="o11">Apoio logístico</label
+                    <label for="o11" data-i18n="q.f11">Apoio logístico</label
                     ><input
                       id="o11"
                       name="logistica"
+                      data-i18n-ph="q.f11ph"
                       placeholder="Transporte, refeições ou outro apoio"
                     />
                   </div>
                 </div>
               </fieldset>
               <fieldset>
-                <legend>5. Os seus dados</legend>
+                <legend data-i18n="q.s5">5. Os seus dados</legend>
                 <div class="two">
                   <div class="field">
-                    <label for="o12">Pessoa de contacto *</label
+                    <label for="o12" data-i18n="q.f12"
+                      >Pessoa de contacto *</label
                     ><input id="o12" name="pessoa" required />
                   </div>
                   <div class="field">
-                    <label for="o13">Cargo</label
+                    <label for="o13" data-i18n="q.f13">Cargo</label
                     ><input id="o13" name="cargo" />
                   </div>
                   <div class="field">
-                    <label for="o14">E-mail *</label
+                    <label for="o14" data-i18n="q.f14">E-mail *</label
                     ><input id="o14" name="email" type="email" required />
                   </div>
                   <div class="field">
-                    <label for="o15">Telefone / WhatsApp</label
+                    <label for="o15" data-i18n="q.f15"
+                      >Telefone / WhatsApp</label
                     ><input id="o15" name="telefone" type="tel" />
                   </div>
                 </div>
                 <div class="field">
-                  <label for="o16"
+                  <label for="o16" data-i18n="q.f16"
                     >Projeto ou caderno de encargos (PDF, DWG)</label
                   ><input
                     id="o16"
@@ -1957,14 +1986,16 @@
                 </div>
                 <label class="consent"
                   ><input type="checkbox" name="consentimento" required />
-                  Autorizo o tratamento destes dados para resposta ao
-                  pedido.</label
+                  <span data-i18n="q.consent"
+                    >Autorizo o tratamento destes dados para resposta ao
+                    pedido.</span
+                  ></label
                 >
               </fieldset>
               <button class="btn btn--lg" type="submit" data-i18n="form.sendq">
-                Pedir proposta
+                Pedir orçamento
               </button>
-              <p class="form-note">
+              <p class="form-note" data-i18n="q.note">
                 Proteção anti-spam ativa. Os dados serão enviados diretamente
                 para o e-mail comercial.
               </p>
@@ -1972,22 +2003,54 @@
             </form>
             <aside class="proposal-aside">
               <div class="contact-panel">
-                <p class="mono">Falar diretamente</p>
-                <h2>Tem uma dúvida sobre o projeto?</h2>
-                <p>
+                <p class="mono" data-i18n="q.direct">Falar diretamente</p>
+                <h2 data-i18n="q.q">Tem uma dúvida sobre o projeto?</h2>
+                <p data-i18n="q.qp">
                   A nossa equipa está disponível para esclarecer requisitos e
                   encontrar a melhor solução.
                 </p>
-                <a class="chan" href="https://wa.me/351923371932"
-                  ><span>WhatsApp</span></a
+                <a
+                  class="chan"
+                  href="https://wa.me/351923371932"
+                  target="_blank"
+                  rel="noopener"
+                  ><svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5 0-1.1.2-3.5-.8-2.9-1.3-4.7-4.3-4.9-4.5-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.5-.1 1z"
+                    /></svg
+                  ><span data-i18n="cta.wa2"
+                    >Abrir conversa no WhatsApp</span
+                  ></a
                 >
                 <a class="chan" href="mailto:comercial@solutionmetalgroup.com"
-                  ><span>comercial@solutionmetalgroup.com</span></a
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                  >
+                    <rect x="3" y="5" width="18" height="14" />
+                    <path d="M3 6l9 7 9-7" /></svg
+                  ><span data-i18n="cta.mail">Enviar e-mail</span></a
                 >
               </div>
               <div class="proposal-note">
-                <strong>Resposta em até 2 dias úteis</strong>
-                <span class="muted"
+                <strong data-i18n="ct.offices">Escritórios</strong>
+                <span class="muted">
+                  <span data-i18n="ct.off1">Escritório 1</span> · R. Comércio
+                  1146, 4505-515 Lobão — Santa Maria da Feira, Aveiro,
+                  Portugal<br />
+                  <span data-i18n="ct.off2">Escritório 2</span> · Centro
+                  Comercial Europa, Av. Sá Carneiro, 4930-648, Piso 2, Sala 37 —
+                  Valença do Minho, Viana do Castelo, Portugal<br />
+                  <span data-i18n="ct.off3">França</span> · Perpinhã, Occitânia
+                </span>
+              </div>
+              <div class="proposal-note">
+                <strong data-i18n="q.reply"
+                  >Resposta em até 2 dias úteis</strong
+                >
+                <span class="muted" data-i18n="q.replyp"
                   >Analisamos o pedido e entramos em contacto para esclarecer os
                   detalhes.</span
                 >
@@ -2034,7 +2097,7 @@
           <a href="servicos.html" data-i18n="nav.services">Áreas de atuação</a>
           <a href="obras.html" data-i18n="nav.portfolio">Portfólio</a>
           <a href="empresa.html" data-i18n="nav.about">Sobre nós</a>
-          <a href="orcamento.html" data-i18n="nav.quote">Pedir proposta</a>
+          <a href="orcamento.html" data-i18n="nav.quote">Pedir orçamento</a>
           <!-- <a href="trabalhe.html" data-i18n="nav.workUs">Trabalhe connosco</a> -->
         </div>
         <div class="fcol">
@@ -2047,7 +2110,11 @@
         </div>
       </div>
     </footer>
-    <a class="wa" href="https://wa.me/351923371932" aria-label="WhatsApp"
+    <a
+      class="wa"
+      href="https://wa.me/351923371932"
+      aria-label="WhatsApp"
+      data-i18n-aria="aria.wa"
       ><svg viewBox="0 0 24 24">
         <path
           d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5 0-1.1.2-3.5-.8-2.9-1.3-4.7-4.3-4.9-4.5-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.5-.1 1z"

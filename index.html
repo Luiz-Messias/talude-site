@@ -27,14 +27,8 @@
     <link
       rel="preload"
       as="image"
+      href="assets/img/hero-1280.avif"
       type="image/avif"
-      imagesrcset="
-        assets/img/hero-480.avif   480w,
-        assets/img/hero-800.avif   800w,
-        assets/img/hero-1280.avif 1280w,
-        assets/img/hero-1600.avif 1600w
-      "
-      imagesizes="100vw"
       fetchpriority="high"
     />
     <style>
@@ -278,7 +272,7 @@
         display: flex;
         align-items: center;
         gap: 16px;
-        height: 72px;
+        height: 84px;
       }
       .logo {
         margin-right: auto;
@@ -288,7 +282,7 @@
         color: var(--ink);
       }
       .logo img {
-        height: 50px;
+        height: 66px;
         width: auto;
         display: block;
       }
@@ -423,7 +417,7 @@
       }
       @media (max-width: 520px) {
         .logo img {
-          height: 42px;
+          height: 52px;
         }
       }
 
@@ -494,7 +488,8 @@
         inset: 0;
         z-index: 0;
       }
-      .hero-bg img {
+      .hero-bg img,
+      video.hero-bg {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -682,6 +677,33 @@
         height: 100%;
         max-height: 600px;
         object-fit: cover;
+        border-radius: var(--r);
+      }
+      /* painel com o logo da marca (substitui a foto) */
+      .edge--logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100%;
+        padding: clamp(28px, 4vw, 56px);
+        background: var(--white);
+        border-radius: var(--r);
+      }
+      .edge--logo img {
+        width: clamp(190px, 24vw, 260px);
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+      }
+
+      /* ---------- figura larga (equipa SMG) ---------- */
+      .wide-figure {
+        margin: clamp(30px, 4.4vw, 56px) 0 0;
+      }
+      .wide-figure img {
+        display: block;
+        width: 100%;
+        height: auto;
         border-radius: var(--r);
       }
 
@@ -1537,75 +1559,75 @@
           padding-right: clamp(26px, 7vw, 38px);
         }
       }
-    /* ===== RESPONSIVO — auditoria 09/2026 (não remover) ===== */
-    /* idiomas: em ecrãs pequenos o grupo .langs é movido para o menu (ver site.js) */
-    @media (max-width: 960px) {
-      .nav {
-        gap: 10px;
+      /* ===== RESPONSIVO — auditoria 09/2026 (não remover) ===== */
+      /* idiomas: em ecrãs pequenos o grupo .langs é movido para o menu (ver site.js) */
+      @media (max-width: 960px) {
+        .nav {
+          gap: 10px;
+        }
+        .links .langs--menu {
+          display: flex;
+          gap: 6px;
+          padding-top: 16px;
+        }
+        .links .langs--menu button {
+          flex: 1;
+          padding: 11px 4px;
+          border-color: var(--hair);
+          font-size: 0.7rem;
+        }
       }
-      .links .langs--menu {
-        display: flex;
+      @media (max-width: 560px) {
+        .logo img {
+          height: 52px;
+        }
+        .nav-proposal {
+          padding: 8px 11px !important;
+          font-size: 0.68rem !important;
+        }
+        .burger {
+          padding: 8px 10px;
+        }
+        /* espaço para o botão flutuante do WhatsApp não tapar o rodapé */
+        footer {
+          padding-bottom: 96px;
+        }
+      }
+      @media (max-width: 400px) {
+        .nav {
+          gap: 8px;
+        }
+        .logo img {
+          height: 46px;
+        }
+        .nav-proposal {
+          padding: 7px 9px !important;
+          font-size: 0.62rem !important;
+          letter-spacing: 0.02em;
+        }
+      }
+      /* nada pode exceder o container em ecrãs estreitos */
+      select,
+      input,
+      textarea,
+      figure,
+      picture {
+        max-width: 100%;
+      }
+      /* ===== BANDEIRAS — SVG próprio em vez de emoji (auditoria 09/2026, não remover) ===== */
+      .langs button {
+        display: inline-flex;
+        align-items: center;
         gap: 6px;
-        padding-top: 16px;
       }
-      .links .langs--menu button {
-        flex: 1;
-        padding: 11px 4px;
-        border-color: var(--hair);
-        font-size: 0.7rem;
+      .langs button svg {
+        width: 16px;
+        height: 11px;
+        flex: none;
+        display: block;
+        border-radius: 2px;
+        box-shadow: inset 0 0 0 1px rgba(47, 43, 42, 0.18);
       }
-    }
-    @media (max-width: 560px) {
-      .logo img {
-        height: 42px;
-      }
-      .nav-proposal {
-        padding: 8px 11px !important;
-        font-size: 0.68rem !important;
-      }
-      .burger {
-        padding: 8px 10px;
-      }
-      /* espaço para o botão flutuante do WhatsApp não tapar o rodapé */
-      footer {
-        padding-bottom: 96px;
-      }
-    }
-    @media (max-width: 400px) {
-      .nav {
-        gap: 8px;
-      }
-      .logo img {
-        height: 38px;
-      }
-      .nav-proposal {
-        padding: 7px 9px !important;
-        font-size: 0.62rem !important;
-        letter-spacing: 0.02em;
-      }
-    }
-    /* nada pode exceder o container em ecrãs estreitos */
-    select,
-    input,
-    textarea,
-    figure,
-    picture {
-      max-width: 100%;
-    }
-    /* ===== BANDEIRAS — SVG próprio em vez de emoji (auditoria 09/2026, não remover) ===== */
-    .langs button {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .langs button svg {
-      width: 16px;
-      height: 11px;
-      flex: none;
-      display: block;
-      border-radius: 2px;
-      box-shadow: inset 0 0 0 1px rgba(47, 43, 42, 0.18);
-    }
     </style>
     <script type="application/ld+json">
       {
@@ -1620,7 +1642,7 @@
   </head>
   <body>
     <header>
-      <nav class="wrap nav" aria-label="Principal">
+      <nav class="wrap nav" aria-label="Principal" data-i18n-aria="aria.nav">
         <a class="logo" href="index.html"
           ><img
             src="assets/img/logo-sm.webp"
@@ -1639,9 +1661,14 @@
           <!-- <a class="nav-sep" href="imigracao.html" data-i18n="nav.imig">Assessoria de imigração</a> -->
         </div>
         <a class="btn nav-proposal" href="orcamento.html" data-i18n="nav.quote"
-          >Pedir proposta</a
+          >Pedir orçamento</a
         >
-        <div class="langs" role="group" aria-label="Idioma">
+        <div
+          class="langs"
+          role="group"
+          aria-label="Idioma"
+          data-i18n-aria="aria.lang"
+        >
           <button data-lang="pt" aria-pressed="true">PT</button>
           <button data-lang="en" aria-pressed="false">EN</button>
           <button data-lang="es" aria-pressed="false">ES</button>
@@ -1653,6 +1680,7 @@
           aria-expanded="false"
           aria-controls="links"
           aria-label="Menu"
+          data-i18n-aria="aria.menu"
         >
           ☰
         </button>
@@ -1660,53 +1688,38 @@
     </header>
     <main>
       <section class="hero">
-        <picture class="hero-bg">
+        <video
+          class="hero-bg hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="assets/img/hero-1280.avif"
+          aria-hidden="true"
+          tabindex="-1"
+        >
           <source
-            type="image/avif"
-            srcset="
-              assets/img/hero-480.avif   480w,
-              assets/img/hero-800.avif   800w,
-              assets/img/hero-1280.avif 1280w,
-              assets/img/hero-1600.avif 1600w
-            "
-            sizes="100vw"
+            src="assets/img/imagens-nova/video-fundo-hero.mp4"
+            type="video/mp4"
           />
-          <source
-            type="image/webp"
-            srcset="
-              assets/img/hero-480.webp   480w,
-              assets/img/hero-800.webp   800w,
-              assets/img/hero-1280.webp 1280w,
-              assets/img/hero.webp      1600w
-            "
-            sizes="100vw"
-          />
-          <img
-            src="assets/img/hero.jpg"
-            alt="Estrutura metálica em montagem com grua e equipa em obra"
-            width="1600"
-            height="900"
-            fetchpriority="high"
-          />
-        </picture>
+        </video>
         <div class="wrap hero-inner">
           <p class="origin mono">
-            <span data-i18n="hero.origin"
-              >Equipas especializadas para projetos industriais</span
+            <span data-i18n="hero.origin">MÃO DE OBRA QUE MOVE PROJETOS.</span>
+            <b data-i18n="hero.origin.b"
+              >Construção Civil • Metalomecânica • Indústria</b
             >
-            <b data-i18n="hero.origin.b">Portugal · Espanha · Europa</b>
           </p>
           <h1>
-            <span data-i18n="hero.h1a"
-              >Equipas especializadas para projetos industriais.</span
-            >
+            <span data-i18n="hero.h1a">O seu projeto tem objetivos.</span>
             <mark data-i18n="hero.h1b"
-              >Montagem, estruturas metálicas e soldadura.</mark
+              >Nós ajudamos a formar a equipa para os alcançar.</mark
             >
           </h1>
           <p class="lede" data-i18n="hero.lede">
-            Colocamos equipas especializadas no seu projeto, em Portugal e na
-            Europa.
+            Disponibilizamos profissionais e equipas organizadas para responder
+            às exigências de cada projeto, em obra e em qualquer fase.
           </p>
           <div class="actions">
             <a class="btn btn--lg" href="orcamento.html" data-i18n="hero.cta1"
@@ -1728,49 +1741,49 @@
             <p class="mono eyebrow" data-i18n="proof.eyebrow">
               Como trabalhamos
             </p>
-            <h2 data-i18n="proof.h">A equipa certa para o trabalho certo.</h2>
+            <h2 data-i18n="proof.h">Da necessidade à obra.</h2>
             <p class="lede" data-i18n="proof.p">
-              Entramos no projeto com pessoas preparadas para fazer a obra
-              avançar, no local e no momento certo.
+              O cliente apresenta a necessidade. Nós procuramos a solução.
             </p>
           </div>
           <div class="proof-list">
             <article class="proof-row">
               <span class="proof-index mono">01</span>
               <div>
-                <h3 data-i18n="proof.t1">Pessoas no terreno</h3>
+                <h3 data-i18n="proof.t1">Profissionais especializados</h3>
                 <p data-i18n="proof.d1">
-                  Montadores, soldadores e equipas completas para necessidades
-                  industriais.
+                  Contamos com profissionais especializados e equipas preparadas
+                  para responder às exigências de cada projeto.
                 </p>
               </div>
             </article>
             <article class="proof-row">
               <span class="proof-index mono">02</span>
               <div>
-                <h3 data-i18n="proof.t2">Onde precisa</h3>
+                <h3 data-i18n="proof.t2">Regiões de atuação</h3>
                 <p data-i18n="proof.d2">
-                  Portugal, Espanha e Europa, de acordo com o alcance do
-                  projeto.
+                  Portugal, Espanha e outros países da Europa, de acordo com as
+                  necessidades e o alcance de cada projeto.
                 </p>
               </div>
             </article>
             <article class="proof-row">
               <span class="proof-index mono">03</span>
               <div>
-                <h3 data-i18n="proof.t3">O trabalho necessário</h3>
+                <h3 data-i18n="proof.t3">Áreas de atuação</h3>
                 <p data-i18n="proof.d3">
-                  Montagem, estruturas metálicas, soldadura, caldeiraria e
-                  manutenção.
+                  Estruturas metálicas, construção civil, montagem, soldadura,
+                  caldeiraria e outras soluções especializadas.
                 </p>
               </div>
             </article>
             <article class="proof-row">
               <span class="proof-index mono">04</span>
               <div>
-                <h3 data-i18n="proof.t4">Uma resposta clara</h3>
+                <h3 data-i18n="proof.t4">Vamos trabalhar juntos</h3>
                 <p data-i18n="proof.d4">
-                  Respondemos aos pedidos de orçamento em até 2 dias úteis.
+                  Partilhamos conhecimento, experiência e recursos para
+                  encontrar a solução certa para cada projeto.
                 </p>
               </div>
             </article>
@@ -1783,13 +1796,21 @@
           <div>
             <p class="mono eyebrow" data-i18n="ab.eyebrow">Sobre nós</p>
             <h2 data-i18n="ab.h">Quem somos</h2>
-            <p class="lede" data-i18n="ab.lede">
-              Quando precisa de uma equipa, nós entramos em campo.
+            <p class="lede" data-i18n="ab.home.lede">
+              Pessoas fazem o projeto acontecer.
             </p>
-            <p style="margin-top: 20px" data-i18n="ab.p">
-              A Solution Metal Group disponibiliza equipas especializadas para
+            <p style="margin-top: 20px" data-i18n="ab.home.p">
+              Somos uma empresa especializada na gestão e disponibilização de
+              mão de obra para projetos de construção civil, metalomecânica e
+              indústria. Colocamos profissionais e equipas especializadas em
               montagem industrial, soldadura, estruturas metálicas, caldeiraria
-              e manutenção, com mobilização em Portugal, Espanha e Europa.
+              e manutenção, em Portugal, Espanha e Europa.
+            </p>
+            <p>
+              <strong data-i18n="ab.li1">Profissionais preparados.</strong
+              ><br />
+              <strong data-i18n="ab.li2">Processos organizados.</strong><br />
+              <strong data-i18n="ab.li3">Resposta eficiente.</strong>
             </p>
             <div class="actions">
               <a class="btn" href="empresa.html" data-i18n="ab.cta"
@@ -1797,23 +1818,14 @@
               >
             </div>
           </div>
-          <figure class="edge">
-            <picture
-              ><source
-                type="image/avif"
-                srcset="
-                  assets/img/obra-05-480.avif 480w,
-                  assets/img/obra-05.avif     788w
-                "
-                sizes="(min-width: 861px) 460px, 354px" />
-              <source srcset="assets/img/obra-05.webp" type="image/webp" />
-              <img
-                src="assets/img/obra-05.jpg"
-                alt="Estrutura metálica em perspetiva"
-                loading="lazy"
-                width="941"
-                height="1671"
-            /></picture>
+          <figure class="edge edge--logo">
+            <img
+              src="assets/img/logo-marca.webp"
+              alt="Solution Metal Group — metalomecânica e construção civil"
+              loading="lazy"
+              width="447"
+              height="276"
+            />
           </figure>
         </div>
       </section>
@@ -1821,15 +1833,20 @@
       <section class="band band--tint rv">
         <div class="wrap">
           <p class="mono eyebrow" data-i18n="act.eyebrow">Áreas de atuação</p>
-          <h2 data-i18n="act.h">Soluções industriais para cada necessidade.</h2>
+          <h2 data-i18n="act.h">
+            Mão de obra para projetos que não podem parar.
+          </h2>
 
           <div class="areas" style="margin-top: 38px">
             <article class="area area--image">
               <div class="area-media">
                 <img
-                  src="assets/img/hero-480.avif"
-                  alt="Equipas especializadas"
+                  src="assets/img/obra-11.webp"
+                  alt="Profissional da SMG em intervenção industrial"
                   loading="lazy"
+                  width="788"
+                  height="1400"
+                  style="object-position: center 26%"
                 />
               </div>
               <div class="area-body">
@@ -1854,7 +1871,7 @@
                   completas para reforçar a sua produção, adaptar a equipa às
                   exigências do seu projeto.
                 </p>
-                <a href="servicos.html" class="more-link"
+                <a href="servicos.html" class="more-link" data-i18n="svc.more"
                   >Saber mais <span aria-hidden="true">→</span></a
                 >
               </div>
@@ -1863,9 +1880,11 @@
             <article class="area area--image">
               <div class="area-media">
                 <img
-                  src="assets/img/obra-05.avif"
-                  alt="Montagem industrial"
+                  src="assets/img/obra-01.webp"
+                  alt="Montagem industrial em fábrica"
                   loading="lazy"
+                  width="788"
+                  height="1400"
                 />
               </div>
               <div class="area-body">
@@ -1889,7 +1908,7 @@
                   Executamos trabalhos de montagem e instalação industrial, com
                   equipas preparadas para trabalhar em obra e cumprir prazos.
                 </p>
-                <a href="servicos.html" class="more-link"
+                <a href="servicos.html" class="more-link" data-i18n="svc.more"
                   >Saber mais <span aria-hidden="true">→</span></a
                 >
               </div>
@@ -1898,9 +1917,12 @@
             <article class="area area--image">
               <div class="area-media">
                 <img
-                  src="assets/img/hero-800.avif"
-                  alt="Estruturas metálicas"
+                  src="assets/img/obra-03.webp"
+                  alt="Componente metálico de grande dimensão em fabrico"
                   loading="lazy"
+                  width="788"
+                  height="1400"
+                  style="object-position: center 40%"
                 />
               </div>
               <div class="area-body">
@@ -1922,7 +1944,7 @@
                   Montagem e adaptação de estruturas metálicas, coberturas,
                   plataformas e elementos estruturais para projetos industriais.
                 </p>
-                <a href="servicos.html" class="more-link"
+                <a href="servicos.html" class="more-link" data-i18n="svc.more"
                   >Saber mais <span aria-hidden="true">→</span></a
                 >
               </div>
@@ -1931,9 +1953,12 @@
             <article class="area area--image">
               <div class="area-media">
                 <img
-                  src="assets/img/hero-1280.avif"
-                  alt="Soldadura"
+                  src="assets/img/obra-06.webp"
+                  alt="Soldadura em oficina"
                   loading="lazy"
+                  width="630"
+                  height="1400"
+                  style="object-position: center 34%"
                 />
               </div>
               <div class="area-body">
@@ -1956,7 +1981,7 @@
                   Soldadores qualificados para processos MIG/MAG/TIG e trabalhos
                   em estrutura metálica, de acordo com as exigências do projeto.
                 </p>
-                <a href="servicos.html" class="more-link"
+                <a href="servicos.html" class="more-link" data-i18n="svc.more"
                   >Saber mais <span aria-hidden="true">→</span></a
                 >
               </div>
@@ -1965,9 +1990,11 @@
             <article class="area area--image">
               <div class="area-media">
                 <img
-                  src="assets/img/hero-1600.avif"
-                  alt="Caldeiraria e tubagem"
+                  src="assets/img/obra-07.webp"
+                  alt="Caldeiraria e tubagem industrial"
                   loading="lazy"
+                  width="1197"
+                  height="1400"
                 />
               </div>
               <div class="area-body">
@@ -1991,7 +2018,7 @@
                   metálicos e sistemas em obra, com rigor de qualidade e
                   segurança.
                 </p>
-                <a href="servicos.html" class="more-link"
+                <a href="servicos.html" class="more-link" data-i18n="svc.more"
                   >Saber mais <span aria-hidden="true">→</span></a
                 >
               </div>
@@ -2000,9 +2027,12 @@
             <article class="area area--image">
               <div class="area-media">
                 <img
-                  src="assets/img/hero-480.avif"
-                  alt="Manutenção industrial"
+                  src="assets/img/obra-09.webp"
+                  alt="Manutenção de tubagem industrial"
                   loading="lazy"
+                  width="788"
+                  height="1400"
+                  style="object-position: center 60%"
                 />
               </div>
               <div class="area-body">
@@ -2027,7 +2057,7 @@
                   resposta ágil e intervenção focada na continuidade de
                   operação.
                 </p>
-                <a href="servicos.html" class="more-link"
+                <a href="servicos.html" class="more-link" data-i18n="svc.more"
                   >Saber mais <span aria-hidden="true">→</span></a
                 >
               </div>
@@ -2044,89 +2074,86 @@
 
       <section class="band rv">
         <div class="wrap">
-          <p class="mono eyebrow" data-i18n="pf.eyebrow">Portfólio</p>
-          <h2 data-i18n="pf.h">Trabalho entregue</h2>
+          <p class="mono eyebrow" data-i18n="pf.eyebrow">
+            O que nos diferencia
+          </p>
+          <h2 data-i18n="pf.h">
+            Não é apenas sobre ter pessoas. É sobre ter as pessoas certas.
+          </h2>
           <p class="lede" data-i18n="pf.p">
-            Trabalhos de montagem e estruturas metálicas realizados pela SMG.
+            Agilidade, organização, proximidade e foco no resultado para
+            responder às necessidades de cada projeto.
           </p>
           <div class="works" style="margin-top: 38px">
             <article class="work">
               <div class="ph">
                 <i>PT</i
-                ><picture
-                  ><source srcset="assets/img/obra-01.webp" type="image/webp" />
-                  <img
-                    src="assets/img/obra-01.jpg"
-                    alt="Montagem de estrutura metálica com gruas"
-                    loading="lazy"
-                    width="2040"
-                    height="1148"
-                /></picture>
+                ><img
+                  src="assets/img/obra-02.webp"
+                  alt="Pré-fabricação de tubagem industrial"
+                  loading="lazy"
+                  width="788"
+                  height="1400"
+                />
               </div>
               <div class="txt">
-                <h3 data-i18n="pf.w1">Estrutura metálica em montagem</h3>
-                <p class="muted" data-i18n="pf.caption">
-                  Montagem industrial · Estrutura metálica
+                <h3 data-i18n="pf.w1">Tubagem industrial pré-fabricada</h3>
+                <p class="muted" data-i18n="pf.c1">
+                  Caldeiraria e tubagem · Pré-fabricação
                 </p>
               </div>
             </article>
             <article class="work">
               <div class="ph">
                 <i>PT</i
-                ><picture
-                  ><source srcset="assets/img/obra-02.webp" type="image/webp" />
-                  <img
-                    src="assets/img/obra-02.jpg"
-                    alt="Estrutura metálica e plataformas elevatórias em obra"
-                    loading="lazy"
-                    width="2040"
-                    height="1148"
-                /></picture>
+                ><img
+                  src="assets/img/obra-06.webp"
+                  alt="Soldadura em oficina"
+                  loading="lazy"
+                  width="630"
+                  height="1400"
+                />
               </div>
               <div class="txt">
-                <h3 data-i18n="pf.w1">Estrutura metálica em montagem</h3>
-                <p class="muted" data-i18n="pf.caption">
-                  Estrutura metálica · Montagem com plataformas
+                <h3 data-i18n="pf.w2">Soldadura em oficina</h3>
+                <p class="muted" data-i18n="pf.c2">
+                  Soldadura · Fabrico em oficina
                 </p>
               </div>
             </article>
             <article class="work">
               <div class="ph">
                 <i>PT</i
-                ><picture
-                  ><source srcset="assets/img/obra-03.webp" type="image/webp" />
-                  <img
-                    src="assets/img/obra-03.jpg"
-                    alt="Estrutura metálica com isolamento em obra"
-                    loading="lazy"
-                    width="1670"
-                    height="942"
-                /></picture>
+                ><img
+                  src="assets/img/obra-04.webp"
+                  alt="Movimentação de componente metálico com grua"
+                  loading="lazy"
+                  width="630"
+                  height="1400"
+                />
               </div>
               <div class="txt">
-                <h3 data-i18n="pf.w2">Estrutura metálica com isolamento</h3>
-                <p class="muted" data-i18n="pf.caption">
-                  Estrutura metálica · Fechamento e isolamento
+                <h3 data-i18n="pf.w3">Movimentação de componentes</h3>
+                <p class="muted" data-i18n="pf.c3">
+                  Caldeiraria e tubagem · Movimentação
                 </p>
               </div>
             </article>
             <article class="work">
               <div class="ph">
                 <i>PT</i
-                ><picture
-                  ><source srcset="assets/img/obra-06.webp" type="image/webp" />
-                  <img
-                    src="assets/img/obra-06.jpg"
-                    alt="Estrutura metálica em montagem com gruas e equipa"
-                    loading="lazy"
-                    width="1672"
-                    height="941"
-                /></picture>
+                ><img
+                  src="assets/img/obra-01.webp"
+                  alt="Montagem industrial em fábrica"
+                  loading="lazy"
+                  width="788"
+                  height="1400"
+                />
               </div>
               <div class="txt">
-                <h3 data-i18n="pf.w3">Montagem com gruas e equipa</h3>
-                <p class="muted" data-i18n="pf.caption">
-                  Montagem industrial · Trabalho em altura
+                <h3 data-i18n="pf.w4">Montagem industrial em fábrica</h3>
+                <p class="muted" data-i18n="pf.c4">
+                  Montagem industrial · Instalação em fábrica
                 </p>
               </div>
             </article>
@@ -2244,7 +2271,7 @@
           <a href="servicos.html" data-i18n="nav.services">Áreas de atuação</a>
           <a href="obras.html" data-i18n="nav.portfolio">Portfólio</a>
           <a href="empresa.html" data-i18n="nav.about">Sobre nós</a>
-          <a href="orcamento.html" data-i18n="nav.quote">Pedir proposta</a>
+          <a href="orcamento.html" data-i18n="nav.quote">Pedir orçamento</a>
           <!-- <a href="trabalhe.html" data-i18n="nav.workUs">Trabalhe connosco</a> -->
         </div>
         <div class="fcol">
@@ -2257,7 +2284,11 @@
         </div>
       </div>
     </footer>
-    <a class="wa" href="https://wa.me/351923371932" aria-label="WhatsApp"
+    <a
+      class="wa"
+      href="https://wa.me/351923371932"
+      aria-label="WhatsApp"
+      data-i18n-aria="aria.wa"
       ><svg viewBox="0 0 24 24">
         <path
           d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5 0-1.1.2-3.5-.8-2.9-1.3-4.7-4.3-4.9-4.5-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.5-.1 1z"
