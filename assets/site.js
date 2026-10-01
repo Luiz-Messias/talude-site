@@ -43,6 +43,9 @@ const I18N = {
     "act.t7": "Industrial maintenance",
     "act.d7":
       "Maintenance and repair of industrial structures and equipment, ensuring safety and operational continuity.",
+    "act.construction.title": "Construction and rehabilitation",
+    "act.construction.description":
+      "Construction, rehabilitation and adaptation works.",
     "act.t8": "Complete teams",
     "act.d8":
       "Coordinated teams assembled around the needs, schedule and scope of your project.",
@@ -422,6 +425,9 @@ const I18N = {
     "act.t7": "Mantenimiento industrial",
     "act.d7":
       "Mantenimiento y reparación de estructuras y equipos industriales, garantizando seguridad y continuidad de operación.",
+    "act.construction.title": "Construcción y rehabilitación",
+    "act.construction.description":
+      "Obras de construcción, rehabilitación y adaptación.",
     "act.t8": "Equipos completos",
     "act.d8":
       "Equipos coordinados según las necesidades, el calendario y el alcance de su proyecto.",
@@ -830,6 +836,9 @@ I18N.fr = {
   "act.t7": "Maintenance industrielle",
   "act.d7":
     "Maintenance et réparation de structures et d'équipements industriels.",
+  "act.construction.title": "Construction et réhabilitation",
+  "act.construction.description":
+    "Travaux de construction, de réhabilitation et d'adaptation.",
   "act.t8": "Équipes complètes",
   "act.d8":
     "Des équipes coordonnées selon les besoins, le calendrier et le périmètre de votre projet.",
