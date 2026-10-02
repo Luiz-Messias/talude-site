@@ -525,7 +525,6 @@
         text-align: left;
       }
       .origin b {
-        color: var(--white);
         font-weight: 600;
       }
       .hero .btn--ghost {
@@ -1529,6 +1528,219 @@
         border-radius: 2px;
         box-shadow: inset 0 0 0 1px rgba(47, 43, 42, 0.18);
       }
+      .phead.portfolio-intro {
+        color: var(--white);
+        background:
+          linear-gradient(
+            90deg,
+            rgba(20, 18, 16, 0.76) 0%,
+            rgba(20, 18, 16, 0.55) 58%,
+            rgba(20, 18, 16, 0.44) 100%
+          ),
+          url("assets/img/portfolio-background.png") center 48% / cover
+            no-repeat;
+        padding: 34px 0 26px;
+        overflow: visible;
+      }
+      .phead.portfolio-intro::after {
+        display: block;
+        background: none;
+      }
+      .phead.portfolio-intro .wrap {
+        display: block;
+      }
+      .phead.portfolio-intro .crumb {
+        margin-bottom: 8px;
+        color: rgba(255, 255, 255, 0.78);
+      }
+      .portfolio-eyebrow {
+        margin: 0 0 4px;
+        color: var(--brand-on-dark);
+        font-size: 0.72rem;
+        font-weight: 700;
+        line-height: 1.4;
+      }
+      .phead.portfolio-intro h1 {
+        max-width: 26ch;
+        margin-bottom: 8px;
+        color: var(--white);
+        font-size: 2.5rem;
+      }
+      .phead.portfolio-intro .lede {
+        max-width: 62ch;
+        margin: 0;
+        color: var(--on-dark);
+      }
+      .portfolio-filter-frame {
+        display: grid;
+        grid-template-columns: 32px minmax(0, 1fr) 32px;
+        align-items: center;
+        gap: 4px;
+        margin: 0 0 18px;
+        padding: 6px 8px 3px;
+        border: 1px solid var(--hair);
+        border-radius: 8px;
+        background: var(--paper-2);
+      }
+      .portfolio-filter-arrow {
+        display: grid;
+        place-items: center;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        border: 1px solid var(--hair);
+        border-radius: 50%;
+        background: var(--paper);
+        color: var(--brand);
+        font: inherit;
+        font-size: 1.15rem;
+        line-height: 1;
+        cursor: pointer;
+        transition:
+          color 0.2s ease,
+          background-color 0.2s ease,
+          border-color 0.2s ease;
+      }
+      .portfolio-filter-arrow:hover:not(:disabled) {
+        border-color: var(--brand);
+        background: var(--brand);
+        color: var(--white);
+      }
+      .portfolio-filter-arrow:disabled {
+        color: var(--steel);
+        cursor: default;
+        opacity: 0.38;
+      }
+      .portfolio-filters {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        min-width: 0;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        column-gap: 20px;
+        padding: 4px 8px 8px;
+        cursor: grab;
+        user-select: none;
+        touch-action: pan-x;
+        overscroll-behavior-x: contain;
+        scrollbar-width: thin;
+        scrollbar-color: var(--brand) var(--zinc);
+        -webkit-overflow-scrolling: touch;
+      }
+      .portfolio-filters::-webkit-scrollbar {
+        height: 6px;
+      }
+      .portfolio-filters::-webkit-scrollbar-track {
+        border-radius: 6px;
+        background: var(--zinc);
+      }
+      .portfolio-filters::-webkit-scrollbar-thumb {
+        border: 1px solid var(--paper-2);
+        border-radius: 6px;
+        background: var(--brand);
+      }
+      .portfolio-filters::-webkit-scrollbar-thumb:hover {
+        background: var(--brand-2);
+      }
+      .portfolio-filters.is-dragging,
+      .portfolio-filters.is-dragging button {
+        cursor: grabbing;
+      }
+      .portfolio-filters button {
+        flex: 0 0 auto;
+        position: relative;
+        appearance: none;
+        padding: 8px 0 9px;
+        border: 0;
+        border-bottom: 2px solid transparent;
+        border-radius: 0;
+        background: transparent;
+        color: var(--ink-2);
+        font: inherit;
+        font-size: 0.82rem;
+        line-height: 1.35;
+        white-space: nowrap;
+        cursor: pointer;
+        transition:
+          color 0.2s ease,
+          border-color 0.2s ease;
+      }
+      .portfolio-filters button:hover,
+      .portfolio-filters button[aria-pressed="true"] {
+        color: var(--ink);
+      }
+      .portfolio-filters button[aria-pressed="true"] {
+        border-bottom-color: var(--brand);
+        font-weight: 700;
+      }
+      .portfolio-projects {
+        padding-top: 18px;
+      }
+      .portfolio-projects .gallery {
+        grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+        grid-auto-rows: clamp(190px, 18vw, 260px);
+        gap: 12px;
+      }
+      .portfolio-projects .gallery figure {
+        aspect-ratio: auto;
+        box-shadow: none;
+      }
+      .portfolio-projects .gallery figure.is-featured {
+        order: -1;
+        grid-row: span 2;
+      }
+      .portfolio-projects .gallery figure.is-featured figcaption b {
+        font-size: 1.25rem;
+      }
+      .portfolio-projects .gallery[data-visible-count="1"] {
+        grid-template-columns: minmax(0, 1fr);
+        grid-auto-rows: auto;
+      }
+      .portfolio-projects .gallery[data-visible-count="1"] figure.is-featured {
+        grid-row: auto;
+        aspect-ratio: 16 / 7;
+      }
+      @media (max-width: 900px) {
+        .portfolio-projects .gallery {
+          grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+          grid-auto-rows: clamp(180px, 25vw, 230px);
+        }
+      }
+      @media (max-width: 560px) {
+        .phead.portfolio-intro {
+          padding: 28px 0 20px;
+        }
+        .phead.portfolio-intro h1 {
+          font-size: 2rem;
+        }
+        .portfolio-filters {
+          column-gap: 16px;
+        }
+        .portfolio-filter-frame {
+          grid-template-columns: 30px minmax(0, 1fr) 30px;
+          gap: 2px;
+          padding: 5px 6px 3px;
+        }
+        .portfolio-filter-arrow {
+          width: 28px;
+          height: 28px;
+        }
+        .portfolio-projects .gallery,
+        .portfolio-projects .gallery[data-visible-count="1"] {
+          grid-template-columns: minmax(0, 1fr);
+          grid-auto-rows: auto;
+        }
+        .portfolio-projects .gallery figure,
+        .portfolio-projects
+          .gallery[data-visible-count="1"]
+          figure.is-featured {
+          grid-row: auto;
+          aspect-ratio: 4 / 3;
+        }
+      }
     </style>
     <script type="application/ld+json">
       {
@@ -1588,156 +1800,281 @@
       </nav>
     </header>
     <main>
-      <section class="phead">
-        <img
-          class="phead-bg"
-          src="assets/img/imagens-nova/banner-1600.webp"
-          srcset="
-            assets/img/imagens-nova/banner-1080.webp 1080w,
-            assets/img/imagens-nova/banner-1600.webp 1600w,
-            assets/img/imagens-nova/banner.webp      2172w
-          "
-          sizes="100vw"
-          alt=""
-          aria-hidden="true"
-        />
+      <section class="phead portfolio-intro">
         <div class="wrap">
-          <p class="mono crumb">
-            <a href="index.html" data-i18n="crumb.home">Início</a> ·
-            <span data-i18n="nav.portfolio">Portfólio</span>
-          </p>
-          <h1 data-i18n="pf.h">Trabalho entregue</h1>
-          <p class="lede" data-i18n="pf.p">
-            Trabalhos de montagem e estruturas metálicas realizados pela SMG.
-          </p>
+          <div class="portfolio-copy">
+            <p class="mono crumb">
+              <a href="index.html" data-i18n="crumb.home">Início</a> ·
+              <span data-i18n="nav.portfolio">Portfólio</span>
+            </p>
+            <p class="portfolio-eyebrow mono" data-i18n="obr.eyebrow">
+              PROJETOS
+            </p>
+            <h1 data-i18n="obr.page.title">
+              Experiência que se transforma em resultados.
+            </h1>
+            <p class="lede" data-i18n="obr.intro">
+              Conheça alguns dos trabalhos executados pela SMG em montagem
+              industrial, estruturas metálicas e soluções metalomecânicas.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section class="band rv">
+      <section class="band rv portfolio-projects">
         <div class="wrap">
-          <div class="gallery">
-            <figure>
+          <div class="portfolio-filter-frame" data-filter-frame>
+            <button
+              class="portfolio-filter-arrow"
+              type="button"
+              data-filter-scroll="left"
+              aria-label="Rolar filtros para a esquerda"
+              data-i18n-aria="obr.filter.prev"
+              aria-controls="portfolio-service-filters"
+              disabled
+            >
+              <span aria-hidden="true">&larr;</span>
+            </button>
+            <div
+              class="portfolio-filters"
+              id="portfolio-service-filters"
+              role="group"
+              aria-label="Filtrar projetos por serviço"
+              data-i18n-aria="obr.filter.label"
+              data-project-filters
+            >
+              <button
+                type="button"
+                data-service-filter="all"
+                data-i18n="obr.filter.all"
+                aria-pressed="true"
+              >
+                Todos
+              </button>
+              <button
+                type="button"
+                data-service-filter="structures"
+                data-i18n="obr.t1"
+                aria-pressed="false"
+              >
+                Estruturas metálicas
+              </button>
+              <button
+                type="button"
+                data-service-filter="piping"
+                data-i18n="obr.t2"
+                aria-pressed="false"
+              >
+                Tubagem industrial
+              </button>
+              <button
+                type="button"
+                data-service-filter="assembly"
+                data-i18n="obr.filter.assembly"
+                aria-pressed="false"
+              >
+                Montagem industrial
+              </button>
+              <button
+                type="button"
+                data-service-filter="platework"
+                data-i18n="obr.t3"
+                aria-pressed="false"
+              >
+                Caldeiraria industrial
+              </button>
+              <button
+                type="button"
+                data-service-filter="welding"
+                data-i18n="obr.t4"
+                aria-pressed="false"
+              >
+                Soldadura industrial
+              </button>
+              <button
+                type="button"
+                data-service-filter="maintenance"
+                data-i18n="obr.t6"
+                aria-pressed="false"
+              >
+                Manutenção industrial
+              </button>
+              <button
+                type="button"
+                data-service-filter="construction"
+                data-i18n="obr.t7"
+                aria-pressed="false"
+              >
+                Construção e reabilitação
+              </button>
+              <button
+                type="button"
+                data-service-filter="platforms"
+                data-i18n="obr.t8"
+                aria-pressed="false"
+              >
+                Plataformas e acessos
+              </button>
+              <button
+                type="button"
+                data-service-filter="networks"
+                data-i18n="obr.t9"
+                aria-pressed="false"
+              >
+                Redes e instalações industriais
+              </button>
+            </div>
+            <button
+              class="portfolio-filter-arrow"
+              type="button"
+              data-filter-scroll="right"
+              aria-label="Rolar filtros para a direita"
+              data-i18n-aria="obr.filter.next"
+              aria-controls="portfolio-service-filters"
+            >
+              <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+          <div class="gallery" data-project-gallery data-visible-count="9">
+            <figure data-project-card data-services="structures">
               <img
-                src="assets/img/obra-01.webp"
-                alt="Montagem industrial em fábrica"
+                src="assets/img/portfolio-01.jpeg"
+                alt="Montagem de estrutura metálica industrial em obra"
                 loading="lazy"
-                width="788"
-                height="1400"
+                width="1672"
+                height="941"
               />
               <figcaption>
-                <b data-i18n="obr.cat">Estruturas metálicas</b
+                <b data-i18n="obr.t1">Estruturas metálicas</b
                 ><span data-i18n="obr.s1"
                   >Fabrico e montagem de estruturas industriais.</span
                 >
               </figcaption>
             </figure>
-            <figure>
+            <figure data-project-card data-services="piping">
               <img
-                src="assets/img/port-02.webp"
-                alt="Montagem e soldadura de tubagem industrial em obra"
+                src="assets/img/portfolio-02.png"
+                alt="Instalação de tubagens industriais em fábrica"
                 loading="lazy"
-                width="1400"
-                height="1050"
+                width="1448"
+                height="1086"
               />
               <figcaption>
-                <b data-i18n="obr.catC">Tubagem industrial</b
-                ><span data-i18n="obr.s2">Pré-fabricação de tubagem</span>
+                <b data-i18n="obr.t2">Tubagem industrial</b
+                ><span data-i18n="obr.s2"
+                  >Fabrico, montagem e instalação de tubagens.</span
+                >
               </figcaption>
             </figure>
-            <figure>
+            <figure data-project-card data-services="platework">
               <img
-                src="assets/img/port-03.webp"
-                alt="Fabrico de componentes metálicos em oficina de caldeiraria"
+                src="assets/img/portfolio-03.png"
+                alt="Fabrico e soldadura de componentes metálicos"
                 loading="lazy"
-                width="1254"
+                width="1672"
                 height="941"
               />
               <figcaption>
-                <b data-i18n="obr.catC">Caldeiraria industrial</b
+                <b data-i18n="obr.t3">Caldeiraria industrial</b
                 ><span data-i18n="obr.s3"
                   >Fabrico e montagem de componentes metálicos.</span
                 >
               </figcaption>
             </figure>
-            <figure>
+            <figure data-project-card data-services="welding">
               <img
-                src="assets/img/port-04.webp"
-                alt="Soldadura de tubagem industrial em obra"
+                src="assets/img/portfolio-04.png"
+                alt="Soldador a trabalhar numa tubagem industrial"
                 loading="lazy"
-                width="1254"
+                width="1672"
                 height="941"
               />
               <figcaption>
-                <b data-i18n="obr.catS">Soldadura industrial</b
+                <b data-i18n="obr.t4">Soldadura industrial</b
                 ><span data-i18n="obr.s4"
                   >Soldadura de estruturas, tubagens e equipamentos.</span
                 >
               </figcaption>
             </figure>
-            <figure>
+            <figure
+              data-project-card
+              data-services="assembly"
+              data-default-featured
+            >
               <img
-                src="assets/img/port-05.webp"
-                alt="Montagem de plataforma metálica com escada e guarda-corpos"
+                src="assets/img/portfolio-05.png"
+                alt="Montagem de estrutura metálica em obra industrial"
                 loading="lazy"
-                width="1254"
+                width="1672"
                 height="941"
               />
               <figcaption>
-                <b data-i18n="obr.catS">Plataformas e acessos</b
+                <b data-i18n="obr.t5">Montagem industrial</b
                 ><span data-i18n="obr.s5"
-                  >Fabrico e montagem de escadas, plataformas e passadiços.</span
+                  >Montagem de estruturas metálicas em contexto
+                  industrial.</span
                 >
               </figcaption>
             </figure>
-            <figure>
+            <figure data-project-card data-services="maintenance">
               <img
-                src="assets/img/port-06.webp"
-                alt="Manutenção de equipamento industrial em fábrica"
+                src="assets/img/portfolio-06.png"
+                alt="Técnico a reparar equipamento industrial"
                 loading="lazy"
-                width="1254"
+                width="1672"
                 height="941"
               />
               <figcaption>
-                <b data-i18n="obr.catM">Manutenção industrial</b
+                <b data-i18n="obr.t6">Manutenção industrial</b
+                ><span data-i18n="obr.s6"
+                  >Manutenção, reparação e requalificação de equipamentos.</span
+                >
               </figcaption>
             </figure>
-            <figure>
+            <figure data-project-card data-services="construction">
               <img
-                src="assets/img/obra-09.webp"
-                alt="Tubagem industrial em serviço"
+                src="assets/img/portfolio-07.png"
+                alt="Obra de construção e reabilitação de edifício industrial"
                 loading="lazy"
-                width="788"
-                height="1400"
+                width="1672"
+                height="941"
               />
               <figcaption>
-                <b data-i18n="obr.catM">Manutenção industrial</b
-                ><span data-i18n="obr.s7">Intervenção em tubagem</span>
+                <b data-i18n="obr.t7">Construção e reabilitação</b
+                ><span data-i18n="obr.s7"
+                  >Obras de construção, reabilitação e adaptação.</span
+                >
               </figcaption>
             </figure>
-            <figure>
+            <figure data-project-card data-services="platforms">
               <img
-                src="assets/img/obra-10.webp"
-                alt="Tubagem montada em plataforma de obra"
+                src="assets/img/portfolio-08.png"
+                alt="Plataforma metálica industrial com escadas e passadiços"
                 loading="lazy"
-                width="788"
-                height="1400"
+                width="1672"
+                height="941"
               />
               <figcaption>
-                <b data-i18n="obr.cat">Montagem industrial</b
-                ><span data-i18n="obr.s8">Montagem em plataforma</span>
+                <b data-i18n="obr.t8">Plataformas e acessos</b
+                ><span data-i18n="obr.s8"
+                  >Fabrico e montagem de escadas, plataformas e
+                  passadiços.</span
+                >
               </figcaption>
             </figure>
-            <figure>
+            <figure data-project-card data-services="networks">
               <img
-                src="assets/img/obra-11.webp"
-                alt="Profissional da SMG em intervenção em obra"
+                src="assets/img/portfolio-09.png"
+                alt="Montagem de rede de incêndio com tubagens vermelhas"
                 loading="lazy"
-                width="788"
-                height="1400"
+                width="1671"
+                height="941"
               />
               <figcaption>
-                <b data-i18n="obr.cat">Montagem industrial</b
-                ><span data-i18n="obr.s9">Profissionais em obra</span>
+                <b data-i18n="obr.t9">Redes e instalações industriais</b
+                ><span data-i18n="obr.s9"
+                  >Montagem de redes de incêndio e sistemas industriais.</span
+                >
               </figcaption>
             </figure>
           </div>

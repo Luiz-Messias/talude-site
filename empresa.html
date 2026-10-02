@@ -678,6 +678,46 @@
         color: var(--brand);
         letter-spacing: 0.08em;
       }
+      .office-directory {
+        display: grid;
+        gap: 18px;
+        margin-top: 12px;
+      }
+      .office-country {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+        padding-bottom: 7px;
+        border-bottom: 1px solid var(--hair);
+        color: var(--brand);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+      }
+      .office-country .mono {
+        margin: 0;
+        color: var(--brand);
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
+      }
+      .office-entries {
+        display: grid;
+        gap: 12px;
+        margin-top: 10px;
+      }
+      .office-entry h3 {
+        margin: 0 0 2px;
+        color: var(--ink);
+        font-size: 0.98rem;
+        line-height: 1.35;
+      }
+      .office-entry p {
+        margin: 0;
+        color: var(--ink-2);
+        font-size: 0.88rem;
+        line-height: 1.55;
+      }
 
       /* ===== globo de atuação — biblioteca cobe (09/2026) ===== */
       .globe-layout {
@@ -1871,26 +1911,57 @@
               />
             </div>
             <p class="mono eyebrow" data-i18n="ab.presence">Onde trabalhamos</p>
-            <ul class="presence">
-              <li>
-                <span class="mono">PT</span
-                ><span data-i18n="ab.loc1"
-                  >R. Comércio 1146, 4505-515 Lobão — Santa Maria da Feira,
-                  Aveiro, Portugal</span
-                >
-              </li>
-              <li>
-                <span class="mono">PT</span
-                ><span data-i18n="ab.loc2"
-                  >Centro Comercial Europa, Av. Sá Carneiro, 4930-648, Piso 2,
-                  Sala 37 — Valença do Minho, Viana do Castelo, Portugal</span
-                >
-              </li>
-              <li>
-                <span class="mono">FR</span
-                ><span data-i18n="ab.loc3">Perpinhã, Occitânia, França</span>
-              </li>
-            </ul>
+            <div class="office-directory">
+              <section class="office-group">
+                <p class="office-country">
+                  <span class="mono">PT</span>
+                  <span data-i18n="office.country.pt">PORTUGAL</span>
+                </p>
+                <div class="office-entries">
+                  <article class="office-entry">
+                    <h3 data-i18n="office.place.lobao">
+                      Lobão — Santa Maria da Feira
+                    </h3>
+                    <p>
+                      <span data-i18n="office.address.lobao"
+                        >R. Comércio 1146 · 4505-515 Lobão</span
+                      ><br />
+                      <span data-i18n="office.region.lobao"
+                        >Aveiro, Portugal</span
+                      >
+                    </p>
+                  </article>
+                  <article class="office-entry">
+                    <h3 data-i18n="office.place.valenca">Valença do Minho</h3>
+                    <p>
+                      <span data-i18n="office.address.valenca"
+                        >Av. Sá Carneiro · 4930-648</span
+                      ><br />
+                      <span data-i18n="office.floor.valenca"
+                        >Piso 2, Sala 37</span
+                      ><br />
+                      <span data-i18n="office.region.valenca"
+                        >Viana do Castelo, Portugal</span
+                      >
+                    </p>
+                  </article>
+                </div>
+              </section>
+              <section class="office-group">
+                <p class="office-country">
+                  <span class="mono">FR</span>
+                  <span data-i18n="office.country.fr">FRANÇA</span>
+                </p>
+                <div class="office-entries">
+                  <article class="office-entry">
+                    <h3 data-i18n="office.place.perpignan">
+                      Perpinhã — Occitânia
+                    </h3>
+                    <p data-i18n="office.region.perpignan">França</p>
+                  </article>
+                </div>
+              </section>
+            </div>
           </div>
         </div>
       </section>

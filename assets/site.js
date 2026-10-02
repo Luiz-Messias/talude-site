@@ -118,11 +118,17 @@ const I18N = {
       "We believe every project should be carried out with professionalism, organisation and commitment, building lasting relationships based on trust.",
     "ab.presence": "Where we work",
     "ab.presence.p": "Portugal · Spain · France",
-    "ab.loc1":
-      "R. Comércio 1146, 4505-515 Lobão — Santa Maria da Feira, Aveiro, Portugal",
-    "ab.loc2":
-      "Centro Comercial Europa, Av. Sá Carneiro, 4930-648, Piso 2, Sala 37 — Valença do Minho, Viana do Castelo, Portugal",
-    "ab.loc3": "Perpignan, Occitanie, France",
+    "office.country.pt": "PORTUGAL",
+    "office.country.fr": "FRANCE",
+    "office.place.lobao": "Lobão — Santa Maria da Feira",
+    "office.address.lobao": "R. Comércio 1146 · 4505-515 Lobão",
+    "office.region.lobao": "Aveiro, Portugal",
+    "office.place.valenca": "Valença do Minho",
+    "office.address.valenca": "Av. Sá Carneiro · 4930-648",
+    "office.floor.valenca": "Floor 2, Room 37",
+    "office.region.valenca": "Viana do Castelo, Portugal",
+    "office.place.perpignan": "Perpignan — Occitanie",
+    "office.region.perpignan": "France",
     "team.eyebrow": "Team",
     "team.h": "Our team",
     "team.lede": "The Solution Metal Group leadership team.",
@@ -345,28 +351,48 @@ const I18N = {
     "ok.tw":
       "Application received. We keep your contact for future opportunities.",
     /* portfólio — títulos e galeria */
-    "pf.w1": "Prefabricated industrial piping",
-    "pf.w2": "Welding in the workshop",
-    "pf.w3": "Handling of metal components",
-    "pf.w4": "Industrial assembly in the plant",
-    "pf.c1": "Platework and piping · Prefabrication",
-    "pf.c2": "Welding · Workshop fabrication",
-    "pf.c3": "Platework and piping · Handling",
-    "pf.c4": "Industrial assembly · Installation",
+    "obr.eyebrow": "PROJECTS",
+    "obr.page.title": "Experience that turns into results.",
+    "obr.intro":
+      "Discover some of SMG's work in industrial assembly, steel structures and metalworking solutions.",
+    "obr.filter.label": "Filter projects by service",
+    "obr.filter.all": "All",
+    "obr.filter.assembly": "Industrial assembly",
+    "obr.filter.prev": "Scroll filters left",
+    "obr.filter.next": "Scroll filters right",
+    "pf.w1": "Industrial Piping",
+    "pf.w2": "Industrial Welding",
+    "pf.w3": "Industrial Equipment Handling",
+    "pf.w4": "Steel Structure Installation",
+    "pf.c1": "Fabrication and assembly of piping and industrial components.",
+    "pf.c2": "Welding of structures and metal components.",
+    "pf.c3": "Handling, lifting and positioning of industrial equipment.",
+    "pf.c4":
+      "Assembly and installation of steel structures for industrial buildings and facilities.",
+    "obr.t1": "Steel structures",
+    "obr.t2": "Industrial piping",
+    "obr.t3": "Industrial steel fabrication",
+    "obr.t4": "Industrial welding",
+    "obr.t5": "Industrial assembly",
+    "obr.t6": "Industrial maintenance",
+    "obr.t7": "Construction and rehabilitation",
+    "obr.t8": "Platforms and access systems",
+    "obr.t9": "Industrial networks and installations",
     "obr.cat": "Industrial assembly",
     "obr.catR": "Steel roofing",
     "obr.catC": "Platework and piping",
     "obr.catS": "Welding",
     "obr.catM": "Industrial maintenance",
-    "obr.s1": "Assembly in the workshop",
-    "obr.s2": "Piping prefabrication",
-    "obr.s3": "Handling of components",
-    "obr.s4": "Pipe welding",
-    "obr.s5": "Workshop fabrication",
-    "obr.s6": "Alignment and assembly",
-    "obr.s7": "Piping intervention",
-    "obr.s8": "Platform assembly",
-    "obr.s9": "Team on site",
+    "obr.s1": "Fabrication and assembly of industrial structures.",
+    "obr.s2": "Fabrication, assembly and installation of piping.",
+    "obr.s3": "Fabrication and assembly of metal components.",
+    "obr.s4": "Welding of structures, piping and equipment.",
+    "obr.s5": "Assembly of steel structures in industrial environments.",
+    "obr.s6": "Maintenance, repair and refurbishment of equipment.",
+    "obr.s7": "Construction, rehabilitation and adaptation works.",
+    "obr.s8": "Fabrication and assembly of stairs, platforms and walkways.",
+    "obr.s9":
+      "Installation of fire-protection networks and industrial systems.",
     /* equipa — cargos e funções */
     "team.r_adm": "Administrative Director",
     "team.r_fin": "Financial Director",
@@ -377,9 +403,6 @@ const I18N = {
     "team.b_com": "Responsible for commercial relationships and client quotes.",
     /* contactos — escritórios */
     "ct.offices": "Offices",
-    "ct.off1": "Office 1",
-    "ct.off2": "Office 2",
-    "ct.off3": "France",
     err: "Please check the required fields.",
   },
   es: {
@@ -503,11 +526,17 @@ const I18N = {
       "Creemos que cada proyecto debe ejecutarse con profesionalismo, organización y compromiso, construyendo relaciones duraderas basadas en la confianza.",
     "ab.presence": "Dónde trabajamos",
     "ab.presence.p": "Portugal · Francia",
-    "ab.loc1":
-      "R. Comércio 1146, 4505-515 Lobão — Santa Maria da Feira, Aveiro, Portugal",
-    "ab.loc2":
-      "Centro Comercial Europa, Av. Sá Carneiro, 4930-648, Piso 2, Sala 37 — Valença do Minho, Viana do Castelo, Portugal",
-    "ab.loc3": "Perpiñán, Occitania, Francia",
+    "office.country.pt": "PORTUGAL",
+    "office.country.fr": "FRANCIA",
+    "office.place.lobao": "Lobão — Santa Maria da Feira",
+    "office.address.lobao": "R. Comércio 1146 · 4505-515 Lobão",
+    "office.region.lobao": "Aveiro, Portugal",
+    "office.place.valenca": "Valença do Minho",
+    "office.address.valenca": "Av. Sá Carneiro · 4930-648",
+    "office.floor.valenca": "Planta 2, Sala 37",
+    "office.region.valenca": "Viana do Castelo, Portugal",
+    "office.place.perpignan": "Perpiñán — Occitania",
+    "office.region.perpignan": "Francia",
     "team.eyebrow": "Equipo",
     "team.h": "Nuestro equipo",
     "team.lede": "El equipo directivo de Solution Metal Group.",
@@ -730,28 +759,47 @@ const I18N = {
     "ok.tw":
       "Candidatura recibida. Guardamos su contacto para futuras oportunidades.",
     /* portafolio — títulos y galería */
-    "pf.w1": "Tuberías industriales prefabricadas",
-    "pf.w2": "Soldadura en taller",
-    "pf.w3": "Manipulación de componentes metálicos",
-    "pf.w4": "Montaje industrial en planta",
-    "pf.c1": "Calderería y tuberías · Prefabricación",
-    "pf.c2": "Soldadura · Fabricación en taller",
-    "pf.c3": "Calderería y tuberías · Manipulación",
-    "pf.c4": "Montaje industrial · Instalación",
+    "obr.eyebrow": "PROYECTOS",
+    "obr.page.title": "Experiencia que se transforma en resultados.",
+    "obr.intro":
+      "Conozca algunos de los trabajos realizados por SMG en montaje industrial, estructuras metálicas y soluciones metalmecánicas.",
+    "obr.filter.label": "Filtrar proyectos por servicio",
+    "obr.filter.all": "Todos",
+    "obr.filter.assembly": "Montaje industrial",
+    "obr.filter.prev": "Desplazar filtros a la izquierda",
+    "obr.filter.next": "Desplazar filtros a la derecha",
+    "pf.w1": "Tuberías Industriales",
+    "pf.w2": "Soldadura Industrial",
+    "pf.w3": "Movimiento de Equipos Industriales",
+    "pf.w4": "Montaje de Estructuras Metálicas",
+    "pf.c1": "Fabricación y montaje de tuberías y componentes industriales.",
+    "pf.c2": "Soldadura de estructuras y componentes metálicos.",
+    "pf.c3": "Movimiento, elevación y posicionamiento de equipos industriales.",
+    "pf.c4":
+      "Montaje e instalación de estructuras metálicas para edificios e instalaciones industriales.",
+    "obr.t1": "Estructuras metálicas",
+    "obr.t2": "Tuberías industriales",
+    "obr.t3": "Calderería industrial",
+    "obr.t4": "Soldadura industrial",
+    "obr.t5": "Montaje industrial",
+    "obr.t6": "Mantenimiento industrial",
+    "obr.t7": "Construcción y rehabilitación",
+    "obr.t8": "Plataformas y accesos",
+    "obr.t9": "Redes e instalaciones industriales",
     "obr.cat": "Montaje industrial",
     "obr.catR": "Cubierta metálica",
     "obr.catC": "Calderería y tuberías",
     "obr.catS": "Soldadura",
     "obr.catM": "Mantenimiento industrial",
-    "obr.s1": "Montaje en taller",
-    "obr.s2": "Prefabricación de tuberías",
-    "obr.s3": "Manipulación de componentes",
-    "obr.s4": "Soldadura de tuberías",
-    "obr.s5": "Fabricación en taller",
-    "obr.s6": "Alineación y montaje",
-    "obr.s7": "Intervención en tuberías",
-    "obr.s8": "Montaje en plataforma",
-    "obr.s9": "Equipo en obra",
+    "obr.s1": "Fabricación y montaje de estructuras industriales.",
+    "obr.s2": "Fabricación, montaje e instalación de tuberías.",
+    "obr.s3": "Fabricación y montaje de componentes metálicos.",
+    "obr.s4": "Soldadura de estructuras, tuberías y equipos.",
+    "obr.s5": "Montaje de estructuras metálicas en entornos industriales.",
+    "obr.s6": "Mantenimiento, reparación y reacondicionamiento de equipos.",
+    "obr.s7": "Obras de construcción, rehabilitación y adaptación.",
+    "obr.s8": "Fabricación y montaje de escaleras, plataformas y pasarelas.",
+    "obr.s9": "Montaje de redes contra incendios y sistemas industriales.",
     /* equipo — cargos y funciones */
     "team.r_adm": "Directora Administrativa",
     "team.r_fin": "Director Financiero",
@@ -763,9 +811,6 @@ const I18N = {
       "Responsable de las relaciones comerciales y los presupuestos a clientes.",
     /* contacto — oficinas */
     "ct.offices": "Oficinas",
-    "ct.off1": "Oficina 1",
-    "ct.off2": "Oficina 2",
-    "ct.off3": "Francia",
     err: "Revise los campos obligatorios.",
   },
 };
@@ -774,11 +819,17 @@ I18N.fr = {
   ...I18N.en,
   /* secção "sobre nós" */
   "ab.presence": "Où nous travaillons",
-  "ab.loc1":
-    "R. Comércio 1146, 4505-515 Lobão — Santa Maria da Feira, Aveiro, Portugal",
-  "ab.loc2":
-    "Centro Comercial Europa, Av. Sá Carneiro, 4930-648, Piso 2, Sala 37 — Valença do Minho, Viana do Castelo, Portugal",
-  "ab.loc3": "Perpignan, Occitanie, France",
+  "office.country.pt": "PORTUGAL",
+  "office.country.fr": "FRANCE",
+  "office.place.lobao": "Lobão — Santa Maria da Feira",
+  "office.address.lobao": "R. Comércio 1146 · 4505-515 Lobão",
+  "office.region.lobao": "Aveiro, Portugal",
+  "office.place.valenca": "Valença do Minho",
+  "office.address.valenca": "Av. Sá Carneiro · 4930-648",
+  "office.floor.valenca": "2e étage, salle 37",
+  "office.region.valenca": "Viana do Castelo, Portugal",
+  "office.place.perpignan": "Perpignan — Occitanie",
+  "office.region.perpignan": "France",
   "cred.eyebrow": "Accréditations",
   "cred.h": "Habilitée pour les travaux publics et privés.",
   "cred.p":
@@ -886,11 +937,21 @@ I18N.fr = {
   "pf.eyebrow": "Réalisations",
   "pf.h": "Travaux réalisés",
   "pf.p": "Travaux de montage et de structures métalliques réalisés par SMG.",
+  "obr.page.title": "L'expérience au service des résultats.",
+  "obr.intro":
+    "Découvrez quelques-uns des travaux réalisés par SMG en montage industriel, structures métalliques et solutions métallomécaniques.",
   "pf.cta": "Voir toutes les réalisations",
   "pf.caption": "Montage industriel · Structure métallique",
-  "pf.w1": "Structure métallique en montage",
-  "pf.w2": "Structure métallique avec isolation",
-  "pf.w3": "Montage avec grues et équipe",
+  "pf.w1": "Tuyauterie industrielle",
+  "pf.w2": "Soudage industriel",
+  "pf.w3": "Manutention d'équipements industriels",
+  "pf.w4": "Montage de structures métalliques",
+  "pf.c1":
+    "Fabrication et montage de tuyauteries et de composants industriels.",
+  "pf.c2": "Soudage de structures et de composants métalliques.",
+  "pf.c3": "Manutention, levage et positionnement d'équipements industriels.",
+  "pf.c4":
+    "Montage et installation de structures métalliques pour bâtiments et installations industrielles.",
   "ab.eyebrow": "À propos",
   "ab.h": "Qui sommes-nous ?",
   "ab.lede": "Des spécialistes au service des projets industriels en Europe.",
@@ -917,9 +978,6 @@ I18N.fr = {
   "ct.note": "Nous répondons aux demandes de devis sous 2 jours ouvrés.",
   "ct.hours": "Horaires à confirmer",
   "ct.offices": "Bureaux",
-  "ct.off1": "Bureau 1",
-  "ct.off2": "Bureau 2",
-  "ct.off3": "France",
   "form.eyebrow": "Formulaire",
   "form.send": "Envoyer le message",
   "form.sendq": "Demander un devis",
@@ -1201,6 +1259,120 @@ const io = new IntersectionObserver(
   { threshold: 0.08 },
 );
 document.querySelectorAll(".rv").forEach((el) => io.observe(el));
+
+/* lightbox — abre a foto em tamanho maior ao clicar */
+(function setupPortfolioFilters() {
+  const filters = document.querySelector("[data-project-filters]");
+  const gallery = document.querySelector("[data-project-gallery]");
+  if (!filters || !gallery) return;
+
+  const cards = Array.from(gallery.querySelectorAll("[data-project-card]"));
+  const buttons = Array.from(filters.querySelectorAll("[data-service-filter]"));
+  const scrollButtons = Array.from(
+    document.querySelectorAll("[data-filter-scroll]"),
+  );
+  let drag = null;
+  let dragged = false;
+
+  function updateScrollButtons() {
+    const maxScroll = filters.scrollWidth - filters.clientWidth;
+    scrollButtons.forEach((button) => {
+      button.disabled =
+        button.dataset.filterScroll === "left"
+          ? filters.scrollLeft <= 1
+          : filters.scrollLeft >= maxScroll - 1;
+    });
+  }
+
+  scrollButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const direction = button.dataset.filterScroll === "left" ? -1 : 1;
+      filters.scrollBy({
+        left: direction * Math.max(180, filters.clientWidth * 0.7),
+        behavior: "smooth",
+      });
+    });
+  });
+  filters.addEventListener("scroll", updateScrollButtons, { passive: true });
+  window.addEventListener("resize", updateScrollButtons);
+
+  function selectService(service, activeButton) {
+    const matchingCards = cards.filter(
+      (card) =>
+        service === "all" || card.dataset.services.split(" ").includes(service),
+    );
+    const featuredCard =
+      service === "all"
+        ? matchingCards.find((card) =>
+            card.hasAttribute("data-default-featured"),
+          ) || matchingCards[0]
+        : matchingCards[0];
+
+    cards.forEach((card) => {
+      const visible = matchingCards.includes(card);
+      card.hidden = !visible;
+      card.classList.toggle("is-featured", card === featuredCard);
+    });
+    gallery.dataset.visibleCount = String(matchingCards.length);
+    buttons.forEach((button) => {
+      button.setAttribute("aria-pressed", String(button === activeButton));
+    });
+  }
+
+  filters.addEventListener("pointerdown", (event) => {
+    if (event.pointerType !== "mouse" || event.button !== 0) return;
+    const captureTarget =
+      event.target instanceof Element ? event.target : filters;
+    drag = {
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startScrollLeft: filters.scrollLeft,
+      captureTarget,
+    };
+    captureTarget.setPointerCapture(event.pointerId);
+  });
+
+  filters.addEventListener("pointermove", (event) => {
+    if (!drag || event.pointerId !== drag.pointerId) return;
+    const distance = event.clientX - drag.startX;
+    if (Math.abs(distance) > 4) {
+      dragged = true;
+      filters.classList.add("is-dragging");
+    }
+    if (dragged) filters.scrollLeft = drag.startScrollLeft - distance;
+  });
+
+  function endDrag(event) {
+    if (!drag || event.pointerId !== drag.pointerId) return;
+    if (drag.captureTarget.hasPointerCapture(event.pointerId)) {
+      drag.captureTarget.releasePointerCapture(event.pointerId);
+    }
+    filters.classList.remove("is-dragging");
+    drag = null;
+  }
+
+  filters.addEventListener("pointerup", endDrag);
+  filters.addEventListener("pointercancel", (event) => {
+    endDrag(event);
+    dragged = false;
+  });
+
+  filters.addEventListener("click", (event) => {
+    if (dragged) {
+      event.preventDefault();
+      event.stopPropagation();
+      dragged = false;
+      return;
+    }
+    const button = event.target.closest("[data-service-filter]");
+    if (button && filters.contains(button)) {
+      selectService(button.dataset.serviceFilter, button);
+    }
+  });
+
+  selectService("all", buttons[0]);
+  updateScrollButtons();
+})();
 
 /* lightbox — abre a foto em tamanho maior ao clicar */
 (function () {
