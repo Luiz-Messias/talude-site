@@ -1407,7 +1407,22 @@ document.querySelectorAll(".rv").forEach((el) => io.observe(el));
     im.src = img.currentSrc || img.src;
     im.alt = img.alt || "";
     const capEl = box.querySelector(".lb-cap");
-    capEl.textContent = cap ? cap.textContent.trim() : "";
+    capEl.textContent = "";
+    if (cap) {
+      const title = cap.querySelector("b, h3");
+      const text = cap.querySelector("span, p");
+      if (title) {
+        const strong = document.createElement("b");
+        strong.textContent = title.textContent.trim().replace(/\s+/g, " ");
+        capEl.appendChild(strong);
+      }
+      if (text) {
+        const span = document.createElement("span");
+        span.textContent = text.textContent.trim().replace(/\s+/g, " ");
+        capEl.appendChild(span);
+      }
+      if (!title && !text) capEl.textContent = cap.textContent.trim();
+    }
     box.classList.add("on");
     document.body.style.overflow = "hidden";
   }
