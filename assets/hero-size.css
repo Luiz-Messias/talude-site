@@ -1,0 +1,16 @@
+.phead {
+  display: flex;
+  align-items: center;
+  height: 480px;
+  padding: 0;
+}
+
+.phead .wrap {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .phead {
+    height: 460px;
+  }
+}

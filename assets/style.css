@@ -1328,6 +1328,7 @@ footer .fcol .logo img {
   box-shadow: 0 22px 40px rgba(26, 30, 35, 0.08);
 }
 .area-media {
+  display: block;
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: #dfe7ee;
@@ -1527,7 +1528,7 @@ footer .fcol > span.mono[data-i18n]:first-child {
 
 /* botões em largura total no telemóvel */
 @media (max-width: 560px) {
-  .btn,
+  .btn:not(.nav-proposal),
   form button[type="submit"] {
     width: 100%;
     justify-content: center;

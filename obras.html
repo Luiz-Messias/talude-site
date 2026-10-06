@@ -1414,7 +1414,7 @@
 
       /* botões em largura total no telemóvel */
       @media (max-width: 560px) {
-        .btn,
+        .btn:not(.nav-proposal),
         form button[type="submit"] {
           width: 100%;
           justify-content: center;
@@ -1551,7 +1551,6 @@
           ),
           url("assets/img/portfolio-background.png") center 48% / cover
             no-repeat;
-        padding: 34px 0 26px;
         overflow: visible;
       }
       .phead.portfolio-intro::after {
@@ -1562,7 +1561,7 @@
         display: block;
       }
       .phead.portfolio-intro .crumb {
-        margin-bottom: 8px;
+        margin-bottom: 16px;
         color: rgba(255, 255, 255, 0.78);
       }
       .portfolio-eyebrow {
@@ -1573,14 +1572,12 @@
         line-height: 1.4;
       }
       .phead.portfolio-intro h1 {
-        max-width: 26ch;
         margin-bottom: 8px;
         color: var(--white);
-        font-size: 2.5rem;
       }
       .phead.portfolio-intro .lede {
-        max-width: 62ch;
-        margin: 0;
+        max-width: 56ch;
+        margin-top: 20px;
         color: var(--on-dark);
       }
       .portfolio-filter-frame {
@@ -1722,12 +1719,6 @@
         }
       }
       @media (max-width: 560px) {
-        .phead.portfolio-intro {
-          padding: 28px 0 20px;
-        }
-        .phead.portfolio-intro h1 {
-          font-size: 2rem;
-        }
         .portfolio-filters {
           column-gap: 16px;
         }
@@ -1754,6 +1745,7 @@
         }
       }
     </style>
+    <link rel="stylesheet" href="assets/hero-size.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

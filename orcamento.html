@@ -440,6 +440,11 @@
         border-color: var(--color-accent-deep);
         transform: translateY(-1px);
       }
+      .nav-proposal {
+        padding: 9px 14px !important;
+        font-size: 0.74rem !important;
+        white-space: nowrap;
+      }
       .btn--ghost {
         background: none;
         color: var(--ink);
@@ -1117,6 +1122,7 @@
         color: var(--ink-2);
         font-size: 0.88rem;
         line-height: 1.25;
+        text-transform: none;
         cursor: pointer;
         transition:
           border-color 0.16s,
@@ -1617,7 +1623,7 @@
 
       /* botões em largura total no telemóvel */
       @media (max-width: 560px) {
-        .btn,
+        .btn:not(.nav-proposal),
         form button[type="submit"] {
           width: 100%;
           justify-content: center;
@@ -1744,6 +1750,7 @@
         box-shadow: inset 0 0 0 1px rgba(47, 43, 42, 0.18);
       }
     </style>
+    <link rel="stylesheet" href="assets/hero-size.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -1807,13 +1814,7 @@
       <section class="phead">
         <img
           class="phead-bg"
-          src="assets/img/imagens-nova/banner-1600.webp"
-          srcset="
-            assets/img/imagens-nova/banner-1080.webp 1080w,
-            assets/img/imagens-nova/banner-1600.webp 1600w,
-            assets/img/imagens-nova/banner.webp      2172w
-          "
-          sizes="100vw"
+          src="assets/img/orcamento-profissionais.jpeg"
           alt=""
           aria-hidden="true"
         />
@@ -1822,7 +1823,9 @@
             <a href="index.html" data-i18n="crumb.home">Início</a> ·
             <span data-i18n="form.eyebrow">Orçamento</span>
           </p>
-          <h1 data-i18n="form.sendq">Pedir orçamento</h1>
+          <h1 data-i18n="form.quote.heading">
+            Peça um orçamento para o seu projeto.
+          </h1>
           <p class="lede" data-i18n="ct.note">
             Respondemos em até 2 dias úteis.
           </p>
@@ -1897,36 +1900,28 @@
                     <span data-i18n="q.c4">Tubistas</span></label
                   >
                   <label class="choice"
-                    ><input
-                      type="checkbox"
-                      name="servico"
-                      value="Equipa completa"
-                    />
-                    <span data-i18n="q.c5">Equipa completa</span></label
+                    ><input type="checkbox" name="servico" value="Pintores" />
+                    <span data-i18n="q.c5">Pintores</span></label
                   >
                   <label class="choice"
                     ><input
                       type="checkbox"
                       name="servico"
-                      value="Estruturas metálicas"
+                      value="Chefe de equipa"
                     />
-                    <span data-i18n="q.c6">Estruturas metálicas</span></label
+                    <span data-i18n="q.c6">Chefe de equipa</span></label
+                  >
+                  <label class="choice"
+                    ><input type="checkbox" name="servico" value="Picheleiro" />
+                    <span data-i18n="q.c7">Picheleiro</span></label
                   >
                   <label class="choice"
                     ><input
                       type="checkbox"
                       name="servico"
-                      value="Montagem industrial"
+                      value="Serralheiro"
                     />
-                    <span data-i18n="q.c7">Montagem industrial</span></label
-                  >
-                  <label class="choice"
-                    ><input type="checkbox" name="servico" value="Manutenção" />
-                    <span data-i18n="q.c8">Manutenção</span></label
-                  >
-                  <label class="choice"
-                    ><input type="checkbox" name="servico" value="Outros" />
-                    <span data-i18n="q.c9">Outros</span></label
+                    <span data-i18n="q.c8">Serralheiro</span></label
                   >
                 </div>
               </fieldset>
