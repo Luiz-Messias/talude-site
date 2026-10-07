@@ -1629,14 +1629,14 @@
         width: 100%;
         overflow-x: auto;
         overflow-y: hidden;
-        column-gap: 20px;
+        column-gap: 8px;
         padding: 4px 8px 8px;
         cursor: grab;
         user-select: none;
         touch-action: pan-x;
         overscroll-behavior-x: contain;
         scrollbar-width: thin;
-        scrollbar-color: var(--zinc) var(--brand);
+        scrollbar-color: var(--steel) var(--zinc);
         -webkit-overflow-scrolling: touch;
       }
       .portfolio-filters::-webkit-scrollbar {
@@ -1644,15 +1644,15 @@
       }
       .portfolio-filters::-webkit-scrollbar-track {
         border-radius: 6px;
-        background: var(--brand);
-      }
-      .portfolio-filters::-webkit-scrollbar-thumb {
-        border: 1px solid var(--brand);
-        border-radius: 6px;
         background: var(--zinc);
       }
+      .portfolio-filters::-webkit-scrollbar-thumb {
+        border: 1px solid var(--zinc);
+        border-radius: 6px;
+        background: var(--steel);
+      }
       .portfolio-filters::-webkit-scrollbar-thumb:hover {
-        background: var(--white);
+        background: var(--ink-2);
       }
       .portfolio-filters.is-dragging,
       .portfolio-filters.is-dragging button {
@@ -1662,11 +1662,10 @@
         flex: 0 0 auto;
         position: relative;
         appearance: none;
-        padding: 8px 0 9px;
-        border: 0;
-        border-bottom: 2px solid transparent;
-        border-radius: 0;
-        background: transparent;
+        padding: 8px 14px;
+        border: 1px solid var(--brand);
+        border-radius: 8px;
+        background: var(--paper);
         color: var(--ink-2);
         font: inherit;
         font-size: 0.82rem;
@@ -1675,15 +1674,17 @@
         cursor: pointer;
         transition:
           color 0.2s ease,
+          background-color 0.2s ease,
           border-color 0.2s ease;
       }
-      .portfolio-filters button:hover,
-      .portfolio-filters button[aria-pressed="true"] {
+      .portfolio-filters button:hover {
+        border-color: var(--brand-2);
         color: var(--ink);
       }
       .portfolio-filters button[aria-pressed="true"] {
-        border-bottom-color: var(--brand);
-        font-weight: 700;
+        background: var(--brand);
+        border-color: var(--brand);
+        color: var(--white);
       }
       .portfolio-projects {
         padding-top: 18px;
