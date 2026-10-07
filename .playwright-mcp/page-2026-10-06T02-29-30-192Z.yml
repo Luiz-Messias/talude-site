@@ -1,0 +1,177 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - navigation "Principal" [ref=f2e3]:
+      - link [ref=f2e4] [cursor=pointer]:
+        - /url: index.html
+        - img "Solution Metal Group" [ref=f2e5]
+      - link "Pedir orçamento" [ref=f2e6] [cursor=pointer]:
+        - /url: orcamento.html
+      - button "Menu" [ref=f2e7] [cursor=pointer]: ☰
+  - main [ref=f2e8]:
+    - generic [ref=f2e11]:
+      - paragraph [ref=f2e12]:
+        - link "Início" [ref=f2e13] [cursor=pointer]:
+          - /url: index.html
+        - text: · Sobre nós
+      - heading "Quem somos" [level=1] [ref=f2e14]
+      - paragraph [ref=f2e15]: Especialistas em montagem industrial, estruturas metálicas, soldadura e apoio técnico para projetos industriais em toda a Europa.
+    - generic [ref=f2e17]:
+      - generic [ref=f2e18]:
+        - paragraph [ref=f2e19]: Sobre nós
+        - heading "A Solution Metal Group" [level=2] [ref=f2e20]
+        - paragraph [ref=f2e21]: A Solution Metal Group é uma empresa especializada em montagem industrial, estruturas metálicas, soldadura e apoio técnico para projetos industriais em toda a Europa. Atuamos com foco na qualidade, na segurança e no cumprimento de prazos, disponibilizando equipas qualificadas para obras industriais, manutenção e montagem de estruturas metálicas.
+        - paragraph [ref=f2e22]: Acreditamos que cada projeto deve ser executado com profissionalismo, organização e compromisso, construindo relações duradouras baseadas na confiança.
+      - generic [ref=f2e23]:
+        - img "Solution Metal Group — metalomecânica e construção civil" [ref=f2e25]
+        - paragraph [ref=f2e26]: Onde trabalhamos
+        - generic [ref=f2e27]:
+          - generic [ref=f2e28]:
+            - paragraph [ref=f2e29]:
+              - generic [ref=f2e30]: PT
+              - generic [ref=f2e31]: PORTUGAL
+            - generic [ref=f2e32]:
+              - article [ref=f2e33]:
+                - heading "Lobão — Santa Maria da Feira" [level=3] [ref=f2e34]
+                - paragraph [ref=f2e35]: R. Comércio 1146 · 4505-515 Lobão Aveiro, Portugal
+              - article [ref=f2e36]:
+                - heading "Valença do Minho" [level=3] [ref=f2e37]
+                - paragraph [ref=f2e38]: Av. Sá Carneiro · 4930-648 Piso 2, Sala 37 Viana do Castelo, Portugal
+          - generic [ref=f2e39]:
+            - paragraph [ref=f2e40]:
+              - generic [ref=f2e41]: FR
+              - generic [ref=f2e42]: FRANÇA
+            - article [ref=f2e44]:
+              - heading "Perpinhã — Occitânia" [level=3] [ref=f2e45]
+              - paragraph [ref=f2e46]: França
+    - generic [ref=f2e48]:
+      - paragraph [ref=f2e49]: Em números
+      - heading "Capacidade para acompanhar o seu projeto." [level=2] [ref=f2e50]
+      - generic [ref=f2e51]:
+        - generic [ref=f2e52]:
+          - generic [ref=f2e53]: 30+
+          - generic [ref=f2e54]: clientes industriais
+        - generic [ref=f2e55]:
+          - generic [ref=f2e56]: 250+
+          - generic [ref=f2e57]: profissionais mobilizados
+        - generic [ref=f2e58]:
+          - generic [ref=f2e59]: 100+
+          - generic [ref=f2e60]: projetos realizados
+        - generic [ref=f2e61]:
+          - generic [ref=f2e62]: "4"
+          - generic [ref=f2e63]: países de atuação
+    - generic [ref=f2e65]:
+      - generic [ref=f2e66]:
+        - paragraph [ref=f2e67]: Regiões de atuação
+        - heading "Presença em toda a Europa." [level=2] [ref=f2e68]
+        - paragraph [ref=f2e69]: Com base em Portugal, mobilizamos equipamentos e profissionais para projetos em diferentes países da Europa.
+        - paragraph [ref=f2e70]: Arraste para girar
+      - figure "Portugal Espanha França Holanda" [ref=f2e71]:
+        - generic [ref=f2e74]:
+          - generic [ref=f2e75]: Portugal
+          - generic [ref=f2e76]: Espanha
+          - generic [ref=f2e77]: França
+          - generic [ref=f2e78]: Holanda
+    - generic [ref=f2e80]:
+      - paragraph [ref=f2e81]: Equipa
+      - heading "A nossa equipa" [level=2] [ref=f2e82]
+      - paragraph [ref=f2e83]: A equipa de direção da Solution Metal Group.
+      - generic [ref=f2e84]:
+        - generic [ref=f2e85]:
+          - generic [ref=f2e86]:
+            - img "Jessica Silva, Diretora Administrativa" [ref=f2e87]
+            - link "LinkedIn de Jessica Silva" [ref=f2e88] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/jessica-moura-da-silva-020708353
+          - heading "Jessica Silva" [level=3] [ref=f2e91]
+          - paragraph [ref=f2e92]: Diretora Administrativa
+          - paragraph [ref=f2e93]: Responsável pela gestão administrativa da empresa.
+        - generic [ref=f2e94]:
+          - generic [ref=f2e95]:
+            - img "Bruna Santos, Diretora Administrativa" [ref=f2e96]
+            - link "LinkedIn de Bruna Santos" [ref=f2e97] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/bruna-santos-1ba07752
+          - heading "Bruna Santos" [level=3] [ref=f2e100]
+          - paragraph [ref=f2e101]: Diretora Administrativa
+          - paragraph [ref=f2e102]: Responsável pela gestão administrativa da empresa.
+        - generic [ref=f2e103]:
+          - generic [ref=f2e104]:
+            - img "Lucas Ribeiro, Diretor Financeiro" [ref=f2e105]
+            - link "LinkedIn de Lucas Ribeiro" [ref=f2e106] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/lucas-ribeiro-a65a96219
+          - heading "Lucas Ribeiro" [level=3] [ref=f2e109]
+          - paragraph [ref=f2e110]: Diretor Financeiro
+          - paragraph [ref=f2e111]: Responsável pela gestão financeira e orçamental da empresa.
+        - generic [ref=f2e112]:
+          - generic [ref=f2e113]:
+            - img "Marcio Santos, Diretor Comercial" [ref=f2e114]
+            - link "LinkedIn de Marcio Santos" [ref=f2e115] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/marcio-santos-303815429
+          - heading "Marcio Santos" [level=3] [ref=f2e118]
+          - paragraph [ref=f2e119]: Diretor Comercial
+          - paragraph [ref=f2e120]: Responsável pelo relacionamento comercial e pelos orçamentos aos clientes.
+    - generic [ref=f2e122]:
+      - paragraph [ref=f2e123]: Clientes
+      - heading "Empresas com quem trabalhamos" [level=2] [ref=f2e124]
+      - generic [ref=f2e125]:
+        - generic [ref=f2e126]:
+          - paragraph [ref=f2e127]: Ao longo da nossa atividade, empresas de várias indústrias em toda a Europa confiaram-nos os seus projetos de montagem industrial e de estruturas metálicas.
+          - paragraph [ref=f2e128]: Por compromisso de confidencialidade, não divulgamos nomes nem logótipos dos nossos clientes — preferimos que o trabalho entregue fale por nós. A pedido, apresentamos referências e visitas a projetos já concluídos.
+          - list [ref=f2e129]:
+            - listitem [ref=f2e130]: Confidencialidade e discrição garantidas
+            - listitem [ref=f2e131]: Relações de longo prazo e trabalho recorrente
+            - listitem [ref=f2e132]: Referências e visitas a obras apresentadas a pedido
+        - complementary [ref=f2e133]:
+          - generic [ref=f2e134]: 30+
+          - generic [ref=f2e135]: clientes industriais atendidos
+          - generic [ref=f2e136]: com projetos em toda a Europa
+    - generic [ref=f2e138]:
+      - paragraph [ref=f2e139]: Credenciais
+      - heading "Habilitada para obras públicas e particulares." [level=2] [ref=f2e140]
+      - paragraph [ref=f2e141]: Alvarás e certificados atribuídos pelo IMPIC — Instituto dos Mercados Públicos, do Imobiliário e da Construção.
+      - figure [ref=f2e142]:
+        - img "IMPIC — Instituto dos Mercados Públicos, do Imobiliário e da Construção" [ref=f2e143]
+      - generic [ref=f2e144]:
+        - generic [ref=f2e145]:
+          - text: Alvará
+          - heading "Empreiteiro de obras particulares" [level=3] [ref=f2e146]
+          - paragraph [ref=f2e147]: 118935 - PAR
+        - generic [ref=f2e148]:
+          - text: Certificado
+          - heading "Empreiteiro de obras públicas" [level=3] [ref=f2e149]
+          - paragraph [ref=f2e150]: 159355 - PUB
+    - generic [ref=f2e153]:
+      - link "A seguir Áreas de atuação" [ref=f2e154] [cursor=pointer]:
+        - /url: servicos.html
+        - text: A seguir
+        - generic [ref=f2e155]: Áreas de atuação
+      - link "A seguir Ver o portfólio" [ref=f2e156] [cursor=pointer]:
+        - /url: obras.html
+        - text: A seguir
+        - generic [ref=f2e157]: Ver o portfólio
+      - link "A seguir Falar connosco" [ref=f2e158] [cursor=pointer]:
+        - /url: orcamento.html
+        - text: A seguir
+        - generic [ref=f2e159]: Falar connosco
+  - contentinfo [ref=f2e160]:
+    - generic [ref=f2e161]:
+      - generic [ref=f2e162]:
+        - link [ref=f2e163] [cursor=pointer]:
+          - /url: index.html
+          - img "Solution Metal Group" [ref=f2e164]
+        - generic [ref=f2e165]: © 2026 Solution Metal Group (SMG)
+        - generic [ref=f2e166]: Montagem industrial e estruturas metálicas
+      - generic [ref=f2e167]:
+        - generic [ref=f2e168]: Mapa do site
+        - link "Áreas de atuação" [ref=f2e169] [cursor=pointer]:
+          - /url: servicos.html
+        - link "Portfólio" [ref=f2e170] [cursor=pointer]:
+          - /url: obras.html
+        - link "Sobre nós" [ref=f2e171] [cursor=pointer]:
+          - /url: empresa.html
+        - link "Pedir orçamento" [ref=f2e172] [cursor=pointer]:
+          - /url: orcamento.html
+      - generic [ref=f2e173]:
+        - generic [ref=f2e174]: Legal
+        - link "Política de privacidade" [ref=f2e175] [cursor=pointer]:
+          - /url: "#"
+  - link "WhatsApp" [ref=f2e176] [cursor=pointer]:
+    - /url: https://wa.me/351923371932

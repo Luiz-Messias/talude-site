@@ -1,0 +1,72 @@
+- generic [active] [ref=f6e1]:
+  - banner [ref=f6e2]:
+    - navigation "Principal" [ref=f6e3]:
+      - link [ref=f6e4] [cursor=pointer]:
+        - /url: index.html
+        - img "Solution Metal Group" [ref=f6e5]
+      - link "Pedir orçamento" [ref=f6e6] [cursor=pointer]:
+        - /url: orcamento.html
+      - button "Menu" [ref=f6e7] [cursor=pointer]: ☰
+  - main [ref=f6e8]:
+    - generic [ref=f6e11]:
+      - paragraph [ref=f6e12]:
+        - link "Início" [ref=f6e13] [cursor=pointer]:
+          - /url: index.html
+        - text: · Trabalhe connosco
+      - heading "Trabalhe connosco" [level=1] [ref=f6e14]
+      - paragraph [ref=f6e15]: Candidatura espontânea. Envie a sua área de interesse e mantemos o seu contacto em arquivo.
+    - generic [ref=f6e18]:
+      - generic [ref=f6e19]:
+        - generic [ref=f6e20]:
+          - generic [ref=f6e21]: Nome completo
+          - textbox "Nome completo" [ref=f6e22]
+        - generic [ref=f6e23]:
+          - generic [ref=f6e24]: E-mail
+          - textbox "E-mail" [ref=f6e25]
+        - generic [ref=f6e26]:
+          - generic [ref=f6e27]: Telefone / WhatsApp
+          - textbox "Telefone / WhatsApp" [ref=f6e28]
+        - generic [ref=f6e29]:
+          - generic [ref=f6e30]: Área de interesse
+          - combobox "Área de interesse" [ref=f6e31]:
+            - option "Metalomecânica" [selected]
+            - option "Construção civil"
+            - option "Administrativo / gestão"
+            - option "Outra área"
+      - generic [ref=f6e32]:
+        - generic [ref=f6e33]: Conte um pouco da sua experiência
+        - textbox "Conte um pouco da sua experiência" [ref=f6e34]
+      - button "Enviar candidatura" [ref=f6e35] [cursor=pointer]
+    - generic [ref=f6e38]:
+      - link "A seguir Sobre nós" [ref=f6e39] [cursor=pointer]:
+        - /url: empresa.html
+        - text: A seguir
+        - generic [ref=f6e40]: Sobre nós
+      - link "A seguir Falar connosco" [ref=f6e41] [cursor=pointer]:
+        - /url: orcamento.html
+        - text: A seguir
+        - generic [ref=f6e42]: Falar connosco
+  - contentinfo [ref=f6e43]:
+    - generic [ref=f6e44]:
+      - generic [ref=f6e45]:
+        - link [ref=f6e46] [cursor=pointer]:
+          - /url: index.html
+          - img "Solution Metal Group" [ref=f6e47]
+        - generic [ref=f6e48]: © 2026 Solution Metal Group (SMG)
+        - generic [ref=f6e49]: Estruturas metálicas e construção civil
+      - generic [ref=f6e50]:
+        - generic [ref=f6e51]: Mapa do site
+        - link "Áreas de atuação" [ref=f6e52] [cursor=pointer]:
+          - /url: servicos.html
+        - link "Portfólio" [ref=f6e53] [cursor=pointer]:
+          - /url: obras.html
+        - link "Sobre nós" [ref=f6e54] [cursor=pointer]:
+          - /url: empresa.html
+        - link "Pedir orçamento" [ref=f6e55] [cursor=pointer]:
+          - /url: orcamento.html
+      - generic [ref=f6e56]:
+        - generic [ref=f6e57]: Legal
+        - link "Política de privacidade" [ref=f6e58] [cursor=pointer]:
+          - /url: "#"
+  - link "WhatsApp" [ref=f6e59] [cursor=pointer]:
+    - /url: https://wa.me/351923371932

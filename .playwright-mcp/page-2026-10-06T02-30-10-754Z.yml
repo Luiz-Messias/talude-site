@@ -1,0 +1,91 @@
+- generic [active] [ref=f5e1]:
+  - banner [ref=f5e2]:
+    - navigation "Principal" [ref=f5e3]:
+      - link [ref=f5e4] [cursor=pointer]:
+        - /url: index.html
+        - img "Solution Metal Group" [ref=f5e5]
+      - link "Pedir orçamento" [ref=f5e6] [cursor=pointer]:
+        - /url: orcamento.html
+      - button "Menu" [ref=f5e7] [cursor=pointer]: ☰
+  - main [ref=f5e8]:
+    - generic [ref=f5e11]:
+      - paragraph [ref=f5e12]:
+        - link "Início" [ref=f5e13] [cursor=pointer]:
+          - /url: index.html
+        - text: · Assessoria de imigração
+      - heading "Assessoria de imigração" [level=1] [ref=f5e14]
+      - paragraph [ref=f5e15]: Serviço complementar, prestado por entidade parceira e separado da atividade principal.
+    - generic [ref=f5e17]:
+      - generic [ref=f5e18]:
+        - generic [ref=f5e19]: Serviço separado
+        - text: A assessoria de imigração é prestada pela SMG Vistos, entidade parceira independente, com gestão própria. Não faz parte da oferta principal da Solution Metal Group, não é o foco deste site e não visa a captação de candidatos.
+      - paragraph [ref=f5e20]: Tabela de serviços
+      - generic [ref=f5e21]:
+        - generic [ref=f5e22]: Por preencher antes de publicar
+        - text: Os valores desta tabela estão em branco de propósito. Preencham com os preços reais — publicar a tabela vazia é pior do que não a ter.
+      - generic [ref=f5e23]:
+        - generic [ref=f5e24]:
+          - generic [ref=f5e25]: Incluído no valor
+          - generic [ref=f5e26]: €
+        - generic [ref=f5e27]:
+          - generic [ref=f5e28]:
+            - text: Análise do caso e plano do processo
+            - generic [ref=f5e29]: Uma hora de conversa, lista do que tem e do que falta.
+          - generic [ref=f5e30]: € ___
+        - generic [ref=f5e31]:
+          - generic [ref=f5e32]:
+            - text: Montagem completa do pedido de visto
+            - generic [ref=f5e33]: Formulários, tradução certificada, conferência de documentos e marcação no consulado.
+          - generic [ref=f5e34]: € ___
+        - generic [ref=f5e35]:
+          - generic [ref=f5e36]:
+            - text: Acompanhamento até à decisão
+            - generic [ref=f5e37]: Interlocução com consulado e AIMA.
+          - generic [ref=f5e38]: € ___
+        - generic [ref=f5e39]:
+          - generic [ref=f5e40]:
+            - text: Reagrupamento familiar
+            - generic [ref=f5e41]: Processo para trazer cônjuge e filhos.
+          - generic [ref=f5e42]: € ___
+        - generic [ref=f5e43]:
+          - generic [ref=f5e44]: Taxas do Estado (não ficam connosco)
+          - generic [ref=f5e45]: €
+        - generic [ref=f5e46]:
+          - generic [ref=f5e47]: Taxa consular do visto
+          - generic [ref=f5e48]: € ___
+        - generic [ref=f5e49]:
+          - generic [ref=f5e50]: Taxa da AIMA à chegada
+          - generic [ref=f5e51]: € ___
+        - generic [ref=f5e52]:
+          - generic [ref=f5e53]: Apostila e certidões no país de origem
+          - generic [ref=f5e54]: € ___
+      - generic [ref=f5e55]:
+        - generic [ref=f5e56]: O que nunca fazemos
+        - text: Não garantimos aprovação de visto — ninguém pode. Não cobramos percentagem do salário. Não retemos passaporte nem documento original.
+      - paragraph [ref=f5e57]: Processos que exijam representação jurídica são conduzidos por advogado inscrito na Ordem dos Advogados.
+      - link "Voltar ao site principal" [ref=f5e59] [cursor=pointer]:
+        - /url: index.html
+  - contentinfo [ref=f5e60]:
+    - generic [ref=f5e61]:
+      - generic [ref=f5e62]:
+        - link [ref=f5e63] [cursor=pointer]:
+          - /url: index.html
+          - img "Solution Metal Group" [ref=f5e64]
+        - generic [ref=f5e65]: © 2026 Solution Metal Group (SMG)
+        - generic [ref=f5e66]: Estruturas metálicas e construção civil
+      - generic [ref=f5e67]:
+        - generic [ref=f5e68]: Mapa do site
+        - link "Áreas de atuação" [ref=f5e69] [cursor=pointer]:
+          - /url: servicos.html
+        - link "Portfólio" [ref=f5e70] [cursor=pointer]:
+          - /url: obras.html
+        - link "Sobre nós" [ref=f5e71] [cursor=pointer]:
+          - /url: empresa.html
+        - link "Pedir orçamento" [ref=f5e72] [cursor=pointer]:
+          - /url: orcamento.html
+      - generic [ref=f5e73]:
+        - generic [ref=f5e74]: Legal
+        - link "Política de privacidade" [ref=f5e75] [cursor=pointer]:
+          - /url: "#"
+  - link "WhatsApp" [ref=f5e76] [cursor=pointer]:
+    - /url: https://wa.me/351923371932

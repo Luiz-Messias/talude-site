@@ -1,0 +1,188 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Principal" [ref=e3]:
+      - link [ref=e4] [cursor=pointer]:
+        - /url: index.html
+        - img "Solution Metal Group" [ref=e5]
+      - link "Pedir orçamento" [ref=e6] [cursor=pointer]:
+        - /url: orcamento.html
+      - button "Menu" [ref=e7] [cursor=pointer]: ☰
+  - main [ref=e8]:
+    - generic [ref=e11]:
+      - paragraph [ref=e12]:
+        - generic [ref=e13]: MÃO DE OBRA QUE MOVE PROJETOS.
+        - generic [ref=e14]: Construção Civil • Metalomecânica • Indústria
+      - heading [level=1] [ref=e15]:
+        - text: O seu projeto tem objetivos.
+        - mark [ref=e16]: Nós ajudamos a formar a equipa para os alcançar.
+      - paragraph [ref=e17]: Disponibilizamos profissionais e equipas organizadas para responder às exigências de cada projeto, em obra e em qualquer fase.
+      - generic [ref=e18]:
+        - link "Pedir orçamento" [ref=e19] [cursor=pointer]:
+          - /url: orcamento.html
+        - link "Falar no WhatsApp" [ref=e20] [cursor=pointer]:
+          - /url: https://wa.me/351923371932
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - paragraph [ref=e24]: Como trabalhamos
+        - heading "Da necessidade à obra." [level=2] [ref=e25]
+        - paragraph [ref=e26]: O cliente apresenta a necessidade. Nós procuramos a solução.
+      - generic [ref=e27]:
+        - article [ref=e28]:
+          - generic [ref=e29]: "01"
+          - generic [ref=e30]:
+            - heading "Profissionais especializados" [level=3] [ref=e31]
+            - paragraph [ref=e32]: Contamos com profissionais especializados e equipas preparadas para responder às exigências de cada projeto.
+        - article [ref=e33]:
+          - generic [ref=e34]: "02"
+          - generic [ref=e35]:
+            - heading "Regiões de atuação" [level=3] [ref=e36]
+            - paragraph [ref=e37]: Portugal, Espanha e outros países da Europa, de acordo com as necessidades e o alcance de cada projeto.
+        - article [ref=e38]:
+          - generic [ref=e39]: "03"
+          - generic [ref=e40]:
+            - heading "Áreas de atuação" [level=3] [ref=e41]
+            - paragraph [ref=e42]: Estruturas metálicas, construção civil, montagem, soldadura, caldeiraria e outras soluções especializadas.
+        - article [ref=e43]:
+          - generic [ref=e44]: "04"
+          - generic [ref=e45]:
+            - heading "Vamos trabalhar juntos" [level=3] [ref=e46]
+            - paragraph [ref=e47]: Partilhamos conhecimento, experiência e recursos para encontrar a solução certa para cada projeto.
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - paragraph [ref=e51]: Sobre nós
+        - heading "Quem somos" [level=2] [ref=e52]
+        - paragraph [ref=e53]: Pessoas fazem o projeto acontecer.
+        - paragraph [ref=e54]: Somos uma empresa especializada na gestão e disponibilização de mão de obra para projetos de construção civil, metalomecânica e indústria. Colocamos profissionais e equipas especializadas em montagem industrial, soldadura, estruturas metálicas, caldeiraria e manutenção, em Portugal, Espanha e Europa.
+        - paragraph [ref=e55]:
+          - strong [ref=e56]: Profissionais preparados.
+          - strong [ref=e57]: Processos organizados.
+          - strong [ref=e58]: Resposta eficiente.
+        - link "Conheça a Solution Metal Group" [ref=e60] [cursor=pointer]:
+          - /url: empresa.html
+      - figure [ref=e61]:
+        - img "Solution Metal Group — metalomecânica e construção civil" [ref=e62]
+    - generic [ref=e64]:
+      - paragraph [ref=e65]: Áreas de atuação
+      - heading "Mão de obra para projetos que não podem parar." [level=2] [ref=e66]
+      - generic [ref=e67]:
+        - article [ref=e68]:
+          - img "Profissional da SMG em intervenção industrial" [ref=e70]
+          - generic [ref=e71]:
+            - heading "Equipas especializadas" [level=3] [ref=e77]
+            - paragraph [ref=e78]: Disponibilizamos profissionais qualificados e equipas completas para reforçar a sua produção, adaptar a equipa às exigências do seu projeto.
+            - link "Saber mais" [ref=e79] [cursor=pointer]:
+              - /url: servicos.html
+              - text: Saber mais →
+        - article [ref=e80]:
+          - img "Montagem industrial em fábrica" [ref=e82]
+          - generic [ref=e83]:
+            - heading "Montagem industrial" [level=3] [ref=e87]
+            - paragraph [ref=e88]: Executamos trabalhos de montagem e instalação industrial, com equipas preparadas para trabalhar em obra e cumprir prazos.
+            - link "Saber mais" [ref=e89] [cursor=pointer]:
+              - /url: servicos.html
+              - text: Saber mais →
+        - article [ref=e90]:
+          - img "Montagem de estrutura metálica com grua em obra" [ref=e92]
+          - generic [ref=e93]:
+            - heading "Estruturas metálicas" [level=3] [ref=e97]
+            - paragraph [ref=e98]: Montagem e adaptação de estruturas metálicas, coberturas, plataformas e elementos estruturais para projetos industriais.
+            - link "Saber mais" [ref=e99] [cursor=pointer]:
+              - /url: servicos.html
+              - text: Saber mais →
+        - article [ref=e100]:
+          - img "Junta de soldadura em tubagem industrial" [ref=e102]
+          - generic [ref=e103]:
+            - heading "Soldadura" [level=3] [ref=e106]
+            - paragraph [ref=e107]: Soldadores qualificados para processos MIG/MAG/TIG e trabalhos em estrutura metálica, de acordo com as exigências do projeto.
+            - link "Saber mais" [ref=e108] [cursor=pointer]:
+              - /url: servicos.html
+              - text: Saber mais →
+        - article [ref=e109]:
+          - img "Caldeiraria e tubagem industrial" [ref=e111]
+          - generic [ref=e112]:
+            - heading "Caldeiraria e tubagem" [level=3] [ref=e117]
+            - paragraph [ref=e118]: Execução de montagem, preparação e adaptação de componentes metálicos e sistemas em obra, com rigor de qualidade e segurança.
+            - link "Saber mais" [ref=e119] [cursor=pointer]:
+              - /url: servicos.html
+              - text: Saber mais →
+        - article [ref=e120]:
+          - img "Manutenção industrial em equipamento" [ref=e122]
+          - generic [ref=e123]:
+            - heading "Manutenção industrial" [level=3] [ref=e129]
+            - paragraph [ref=e130]: Apoiamos a manutenção e reparação de ativos industriais, com resposta ágil e intervenção focada na continuidade de operação.
+            - link "Saber mais" [ref=e131] [cursor=pointer]:
+              - /url: servicos.html
+              - text: Saber mais →
+      - link "Ver todas as áreas" [ref=e133] [cursor=pointer]:
+        - /url: servicos.html
+    - generic [ref=e135]:
+      - paragraph [ref=e136]: O que nos diferencia
+      - heading "Não é apenas sobre ter pessoas. É sobre ter as pessoas certas." [level=2] [ref=e137]
+      - paragraph [ref=e138]: Agilidade, organização, proximidade e foco no resultado para responder às necessidades de cada projeto.
+      - generic [ref=e139]:
+        - article [ref=e140]:
+          - generic [ref=e141]:
+            - generic [ref=e142]: PT
+            - img "Pré-fabricação de tubagem industrial" [ref=e143]
+          - generic [ref=e144]:
+            - heading "Tubagem Industrial" [level=3] [ref=e145]
+            - paragraph [ref=e146]: Fabrico e montagem de tubagens e componentes industriais.
+        - article [ref=e147]:
+          - generic [ref=e148]:
+            - generic [ref=e149]: PT
+            - img "Soldadura em oficina" [ref=e150]
+          - generic [ref=e151]:
+            - heading "Soldadura Industrial" [level=3] [ref=e152]
+            - paragraph [ref=e153]: Soldadura de estruturas e componentes metálicos.
+        - article [ref=e154]:
+          - generic [ref=e155]:
+            - generic [ref=e156]: PT
+            - img "Movimentação de componente metálico com grua" [ref=e157]
+          - generic [ref=e158]:
+            - heading "Movimentação de Equipamentos Industriais" [level=3] [ref=e159]
+            - paragraph [ref=e160]: Movimentação, elevação e posicionamento de equipamentos industriais.
+        - article [ref=e161]:
+          - generic [ref=e162]:
+            - generic [ref=e163]: PT
+            - img "Montagem de estrutura metálica para edifício industrial" [ref=e164]
+          - generic [ref=e165]:
+            - heading "Montagem de Estruturas Metálicas" [level=3] [ref=e166]
+            - paragraph [ref=e167]: Montagem e instalação de estruturas metálicas para edifícios e instalações industriais.
+      - link "Ver o portfólio completo" [ref=e169] [cursor=pointer]:
+        - /url: obras.html
+    - generic [ref=e171]:
+      - generic [ref=e172]:
+        - paragraph [ref=e173]: Contacto
+        - heading "Precisa de uma equipa para o seu projeto?" [level=2] [ref=e174]
+        - paragraph [ref=e175]: Envie-nos o seu pedido. Respondemos em até 2 dias úteis.
+      - generic [ref=e176]:
+        - link "WhatsApp" [ref=e177] [cursor=pointer]:
+          - /url: https://wa.me/351923371932
+        - link "Enviar e-mail" [ref=e181] [cursor=pointer]:
+          - /url: mailto:comercial@solutionmetal.com
+        - link "Pedir orçamento" [ref=e186] [cursor=pointer]:
+          - /url: orcamento.html
+  - contentinfo [ref=e192]:
+    - generic [ref=e193]:
+      - generic [ref=e194]:
+        - link [ref=e195] [cursor=pointer]:
+          - /url: index.html
+          - img "Solution Metal Group" [ref=e196]
+        - generic [ref=e197]: © 2026 Solution Metal Group (SMG)
+        - generic [ref=e198]: Montagem industrial e estruturas metálicas
+      - generic [ref=e199]:
+        - generic [ref=e200]: Mapa do site
+        - link "Áreas de atuação" [ref=e201] [cursor=pointer]:
+          - /url: servicos.html
+        - link "Portfólio" [ref=e202] [cursor=pointer]:
+          - /url: obras.html
+        - link "Sobre nós" [ref=e203] [cursor=pointer]:
+          - /url: empresa.html
+        - link "Pedir orçamento" [ref=e204] [cursor=pointer]:
+          - /url: orcamento.html
+      - generic [ref=e205]:
+        - generic [ref=e206]: Legal
+        - link "Política de privacidade" [ref=e207] [cursor=pointer]:
+          - /url: "#"
+  - link "WhatsApp" [ref=e208] [cursor=pointer]:
+    - /url: https://wa.me/351923371932

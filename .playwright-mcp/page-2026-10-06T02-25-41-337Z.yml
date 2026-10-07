@@ -1,0 +1,114 @@
+- generic [active] [ref=f11e1]:
+  - banner [ref=f11e2]:
+    - navigation "Principal" [ref=f11e3]:
+      - link [ref=f11e4] [cursor=pointer]:
+        - /url: index.html
+        - img "Solution Metal Group" [ref=f11e5]
+      - link "Pedir orçamento" [ref=f11e6] [cursor=pointer]:
+        - /url: orcamento.html
+      - button "Menu" [ref=f11e7] [cursor=pointer]: ☰
+  - main [ref=f11e8]:
+    - generic [ref=f11e11]:
+      - paragraph [ref=f11e12]:
+        - link "Início" [ref=f11e13] [cursor=pointer]:
+          - /url: index.html
+        - text: · Portfólio
+      - paragraph [ref=f11e14]: PROJETOS
+      - heading "Experiência que se transforma em resultados." [level=1] [ref=f11e15]
+      - paragraph [ref=f11e16]: Conheça alguns dos trabalhos executados pela SMG em montagem industrial, estruturas metálicas e soluções metalomecânicas.
+    - generic [ref=f11e18]:
+      - generic [ref=f11e19]:
+        - button "Rolar filtros para a esquerda" [disabled] [ref=f11e20]:
+          - generic [aria-hidden] [ref=f11e21]: ←
+        - group "Filtrar projetos por serviço" [ref=f11e22]:
+          - button "Todos" [pressed] [ref=f11e23] [cursor=pointer]
+          - button "Estruturas metálicas" [ref=f11e24] [cursor=pointer]
+          - button "Tubagem industrial" [ref=f11e25] [cursor=pointer]
+          - button "Montagem industrial" [ref=f11e26] [cursor=pointer]
+          - button "Caldeiraria industrial" [ref=f11e27] [cursor=pointer]
+          - button "Soldadura industrial" [ref=f11e28] [cursor=pointer]
+          - button "Manutenção industrial" [ref=f11e29] [cursor=pointer]
+          - button "Construção e reabilitação" [ref=f11e30] [cursor=pointer]
+          - button "Plataformas e acessos" [ref=f11e31] [cursor=pointer]
+          - button "Redes e instalações industriais" [ref=f11e32] [cursor=pointer]
+        - button "Rolar filtros para a direita" [ref=f11e33] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f11e34]: →
+      - generic [ref=f11e35]:
+        - figure "Estruturas metálicas Fabrico e montagem de estruturas industriais." [ref=f11e36]:
+          - img "Montagem de estrutura metálica industrial em obra" [ref=f11e37]
+          - generic [ref=f11e38]:
+            - generic [ref=f11e39]: Estruturas metálicas
+            - text: Fabrico e montagem de estruturas industriais.
+        - figure "Tubagem industrial Fabrico, montagem e instalação de tubagens." [ref=f11e40]:
+          - img "Instalação de tubagens industriais em fábrica" [ref=f11e41]
+          - generic [ref=f11e42]:
+            - generic [ref=f11e43]: Tubagem industrial
+            - text: Fabrico, montagem e instalação de tubagens.
+        - figure "Caldeiraria industrial Fabrico e montagem de componentes metálicos." [ref=f11e44]:
+          - img "Fabrico e soldadura de componentes metálicos" [ref=f11e45]
+          - generic [ref=f11e46]:
+            - generic [ref=f11e47]: Caldeiraria industrial
+            - text: Fabrico e montagem de componentes metálicos.
+        - figure "Soldadura industrial Soldadura de estruturas, tubagens e equipamentos." [ref=f11e48]:
+          - img "Soldador a trabalhar numa tubagem industrial" [ref=f11e49]
+          - generic [ref=f11e50]:
+            - generic [ref=f11e51]: Soldadura industrial
+            - text: Soldadura de estruturas, tubagens e equipamentos.
+        - figure "Montagem industrial Montagem de estruturas metálicas em contexto industrial." [ref=f11e52]:
+          - img "Montagem de estrutura metálica em obra industrial" [ref=f11e53]
+          - generic [ref=f11e54]:
+            - generic [ref=f11e55]: Montagem industrial
+            - text: Montagem de estruturas metálicas em contexto industrial.
+        - figure "Manutenção industrial Manutenção, reparação e requalificação de equipamentos." [ref=f11e56]:
+          - img "Técnico a reparar equipamento industrial" [ref=f11e57]
+          - generic [ref=f11e58]:
+            - generic [ref=f11e59]: Manutenção industrial
+            - text: Manutenção, reparação e requalificação de equipamentos.
+        - figure "Construção e reabilitação Obras de construção, reabilitação e adaptação." [ref=f11e60]:
+          - img "Obra de construção e reabilitação de edifício industrial" [ref=f11e61]
+          - generic [ref=f11e62]:
+            - generic [ref=f11e63]: Construção e reabilitação
+            - text: Obras de construção, reabilitação e adaptação.
+        - figure "Plataformas e acessos Fabrico e montagem de escadas, plataformas e passadiços." [ref=f11e64]:
+          - img "Plataforma metálica industrial com escadas e passadiços" [ref=f11e65]
+          - generic [ref=f11e66]:
+            - generic [ref=f11e67]: Plataformas e acessos
+            - text: Fabrico e montagem de escadas, plataformas e passadiços.
+        - figure "Redes e instalações industriais Montagem de redes de incêndio e sistemas industriais." [ref=f11e68]:
+          - img "Montagem de rede de incêndio com tubagens vermelhas" [ref=f11e69]
+          - generic [ref=f11e70]:
+            - generic [ref=f11e71]: Redes e instalações industriais
+            - text: Montagem de redes de incêndio e sistemas industriais.
+    - generic [ref=f11e74]:
+      - link "A seguir Áreas de atuação" [ref=f11e75] [cursor=pointer]:
+        - /url: servicos.html
+        - text: A seguir
+        - generic [ref=f11e76]: Áreas de atuação
+      - link "A seguir Pedir orçamento" [ref=f11e77] [cursor=pointer]:
+        - /url: orcamento.html
+        - text: A seguir
+        - generic [ref=f11e78]: Pedir orçamento
+  - contentinfo [ref=f11e79]:
+    - generic [ref=f11e80]:
+      - generic [ref=f11e81]:
+        - link [ref=f11e82] [cursor=pointer]:
+          - /url: index.html
+          - img "Solution Metal Group" [ref=f11e83]
+        - generic [ref=f11e84]: © 2026 Solution Metal Group (SMG)
+        - generic [ref=f11e85]: Montagem industrial e estruturas metálicas
+      - generic [ref=f11e86]:
+        - generic [ref=f11e87]: Mapa do site
+        - link "Áreas de atuação" [ref=f11e88] [cursor=pointer]:
+          - /url: servicos.html
+        - link "Portfólio" [ref=f11e89] [cursor=pointer]:
+          - /url: obras.html
+        - link "Sobre nós" [ref=f11e90] [cursor=pointer]:
+          - /url: empresa.html
+        - link "Pedir orçamento" [ref=f11e91] [cursor=pointer]:
+          - /url: orcamento.html
+      - generic [ref=f11e92]:
+        - generic [ref=f11e93]: Legal
+        - link "Política de privacidade" [ref=f11e94] [cursor=pointer]:
+          - /url: "#"
+  - link "WhatsApp" [ref=f11e95] [cursor=pointer]:
+    - /url: https://wa.me/351923371932

@@ -1,0 +1,130 @@
+- generic [active] [ref=f10e1]:
+  - banner [ref=f10e2]:
+    - navigation "Principal" [ref=f10e3]:
+      - link [ref=f10e4] [cursor=pointer]:
+        - /url: index.html
+        - img "Solution Metal Group" [ref=f10e5]
+      - generic [ref=f10e6]:
+        - link "Início" [ref=f10e7] [cursor=pointer]:
+          - /url: index.html
+        - link "Áreas de atuação" [ref=f10e8] [cursor=pointer]:
+          - /url: servicos.html
+        - link "Portfólio" [ref=f10e9] [cursor=pointer]:
+          - /url: obras.html
+        - link "Sobre nós" [ref=f10e10] [cursor=pointer]:
+          - /url: empresa.html
+      - link "Pedir orçamento" [ref=f10e11] [cursor=pointer]:
+        - /url: orcamento.html
+      - group "Idioma" [ref=f10e12]:
+        - button "PT" [pressed] [ref=f10e13] [cursor=pointer]
+        - button "EN" [ref=f10e18] [cursor=pointer]
+        - button "ES" [ref=f10e25] [cursor=pointer]
+        - button "FR" [ref=f10e29] [cursor=pointer]
+  - main [ref=f10e34]:
+    - generic [ref=f10e37]:
+      - paragraph [ref=f10e38]: Áreas de atuação
+      - heading "Soluções industriais para cada necessidade." [level=1] [ref=f10e39]
+      - paragraph [ref=f10e40]: Disponibilizamos equipas especializadas e executamos trabalhos industriais nas áreas de montagem, estruturas metálicas, soldadura, caldeiraria e manutenção, em Portugal, Espanha e Europa.
+    - generic [ref=f10e42]:
+      - generic [ref=f10e43]:
+        - generic [ref=f10e44]:
+          - paragraph [ref=f10e45]: O que fazemos
+          - heading "Experiência que impulsiona o seu projeto." [level=2] [ref=f10e46]
+        - paragraph [ref=f10e47]: Reunimos profissionais qualificados, equipamentos adequados e experiência em diferentes setores industriais, garantindo soluções seguras, eficientes e adaptadas às necessidades de cada cliente.
+      - generic [ref=f10e48]:
+        - article [ref=f10e49]:
+          - img "Equipa especializada em trabalho industrial" [ref=f10e51]
+          - generic [ref=f10e52]:
+            - heading "Equipas especializadas" [level=3] [ref=f10e58]
+            - paragraph [ref=f10e59]: Disponibilizamos profissionais qualificados e equipas completas para reforçar a sua produção, adaptando a equipa às exigências do seu projeto.
+            - link "Saber mais" [ref=f10e60] [cursor=pointer]:
+              - /url: orcamento.html
+              - generic [aria-hidden] [ref=f10e62]: →
+        - article [ref=f10e63]:
+          - img "Montagem industrial em obra" [ref=f10e65]
+          - generic [ref=f10e66]:
+            - heading "Montagem industrial" [level=3] [ref=f10e70]
+            - paragraph [ref=f10e71]: Executamos trabalhos de montagem e instalação industrial, com equipas preparadas para trabalhar em obra e cumprir os prazos e requisitos de cada projeto.
+            - link "Saber mais" [ref=f10e72] [cursor=pointer]:
+              - /url: orcamento.html
+              - generic [aria-hidden] [ref=f10e74]: →
+        - article [ref=f10e75]:
+          - img "Montagem de estrutura metálica com grua em obra" [ref=f10e77]
+          - generic [ref=f10e78]:
+            - heading "Estruturas metálicas" [level=3] [ref=f10e82]
+            - paragraph [ref=f10e83]: Montagem e instalação de estruturas metálicas, coberturas, plataformas e outros elementos estruturais, com foco na qualidade e segurança da execução.
+            - link "Saber mais" [ref=f10e84] [cursor=pointer]:
+              - /url: orcamento.html
+              - generic [aria-hidden] [ref=f10e86]: →
+        - article [ref=f10e87]:
+          - img "Junta de soldadura em tubagem industrial" [ref=f10e89]
+          - generic [ref=f10e90]:
+            - heading "Soldadura" [level=3] [ref=f10e93]
+            - paragraph [ref=f10e94]: Soldadores qualificados em MIG/MAG, TIG e elétrodo, preparados para diferentes tipos de trabalhos e exigências de soldadura industrial.
+            - link "Saber mais" [ref=f10e95] [cursor=pointer]:
+              - /url: orcamento.html
+              - generic [aria-hidden] [ref=f10e97]: →
+        - article [ref=f10e98]:
+          - img "Caldeiraria e tubagem industrial" [ref=f10e100]
+          - generic [ref=f10e101]:
+            - heading "Caldeiraria e tubagem" [level=3] [ref=f10e106]
+            - paragraph [ref=f10e107]: Execução e montagem de trabalhos de caldeiraria e tubagem industrial, desde a preparação e adaptação até à instalação em obra.
+            - link "Saber mais" [ref=f10e108] [cursor=pointer]:
+              - /url: orcamento.html
+              - generic [aria-hidden] [ref=f10e110]: →
+        - article [ref=f10e111]:
+          - img "Manutenção industrial em equipamento" [ref=f10e113]
+          - generic [ref=f10e114]:
+            - heading "Manutenção industrial" [level=3] [ref=f10e120]
+            - paragraph [ref=f10e121]: Apoio em trabalhos de manutenção e intervenção industrial, com profissionais preparados para responder a necessidades pontuais ou projetos de maior duração.
+            - link "Saber mais" [ref=f10e122] [cursor=pointer]:
+              - /url: orcamento.html
+              - generic [aria-hidden] [ref=f10e124]: →
+    - generic [ref=f10e126]:
+      - generic [ref=f10e127]:
+        - generic [ref=f10e128]:
+          - paragraph [ref=f10e129]: Porque escolher a SMG
+          - heading "Mais do que serviços, entregamos resultados." [level=2] [ref=f10e130]
+        - img "Solution Metal Group" [ref=f10e131]
+      - generic [ref=f10e132]:
+        - article [ref=f10e133]:
+          - heading "Equipas qualificadas" [level=3] [ref=f10e137]
+        - article [ref=f10e138]:
+          - heading "Flexibilidade e rapidez" [level=3] [ref=f10e140]
+        - article [ref=f10e141]:
+          - heading "Segurança em primeiro lugar" [level=3] [ref=f10e145]
+        - article [ref=f10e146]:
+          - heading "Compromisso com o cliente" [level=3] [ref=f10e149]
+    - generic [ref=f10e152]:
+      - link "A seguir Ver o portfólio" [ref=f10e153] [cursor=pointer]:
+        - /url: obras.html
+        - text: A seguir
+        - generic [ref=f10e154]: Ver o portfólio
+      - link "A seguir Pedir orçamento" [ref=f10e155] [cursor=pointer]:
+        - /url: orcamento.html
+        - text: A seguir
+        - generic [ref=f10e156]: Pedir orçamento
+  - contentinfo [ref=f10e157]:
+    - generic [ref=f10e158]:
+      - generic [ref=f10e159]:
+        - link [ref=f10e160] [cursor=pointer]:
+          - /url: index.html
+          - img "Solution Metal Group" [ref=f10e161]
+        - generic [ref=f10e162]: © 2026 Solution Metal Group (SMG)
+        - generic [ref=f10e163]: Montagem industrial e estruturas metálicas
+      - generic [ref=f10e164]:
+        - generic [ref=f10e165]: Mapa do site
+        - link "Áreas de atuação" [ref=f10e166] [cursor=pointer]:
+          - /url: servicos.html
+        - link "Portfólio" [ref=f10e167] [cursor=pointer]:
+          - /url: obras.html
+        - link "Sobre nós" [ref=f10e168] [cursor=pointer]:
+          - /url: empresa.html
+        - link "Pedir orçamento" [ref=f10e169] [cursor=pointer]:
+          - /url: orcamento.html
+      - generic [ref=f10e170]:
+        - generic [ref=f10e171]: Legal
+        - link "Política de privacidade" [ref=f10e172] [cursor=pointer]:
+          - /url: "#"
+  - link "WhatsApp" [ref=f10e173] [cursor=pointer]:
+    - /url: https://wa.me/351923371932

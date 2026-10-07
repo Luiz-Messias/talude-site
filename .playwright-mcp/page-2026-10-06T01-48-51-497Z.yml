@@ -1,0 +1,196 @@
+- generic [active] [ref=f3e1]:
+  - text: "-apple-system, sans-serif; font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased; property=\"og:title\" content=\"Pedir orçamento | Solution Metal Group\" />"
+  - banner [ref=f3e2]:
+    - navigation "Principal" [ref=f3e3]:
+      - link [ref=f3e4] [cursor=pointer]:
+        - /url: index.html
+        - img "Solution Metal Group" [ref=f3e5]
+      - generic [ref=f3e6]:
+        - link "Início" [ref=f3e7] [cursor=pointer]:
+          - /url: index.html
+        - link "Áreas de atuação" [ref=f3e8] [cursor=pointer]:
+          - /url: servicos.html
+        - link "Portfólio" [ref=f3e9] [cursor=pointer]:
+          - /url: obras.html
+        - link "Sobre nós" [ref=f3e10] [cursor=pointer]:
+          - /url: empresa.html
+        - group "Idioma" [ref=f3e11]:
+          - button "PT" [pressed] [ref=f3e12]
+          - button "EN" [ref=f3e17]
+          - button "ES" [ref=f3e24]
+          - button "FR" [ref=f3e28]
+      - link "Pedir orçamento" [ref=f3e33] [cursor=pointer]:
+        - /url: orcamento.html
+      - button "Menu" [ref=f3e34]: ☰
+  - main [ref=f3e35]:
+    - generic [ref=f3e38]:
+      - paragraph [ref=f3e39]:
+        - link "Início" [ref=f3e40] [cursor=pointer]:
+          - /url: index.html
+        - text: · Orçamento
+      - heading "Pedir orçamento" [level=1] [ref=f3e41]
+      - paragraph [ref=f3e42]: Respondemos em até 2 dias úteis.
+    - generic [ref=f3e45]:
+      - generic [ref=f3e46]:
+        - textbox [aria-hidden] [ref=f3e47]
+        - group "1. Sobre o projeto" [ref=f3e48]:
+          - generic [ref=f3e50]:
+            - generic [ref=f3e51]:
+              - text: Empresa *
+              - textbox "Empresa *" [ref=f3e52]
+            - generic [ref=f3e53]:
+              - text: Nome e referência do projeto *
+              - textbox "Nome e referência do projeto *" [ref=f3e54]
+            - generic [ref=f3e55]:
+              - text: Local da obra *
+              - textbox "Local da obra *" [ref=f3e56]
+            - generic [ref=f3e57]:
+              - text: País *
+              - combobox "País *" [ref=f3e58]:
+                - option "Selecione" [selected]
+                - option "Portugal"
+                - option "Espanha"
+                - option "França"
+                - option "Outro"
+        - group "2. O que precisa?" [ref=f3e59]:
+          - generic [ref=f3e61]:
+            - generic [ref=f3e62]:
+              - checkbox "Soldadores" [ref=f3e63]
+              - text: Soldadores
+            - generic [ref=f3e64]:
+              - checkbox "Montadores" [ref=f3e65]
+              - text: Montadores
+            - generic [ref=f3e66]:
+              - checkbox "Caldeireiros" [ref=f3e67]
+              - text: Caldeireiros
+            - generic [ref=f3e68]:
+              - checkbox "Tubistas" [ref=f3e69]
+              - text: Tubistas
+            - generic [ref=f3e70]:
+              - checkbox "Pintores" [ref=f3e71]
+              - text: Pintores
+            - generic [ref=f3e72]:
+              - checkbox "Chefe de equipa" [ref=f3e73]
+              - text: Chefe de equipa
+            - generic [ref=f3e74]:
+              - checkbox "Picheleiro" [ref=f3e75]
+              - text: Picheleiro
+            - generic [ref=f3e76]:
+              - checkbox "Serralheiro" [ref=f3e77]
+              - text: Serralheiro
+        - group "3. Dimensão do trabalho" [ref=f3e78]:
+          - generic [ref=f3e80]:
+            - generic [ref=f3e81]:
+              - text: Número de profissionais *
+              - spinbutton "Número de profissionais *" [ref=f3e82]
+            - generic [ref=f3e83]:
+              - text: Data prevista de início
+              - textbox "Data prevista de início" [ref=f3e84]
+            - generic [ref=f3e85]:
+              - text: Duração prevista
+              - textbox "Duração prevista" [ref=f3e86]:
+                - /placeholder: "Ex.: 3 meses"
+            - generic [ref=f3e87]:
+              - text: Turnos
+              - combobox "Turnos" [ref=f3e88]:
+                - option "Selecione" [selected]
+                - option "Diurno"
+                - option "Noturno"
+                - option "Rotativo"
+                - option "A confirmar"
+          - generic [ref=f3e89]:
+            - text: Descrição e dimensão do trabalho *
+            - textbox "Descrição e dimensão do trabalho *" [ref=f3e90]
+        - group "4. Alojamento e apoio logístico" [ref=f3e91]:
+          - generic [ref=f3e93]:
+            - generic [ref=f3e94]:
+              - text: Alojamento necessário?
+              - combobox "Alojamento necessário?" [ref=f3e95]:
+                - option "Não" [selected]
+                - option "Sim, a cargo da SMG"
+                - option "Sim, a cargo da contratante"
+                - option "A confirmar"
+            - generic [ref=f3e96]:
+              - text: Apoio logístico
+              - textbox "Apoio logístico" [ref=f3e97]:
+                - /placeholder: Transporte, refeições ou outro apoio
+        - group "5. Os seus dados" [ref=f3e98]:
+          - generic [ref=f3e100]:
+            - generic [ref=f3e101]:
+              - text: Pessoa de contacto *
+              - textbox "Pessoa de contacto *" [ref=f3e102]
+            - generic [ref=f3e103]:
+              - text: Cargo
+              - textbox "Cargo" [ref=f3e104]
+            - generic [ref=f3e105]:
+              - text: E-mail *
+              - textbox "E-mail *" [ref=f3e106]
+            - generic [ref=f3e107]:
+              - text: Telefone / WhatsApp
+              - textbox "Telefone / WhatsApp" [ref=f3e108]
+          - generic [ref=f3e109]:
+            - text: Projeto ou caderno de encargos (PDF, DWG)
+            - button "Projeto ou caderno de encargos (PDF, DWG)" [ref=f3e110]
+          - generic [ref=f3e111]:
+            - checkbox "Autorizo o tratamento destes dados para resposta ao pedido." [ref=f3e112]
+            - text: Autorizo o tratamento destes dados para resposta ao pedido.
+        - button "Pedir orçamento" [ref=f3e113]
+        - paragraph [ref=f3e114]: Proteção anti-spam ativa. Os dados serão enviados diretamente para o e-mail comercial.
+        - paragraph
+      - complementary [ref=f3e115]:
+        - generic [ref=f3e116]:
+          - paragraph [ref=f3e117]: Falar diretamente
+          - heading "Tem uma dúvida sobre o projeto?" [level=2] [ref=f3e118]
+          - paragraph [ref=f3e119]: A nossa equipa está disponível para esclarecer requisitos e encontrar a melhor solução.
+          - link "Abrir conversa no WhatsApp" [ref=f3e120] [cursor=pointer]:
+            - /url: https://wa.me/351923371932
+          - link "Enviar e-mail" [ref=f3e123] [cursor=pointer]:
+            - /url: mailto:comercial@solutionmetal.com
+        - generic [ref=f3e127]:
+          - strong [ref=f3e128]: Escritórios
+          - generic [ref=f3e129]:
+            - generic [ref=f3e130]:
+              - paragraph [ref=f3e131]: PT PORTUGAL
+              - generic [ref=f3e132]:
+                - article [ref=f3e133]:
+                  - heading "Lobão — Santa Maria da Feira" [level=3] [ref=f3e134]
+                  - paragraph [ref=f3e135]: R. Comércio 1146 · 4505-515 Lobão Aveiro, Portugal
+                - article [ref=f3e136]:
+                  - heading "Valença do Minho" [level=3] [ref=f3e137]
+                  - paragraph [ref=f3e138]: Av. Sá Carneiro · 4930-648 Piso 2, Sala 37 Viana do Castelo, Portugal
+            - generic [ref=f3e139]:
+              - paragraph [ref=f3e140]: FR FRANÇA
+              - article [ref=f3e142]:
+                - heading "Perpinhã — Occitânia" [level=3] [ref=f3e143]
+                - paragraph [ref=f3e144]: França
+        - generic [ref=f3e145]:
+          - strong [ref=f3e146]: Resposta em até 2 dias úteis
+          - text: Analisamos o pedido e entramos em contacto para esclarecer os detalhes.
+    - generic [ref=f3e149]:
+      - link "A seguirÁreas de atuação" [ref=f3e150] [cursor=pointer]:
+        - /url: servicos.html
+      - link "A seguirVer o portfólio" [ref=f3e151] [cursor=pointer]:
+        - /url: obras.html
+  - contentinfo [ref=f3e152]:
+    - generic [ref=f3e153]:
+      - generic [ref=f3e154]:
+        - link [ref=f3e155] [cursor=pointer]:
+          - /url: index.html
+          - img "Solution Metal Group" [ref=f3e156]
+        - text: © 2026 Solution Metal Group (SMG) Montagem industrial e estruturas metálicas
+      - generic [ref=f3e157]:
+        - text: Mapa do site
+        - link "Áreas de atuação" [ref=f3e158] [cursor=pointer]:
+          - /url: servicos.html
+        - link "Portfólio" [ref=f3e159] [cursor=pointer]:
+          - /url: obras.html
+        - link "Sobre nós" [ref=f3e160] [cursor=pointer]:
+          - /url: empresa.html
+        - link "Pedir orçamento" [ref=f3e161] [cursor=pointer]:
+          - /url: orcamento.html
+      - generic [ref=f3e162]:
+        - text: Legal
+        - link "Política de privacidade" [ref=f3e163] [cursor=pointer]:
+          - /url: "#"
+  - link "WhatsApp" [ref=f3e164] [cursor=pointer]:
+    - /url: https://wa.me/351923371932
