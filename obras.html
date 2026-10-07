@@ -1586,10 +1586,9 @@
         align-items: center;
         gap: 4px;
         margin: 0 0 18px;
-        padding: 6px 8px 3px;
-        border: 1px solid var(--hair);
-        border-radius: 8px;
-        background: var(--paper-2);
+        padding: 0;
+        border: 0;
+        background: transparent;
       }
       .portfolio-filter-arrow {
         display: grid;
@@ -1721,12 +1720,11 @@
       }
       @media (max-width: 560px) {
         .portfolio-filters {
-          column-gap: 16px;
+          column-gap: 8px;
         }
         .portfolio-filter-frame {
           grid-template-columns: 30px minmax(0, 1fr) 30px;
           gap: 2px;
-          padding: 5px 6px 3px;
         }
         .portfolio-filter-arrow {
           width: 28px;
