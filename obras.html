@@ -1636,7 +1636,7 @@
         touch-action: pan-x;
         overscroll-behavior-x: contain;
         scrollbar-width: thin;
-        scrollbar-color: var(--brand) var(--zinc);
+        scrollbar-color: var(--zinc) var(--brand);
         -webkit-overflow-scrolling: touch;
       }
       .portfolio-filters::-webkit-scrollbar {
@@ -1644,15 +1644,15 @@
       }
       .portfolio-filters::-webkit-scrollbar-track {
         border-radius: 6px;
-        background: var(--zinc);
-      }
-      .portfolio-filters::-webkit-scrollbar-thumb {
-        border: 1px solid var(--paper-2);
-        border-radius: 6px;
         background: var(--brand);
       }
+      .portfolio-filters::-webkit-scrollbar-thumb {
+        border: 1px solid var(--brand);
+        border-radius: 6px;
+        background: var(--zinc);
+      }
       .portfolio-filters::-webkit-scrollbar-thumb:hover {
-        background: var(--brand-2);
+        background: var(--white);
       }
       .portfolio-filters.is-dragging,
       .portfolio-filters.is-dragging button {
