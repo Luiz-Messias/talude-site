@@ -1434,3 +1434,20 @@ document.querySelectorAll(".rv").forEach((el) => io.observe(el));
     if (e.key === "Escape") close();
   });
 })();
+
+/* hero: garantir que o vídeo de fundo arranca e se mantém em loop */
+const heroVideo = document.querySelector(".hero-video");
+if (heroVideo) {
+  heroVideo.muted = true;
+  heroVideo.loop = true;
+  const startHeroVideo = () => {
+    const playing = heroVideo.play();
+    if (playing && typeof playing.catch === "function") playing.catch(() => {});
+  };
+  startHeroVideo();
+  heroVideo.addEventListener("loadeddata", startHeroVideo);
+  heroVideo.addEventListener("canplay", startHeroVideo);
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) startHeroVideo();
+  });
+}
