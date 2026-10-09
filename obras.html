@@ -759,13 +759,15 @@
           box-shadow 0.35s ease;
       }
       .gallery figure picture,
-      .gallery figure img {
+      .gallery figure img,
+      .gallery figure video {
         position: absolute;
         inset: 0;
         width: 100%;
         height: 100%;
       }
-      .gallery figure img {
+      .gallery figure img,
+      .gallery figure video {
         object-fit: cover;
         object-position: center;
         transition:
@@ -776,7 +778,8 @@
         transform: translateY(-4px);
         box-shadow: 0 24px 48px rgba(47, 43, 42, 0.16);
       }
-      .gallery figure:hover img {
+      .gallery figure:hover img,
+      .gallery figure:hover video {
         transform: scale(1.06);
       }
       .gallery figure {
@@ -2054,6 +2057,28 @@
                 <b data-i18n="obr.t2">Tubagem industrial</b
                 ><span data-i18n="obr.s2"
                   >Fabrico, montagem e instalação de tubagens.</span
+                >
+              </figcaption>
+            </figure>
+            <figure data-project-card data-services="piping">
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="assets/img/tubagem-industrial-poster.jpg"
+                aria-label="Vídeo de montagem de tubagem industrial"
+              >
+                <source
+                  src="assets/img/tubagem-industrial.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <figcaption>
+                <b data-i18n="obr.t2">Tubagem industrial</b
+                ><span data-i18n="obr.svideoPiping"
+                  >Vídeo de montagem de tubagem industrial.</span
                 >
               </figcaption>
             </figure>
