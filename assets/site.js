@@ -385,6 +385,7 @@ const I18N = {
     "obr.catS": "Welding",
     "obr.catM": "Industrial maintenance",
     "obr.s1": "Fabrication and assembly of industrial structures.",
+    "obr.svideo": "Video of steel structure assembly.",
     "obr.s2": "Fabrication, assembly and installation of piping.",
     "obr.s3": "Fabrication and assembly of metal components.",
     "obr.s4": "Welding of structures, piping and equipment.",
@@ -794,6 +795,7 @@ const I18N = {
     "obr.catS": "Soldadura",
     "obr.catM": "Mantenimiento industrial",
     "obr.s1": "Fabricación y montaje de estructuras industriales.",
+    "obr.svideo": "Vídeo de montaje de estructura metálica.",
     "obr.s2": "Fabricación, montaje e instalación de tuberías.",
     "obr.s3": "Fabricación y montaje de componentes metálicos.",
     "obr.s4": "Soldadura de estructuras, tuberías y equipos.",
@@ -1377,61 +1379,192 @@ document.querySelectorAll(".rv").forEach((el) => io.observe(el));
   updateScrollButtons();
 })();
 
-/* lightbox — abre a foto em tamanho maior ao clicar */
+/* lightbox — abre a foto/vídeo em tamanho maior, com navegação */
 (function () {
-  const items = document.querySelectorAll(".gallery figure, .works .work");
+  const items = Array.from(
+    document.querySelectorAll(".gallery figure, .works .work"),
+  );
   if (!items.length) return;
   let box = null;
+  let list = [];
+  let index = 0;
+  let dragStart = null;
 
-  function close() {
-    if (!box) return;
-    box.classList.remove("on");
-    document.body.style.overflow = "";
+  function mediaOf(fig) {
+    return fig.querySelector("video, img");
   }
-  function open(fig) {
-    const img = fig.querySelector("img");
-    if (!img) return;
+
+  function visibleItems() {
+    return items.filter((el) => !el.hidden);
+  }
+
+  function pauseGridVideos() {
+    items.forEach((el) => {
+      const v = el.querySelector("video");
+      if (v) v.pause();
+    });
+  }
+
+  function resumeGridVideos() {
+    items.forEach((el) => {
+      const v = el.querySelector("video");
+      if (v) {
+        const p = v.play();
+        if (p && typeof p.catch === "function") p.catch(() => {});
+      }
+    });
+  }
+
+  function captionOf(fig) {
     const cap = fig.querySelector("figcaption") || fig.querySelector(".txt");
-    if (!box) {
-      box = document.createElement("div");
-      box.className = "lightbox";
-      box.setAttribute("role", "dialog");
-      box.setAttribute("aria-modal", "true");
-      box.innerHTML =
-        '<button class="lb-close" aria-label="Fechar">&times;</button>' +
-        '<figure class="lb-frame"><img alt="" /><figcaption class="lb-cap"></figcaption></figure>';
-      box.addEventListener("click", (e) => {
-        if (e.target === box || e.target.classList.contains("lb-close"))
-          close();
-      });
-      document.body.appendChild(box);
+    if (!cap) return { title: "", text: "" };
+    const titleEl = cap.querySelector("b, h3");
+    const textEl = cap.querySelector("span, p");
+    return {
+      title: titleEl ? titleEl.textContent.trim().replace(/\s+/g, " ") : "",
+      text: textEl ? textEl.textContent.trim().replace(/\s+/g, " ") : "",
+    };
+  }
+
+  function build() {
+    box = document.createElement("div");
+    box.className = "lightbox";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.innerHTML =
+      '<button class="lb-close" aria-label="Fechar">&times;</button>' +
+      '<button class="lb-nav lb-prev" aria-label="Anterior">&larr;</button>' +
+      '<button class="lb-nav lb-next" aria-label="Seguinte">&rarr;</button>' +
+      '<figure class="lb-frame"></figure>' +
+      '<span class="lb-count" aria-hidden="true"></span>';
+    box.addEventListener("click", (e) => {
+      if (e.target.closest(".lb-close")) {
+        close();
+        return;
+      }
+      const nav = e.target.closest(".lb-nav");
+      if (nav) {
+        step(nav.classList.contains("lb-next") ? 1 : -1);
+        return;
+      }
+      if (e.target === box) close();
+    });
+    document.body.appendChild(box);
+  }
+
+  function render() {
+    const fig = list[index];
+    if (!fig) return;
+    const frame = box.querySelector(".lb-frame");
+    frame.innerHTML = "";
+    const media = mediaOf(fig);
+    if (media && media.tagName === "VIDEO") {
+      const source = media.querySelector("source");
+      const video = document.createElement("video");
+      video.src = media.currentSrc || (source && source.src) || "";
+      if (media.poster) video.poster = media.poster;
+      video.controls = true;
+      video.autoplay = true;
+      video.loop = true;
+      video.muted = true;
+      video.playsInline = true;
+      frame.appendChild(video);
+      const p = video.play();
+      if (p && typeof p.catch === "function") p.catch(() => {});
+    } else if (media) {
+      const im = document.createElement("img");
+      im.src = media.currentSrc || media.src;
+      im.alt = media.alt || "";
+      frame.appendChild(im);
     }
-    const im = box.querySelector("img");
-    im.src = img.currentSrc || img.src;
-    im.alt = img.alt || "";
-    const capEl = box.querySelector(".lb-cap");
-    capEl.textContent = "";
-    if (cap) {
-      const title = cap.querySelector("b, h3");
-      const text = cap.querySelector("span, p");
+    const { title, text } = captionOf(fig);
+    if (title || text) {
+      const cap = document.createElement("figcaption");
+      cap.className = "lb-cap";
       if (title) {
         const strong = document.createElement("b");
-        strong.textContent = title.textContent.trim().replace(/\s+/g, " ");
-        capEl.appendChild(strong);
+        strong.textContent = title;
+        cap.appendChild(strong);
       }
       if (text) {
         const span = document.createElement("span");
-        span.textContent = text.textContent.trim().replace(/\s+/g, " ");
-        capEl.appendChild(span);
+        span.textContent = text;
+        cap.appendChild(span);
       }
-      if (!title && !text) capEl.textContent = cap.textContent.trim();
+      frame.appendChild(cap);
     }
+    const count = box.querySelector(".lb-count");
+    const prev = box.querySelector(".lb-prev");
+    const next = box.querySelector(".lb-next");
+    const many = list.length > 1;
+    count.textContent = many ? index + 1 + " / " + list.length : "";
+    prev.hidden = !many;
+    next.hidden = !many;
+    prev.disabled = index === 0;
+    next.disabled = index === list.length - 1;
+  }
+
+  function step(direction) {
+    const target = index + direction;
+    if (target < 0 || target > list.length - 1) return;
+    index = target;
+    render();
+  }
+
+  function open(fig) {
+    list = visibleItems();
+    index = list.indexOf(fig);
+    if (index < 0) {
+      list = [fig];
+      index = 0;
+    }
+    if (!box) build();
+    render();
     box.classList.add("on");
     document.body.style.overflow = "hidden";
+    pauseGridVideos();
   }
+
+  function close() {
+    if (!box) return;
+    const video = box.querySelector("video");
+    if (video) video.pause();
+    box.classList.remove("on");
+    box.querySelector(".lb-frame").innerHTML = "";
+    document.body.style.overflow = "";
+    resumeGridVideos();
+  }
+
   items.forEach((f) => f.addEventListener("click", () => open(f)));
+
   document.addEventListener("keydown", (e) => {
+    if (!box || !box.classList.contains("on")) return;
     if (e.key === "Escape") close();
+    else if (e.key === "ArrowRight") step(1);
+    else if (e.key === "ArrowLeft") step(-1);
+  });
+
+  /* arrastar / deslizar para o lado para ver o item seguinte */
+  document.addEventListener("pointerdown", (e) => {
+    if (!box || !box.classList.contains("on")) return;
+    if (e.target.closest(".lb-nav, .lb-close")) return;
+    const video = e.target.closest("video");
+    if (video) {
+      const rect = video.getBoundingClientRect();
+      if (e.clientY > rect.bottom - 56) return;
+    }
+    dragStart = { x: e.clientX, y: e.clientY };
+  });
+
+  document.addEventListener("pointerup", (e) => {
+    if (!dragStart) return;
+    const start = dragStart;
+    dragStart = null;
+    if (!box || !box.classList.contains("on")) return;
+    const dx = e.clientX - start.x;
+    const dy = e.clientY - start.y;
+    if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy)) return;
+    step(dx < 0 ? 1 : -1);
   });
 })();
 
