@@ -231,6 +231,7 @@ const I18N = {
     "q.pt": "Portugal",
     "q.es": "Spain",
     "q.fr": "France",
+    "q.nl": "Netherlands",
     "q.outro": "Other",
     "q.s2": "2. What do you need?",
     "q.c1": "Welders",
@@ -242,6 +243,8 @@ const I18N = {
     "q.c7": "Plumber",
     "q.c8": "Metalworker",
     "q.c9": "Other",
+    "q.c9l": "Specify the service *",
+    "q.c9ph": "E.g.: scaffolders, thermal insulation, stainless steel",
     "q.s3": "3. Scope of work",
     "q.f5": "Number of workers *",
     "q.f6": "Expected start date",
@@ -642,6 +645,7 @@ const I18N = {
     "q.pt": "Portugal",
     "q.es": "España",
     "q.fr": "Francia",
+    "q.nl": "Países Bajos",
     "q.outro": "Otro",
     "q.s2": "2. ¿Qué necesita?",
     "q.c1": "Soldadores",
@@ -653,6 +657,8 @@ const I18N = {
     "q.c7": "Fontanero",
     "q.c8": "Cerrajero",
     "q.c9": "Otros",
+    "q.c9l": "Especificar el servicio *",
+    "q.c9ph": "Ej.: andamieros, aislamiento térmico, inox",
     "q.s3": "3. Dimensión del trabajo",
     "q.f5": "Número de profesionales *",
     "q.f6": "Fecha prevista de inicio",
@@ -1009,6 +1015,7 @@ I18N.fr = {
   "q.pt": "Portugal",
   "q.es": "Espagne",
   "q.fr": "France",
+  "q.nl": "Pays-Bas",
   "q.outro": "Autre",
   "q.s2": "2. De quoi avez-vous besoin ?",
   "q.c1": "Soudeurs",
@@ -1020,6 +1027,8 @@ I18N.fr = {
   "q.c7": "Plombier",
   "q.c8": "Serrurier",
   "q.c9": "Autres",
+  "q.c9l": "Préciser le service *",
+  "q.c9ph": "Ex. : échafaudeurs, calorifugeage, inox",
   "q.s3": "3. Ampleur des travaux",
   "q.f5": "Nombre de professionnels *",
   "q.f6": "Date de début prévue",
@@ -1259,6 +1268,27 @@ function wire(formId, msgId, okKey) {
 wire("form-orc", "msg-orc", "ok.o");
 wire("form-ct", "msg-ct", "ok.form");
 wire("form-tw", "msg-tw", "ok.tw");
+
+/* orçamento: "Outros" revela a caixa para a empresa especificar o serviço */
+const orcOther = document.querySelector(
+  '#form-orc input[name="servico"][value="Outros"]',
+);
+const orcOtherBox = document.getElementById("outros-extra");
+if (orcOther && orcOtherBox) {
+  const orcOtherInput = orcOtherBox.querySelector("input");
+  const syncOther = () => {
+    const on = orcOther.checked;
+    orcOtherBox.hidden = !on;
+    orcOtherInput.disabled = !on;
+    orcOtherInput.required = on;
+  };
+  orcOther.addEventListener("change", () => {
+    syncOther();
+    if (orcOther.checked) orcOtherInput.focus();
+  });
+  window.addEventListener("pageshow", syncOther);
+  syncOther();
+}
 
 /* revelação */
 const io = new IntersectionObserver(

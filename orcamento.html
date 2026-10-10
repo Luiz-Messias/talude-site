@@ -1139,6 +1139,16 @@
         margin: 0;
         accent-color: var(--brand);
       }
+      .choice-extra {
+        margin-top: 10px;
+        padding: 14px 16px 16px;
+        border: 1px solid var(--hair);
+        border-radius: 8px;
+        background: var(--paper-2);
+      }
+      .choice-extra[hidden] {
+        display: none;
+      }
       .proposal-aside {
         position: sticky;
         top: 96px;
@@ -1224,8 +1234,38 @@
         margin-bottom: 18px;
       }
       .consent {
-        margin-top: 18px;
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin: 26px 0 0;
+        padding: 14px 16px;
+        border: 1px solid var(--hair);
+        border-radius: 8px;
+        background: var(--paper-2);
         color: var(--ink-2);
+        font-family: inherit;
+        font-size: 0.86rem;
+        letter-spacing: 0;
+        text-transform: none;
+        line-height: 1.45;
+        cursor: pointer;
+        transition:
+          border-color 0.16s,
+          background 0.16s,
+          color 0.16s;
+      }
+      .consent:has(input:checked) {
+        border-color: var(--brand);
+        background: rgba(168, 96, 47, 0.08);
+        color: var(--ink);
+      }
+      .consent input {
+        flex: 0 0 auto;
+        width: 18px;
+        height: 18px;
+        margin: 1px 0 0;
+        padding: 0;
+        accent-color: var(--brand);
       }
       .form-note {
         margin: 14px 0 0;
@@ -1872,6 +1912,7 @@
                       <option data-i18n="q.pt">Portugal</option>
                       <option data-i18n="q.es">Espanha</option>
                       <option data-i18n="q.fr">França</option>
+                      <option data-i18n="q.nl">Holanda</option>
                       <option data-i18n="q.outro">Outro</option>
                     </select>
                   </div>
@@ -1928,6 +1969,17 @@
                     ><input type="checkbox" name="servico" value="Outros" />
                     <span data-i18n="q.c9">Outros</span></label
                   >
+                </div>
+                <div class="choice-extra" id="outros-extra" hidden>
+                  <label for="o17" data-i18n="q.c9l"
+                    >Especificar serviço *</label
+                  ><input
+                    id="o17"
+                    name="outro_servico"
+                    data-i18n-ph="q.c9ph"
+                    placeholder="Ex.: Andaimistas, isolamento térmico, inox"
+                    disabled
+                  />
                 </div>
               </fieldset>
               <fieldset>
