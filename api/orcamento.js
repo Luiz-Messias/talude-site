@@ -21,6 +21,10 @@ const REMETENTE =
   process.env.ORCAMENTO_FROM || "SMG site <formulario@solutionmetal.com>";
 const LIMITE_CORPO = 256 * 1024;
 
+/* diagnóstico: aparece em Vercel → Deployments → Functions (Runtime Logs).
+   Serve para confirmar que as variáveis de ambiente foram aplicadas. */
+console.log(`[orcamento] destino: ${DESTINO} | remetente: ${REMETENTE}`);
+
 /* ordem e legenda dos campos no e-mail */
 const CAMPOS = [
   ["empresa", "Empresa"],
@@ -162,14 +166,31 @@ module.exports = async (req, res) => {
       }),
     });
   } catch (e) {
+    console.error("[orcamento] falha de rede ao contactar o Resend:", e && e.message);
     res.status(502).json({ error: "send_failed" });
     return;
   }
 
   if (!resposta.ok) {
+    let detalhe = "";
+    try {
+      detalhe = await resposta.text();
+    } catch (e) {
+      /* ignora */
+    }
+    console.error(
+      `[orcamento] o Resend recusou o envio (HTTP ${resposta.status}): ${detalhe}`,
+    );
     res.status(502).json({ error: "send_failed" });
     return;
   }
 
+  let id = "";
+  try {
+    id = (await resposta.json()).id || "";
+  } catch (e) {
+    /* ignora */
+  }
+  console.log(`[orcamento] enviado para ${DESTINO} (id ${id})`);
   res.status(200).json({ ok: true });
 };
