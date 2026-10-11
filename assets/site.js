@@ -1289,41 +1289,47 @@ function wire(formId, msgId, okKey) {
         m.innerHTML = `<strong>&#10003; ${t(okKey)}</strong><span class="msg-hint">${t(hintKey)} ${link}</span>`;
       };
 
-      /* sem serviço configurado: abre o programa de e-mail do visitante */
-      if (!endpoint) {
+      const enviarPorMailto = () => {
         window.location.href = `mailto:${mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
         showOk("ok.ohint");
+      };
+
+      /* sem serviço configurado: abre o programa de e-mail do visitante */
+      if (!endpoint) {
+        enviarPorMailto();
         return;
       }
 
-      /* envio direto: o serviço entrega o e-mail, sem passar pelo programa de e-mail */
-      const payload = new FormData(f);
-      if (f.dataset.accessKey) payload.set("access_key", f.dataset.accessKey);
-      const visitante = data.get("email") || "";
-      payload.set("subject", subject);
-      payload.set("_subject", subject);
-      if (visitante) {
-        payload.set("replyto", visitante);
-        payload.set("_replyto", visitante);
+      /* envio direto: a função do Vercel entrega o e-mail */
+      const payload = { servico: [] };
+      for (const [chave, valor] of data.entries()) {
+        if (chave === "ficheiros") continue;
+        if (chave === "servico") payload.servico.push(valor);
+        else payload[chave] = valor;
       }
+      payload.ficheiros = [...f.elements.ficheiros.files].map((x) => x.name);
+
       const btn = f.querySelector('button[type="submit"]');
       if (btn) btn.disabled = true;
       fetch(endpoint, {
         method: "POST",
-        body: payload,
-        headers: { Accept: "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
       })
-        .then(async (res) => {
-          let bom = res.ok;
-          if (bom) {
-            try {
-              const j = await res.json();
-              if (j && j.success === false) bom = false;
-            } catch (e) {
-              /* resposta 200 sem JSON = sucesso */
-            }
+        .then((res) => {
+          /* 503 = serviço ainda sem chave: volta ao programa de e-mail */
+          if (res.status === 503) return "sem-servico";
+          if (!res.ok) throw new Error("envio falhou");
+          return "enviado";
+        })
+        .then((estado) => {
+          if (estado === "sem-servico") {
+            enviarPorMailto();
+            return;
           }
-          if (!bom) throw new Error("envio falhou");
           showOk("ok.odirect");
           f.reset();
           const ob = f.querySelector('input[name="servico"][value="Outros"]');

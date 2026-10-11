@@ -1896,15 +1896,15 @@
       <section class="band rv">
         <div class="wrap">
           <div class="proposal-layout">
-            <!-- data-endpoint: serviço que entrega o e-mail do formulário (vazio = abre o programa de e-mail).
-                 data-access-key: chave do serviço, quando o serviço exigir uma. -->
+            <!-- Envio direto: /api/orcamento entrega o e-mail pelo Resend.
+                 Se o serviço não estiver configurado, o formulário volta
+                 automaticamente a abrir o programa de e-mail do visitante. -->
             <form
               class="proposal-form"
               id="form-orc"
               novalidate
               data-mailto="comercial@solutionmetal.com"
-              data-endpoint=""
-              data-access-key=""
+              data-endpoint="/api/orcamento"
             >
               <input
                 class="trap"
