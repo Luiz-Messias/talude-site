@@ -204,7 +204,7 @@ const I18N = {
     /* formulários */
     "form.eyebrow": "Form",
     "form.send": "Send message",
-    "form.sendq": "Request a quote",
+    "form.sendq": "Send request",
     "form.quote.heading": "Request a quote for your project.",
     "form.company": "Company",
     "form.person": "Contact person",
@@ -351,7 +351,9 @@ const I18N = {
     "crumb.home": "Home",
     /* mensagens */
     "ok.form": "Message sent. We will reply shortly.",
-    "ok.o": "Request sent. We reply within 2 working days.",
+    "ok.o": "Request sent successfully.",
+    "ok.ohint":
+      "We opened your e-mail app with the request details — please confirm sending. If it doesn't open, write to",
     "ok.tw":
       "Application received. We keep your contact for future opportunities.",
     /* portfólio — títulos e galeria */
@@ -618,7 +620,7 @@ const I18N = {
     /* formularios */
     "form.eyebrow": "Formulario",
     "form.send": "Enviar mensaje",
-    "form.sendq": "Pedir presupuesto",
+    "form.sendq": "Enviar solicitud",
     "form.quote.heading": "Solicite un presupuesto para su proyecto.",
     "form.company": "Empresa",
     "form.person": "Persona de contacto",
@@ -765,7 +767,9 @@ const I18N = {
     "crumb.home": "Inicio",
     /* mensajes */
     "ok.form": "Mensaje enviado. Responderemos en breve.",
-    "ok.o": "Solicitud enviada. Respondemos en 2 días laborables.",
+    "ok.o": "Solicitud enviada correctamente.",
+    "ok.ohint":
+      "Hemos abierto su programa de correo con los datos de la solicitud; confirme el envío. Si no se abre, escriba a",
     "ok.tw":
       "Candidatura recibida. Guardamos su contacto para futuras oportunidades.",
     /* portafolio — títulos y galería */
@@ -992,7 +996,7 @@ I18N.fr = {
   "ct.offices": "Bureaux",
   "form.eyebrow": "Formulaire",
   "form.send": "Envoyer le message",
-  "form.sendq": "Demander un devis",
+  "form.sendq": "Envoyer la demande",
   "form.quote.heading": "Demandez un devis pour votre projet.",
   "form.company": "Entreprise",
   "form.person": "Personne à contacter",
@@ -1090,14 +1094,18 @@ I18N.fr = {
   "next.k6": "Nous contacter",
   "crumb.home": "Accueil",
   "ok.form": "Message envoyé. Nous vous répondrons rapidement.",
-  "ok.o": "Demande envoyée. Nous répondons sous 2 jours ouvrés.",
+  "ok.o": "Demande envoyée avec succès.",
+  "ok.ohint":
+    "Nous avons ouvert votre messagerie avec les données de la demande — confirmez l'envoi. Si elle ne s'ouvre pas, écrivez à",
   err: "Vérifiez les champs obligatoires.",
 };
 
 /* ---------------- motor ---------------- */
 const PT_FALLBACK = {
   "ok.form": "Mensagem enviada. Responderemos em breve.",
-  "ok.o": "Pedido enviado. Respondemos em 2 dias úteis.",
+  "ok.o": "Pedido enviado com sucesso.",
+  "ok.ohint":
+    "Abrimos o seu programa de e-mail com os dados do pedido — confirme o envio. Se não abrir, escreva para",
   "ok.tw":
     "Candidatura recebida. Guardamos o seu contacto para futuras oportunidades.",
   err: "Verifique os campos obrigatórios.",
@@ -1257,8 +1265,10 @@ function wire(formId, msgId, okKey) {
       const files = [...f.elements.ficheiros.files].map((file) => file.name);
       if (files.length) lines.push(`Ficheiros: ${files.join(", ")}`);
       const subject = `Pedido de proposta — ${data.get("empresa") || "novo projeto"}`;
-      window.location.href = `mailto:${f.dataset.mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
-      m.textContent = t(okKey);
+      const mailto = f.dataset.mailto || "";
+      window.location.href = `mailto:${mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+      m.className = "msg on ok";
+      m.innerHTML = `<strong>&#10003; ${t(okKey)}</strong><span class="msg-hint">${t("ok.ohint")} <a href="mailto:${mailto}">${mailto}</a></span>`;
       return;
     }
     m.textContent = t(okKey);
