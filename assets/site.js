@@ -354,6 +354,10 @@ const I18N = {
     "ok.o": "Request sent successfully.",
     "ok.ohint":
       "We opened your e-mail app with the request details — please confirm sending. If it doesn't open, write to",
+    "ok.odirect": "We will reply to the e-mail provided within 2 working days.",
+    "err.send": "The request could not be sent.",
+    "err.sendhint":
+      "Check your connection and try again. If it persists, send the details to",
     "ok.tw":
       "Application received. We keep your contact for future opportunities.",
     /* portfólio — títulos e galeria */
@@ -770,6 +774,10 @@ const I18N = {
     "ok.o": "Solicitud enviada correctamente.",
     "ok.ohint":
       "Hemos abierto su programa de correo con los datos de la solicitud; confirme el envío. Si no se abre, escriba a",
+    "ok.odirect": "Responderemos al correo indicado en 2 días laborables.",
+    "err.send": "No se ha podido enviar la solicitud.",
+    "err.sendhint":
+      "Compruebe la conexión e inténtelo de nuevo. Si persiste, envíe los datos a",
     "ok.tw":
       "Candidatura recibida. Guardamos su contacto para futuras oportunidades.",
     /* portafolio — títulos y galería */
@@ -1097,6 +1105,10 @@ I18N.fr = {
   "ok.o": "Demande envoyée avec succès.",
   "ok.ohint":
     "Nous avons ouvert votre messagerie avec les données de la demande — confirmez l'envoi. Si elle ne s'ouvre pas, écrivez à",
+  "ok.odirect": "Nous répondrons à l'adresse indiquée sous 2 jours ouvrés.",
+  "err.send": "La demande n'a pas pu être envoyée.",
+  "err.sendhint":
+    "Vérifiez votre connexion et réessayez. Si le problème persiste, envoyez les données à",
   err: "Vérifiez les champs obligatoires.",
 };
 
@@ -1106,6 +1118,10 @@ const PT_FALLBACK = {
   "ok.o": "Pedido enviado com sucesso.",
   "ok.ohint":
     "Abrimos o seu programa de e-mail com os dados do pedido — confirme o envio. Se não abrir, escreva para",
+  "ok.odirect": "Respondemos ao e-mail indicado em até 2 dias úteis.",
+  "err.send": "Não foi possível enviar o pedido.",
+  "err.sendhint":
+    "Verifique a ligação e tente novamente. Se persistir, envie os dados para",
   "ok.tw":
     "Candidatura recebida. Guardamos o seu contacto para futuras oportunidades.",
   err: "Verifique os campos obrigatórios.",
@@ -1266,9 +1282,60 @@ function wire(formId, msgId, okKey) {
       if (files.length) lines.push(`Ficheiros: ${files.join(", ")}`);
       const subject = `Pedido de proposta — ${data.get("empresa") || "novo projeto"}`;
       const mailto = f.dataset.mailto || "";
-      window.location.href = `mailto:${mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
-      m.className = "msg on ok";
-      m.innerHTML = `<strong>&#10003; ${t(okKey)}</strong><span class="msg-hint">${t("ok.ohint")} <a href="mailto:${mailto}">${mailto}</a></span>`;
+      const endpoint = (f.dataset.endpoint || "").trim();
+      const link = `<a href="mailto:${mailto}">${mailto}</a>`;
+      const showOk = (hintKey) => {
+        m.className = "msg on ok";
+        m.innerHTML = `<strong>&#10003; ${t(okKey)}</strong><span class="msg-hint">${t(hintKey)} ${link}</span>`;
+      };
+
+      /* sem serviço configurado: abre o programa de e-mail do visitante */
+      if (!endpoint) {
+        window.location.href = `mailto:${mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+        showOk("ok.ohint");
+        return;
+      }
+
+      /* envio direto: o serviço entrega o e-mail, sem passar pelo programa de e-mail */
+      const payload = new FormData(f);
+      if (f.dataset.accessKey) payload.set("access_key", f.dataset.accessKey);
+      const visitante = data.get("email") || "";
+      payload.set("subject", subject);
+      payload.set("_subject", subject);
+      if (visitante) {
+        payload.set("replyto", visitante);
+        payload.set("_replyto", visitante);
+      }
+      const btn = f.querySelector('button[type="submit"]');
+      if (btn) btn.disabled = true;
+      fetch(endpoint, {
+        method: "POST",
+        body: payload,
+        headers: { Accept: "application/json" },
+      })
+        .then(async (res) => {
+          let bom = res.ok;
+          if (bom) {
+            try {
+              const j = await res.json();
+              if (j && j.success === false) bom = false;
+            } catch (e) {
+              /* resposta 200 sem JSON = sucesso */
+            }
+          }
+          if (!bom) throw new Error("envio falhou");
+          showOk("ok.odirect");
+          f.reset();
+          const ob = f.querySelector('input[name="servico"][value="Outros"]');
+          if (ob) ob.dispatchEvent(new Event("change", { bubbles: true }));
+        })
+        .catch(() => {
+          m.className = "msg on err";
+          m.innerHTML = `<strong>${t("err.send")}</strong><span class="msg-hint">${t("err.sendhint")} ${link}</span>`;
+        })
+        .finally(() => {
+          if (btn) btn.disabled = false;
+        });
       return;
     }
     m.textContent = t(okKey);
