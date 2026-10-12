@@ -1,7 +1,13 @@
 /* ===== globo de atuação — biblioteca globe.gl (09/2026) =====
-   Usado em servicos.html (bloco "Regiões de atuação").
+   Usado em servicos.html (bloco "Países de atuação").
    O motor está em assets/globe.js; a biblioteca só é carregada
    quando a secção se aproxima do ecrã. */
+
+/* a faixa do globo é clara — fundo branco, texto escuro —, para o globo
+   escuro sobressair em vez de se perder num fundo escuro */
+.globe-band {
+  background: var(--paper);
+}
 .globe-layout {
   display: grid;
   grid-template-columns: 0.92fr 1.08fr;
@@ -66,7 +72,9 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #fff;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);
+  text-shadow:
+    0 0 3px rgba(0, 0, 0, 0.95),
+    0 0 8px rgba(0, 0, 0, 0.75);
 }
 .gpin.s-left span {
   left: auto;
@@ -124,7 +132,7 @@
   font-size: 0.62rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--on-dark);
+  color: var(--ink-2);
 }
 .globe-key {
   display: inline-flex;
@@ -141,6 +149,6 @@
 }
 .globe-hint {
   margin: 20px 0 0;
-  color: var(--on-dark);
-  opacity: 0.75;
+  color: var(--steel);
+  opacity: 0.9;
 }
