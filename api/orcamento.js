@@ -18,6 +18,9 @@
  *   RESEND_BASE      opcional — só para testes locais (aponta para um stub).
  */
 
+const fs = require("fs");
+const path = require("path");
+
 const DESTINO = process.env.ORCAMENTO_TO || "comercial@solutionmetal.com";
 const REMETENTE =
   process.env.ORCAMENTO_FROM || "SMG site <formulario@solutionmetalgroup.com>";
@@ -72,6 +75,51 @@ async function lerCorpo(req) {
   return JSON.parse(Buffer.concat(partes).toString("utf8"));
 }
 
+function dataLegivel(data) {
+  try {
+    return `${data.toLocaleString("pt-PT", {
+      timeZone: "Europe/Lisbon",
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    })} (Lisboa)`;
+  } catch (e) {
+    return data.toISOString();
+  }
+}
+
+/* O logo vai embutido no e-mail (cid:), por isso aparece sempre — até nos
+   clientes que bloqueiam imagens externas — e não depende do site estar no ar.
+   Se o ficheiro não estiver acessível, o e-mail segue sem imagem: o pedido
+   nunca se perde por causa do logótipo. */
+const CAMINHOS_LOGO = [
+  path.join(process.cwd(), "assets", "img", "logo-email.png"),
+  path.join(__dirname, "..", "assets", "img", "logo-email.png"),
+  path.join(__dirname, "assets", "img", "logo-email.png"),
+];
+
+let logoEmCache;
+
+function lerLogo() {
+  if (logoEmCache !== undefined) return logoEmCache;
+  for (const caminho of CAMINHOS_LOGO) {
+    try {
+      logoEmCache = fs.readFileSync(caminho);
+      console.log(`[orcamento] logo carregado de ${caminho}`);
+      return logoEmCache;
+    } catch (e) {
+      /* tenta o caminho seguinte */
+    }
+  }
+  console.error(
+    `[orcamento] logo não encontrado — o e-mail segue sem imagem. Tentado: ${CAMINHOS_LOGO.join(" | ")}`,
+  );
+  logoEmCache = null;
+  return null;
+}
+
 module.exports = async (req, res) => {
   if (req.method !== "POST") {
     res.status(405).json({ error: "method_not_allowed" });
@@ -112,10 +160,12 @@ module.exports = async (req, res) => {
     ? dados.ficheiros.map(texto).filter(Boolean)
     : [];
 
-  const linhas = CAMPOS.map(([chave, rotulo]) => [rotulo, texto(dados[chave])]).filter(
-    ([, valor]) => valor,
-  );
-  if (servicos.length) linhas.splice(5, 0, ["Serviços pretendidos", servicos.join(", ")]);
+  const linhas = CAMPOS.map(([chave, rotulo]) => [
+    rotulo,
+    texto(dados[chave]),
+  ]).filter(([, valor]) => valor);
+  if (servicos.length)
+    linhas.splice(5, 0, ["Serviços pretendidos", servicos.join(", ")]);
   if (ficheiros.length)
     linhas.push(["Ficheiros referidos pelo cliente", ficheiros.join(", ")]);
 
@@ -123,29 +173,47 @@ module.exports = async (req, res) => {
     .replace(/[\r\n]+/g, " ")
     .slice(0, 180);
 
+  const logo = lerLogo();
+  const quando = dataLegivel(new Date());
+
   const corpoTexto = [
+    "SOLUTION METAL GROUP",
+    "Pedido de proposta — formulário do site",
+    "",
     ...linhas.map(([rotulo, valor]) => `${rotulo}: ${valor}`),
     "",
-    `Recebido em ${new Date().toISOString()}`,
+    `Recebido em ${quando}`,
   ].join("\n");
 
-  const corpoHtml = `<!doctype html><html lang="pt"><body style="margin:0;background:#f4f1ee;font-family:Arial,Helvetica,sans-serif;color:#1f1c19">
-<div style="max-width:640px;margin:0 auto;padding:24px">
-  <h1 style="margin:0 0 4px;font-size:20px">Pedido de proposta</h1>
-  <p style="margin:0 0 20px;color:#6b625a;font-size:13px">Enviado pelo formulário do site</p>
-  <table style="width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden">
-    ${linhas
-      .map(
-        ([rotulo, valor]) =>
-          `<tr><th style="text-align:left;vertical-align:top;padding:10px 14px;width:210px;border-bottom:1px solid #ece7e2;font-size:13px;color:#6b625a;font-weight:600">${escapar(
-            rotulo,
-          )}</th><td style="padding:10px 14px;border-bottom:1px solid #ece7e2;font-size:14px">${escapar(
-            valor,
-          ).replace(/\n/g, "<br>")}</td></tr>`,
-      )
-      .join("")}
-  </table>
-  <p style="margin:18px 0 0;color:#6b625a;font-size:12px">Recebido em ${new Date().toISOString()}</p>
+  const cabecalhoLogo = logo
+    ? `<img src="cid:smg-logo" alt="Solution Metal Group" width="180" style="display:block;width:180px;max-width:180px;height:auto;margin:0 auto;border:0;outline:none;text-decoration:none">`
+    : `<div style="font-size:20px;font-weight:bold;letter-spacing:0.06em;color:#282220">SOLUTION <span style="color:#a8602f">METAL</span> GROUP</div>`;
+
+  const corpoHtml = `<!doctype html><html lang="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pedido de proposta</title></head><body style="margin:0;padding:0;background:#f4f1ee;font-family:Arial,Helvetica,sans-serif;color:#282220">
+<div style="max-width:640px;margin:0 auto;padding:24px 16px">
+  <div style="background:#ffffff;border:1px solid #ece7e2;border-radius:10px;overflow:hidden">
+    <div style="padding:26px 24px 20px;text-align:center">${cabecalhoLogo}</div>
+    <div style="height:3px;background:#a8602f;font-size:0;line-height:0">&nbsp;</div>
+    <div style="padding:22px 24px 0">
+      <h1 style="margin:0 0 4px;font-size:19px;line-height:1.3;color:#282220">Pedido de proposta</h1>
+      <p style="margin:0;font-size:13px;color:#6b625a">Enviado pelo formulário do site</p>
+    </div>
+    <table role="presentation" style="width:100%;border-collapse:collapse;margin-top:20px">
+      ${linhas
+        .map(
+          ([rotulo, valor]) =>
+            `<tr><th style="text-align:left;vertical-align:top;padding:10px 14px 10px 24px;width:210px;border-top:1px solid #ece7e2;font-size:13px;color:#6b625a;font-weight:600">${escapar(
+              rotulo,
+            )}</th><td style="padding:10px 24px 10px 14px;border-top:1px solid #ece7e2;font-size:14px;color:#282220">${escapar(
+              valor,
+            ).replace(/\n/g, "<br>")}</td></tr>`,
+        )
+        .join("")}
+    </table>
+    <div style="padding:18px 24px 22px">
+      <p style="margin:0;font-size:12px;color:#6b625a">Recebido em ${quando}</p>
+    </div>
+  </div>
 </div></body></html>`;
 
   const base = process.env.RESEND_BASE || "https://api.resend.com";
@@ -165,10 +233,24 @@ module.exports = async (req, res) => {
         html: corpoHtml,
         text: corpoTexto,
         ...(EMAIL_OK.test(email) ? { reply_to: email } : {}),
+        ...(logo
+          ? {
+              attachments: [
+                {
+                  filename: "solution-metal-group.png",
+                  content: logo.toString("base64"),
+                  content_id: "smg-logo",
+                },
+              ],
+            }
+          : {}),
       }),
     });
   } catch (e) {
-    console.error("[orcamento] falha de rede ao contactar o Resend:", e && e.message);
+    console.error(
+      "[orcamento] falha de rede ao contactar o Resend:",
+      e && e.message,
+    );
     res.status(502).json({ error: "send_failed" });
     return;
   }

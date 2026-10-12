@@ -1,4 +1,9 @@
 {
   "outputDirectory": ".",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "functions": {
+    "api/orcamento.js": {
+      "includeFiles": "assets/img/logo-email.png"
+    }
+  }
 }
