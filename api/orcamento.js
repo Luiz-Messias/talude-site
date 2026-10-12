@@ -18,9 +18,6 @@
  *   RESEND_BASE      opcional — só para testes locais (aponta para um stub).
  */
 
-const fs = require("fs");
-const path = require("path");
-
 const DESTINO = process.env.ORCAMENTO_TO || "comercial@solutionmetal.com";
 const REMETENTE =
   process.env.ORCAMENTO_FROM || "SMG site <formulario@solutionmetalgroup.com>";
@@ -90,35 +87,23 @@ function dataLegivel(data) {
   }
 }
 
-/* O logo vai embutido no e-mail (cid:), por isso aparece sempre — até nos
-   clientes que bloqueiam imagens externas — e não depende do site estar no ar.
-   Se o ficheiro não estiver acessível, o e-mail segue sem imagem: o pedido
-   nunca se perde por causa do logótipo. */
-const CAMINHOS_LOGO = [
-  path.join(process.cwd(), "assets", "img", "logo-email.png"),
-  path.join(__dirname, "..", "assets", "img", "logo-email.png"),
-  path.join(__dirname, "assets", "img", "logo-email.png"),
-];
+/* O logo entra no e-mail como imagem normal da mensagem (por link), não como
+   anexo: o cliente de e-mail mostra-o no cabeçalho e não o apresenta como
+   ficheiro. Quando o site passar a responder no domínio próprio, basta definir
+   ORCAMENTO_SITE (ou ORCAMENTO_LOGO) nas variáveis de ambiente da Vercel. */
+const URL_SITE = (
+  process.env.ORCAMENTO_SITE || "https://talude-bay.vercel.app"
+).replace(/\/+$/, "");
 
-let logoEmCache;
-
-function lerLogo() {
-  if (logoEmCache !== undefined) return logoEmCache;
-  for (const caminho of CAMINHOS_LOGO) {
-    try {
-      logoEmCache = fs.readFileSync(caminho);
-      console.log(`[orcamento] logo carregado de ${caminho}`);
-      return logoEmCache;
-    } catch (e) {
-      /* tenta o caminho seguinte */
-    }
-  }
+const LOGO = (() => {
+  const escolhido =
+    process.env.ORCAMENTO_LOGO || `${URL_SITE}/assets/img/logo-email.png`;
+  if (/^https?:\/\/[^\s"']+$/i.test(escolhido.trim())) return escolhido.trim();
   console.error(
-    `[orcamento] logo não encontrado — o e-mail segue sem imagem. Tentado: ${CAMINHOS_LOGO.join(" | ")}`,
+    `[orcamento] URL do logo inválido (${escolhido}) — o e-mail segue sem imagem`,
   );
-  logoEmCache = null;
-  return null;
-}
+  return "";
+})();
 
 module.exports = async (req, res) => {
   if (req.method !== "POST") {
@@ -173,7 +158,6 @@ module.exports = async (req, res) => {
     .replace(/[\r\n]+/g, " ")
     .slice(0, 180);
 
-  const logo = lerLogo();
   const quando = dataLegivel(new Date());
 
   const corpoTexto = [
@@ -185,8 +169,8 @@ module.exports = async (req, res) => {
     `Recebido em ${quando}`,
   ].join("\n");
 
-  const cabecalhoLogo = logo
-    ? `<img src="cid:smg-logo" alt="Solution Metal Group" width="180" style="display:block;width:180px;max-width:180px;height:auto;margin:0 auto;border:0;outline:none;text-decoration:none">`
+  const cabecalhoLogo = LOGO
+    ? `<img src="${escapar(LOGO)}" alt="Solution Metal Group" width="180" style="display:block;width:180px;max-width:180px;height:auto;margin:0 auto;border:0;outline:none;text-decoration:none">`
     : `<div style="font-size:20px;font-weight:bold;letter-spacing:0.06em;color:#282220">SOLUTION <span style="color:#a8602f">METAL</span> GROUP</div>`;
 
   const corpoHtml = `<!doctype html><html lang="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pedido de proposta</title></head><body style="margin:0;padding:0;background:#f4f1ee;font-family:Arial,Helvetica,sans-serif;color:#282220">
@@ -233,17 +217,6 @@ module.exports = async (req, res) => {
         html: corpoHtml,
         text: corpoTexto,
         ...(EMAIL_OK.test(email) ? { reply_to: email } : {}),
-        ...(logo
-          ? {
-              attachments: [
-                {
-                  filename: "solution-metal-group.png",
-                  content: logo.toString("base64"),
-                  content_id: "smg-logo",
-                },
-              ],
-            }
-          : {}),
       }),
     });
   } catch (e) {
