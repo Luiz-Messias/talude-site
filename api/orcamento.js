@@ -332,6 +332,8 @@ module.exports = async (req, res) => {
   const servicos = Array.isArray(dados.servico)
     ? dados.servico.map(texto).filter(Boolean)
     : [];
+  /* quando o cliente escolhe vários serviços, envia a quantidade de cada um */
+  const servicosDetalhados = texto(dados.servicos_com_quantidade);
   const ficheiros = Array.isArray(dados.ficheiros)
     ? dados.ficheiros.map(texto).filter(Boolean)
     : [];
@@ -341,7 +343,10 @@ module.exports = async (req, res) => {
     texto(dados[chave]),
   ]).filter(([, valor]) => valor);
   if (servicos.length)
-    linhas.splice(5, 0, ["Serviços pretendidos", servicos.join(", ")]);
+    linhas.splice(5, 0, [
+      "Serviços pretendidos",
+      servicosDetalhados || servicos.join(", "),
+    ]);
   if (anexos.length) {
     linhas.push([
       "Anexos (seguem com este e-mail)",
