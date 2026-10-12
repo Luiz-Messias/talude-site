@@ -1320,8 +1320,9 @@ function wire(formId, msgId, okKey) {
         body: JSON.stringify(payload),
       })
         .then((res) => {
-          /* 503 = serviço ainda sem chave: volta ao programa de e-mail */
-          if (res.status === 503) return "sem-servico";
+          /* 503 = serviço ainda sem chave; 404 = função não publicada.
+             Em qualquer dos casos volta ao programa de e-mail, como antes. */
+          if (res.status === 503 || res.status === 404) return "sem-servico";
           if (!res.ok) throw new Error("envio falhou");
           return "enviado";
         })
