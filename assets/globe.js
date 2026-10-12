@@ -1,4 +1,4 @@
-/* Globo de atuação (empresa.html)
+/* Globo de atuação (servicos.html)
    Biblioteca: globe.gl (three.js) — vendorizada em assets/vendor/globe.gl.min.js.
    O script da biblioteca só é carregado quando a secção se aproxima do ecrã. */
 (function () {

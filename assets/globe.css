@@ -1,0 +1,146 @@
+/* ===== globo de atuação — biblioteca globe.gl (09/2026) =====
+   Usado em servicos.html (bloco "Regiões de atuação").
+   O motor está em assets/globe.js; a biblioteca só é carregada
+   quando a secção se aproxima do ecrã. */
+.globe-layout {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: clamp(30px, 5vw, 72px);
+  align-items: center;
+}
+/* a cena do globo não pode esticar a coluna (evita overflow em mobile) */
+.globe-layout > * {
+  min-width: 0;
+}
+@media (max-width: 860px) {
+  .globe-layout {
+    grid-template-columns: 1fr;
+  }
+}
+.globe-stage {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 560px;
+  min-width: 0;
+}
+.globe-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  cursor: grab;
+  touch-action: pan-y;
+  overflow: hidden;
+}
+.globe-frame.is-dragging {
+  cursor: grabbing;
+}
+.globe-canvas {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.globe-canvas canvas {
+  display: block;
+}
+/* marcadores (elementos HTML projetados sobre o globo) */
+.gpin {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e08a4c;
+  box-shadow:
+    0 0 0 3px rgba(224, 138, 76, 0.3),
+    0 0 12px rgba(224, 138, 76, 0.85);
+  pointer-events: none;
+}
+.gpin span {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  font-family: "DM Mono", monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);
+}
+.gpin.s-left span {
+  left: auto;
+  right: 15px;
+}
+.gpin.s-up span {
+  left: 50%;
+  top: auto;
+  bottom: 15px;
+  transform: translateX(-50%);
+}
+.gpin.s-down span {
+  left: 50%;
+  top: 15px;
+  transform: translateX(-50%);
+}
+/* marca SMG no globo (fallback sem WebGL) */
+.globe-logo {
+  display: none;
+}
+.globe-frame.no-webgl .globe-logo {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 46%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  opacity: 0.92;
+  filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.5));
+}
+.globe-frame.no-webgl {
+  cursor: default;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 34% 26%,
+    #363b42 0%,
+    #1b1e22 48%,
+    #0d0f11 100%
+  );
+  box-shadow:
+    inset -16px -20px 44px rgba(0, 0, 0, 0.6),
+    0 24px 56px rgba(0, 0, 0, 0.45);
+}
+.globe-frame.no-webgl .globe-canvas {
+  display: none;
+}
+.globe-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 24px;
+  margin: 20px 0 0;
+  font-family: "DM Mono", monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--on-dark);
+}
+.globe-key {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.globe-key::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #d08a52;
+  box-shadow: 0 0 0 3px rgba(168, 96, 47, 0.22);
+}
+.globe-hint {
+  margin: 20px 0 0;
+  color: var(--on-dark);
+  opacity: 0.75;
+}
