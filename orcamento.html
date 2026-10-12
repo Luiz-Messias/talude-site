@@ -1272,6 +1272,104 @@
         color: var(--steel);
         font-size: 0.82rem;
       }
+      /* ---------- anexos do formulário ---------- */
+      .field .hint {
+        margin: 8px 0 0;
+      }
+      .lista-anexos {
+        display: grid;
+        gap: 6px;
+        margin: 10px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+      .lista-anexos[hidden] {
+        display: none;
+      }
+      .lista-anexos li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 10px;
+        border: 1px solid var(--hair);
+        border-radius: 8px;
+        background: var(--paper);
+        font-size: 0.86rem;
+      }
+      .anexo-nome {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: var(--ink);
+      }
+      .anexo-peso {
+        flex: 0 0 auto;
+        color: var(--steel);
+        font-size: 0.78rem;
+        font-variant-numeric: tabular-nums;
+      }
+      .anexo-remover {
+        flex: 0 0 auto;
+        padding: 5px 9px;
+        border: 1px solid var(--hair);
+        border-radius: 6px;
+        background: transparent;
+        color: var(--ink-2);
+        font: inherit;
+        font-size: 0.78rem;
+        line-height: 1;
+        cursor: pointer;
+      }
+      .anexo-remover:hover,
+      .anexo-remover:focus-visible {
+        border-color: var(--brand);
+        color: var(--brand);
+      }
+      .anexos-erros {
+        display: grid;
+        gap: 6px;
+        margin-top: 10px;
+      }
+      .anexos-erros:empty {
+        display: none;
+      }
+      .anexo-erro {
+        margin: 0;
+        padding: 10px 12px;
+        border-left: 4px solid var(--color-accent-deep);
+        border-radius: 0 8px 8px 0;
+        background: var(--err-bg);
+        color: var(--ink-2);
+        font-size: 0.86rem;
+        line-height: 1.5;
+      }
+      .anexo-erro strong {
+        color: var(--ink);
+      }
+      .anexo-simbolo {
+        display: inline-block;
+        margin-right: 4px;
+        color: var(--color-accent-deep);
+        font-weight: 700;
+      }
+      .anexo-erro a {
+        color: var(--brand);
+        font-weight: 700;
+      }
+      .anexo-remover--aviso {
+        display: inline-block;
+        margin-top: 6px;
+      }
+      .anexo-erro .anexo-remover {
+        border-color: rgba(124, 69, 31, 0.4);
+        background: var(--paper);
+      }
+      .anexo-erro .anexo-dica {
+        display: block;
+        margin-top: 4px;
+      }
       .trap {
         position: absolute;
         left: -10000px;
@@ -2103,14 +2201,25 @@
                 </div>
                 <div class="field">
                   <label for="o16" data-i18n="q.f16"
-                    >Projeto ou caderno de encargos (PDF, DWG)</label
+                    >Projeto ou caderno de encargos (PDF, DWG, ZIP, DOCX, XLSX,
+                    JPG, PNG)</label
                   ><input
                     id="o16"
                     name="ficheiros"
                     type="file"
                     multiple
-                    accept=".pdf,.dwg,.zip"
+                    accept=".pdf,.dwg,.zip,.docx,.xlsx,.jpg,.jpeg,.png"
+                    aria-describedby="anexos-info anexos-erros"
                   />
+                  <p class="hint" id="anexos-info" data-i18n="q.f16h">
+                    Até 3 ficheiros · 3 MB no total.
+                  </p>
+                  <ul class="lista-anexos" id="anexos-lista" hidden></ul>
+                  <div
+                    class="anexos-erros"
+                    id="anexos-erros"
+                    role="alert"
+                  ></div>
                 </div>
                 <label class="consent"
                   ><input type="checkbox" name="consentimento" required />

@@ -268,7 +268,31 @@ const I18N = {
     "q.f13": "Role",
     "q.f14": "E-mail *",
     "q.f15": "Phone / WhatsApp",
-    "q.f16": "Project or specifications (PDF, DWG)",
+    "q.f16": "Project or specifications (PDF, DWG, ZIP, DOCX, XLSX, JPG, PNG)",
+    "q.f16h": "Up to 3 files · 3 MB in total.",
+    "anx.qtd":
+      "You can attach a maximum of 3 files. Remove one to add another.",
+    "anx.grande":
+      "This file ({detalhe}) is over the 3 MB limit. Compress it or reduce its size, then select it again in the form.",
+    "anx.total":
+      "The attached files together are over the 3 MB limit ({detalhe}). Compress or remove one and try again.",
+    "anx.formato":
+      "File format not accepted. Use PDF, DWG, ZIP, DOCX, XLSX, JPG or PNG.",
+    "anx.remover": "Remove",
+    "anx.dispensar": "Dismiss warning",
+    "anx.enviando": "Sending…",
+    "anx.ler": "One of the files could not be read. Select it again and retry.",
+    "anx.bloqueio": "Fix the flagged files before sending the request.",
+    "anx.falhaAnexos":
+      "Automatic sending is unavailable and the files are not sent by e-mail. Write to {email} and attach them to that message.",
+    "anx.avisoAnexos":
+      "The files do not follow by e-mail — send them separately.",
+    "anx.ok": "The attached files were received.",
+    "anx.compPdf": "Compress PDF",
+    "anx.compImg": "Reduce image size",
+    "anx.compZip": "Compress ZIP file",
+    "anx.compGen":
+      "Compress the file or reduce its size, then select it again.",
     "q.consent":
       "I authorise the processing of these data in order to answer the request.",
     "q.note":
@@ -688,7 +712,33 @@ const I18N = {
     "q.f13": "Cargo",
     "q.f14": "Correo *",
     "q.f15": "Teléfono / WhatsApp",
-    "q.f16": "Proyecto o pliego (PDF, DWG)",
+    "q.f16": "Proyecto o pliego (PDF, DWG, ZIP, DOCX, XLSX, JPG, PNG)",
+    "q.f16h": "Hasta 3 archivos · 3 MB en total.",
+    "anx.qtd":
+      "Puede adjuntar un máximo de 3 archivos. Elimine uno para añadir otro.",
+    "anx.grande":
+      "Este archivo ({detalhe}) supera el límite de 3 MB. Comprímalo o reduzca su tamaño y vuelva a seleccionarlo en el formulario.",
+    "anx.total":
+      "El conjunto de archivos adjuntos supera el límite de 3 MB ({detalhe}). Comprima o elimine alguno y vuelva a intentarlo.",
+    "anx.formato":
+      "Formato de archivo no aceptado. Utilice PDF, DWG, ZIP, DOCX, XLSX, JPG o PNG.",
+    "anx.remover": "Eliminar",
+    "anx.dispensar": "Descartar aviso",
+    "anx.enviando": "Enviando…",
+    "anx.ler":
+      "No se pudo leer uno de los archivos. Vuelva a seleccionarlo e inténtelo de nuevo.",
+    "anx.bloqueio":
+      "Corrija los archivos señalados antes de enviar la solicitud.",
+    "anx.falhaAnexos":
+      "El envío automático no está disponible y los archivos no se envían por correo. Escriba a {email} y adjúntelos en ese mensaje.",
+    "anx.avisoAnexos":
+      "Los archivos no se envían por correo — envíelos por separado.",
+    "anx.ok": "Se han recibido los archivos adjuntos.",
+    "anx.compPdf": "Comprimir PDF",
+    "anx.compImg": "Reducir imagen",
+    "anx.compZip": "Comprimir archivo ZIP",
+    "anx.compGen":
+      "Comprima el archivo o reduzca su tamaño y vuelva a seleccionarlo.",
     "q.consent":
       "Autorizo el tratamiento de estos datos para responder a la solicitud.",
     "q.note":
@@ -1064,7 +1114,32 @@ I18N.fr = {
   "q.f13": "Fonction",
   "q.f14": "E-mail *",
   "q.f15": "Téléphone / WhatsApp",
-  "q.f16": "Projet ou cahier des charges (PDF, DWG)",
+  "q.f16": "Projet ou cahier des charges (PDF, DWG, ZIP, DOCX, XLSX, JPG, PNG)",
+  "q.f16h": "Jusqu'à 3 fichiers · 3 Mo au total.",
+  "anx.qtd":
+    "Vous pouvez joindre 3 fichiers au maximum. Supprimez-en un pour en ajouter un autre.",
+  "anx.grande":
+    "Ce fichier ({detalhe}) dépasse la limite de 3 Mo. Compressez-le ou réduisez sa taille, puis sélectionnez-le à nouveau dans le formulaire.",
+  "anx.total":
+    "L'ensemble des fichiers joints dépasse la limite de 3 Mo ({detalhe}). Compressez ou supprimez un fichier, puis réessayez.",
+  "anx.formato":
+    "Format de fichier non accepté. Utilisez PDF, DWG, ZIP, DOCX, XLSX, JPG ou PNG.",
+  "anx.remover": "Supprimer",
+  "anx.dispensar": "Ignorer l'avertissement",
+  "anx.enviando": "Envoi…",
+  "anx.ler":
+    "Un des fichiers n'a pas pu être lu. Sélectionnez-le à nouveau et réessayez.",
+  "anx.bloqueio": "Corrigez les fichiers signalés avant d'envoyer la demande.",
+  "anx.falhaAnexos":
+    "L'envoi automatique est indisponible et les fichiers ne sont pas envoyés par e-mail. Écrivez à {email} et joignez-les à ce message.",
+  "anx.avisoAnexos":
+    "Les fichiers ne sont pas envoyés par e-mail — envoyez-les séparément.",
+  "anx.ok": "Les fichiers joints ont bien été reçus.",
+  "anx.compPdf": "Compresser le PDF",
+  "anx.compImg": "Réduire l'image",
+  "anx.compZip": "Compresser le fichier ZIP",
+  "anx.compGen":
+    "Compressez le fichier ou réduisez sa taille, puis sélectionnez-le à nouveau.",
   "q.consent":
     "J'autorise le traitement de ces données afin de répondre à la demande.",
   "q.note":
@@ -1124,6 +1199,29 @@ const PT_FALLBACK = {
     "Verifique a ligação e tente novamente. Se persistir, envie os dados para",
   "ok.tw":
     "Candidatura recebida. Guardamos o seu contacto para futuras oportunidades.",
+  "anx.qtd":
+    "Pode anexar no máximo 3 ficheiros. Remova um deles para adicionar outro.",
+  "anx.grande":
+    "Este ficheiro ({detalhe}) excede o limite de 3 MB. Comprima-o ou reduza o tamanho e volte a selecioná-lo no formulário.",
+  "anx.total":
+    "O conjunto de anexos excede o limite de 3 MB ({detalhe}). Comprima ou remova algum ficheiro e tente novamente.",
+  "anx.formato":
+    "Formato não aceite. Use PDF, DWG, ZIP, DOCX, XLSX, JPG ou PNG.",
+  "anx.remover": "Remover",
+  "anx.dispensar": "Dispensar aviso",
+  "anx.enviando": "A enviar…",
+  "anx.ler":
+    "Não foi possível ler um dos ficheiros. Volte a selecioná-lo e tente novamente.",
+  "anx.bloqueio": "Corrija os ficheiros assinalados antes de enviar o pedido.",
+  "anx.falhaAnexos":
+    "O envio automático está indisponível e os ficheiros não seguem por e-mail. Escreva para {email} e anexe-os nessa mensagem.",
+  "anx.avisoAnexos": "Os ficheiros não seguem por e-mail — envie-os à parte.",
+  "anx.ok": "Os ficheiros anexados foram recebidos.",
+  "anx.compPdf": "Comprimir PDF",
+  "anx.compImg": "Reduzir imagem",
+  "anx.compZip": "Comprimir ficheiro ZIP",
+  "anx.compGen":
+    "Comprima o ficheiro ou reduza o tamanho e volte a selecioná-lo.",
   err: "Verifique os campos obrigatórios.",
 };
 const nodes = document.querySelectorAll("[data-i18n]");
@@ -1244,14 +1342,280 @@ if (burger) {
   });
 }
 
+/* ---------------- anexos do formulário de orçamento --------------
+   Os limites são os mesmos da função api/orcamento.js. O browser valida para
+   avisar cedo, com uma mensagem clara; a função valida tudo outra vez, porque
+   o browser não é fronteira de segurança. */
+const ANEXO_MAX = 3; /* ficheiros */
+const ANEXO_BYTES = 3 * 1024 * 1024; /* 3 MB por ficheiro */
+const ANEXO_TOTAL = 3 * 1024 * 1024; /* 3 MB somando todos */
+const ANEXO_LIVRES = ["", "application/octet-stream", "binary/octet-stream"];
+const ANEXO_TIPOS = {
+  pdf: ["application/pdf"],
+  dwg: [
+    "image/vnd.dwg",
+    "image/x-dwg",
+    "application/acad",
+    "application/x-acad",
+    "application/dwg",
+  ],
+  zip: [
+    "application/zip",
+    "application/x-zip-compressed",
+    "multipart/x-zip",
+    "application/x-compressed",
+  ],
+  docx: [
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "application/zip",
+  ],
+  xlsx: [
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "application/zip",
+  ],
+  jpg: ["image/jpeg"],
+  jpeg: ["image/jpeg"],
+  png: ["image/png"],
+};
+/* ferramentas de compactação por tipo de ficheiro */
+const ANEXO_AJUDA = {
+  pdf: { url: "https://www.ilovepdf.com/compress_pdf", rotulo: "anx.compPdf" },
+  jpg: { url: "https://tinypng.com/", rotulo: "anx.compImg" },
+  jpeg: { url: "https://tinypng.com/", rotulo: "anx.compImg" },
+  png: { url: "https://tinypng.com/", rotulo: "anx.compImg" },
+  zip: { url: "https://www.ezyzip.com/", rotulo: "anx.compZip" },
+};
+
+const extensaoFicheiro = (nome) => {
+  const m = /\.([a-z0-9]+)$/i.exec(String(nome || "").trim());
+  return m ? m[1].toLowerCase() : "";
+};
+
+/* arredonda para cima: um ficheiro de 3,01 MB não pode aparecer como "3 MB"
+   ao lado de "excede o limite de 3 MB" */
+const pesoFicheiro = (bytes) => {
+  if (bytes >= 1048576) {
+    const mb = Math.ceil((bytes / 1048576) * 100) / 100;
+    return `${mb.toLocaleString("pt-PT", { maximumFractionDigits: 2 })} MB`;
+  }
+  return `${Math.max(1, Math.round(bytes / 1024))} KB`;
+};
+
+/* o lugar {detalhe} é opcional: sem detalhe, o parêntese sai inteiro */
+function textoAnexo(chave, detalhe) {
+  const base = t(chave);
+  const texto = detalhe
+    ? base.replace("{detalhe}", detalhe)
+    : base.replace(/\s*\(\{detalhe\}\)/, "");
+  return texto.replace(/\s{2,}/g, " ");
+}
+
+function ficheiroEmBase64(ficheiro) {
+  return new Promise((resolver, rejeitar) => {
+    const leitor = new FileReader();
+    leitor.onerror = () => rejeitar(new Error("leitura"));
+    leitor.onload = () => {
+      const resultado = String(leitor.result || "");
+      const corte = resultado.indexOf(",");
+      if (corte < 0) {
+        rejeitar(new Error("leitura"));
+        return;
+      }
+      resolver({
+        nome: ficheiro.name,
+        tipo: ficheiro.type || "",
+        conteudo: resultado.slice(corte + 1),
+      });
+    };
+    leitor.readAsDataURL(ficheiro);
+  });
+}
+
+/* um de cada vez: evita ter vários ficheiros grandes em memória ao mesmo tempo */
+async function anexosEmBase64(lista) {
+  const saida = [];
+  for (const ficheiro of lista) saida.push(await ficheiroEmBase64(ficheiro));
+  return saida;
+}
+
+function botaoRemover(rotulo, nome, aoClicar) {
+  const botao = document.createElement("button");
+  botao.type = "button";
+  botao.className = "anexo-remover";
+  botao.textContent = rotulo;
+  botao.setAttribute("aria-label", `${rotulo}: ${nome}`);
+  botao.addEventListener("click", aoClicar);
+  return botao;
+}
+
+const gestoresAnexos = new WeakMap();
+
+function gestorAnexos(f) {
+  if (gestoresAnexos.has(f)) return gestoresAnexos.get(f);
+  const input = f.elements.ficheiros;
+  const listaBox = document.getElementById("anexos-lista");
+  const errosBox = document.getElementById("anexos-erros");
+  if (!input || !listaBox || !errosBox) return null;
+
+  let aceites = [];
+  let rejeitados = [];
+
+  /* o mesmo ficheiro rejeitado duas vezes não gera dois avisos */
+  const rejeitar = (ficheiro, motivo, detalhe) => {
+    const repetido = rejeitados.some(
+      (r) =>
+        r.nome === ficheiro.name &&
+        r.tamanho === ficheiro.size &&
+        r.motivo === motivo,
+    );
+    if (!repetido) {
+      rejeitados.push({
+        nome: ficheiro.name,
+        tamanho: ficheiro.size,
+        motivo,
+        detalhe: detalhe || pesoFicheiro(ficheiro.size),
+      });
+    }
+  };
+
+  const lerNovos = () => {
+    const novos = [...(input.files || [])];
+    input.value = ""; /* permite voltar a escolher o mesmo ficheiro */
+    for (const ficheiro of novos) {
+      const mimes = ANEXO_TIPOS[extensaoFicheiro(ficheiro.name)];
+      if (!mimes) {
+        rejeitar(ficheiro, "anx.formato");
+        continue;
+      }
+      if (
+        ficheiro.type &&
+        !ANEXO_LIVRES.includes(ficheiro.type) &&
+        !mimes.includes(ficheiro.type)
+      ) {
+        rejeitar(ficheiro, "anx.formato");
+        continue;
+      }
+      if (ficheiro.size > ANEXO_BYTES) {
+        rejeitar(ficheiro, "anx.grande");
+        continue;
+      }
+      /* escolher o mesmo nome substitui o anterior em vez de duplicar */
+      const outros = aceites.filter((x) => x.name !== ficheiro.name);
+      if (outros.length >= ANEXO_MAX) {
+        rejeitar(ficheiro, "anx.qtd");
+        continue;
+      }
+      const soma = outros.reduce((s, x) => s + x.size, 0) + ficheiro.size;
+      if (soma > ANEXO_TOTAL) {
+        const lista = [...outros, ficheiro]
+          .map((x) => `${x.name} (${pesoFicheiro(x.size)})`)
+          .join(" · ");
+        rejeitar(ficheiro, "anx.total", lista);
+        continue;
+      }
+      aceites = [...outros, ficheiro];
+      /* ficheiro válido: o aviso anterior do mesmo nome deixa de fazer sentido */
+      rejeitados = rejeitados.filter((r) => r.nome !== ficheiro.name);
+    }
+    pintar();
+  };
+
+  function pintar() {
+    listaBox.textContent = "";
+    listaBox.hidden = aceites.length === 0;
+    aceites.forEach((ficheiro) => {
+      const linha = document.createElement("li");
+      const nome = document.createElement("span");
+      nome.className = "anexo-nome";
+      nome.textContent = ficheiro.name;
+      const peso = document.createElement("span");
+      peso.className = "anexo-peso";
+      peso.textContent = pesoFicheiro(ficheiro.size);
+      linha.append(
+        nome,
+        peso,
+        botaoRemover(t("anx.remover"), ficheiro.name, () => {
+          aceites = aceites.filter((x) => x !== ficheiro);
+          pintar();
+          input.focus();
+        }),
+      );
+      listaBox.append(linha);
+    });
+
+    errosBox.textContent = "";
+    rejeitados.forEach((r) => {
+      const aviso = document.createElement("p");
+      aviso.className = "anexo-erro";
+      const simbolo = document.createElement("span");
+      simbolo.className = "anexo-simbolo";
+      simbolo.setAttribute("aria-hidden", "true");
+      simbolo.textContent = "!";
+      const nome = document.createElement("strong");
+      nome.textContent = r.nome;
+      aviso.append(
+        simbolo,
+        nome,
+        document.createTextNode(` — ${textoAnexo(r.motivo, r.detalhe)}`),
+      );
+      /* só os problemas de tamanho dão direito a ferramenta de compactação */
+      const ajuda = ANEXO_AJUDA[extensaoFicheiro(r.nome)];
+      if (r.motivo === "anx.grande" || r.motivo === "anx.total") {
+        if (ajuda) {
+          const ligacao = document.createElement("a");
+          ligacao.href = ajuda.url;
+          ligacao.target = "_blank";
+          ligacao.rel = "noopener noreferrer";
+          ligacao.textContent = t(ajuda.rotulo);
+          aviso.append(document.createTextNode(" "), ligacao);
+        } else {
+          const dica = document.createElement("span");
+          dica.className = "anexo-dica";
+          /* o espaço evita "limite 3 MB.Comprima" nos leitores de ecrã */
+          dica.textContent = ` ${t("anx.compGen")}`;
+          aviso.append(dica);
+        }
+      }
+      const remover = botaoRemover(t("anx.dispensar"), r.nome, () => {
+        rejeitados = rejeitados.filter((x) => x !== r);
+        pintar();
+      });
+      remover.classList.add("anexo-remover--aviso");
+      aviso.append(remover);
+      errosBox.append(aviso);
+    });
+
+    input.setAttribute("aria-invalid", rejeitados.length ? "true" : "false");
+  }
+
+  input.addEventListener("change", lerNovos);
+  pintar();
+
+  const api = {
+    aceites: () => aceites,
+    temErros: () => rejeitados.length > 0,
+    focar: () => input.focus(),
+    limpar: () => {
+      aceites = [];
+      rejeitados = [];
+      input.value = "";
+      pintar();
+    },
+  };
+  gestoresAnexos.set(f, api);
+  return api;
+}
+
 /* formulários: envio direto ao e-mail comercial, sem base de dados */
 function wire(formId, msgId, okKey) {
   const f = document.getElementById(formId);
   if (!f) return;
   const m = document.getElementById(msgId);
   const startedAt = Date.now();
+  let enviando = false;
   f.addEventListener("submit", (e) => {
     e.preventDefault();
+    if (enviando) return;
     m.className = "msg on";
     if (!f.checkValidity()) {
       m.classList.add("err");
@@ -1265,6 +1629,8 @@ function wire(formId, msgId, okKey) {
       return;
     }
     if (formId === "form-orc") {
+      const gestor = gestorAnexos(f);
+      const escolhidos = gestor ? gestor.aceites() : [];
       const data = new FormData(f);
       const lines = [];
       const services = [];
@@ -1278,71 +1644,154 @@ function wire(formId, msgId, okKey) {
         lines.push(`${key}: ${value}`);
       }
       if (services.length) lines.push(`Serviços: ${services.join(", ")}`);
-      const files = [...f.elements.ficheiros.files].map((file) => file.name);
-      if (files.length) lines.push(`Ficheiros: ${files.join(", ")}`);
+      if (escolhidos.length)
+        lines.push(`Ficheiros: ${escolhidos.map((x) => x.name).join(", ")}`);
       const subject = `Pedido de proposta — ${data.get("empresa") || "novo projeto"}`;
       const mailto = f.dataset.mailto || "";
       const endpoint = (f.dataset.endpoint || "").trim();
       const link = `<a href="mailto:${mailto}">${mailto}</a>`;
-      const showOk = (hintKey) => {
+      const showOk = (hintKey, extra) => {
         m.className = "msg on ok";
-        m.innerHTML = `<strong>&#10003; ${t(okKey)}</strong><span class="msg-hint">${t(hintKey)} ${link}</span>`;
+        m.innerHTML = `<strong>&#10003; ${t(okKey)}</strong><span class="msg-hint">${t(hintKey)} ${link}</span>${extra ? `<span class="msg-hint">${extra}</span>` : ""}`;
       };
+      const showErr = (html) => {
+        m.className = "msg on err";
+        m.innerHTML = html;
+      };
+      const avisoAnexos = escolhidos.length
+        ? `<span class="msg-hint">${t("anx.avisoAnexos")}</span>`
+        : "";
 
       const enviarPorMailto = () => {
         window.location.href = `mailto:${mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
         showOk("ok.ohint");
       };
 
-      /* sem serviço configurado: abre o programa de e-mail do visitante */
+      /* há ficheiros assinalados: explicar e não enviar nada */
+      if (gestor && gestor.temErros()) {
+        showErr(`<strong>${t("anx.bloqueio")}</strong>`);
+        gestor.focar();
+        return;
+      }
+
+      /* sem serviço configurado: o mailto só serve quando não há ficheiros,
+         porque não os consegue anexar */
       if (!endpoint) {
+        if (escolhidos.length) {
+          showErr(
+            `<strong>${t("err.send")}</strong><span class="msg-hint">${t("anx.falhaAnexos").replace("{email}", link)}</span>`,
+          );
+          return;
+        }
         enviarPorMailto();
         return;
       }
 
-      /* envio direto: a função do Vercel entrega o e-mail */
-      const payload = { servico: [] };
-      for (const [chave, valor] of data.entries()) {
-        if (chave === "ficheiros") continue;
-        if (chave === "servico") payload.servico.push(valor);
-        else payload[chave] = valor;
-      }
-      payload.ficheiros = [...f.elements.ficheiros.files].map((x) => x.name);
-
       const btn = f.querySelector('button[type="submit"]');
-      if (btn) btn.disabled = true;
-      fetch(endpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(payload),
-      })
-        .then((res) => {
-          /* 503 = serviço ainda sem chave; 404 = função não publicada.
-             Em qualquer dos casos volta ao programa de e-mail, como antes. */
-          if (res.status === 503 || res.status === 404) return "sem-servico";
-          if (!res.ok) throw new Error("envio falhou");
-          return "enviado";
-        })
-        .then((estado) => {
-          if (estado === "sem-servico") {
+      const rotuloBtn = btn ? btn.textContent : "";
+      const repor = () => {
+        enviando = false;
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = rotuloBtn;
+        }
+      };
+
+      /* estado de carregamento durante a leitura dos ficheiros e o envio */
+      enviando = true;
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = t("anx.enviando");
+      }
+
+      (async () => {
+        let anexos = [];
+        try {
+          anexos = await anexosEmBase64(escolhidos);
+        } catch (e) {
+          showErr(`<strong>${t("anx.ler")}</strong>`);
+          repor();
+          return;
+        }
+
+        const payload = { servico: [] };
+        for (const [chave, valor] of data.entries()) {
+          if (chave === "ficheiros") continue;
+          if (chave === "servico") payload.servico.push(valor);
+          else payload[chave] = valor;
+        }
+        if (anexos.length) payload.anexos = anexos;
+
+        let resposta;
+        try {
+          resposta = await fetch(endpoint, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify(payload),
+          });
+        } catch (e) {
+          showErr(
+            `<strong>${t("err.send")}</strong><span class="msg-hint">${t("err.sendhint")} ${link}${avisoAnexos}</span>`,
+          );
+          repor();
+          return;
+        }
+
+        /* 503 = serviço ainda sem chave; 404 = função não publicada */
+        if (resposta.status === 503 || resposta.status === 404) {
+          if (anexos.length) {
+            showErr(
+              `<strong>${t("err.send")}</strong><span class="msg-hint">${t("anx.falhaAnexos").replace("{email}", link)}</span>`,
+            );
+          } else {
             enviarPorMailto();
+          }
+          repor();
+          return;
+        }
+
+        if (!resposta.ok) {
+          let devolvido = null;
+          try {
+            devolvido = await resposta.json();
+          } catch (e) {
+            /* resposta sem JSON (por exemplo o 413 da própria Vercel) */
+          }
+          const codigo = devolvido && devolvido.error;
+          if (codigo === "campos_em_falta") {
+            showErr(`<strong>${t("err")}</strong>`);
+            repor();
             return;
           }
-          showOk("ok.odirect");
-          f.reset();
-          const ob = f.querySelector('input[name="servico"][value="Outros"]');
-          if (ob) ob.dispatchEvent(new Event("change", { bubbles: true }));
-        })
-        .catch(() => {
-          m.className = "msg on err";
-          m.innerHTML = `<strong>${t("err.send")}</strong><span class="msg-hint">${t("err.sendhint")} ${link}</span>`;
-        })
-        .finally(() => {
-          if (btn) btn.disabled = false;
-        });
+          const chave =
+            {
+              anexo_muito_grande: "anx.grande",
+              anexo_total: "anx.total",
+              anexo_quantidade: "anx.qtd",
+              anexo_formato: "anx.formato",
+              anexo_invalido: "anx.formato",
+              anexos_invalidos: "anx.formato",
+              corpo_demasiado_grande: "anx.total",
+            }[codigo] || (resposta.status === 413 ? "anx.total" : null);
+          showErr(
+            chave
+              ? `<strong>${t("err.send")}</strong><span class="msg-hint">${textoAnexo(chave)}</span>`
+              : `<strong>${t("err.send")}</strong><span class="msg-hint">${t("err.sendhint")} ${link}${avisoAnexos}</span>`,
+          );
+          repor();
+          return;
+        }
+
+        showOk("ok.odirect", anexos.length ? t("anx.ok") : "");
+        f.reset();
+        if (gestor) gestor.limpar();
+        const ob = f.querySelector('input[name="servico"][value="Outros"]');
+        if (ob) ob.dispatchEvent(new Event("change", { bubbles: true }));
+        repor();
+      })();
       return;
     }
     m.textContent = t(okKey);
@@ -1352,6 +1801,11 @@ function wire(formId, msgId, okKey) {
 wire("form-orc", "msg-orc", "ok.o");
 wire("form-ct", "msg-ct", "ok.form");
 wire("form-tw", "msg-tw", "ok.tw");
+
+/* orçamento: prepara os anexos logo no carregamento, para validar cada
+   ficheiro à medida que o visitante o escolhe (e não só ao enviar) */
+const orcForm = document.getElementById("form-orc");
+if (orcForm) gestorAnexos(orcForm);
 
 /* orçamento: "Outros" revela a caixa para a empresa especificar o serviço */
 const orcOther = document.querySelector(
