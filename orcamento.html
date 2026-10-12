@@ -1096,7 +1096,7 @@
       }
       .proposal-form fieldset > .field:first-of-type,
       .proposal-form fieldset > .two:first-of-type,
-      .proposal-form fieldset > .choice-grid:first-of-type {
+      .proposal-form fieldset > .three:first-of-type {
         margin-top: 20px;
       }
       .proposal-form .field {
@@ -1105,39 +1105,95 @@
       .proposal-form .two {
         gap: 0 14px;
       }
-      .choice-grid {
+      .prof-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 8px;
       }
-      .choice {
+      .prof {
         display: flex;
         align-items: center;
-        min-height: 48px;
-        gap: 8px;
-        padding: 10px 12px;
+        gap: 10px;
+        min-height: 52px;
+        padding: 8px 10px;
         border: 1px solid var(--hair);
         border-radius: 8px;
         background: var(--paper-2);
-        color: var(--ink-2);
-        font-size: 0.88rem;
-        line-height: 1.25;
-        text-transform: none;
-        cursor: pointer;
         transition:
           border-color 0.16s,
-          background 0.16s,
-          color 0.16s;
+          background 0.16s;
       }
-      .choice:has(input:checked) {
+      .prof.activo {
         border-color: var(--brand);
-        background: rgba(168, 96, 47, 0.08);
-        color: var(--ink);
+        background: rgba(168, 96, 47, 0.07);
       }
-      .choice input {
-        width: auto;
+      .prof-ico {
+        flex: 0 0 auto;
+        display: grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        border: 1px solid var(--hair);
+        border-radius: 8px;
+        background: var(--paper);
+        color: var(--brand);
+      }
+      .prof-ico svg {
+        width: 19px;
+        height: 19px;
+      }
+      .prof-nome {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: var(--ink);
+        font-size: 0.88rem;
+      }
+      .passo {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .passo-btn {
+        display: grid;
+        place-items: center;
+        width: 26px;
+        height: 26px;
+        padding: 0;
+        border: 1px solid var(--hair);
+        border-radius: 7px;
+        background: var(--paper);
+        color: var(--brand);
+        font-size: 1rem;
+        line-height: 1;
+        cursor: pointer;
+      }
+      .passo-btn:hover {
+        border-color: var(--brand);
+      }
+      .passo-num {
+        width: 42px;
+        padding: 4px 0;
+        border: 1px solid var(--hair);
+        border-radius: 7px;
+        background: var(--paper);
+        color: var(--ink-2);
+        font-size: 0.92rem;
+        text-align: center;
+        -moz-appearance: textfield;
+      }
+      .passo-num.activo {
+        border-color: var(--brand);
+        color: var(--brand);
+        font-weight: 700;
+      }
+      .passo-num::-webkit-outer-spin-button,
+      .passo-num::-webkit-inner-spin-button {
+        -webkit-appearance: none;
         margin: 0;
-        accent-color: var(--brand);
       }
       .choice-extra {
         margin-top: 10px;
@@ -1150,67 +1206,39 @@
         display: none;
       }
       /* ---------- quantidades por serviço ---------- */
-      .servicos-qtd {
+      .sec-hint {
+        margin: 18px 0 16px;
+        color: var(--ink-2);
+        font-size: 0.88rem;
+        line-height: 1.5;
+      }
+      .total-prof {
+        display: flex;
+        align-items: center;
+        gap: 10px;
         margin-top: 10px;
-        padding: 14px 16px 16px;
+        padding: 8px 10px;
         border: 1px solid var(--hair);
         border-radius: 8px;
         background: var(--paper-2);
-      }
-      .servicos-qtd[hidden] {
-        display: none;
-      }
-      .servicos-qtd-titulo {
-        margin: 0 0 12px;
-        color: var(--ink-2);
-        font-size: 0.86rem;
-        line-height: 1.45;
-      }
-      .servicos-qtd-lista {
-        display: grid;
-        gap: 8px;
-      }
-      .svc-linha {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-      }
-      .svc-nome {
-        min-width: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
         color: var(--ink);
-        font-size: 0.88rem;
+        font-size: 0.92rem;
       }
-      .svc-linha input[type="number"] {
-        flex: 0 0 auto;
-        width: 84px;
-        padding: 8px 10px;
-        font-size: 0.95rem;
+      .total-prof b {
+        margin-left: auto;
+        min-width: 46px;
+        padding: 5px 12px;
+        border: 2px solid var(--brand);
+        border-radius: 8px;
+        background: var(--paper);
+        color: var(--brand);
+        font-size: 1.05rem;
         text-align: center;
       }
-      .servicos-qtd-total {
-        margin: 12px 0 0;
-        padding-top: 10px;
-        border-top: 1px solid var(--hair);
-        color: var(--ink-2);
-        font-size: 0.86rem;
-      }
-      .servicos-qtd-total b {
-        color: var(--ink);
-        font-size: 1rem;
-      }
-      .dica-auto {
-        display: block;
-        margin: 6px 0 0;
-        color: var(--steel);
-        font-size: 0.8rem;
-        line-height: 1.4;
-      }
-      .dica-auto[hidden] {
-        display: none;
+      .three {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0 18px;
       }
       .proposal-aside {
         position: sticky;
@@ -1451,8 +1479,8 @@
         .proposal-form fieldset {
           padding: 20px 16px 16px;
         }
-        .choice-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+        .prof-grid {
+          grid-template-columns: 1fr;
         }
       }
       label {
@@ -1497,7 +1525,8 @@
         gap: 0 18px;
       }
       @media (max-width: 700px) {
-        .two {
+        .two,
+        .three {
           grid-template-columns: 1fr;
         }
       }
@@ -2105,55 +2134,478 @@
               </fieldset>
               <fieldset>
                 <legend data-i18n="q.s2">2. O que precisa?</legend>
-                <div class="choice-grid">
-                  <label class="choice"
-                    ><input type="checkbox" name="servico" value="Soldadores" />
-                    <span data-i18n="q.c1">Soldadores</span></label
-                  >
-                  <label class="choice"
-                    ><input type="checkbox" name="servico" value="Montadores" />
-                    <span data-i18n="q.c2">Montadores</span></label
-                  >
-                  <label class="choice"
-                    ><input
+                <p class="sec-hint" data-i18n="q.s2h">
+                  Indique as profissões pretendidas e a quantidade de
+                  profissionais para cada uma.
+                </p>
+                <div class="prof-grid">
+                  <div class="prof">
+                    <input
+                      type="checkbox"
+                      name="servico"
+                      value="Soldadores"
+                      hidden
+                    />
+                    <span class="prof-ico" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M4 10.5a8 8 0 0 1 16 0v6a3.5 3.5 0 0 1-3.5 3.5h-9A3.5 3.5 0 0 1 4 16.5z"
+                        />
+                        <path d="M7.6 11.8h8.8v3.6H7.6z" />
+                      </svg>
+                    </span>
+                    <span class="prof-nome" data-i18n="q.c1">Soldadores</span>
+                    <span class="passo">
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="-1"
+                        aria-label="Menos"
+                      >
+                        &#8722;
+                      </button>
+                      <input
+                        class="passo-num"
+                        type="number"
+                        min="0"
+                        max="999"
+                        value="0"
+                        inputmode="numeric"
+                        aria-label="Soldadores"
+                        data-i18n-aria="q.c1"
+                      />
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="1"
+                        aria-label="Mais"
+                      >
+                        &#43;
+                      </button>
+                    </span>
+                  </div>
+                  <div class="prof">
+                    <input
+                      type="checkbox"
+                      name="servico"
+                      value="Montadores"
+                      hidden
+                    />
+                    <span class="prof-ico" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="9" cy="7.5" r="3.2" />
+                        <path d="M3.5 20.5a5.5 5.5 0 0 1 11 0" />
+                        <path d="M16.5 15.5l4 4M20.5 15.5l-4 4" />
+                      </svg>
+                    </span>
+                    <span class="prof-nome" data-i18n="q.c2">Montadores</span>
+                    <span class="passo">
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="-1"
+                        aria-label="Menos"
+                      >
+                        &#8722;
+                      </button>
+                      <input
+                        class="passo-num"
+                        type="number"
+                        min="0"
+                        max="999"
+                        value="0"
+                        inputmode="numeric"
+                        aria-label="Montadores"
+                        data-i18n-aria="q.c2"
+                      />
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="1"
+                        aria-label="Mais"
+                      >
+                        &#43;
+                      </button>
+                    </span>
+                  </div>
+                  <div class="prof">
+                    <input
                       type="checkbox"
                       name="servico"
                       value="Caldeireiros"
+                      hidden
                     />
-                    <span data-i18n="q.c3">Caldeireiros</span></label
-                  >
-                  <label class="choice"
-                    ><input type="checkbox" name="servico" value="Tubistas" />
-                    <span data-i18n="q.c4">Tubistas</span></label
-                  >
-                  <label class="choice"
-                    ><input type="checkbox" name="servico" value="Pintores" />
-                    <span data-i18n="q.c5">Pintores</span></label
-                  >
-                  <label class="choice"
-                    ><input
+                    <span class="prof-ico" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="5.5" y="4" width="13" height="16" rx="4" />
+                        <path d="M5.5 9.5h13" />
+                        <path d="M12 4V2.2" />
+                      </svg>
+                    </span>
+                    <span class="prof-nome" data-i18n="q.c3">Caldeireiros</span>
+                    <span class="passo">
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="-1"
+                        aria-label="Menos"
+                      >
+                        &#8722;
+                      </button>
+                      <input
+                        class="passo-num"
+                        type="number"
+                        min="0"
+                        max="999"
+                        value="0"
+                        inputmode="numeric"
+                        aria-label="Caldeireiros"
+                        data-i18n-aria="q.c3"
+                      />
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="1"
+                        aria-label="Mais"
+                      >
+                        &#43;
+                      </button>
+                    </span>
+                  </div>
+                  <div class="prof">
+                    <input
+                      type="checkbox"
+                      name="servico"
+                      value="Tubistas"
+                      hidden
+                    />
+                    <span class="prof-ico" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M7 3v9a5 5 0 0 0 5 5h9" />
+                        <path d="M4 3h6M21 14v6" />
+                      </svg>
+                    </span>
+                    <span class="prof-nome" data-i18n="q.c4">Tubistas</span>
+                    <span class="passo">
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="-1"
+                        aria-label="Menos"
+                      >
+                        &#8722;
+                      </button>
+                      <input
+                        class="passo-num"
+                        type="number"
+                        min="0"
+                        max="999"
+                        value="0"
+                        inputmode="numeric"
+                        aria-label="Tubistas"
+                        data-i18n-aria="q.c4"
+                      />
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="1"
+                        aria-label="Mais"
+                      >
+                        &#43;
+                      </button>
+                    </span>
+                  </div>
+                  <div class="prof">
+                    <input
+                      type="checkbox"
+                      name="servico"
+                      value="Pintores"
+                      hidden
+                    />
+                    <span class="prof-ico" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="4" width="11" height="5" rx="1.5" />
+                        <path d="M15 6.5h4.5v4H12" />
+                        <path d="M11.5 10.5v3" />
+                        <rect
+                          x="9.8"
+                          y="13.5"
+                          width="3.4"
+                          height="6.5"
+                          rx="1.4"
+                        />
+                      </svg>
+                    </span>
+                    <span class="prof-nome" data-i18n="q.c5">Pintores</span>
+                    <span class="passo">
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="-1"
+                        aria-label="Menos"
+                      >
+                        &#8722;
+                      </button>
+                      <input
+                        class="passo-num"
+                        type="number"
+                        min="0"
+                        max="999"
+                        value="0"
+                        inputmode="numeric"
+                        aria-label="Pintores"
+                        data-i18n-aria="q.c5"
+                      />
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="1"
+                        aria-label="Mais"
+                      >
+                        &#43;
+                      </button>
+                    </span>
+                  </div>
+                  <div class="prof">
+                    <input
                       type="checkbox"
                       name="servico"
                       value="Chefe de equipa"
+                      hidden
                     />
-                    <span data-i18n="q.c6">Chefe de equipa</span></label
-                  >
-                  <label class="choice"
-                    ><input type="checkbox" name="servico" value="Picheleiro" />
-                    <span data-i18n="q.c7">Picheleiro</span></label
-                  >
-                  <label class="choice"
-                    ><input
+                    <span class="prof-ico" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="7" r="3" />
+                        <path d="M6.5 20v-1.5a5.5 5.5 0 0 1 11 0V20" />
+                        <circle cx="5" cy="10.5" r="2.2" />
+                        <circle cx="19" cy="10.5" r="2.2" />
+                      </svg>
+                    </span>
+                    <span class="prof-nome" data-i18n="q.c6"
+                      >Chefe de equipa</span
+                    >
+                    <span class="passo">
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="-1"
+                        aria-label="Menos"
+                      >
+                        &#8722;
+                      </button>
+                      <input
+                        class="passo-num"
+                        type="number"
+                        min="0"
+                        max="999"
+                        value="0"
+                        inputmode="numeric"
+                        aria-label="Chefe de equipa"
+                        data-i18n-aria="q.c6"
+                      />
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="1"
+                        aria-label="Mais"
+                      >
+                        &#43;
+                      </button>
+                    </span>
+                  </div>
+                  <div class="prof">
+                    <input
+                      type="checkbox"
+                      name="servico"
+                      value="Picheleiro"
+                      hidden
+                    />
+                    <span class="prof-ico" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="13.5" r="5.5" />
+                        <path d="M6.5 13.5h11M12 3.5v4.5" />
+                      </svg>
+                    </span>
+                    <span class="prof-nome" data-i18n="q.c7">Picheleiro</span>
+                    <span class="passo">
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="-1"
+                        aria-label="Menos"
+                      >
+                        &#8722;
+                      </button>
+                      <input
+                        class="passo-num"
+                        type="number"
+                        min="0"
+                        max="999"
+                        value="0"
+                        inputmode="numeric"
+                        aria-label="Picheleiro"
+                        data-i18n-aria="q.c7"
+                      />
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="1"
+                        aria-label="Mais"
+                      >
+                        &#43;
+                      </button>
+                    </span>
+                  </div>
+                  <div class="prof">
+                    <input
                       type="checkbox"
                       name="servico"
                       value="Serralheiro"
+                      hidden
                     />
-                    <span data-i18n="q.c8">Serralheiro</span></label
-                  >
-                  <label class="choice"
-                    ><input type="checkbox" name="servico" value="Outros" />
-                    <span data-i18n="q.c9">Outros</span></label
-                  >
+                    <span class="prof-ico" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M13.5 3.5 20.5 10.5l-2.6 2.6L10.9 6.1z" />
+                        <path d="M11.6 8.6 3.5 16.7l3.8 3.8 8.1-8.1" />
+                      </svg>
+                    </span>
+                    <span class="prof-nome" data-i18n="q.c8">Serralheiro</span>
+                    <span class="passo">
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="-1"
+                        aria-label="Menos"
+                      >
+                        &#8722;
+                      </button>
+                      <input
+                        class="passo-num"
+                        type="number"
+                        min="0"
+                        max="999"
+                        value="0"
+                        inputmode="numeric"
+                        aria-label="Serralheiro"
+                        data-i18n-aria="q.c8"
+                      />
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="1"
+                        aria-label="Mais"
+                      >
+                        &#43;
+                      </button>
+                    </span>
+                  </div>
+                  <div class="prof">
+                    <input
+                      type="checkbox"
+                      name="servico"
+                      value="Outros"
+                      hidden
+                    />
+                    <span class="prof-ico" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="6" cy="12" r="1.5" />
+                        <circle cx="12" cy="12" r="1.5" />
+                        <circle cx="18" cy="12" r="1.5" />
+                      </svg>
+                    </span>
+                    <span class="prof-nome" data-i18n="q.c9">Outros</span>
+                    <span class="passo">
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="-1"
+                        aria-label="Menos"
+                      >
+                        &#8722;
+                      </button>
+                      <input
+                        class="passo-num"
+                        type="number"
+                        min="0"
+                        max="999"
+                        value="0"
+                        inputmode="numeric"
+                        aria-label="Outros"
+                        data-i18n-aria="q.c9"
+                      />
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="1"
+                        aria-label="Mais"
+                      >
+                        &#43;
+                      </button>
+                    </span>
+                  </div>
                 </div>
                 <div class="choice-extra" id="outros-extra" hidden>
                   <label for="o17" data-i18n="q.c9l"
@@ -2166,39 +2618,34 @@
                     disabled
                   />
                 </div>
-                <div class="servicos-qtd" id="servicos-qtd" hidden>
-                  <p class="servicos-qtd-titulo" data-i18n="q.svcTitulo">
-                    Escolheu mais do que um serviço. Indique quantos
-                    profissionais precisa de cada um:
-                  </p>
-                  <div class="servicos-qtd-lista" id="servicos-qtd-lista"></div>
-                  <p class="servicos-qtd-total">
-                    <span data-i18n="q.svcTotal">Total de profissionais</span>:
-                    <b id="servicos-qtd-soma">0</b>
-                  </p>
+                <div class="total-prof">
+                  <span class="prof-ico" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="7" r="3" />
+                      <path d="M6.5 20v-1.5a5.5 5.5 0 0 1 11 0V20" />
+                      <circle cx="5" cy="10.5" r="2.2" />
+                      <circle cx="19" cy="10.5" r="2.2" />
+                    </svg>
+                  </span>
+                  <span data-i18n="q.svcTotal">Total de profissionais</span>
+                  <b id="prof-total">0</b>
+                  <input
+                    type="hidden"
+                    name="profissionais"
+                    id="profissionais"
+                  />
                 </div>
               </fieldset>
               <fieldset>
                 <legend data-i18n="q.s3">3. Dimensão do trabalho</legend>
-                <div class="two">
-                  <div class="field">
-                    <label for="o5" data-i18n="q.f5"
-                      >Número de profissionais *</label
-                    ><input
-                      id="o5"
-                      name="profissionais"
-                      type="number"
-                      min="1"
-                      required
-                    />
-                    <span
-                      class="dica-auto"
-                      id="profissionais-auto"
-                      data-i18n="q.f5auto"
-                      hidden
-                      >Calculado a partir das quantidades por serviço.</span
-                    >
-                  </div>
+                <div class="three">
                   <div class="field">
                     <label for="o6" data-i18n="q.f6"
                       >Data prevista de início</label

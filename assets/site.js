@@ -269,11 +269,13 @@ const I18N = {
     "q.f14": "E-mail *",
     "q.f15": "Phone / WhatsApp",
     "q.f16": "Project or specifications (PDF, DWG, ZIP, DOCX, XLSX, JPG, PNG)",
-    "q.f5auto": "Calculated from the quantities per service.",
-    "q.svcTitulo":
-      "You picked more than one service. State how many professionals you need for each:",
+    "q.s2h":
+      "Tell us the trades you need and how many professionals for each one.",
+    "q.mais": "More",
+    "q.menos": "Fewer",
+    "q.zero":
+      "Choose at least one trade and set how many professionals you need.",
     "q.svcTotal": "Total professionals",
-    "q.svcQtd": "Quantity for",
     "q.f16h": "Up to 3 files · 3 MB in total.",
     "anx.qtd":
       "You can attach a maximum of 3 files. Remove one to add another.",
@@ -718,11 +720,13 @@ const I18N = {
     "q.f14": "Correo *",
     "q.f15": "Teléfono / WhatsApp",
     "q.f16": "Proyecto o pliego (PDF, DWG, ZIP, DOCX, XLSX, JPG, PNG)",
-    "q.f5auto": "Calculado a partir de las cantidades por servicio.",
-    "q.svcTitulo":
-      "Ha elegido más de un servicio. Indique cuántos profesionales necesita de cada uno:",
+    "q.s2h":
+      "Indique los oficios que necesita y cuántos profesionales de cada uno.",
+    "q.mais": "Más",
+    "q.menos": "Menos",
+    "q.zero":
+      "Elija al menos un oficio e indique cuántos profesionales necesita.",
     "q.svcTotal": "Total de profesionales",
-    "q.svcQtd": "Cantidad para",
     "q.f16h": "Hasta 3 archivos · 3 MB en total.",
     "anx.qtd":
       "Puede adjuntar un máximo de 3 archivos. Elimine uno para añadir otro.",
@@ -1125,11 +1129,13 @@ I18N.fr = {
   "q.f14": "E-mail *",
   "q.f15": "Téléphone / WhatsApp",
   "q.f16": "Projet ou cahier des charges (PDF, DWG, ZIP, DOCX, XLSX, JPG, PNG)",
-  "q.f5auto": "Calculé à partir des quantités par service.",
-  "q.svcTitulo":
-    "Vous avez choisi plus d'un service. Indiquez combien de professionnels vous en voulez pour chacun :",
+  "q.s2h":
+    "Indiquez les métiers dont vous avez besoin et combien de professionnels pour chacun.",
+  "q.mais": "Plus",
+  "q.menos": "Moins",
+  "q.zero":
+    "Choisissez au moins un métier et indiquez combien de professionnels vous voulez.",
   "q.svcTotal": "Total de professionnels",
-  "q.svcQtd": "Quantité pour",
   "q.f16h": "Jusqu'à 3 fichiers · 3 Mo au total.",
   "anx.qtd":
     "Vous pouvez joindre 3 fichiers au maximum. Supprimez-en un pour en ajouter un autre.",
@@ -1214,11 +1220,13 @@ const PT_FALLBACK = {
     "Verifique a ligação e tente novamente. Se persistir, envie os dados para",
   "ok.tw":
     "Candidatura recebida. Guardamos o seu contacto para futuras oportunidades.",
-  "q.f5auto": "Calculado a partir das quantidades por serviço.",
-  "q.svcTitulo":
-    "Escolheu mais do que um serviço. Indique quantos profissionais precisa de cada um:",
+  "q.s2h":
+    "Indique as profissões pretendidas e a quantidade de profissionais para cada uma.",
+  "q.mais": "Mais",
+  "q.menos": "Menos",
+  "q.zero":
+    "Escolha pelo menos uma profissão e indique quantos profissionais precisa.",
   "q.svcTotal": "Total de profissionais",
-  "q.svcQtd": "Quantidade para",
   "anx.qtd":
     "Pode anexar no máximo 3 ficheiros. Remova um deles para adicionar outro.",
   "anx.grande":
@@ -1627,146 +1635,122 @@ function gestorAnexos(f) {
   return api;
 }
 
-/* ---------------- quantidades por serviço ----------------
-   Com um único serviço escolhido nada muda: o visitante escreve o total em
-   "Número de profissionais", como sempre. Com dois ou mais, o total passa a
-   ser a soma das quantidades indicadas para cada serviço. */
-const gestoresServicos = new WeakMap();
+/* ---------------- profissões e quantidades ----------------
+   Cada profissão tem um contador (− n +). O número escolhido é o número de
+   profissionais pedidos dessa profissão, e a soma aparece em "Total de
+   profissionais", que é o valor enviado no pedido. */
+const gestoresProf = new WeakMap();
 
-function gestorServicosQtd(f) {
-  if (gestoresServicos.has(f)) return gestoresServicos.get(f);
-  const bloco = document.getElementById("servicos-qtd");
-  const caixas = [...f.querySelectorAll('input[name="servico"]')];
-  if (!bloco || !caixas.length) return null;
-  const lista = document.getElementById("servicos-qtd-lista");
-  const soma = document.getElementById("servicos-qtd-soma");
+function gestorProfissoes(f) {
+  if (gestoresProf.has(f)) return gestoresProf.get(f);
+  const cartoes = [...f.querySelectorAll(".prof")];
+  if (!cartoes.length) return null;
+  const total = document.getElementById("prof-total");
   const campoTotal = f.elements.profissionais;
-  const dicaAuto = document.getElementById("profissionais-auto");
-  const linhas = new Map(); /* caixa -> { linha, nome, campo } */
-  let valorEscrito = ""; /* o que o visitante tinha escrito à mão */
-  let modoAuto = false; /* o total está a ser calculado por nós */
+  const caixaOutros = document.getElementById("outros-extra");
+  const campoOutros = caixaOutros ? caixaOutros.querySelector("input") : null;
 
-  const escolhidos = () => caixas.filter((c) => c.checked);
-  /* nome do serviço tal como está no formulário (muda com o idioma) */
-  const nomeDoServico = (caixa) =>
-    caixa.closest(".choice")?.querySelector("span")?.textContent.trim() ||
-    caixa.value;
+  const passos = cartoes.map((cartao) => {
+    const vinculo = cartao.querySelector('input[name="servico"]');
+    const numero = cartao.querySelector(".passo-num");
+    const nome = cartao.querySelector(".prof-nome");
+    const texto = () => nome?.textContent.trim() || vinculo?.value || "";
+    return { cartao, vinculo, numero, nome, texto };
+  });
 
-  /* mudar de idioma volta a escrever os nomes, sem tocar nos números */
-  function retextualizar() {
-    for (const [caixa, registo] of linhas) {
-      const nome = nomeDoServico(caixa);
-      registo.nome.textContent = nome;
-      registo.campo.setAttribute("aria-label", `${t("q.svcQtd")} ${nome}`);
+  const quantidade = (passo) =>
+    Math.min(999, Math.max(0, parseInt(passo.numero.value, 10) || 0));
+
+  function atualizar() {
+    let soma = 0;
+    for (const passo of passos) soma += quantidade(passo);
+    /* sem ninguém pedido, o formulário não pode seguir */
+    const aviso = soma ? "" : t("q.zero");
+    for (const passo of passos) {
+      const n = quantidade(passo);
+      /* a caixa escondida é que faz chegar o serviço ao e-mail */
+      if (passo.vinculo) passo.vinculo.checked = n > 0;
+      passo.cartao.classList.toggle("activo", n > 0);
+      passo.numero.classList.toggle("activo", n > 0);
+      /* botões e campo com o nome da profissão, no idioma em uso */
+      const nome = passo.texto();
+      passo.cartao
+        .querySelectorAll(".passo-btn")
+        .forEach((b) =>
+          b.setAttribute(
+            "aria-label",
+            `${t(b.dataset.passo === "1" ? "q.mais" : "q.menos")} ${nome}`,
+          ),
+        );
+      passo.numero.setAttribute("aria-label", nome);
+      passo.numero.setCustomValidity(aviso);
+    }
+    if (total) total.textContent = String(soma);
+    if (campoTotal) campoTotal.value = soma ? String(soma) : "";
+
+    /* "Outros" pede sempre o nome do serviço */
+    if (caixaOutros && campoOutros) {
+      const outros = passos.find((p) => p.vinculo?.value === "Outros");
+      const pedido = outros ? quantidade(outros) > 0 : false;
+      caixaOutros.hidden = !pedido;
+      campoOutros.disabled = !pedido;
+      campoOutros.required = pedido;
     }
   }
-  document.addEventListener("langchange", retextualizar);
 
-  /* enquanto o campo é do visitante, guardamos o que ele escreve para o
-     devolver intacto se voltar a haver um só serviço */
-  if (campoTotal) {
-    campoTotal.addEventListener("input", () => {
-      if (!campoTotal.readOnly) valorEscrito = campoTotal.value;
-    });
+  function ajustar(passo, delta) {
+    const n = Math.min(999, Math.max(0, quantidade(passo) + delta));
+    passo.numero.value = String(n);
+    atualizar();
   }
 
-  function recalcular() {
-    let total = 0;
-    for (const registo of linhas.values()) {
-      const n = Math.min(
-        999,
-        Math.max(1, parseInt(registo.campo.value, 10) || 1),
+  for (const passo of passos) {
+    passo.cartao
+      .querySelectorAll(".passo-btn")
+      .forEach((botao) =>
+        botao.addEventListener("click", () =>
+          ajustar(passo, Number(botao.dataset.passo)),
+        ),
       );
-      total += n;
-    }
-    if (soma) soma.textContent = String(total);
-    if (campoTotal) {
-      campoTotal.value = String(total);
-      campoTotal.readOnly = true;
-    }
+    passo.numero.addEventListener("input", atualizar);
+    /* ao sair do campo, um valor vazio ou estranho volta a ser um número */
+    passo.numero.addEventListener("change", () => {
+      passo.numero.value = String(quantidade(passo));
+      atualizar();
+    });
+    /* setas do teclado e roda do rato */
+    passo.numero.addEventListener(
+      "wheel",
+      (e) => {
+        e.preventDefault();
+        ajustar(passo, e.deltaY < 0 ? 1 : -1);
+      },
+      { passive: false },
+    );
   }
 
-  function sincronizar() {
-    const ativos = escolhidos();
-    const varios = ativos.length > 1;
-    bloco.hidden = !varios;
-
-    if (!varios) {
-      /* volta ao comportamento de sempre */
-      lista.textContent = "";
-      linhas.clear();
-      if (campoTotal) {
-        campoTotal.readOnly = false;
-        if (modoAuto) campoTotal.value = valorEscrito;
-      }
-      modoAuto = false;
-      if (dicaAuto) dicaAuto.hidden = true;
-      return;
-    }
-
-    /* guarda o valor escrito à mão antes de passar a automático */
-    if (campoTotal && !modoAuto) valorEscrito = campoTotal.value;
-    modoAuto = true;
-
-    /* tira as linhas dos serviços que deixaram de estar escolhidos */
-    for (const [caixa, registo] of [...linhas]) {
-      if (ativos.includes(caixa)) continue;
-      registo.linha.remove();
-      linhas.delete(caixa);
-    }
-
-    /* acrescenta as que faltam, pela ordem das caixas no formulário */
-    for (const caixa of ativos) {
-      if (linhas.has(caixa)) continue;
-      const nome = nomeDoServico(caixa);
-
-      const linha = document.createElement("div");
-      linha.className = "svc-linha";
-      const textoNome = document.createElement("span");
-      textoNome.className = "svc-nome";
-      textoNome.textContent = nome;
-      const campo = document.createElement("input");
-      campo.type = "number";
-      campo.min = "1";
-      campo.max = "999";
-      campo.inputMode = "numeric";
-      campo.value = "1";
-      campo.setAttribute("aria-label", `${t("q.svcQtd")} ${nome}`);
-      campo.addEventListener("input", recalcular);
-
-      linha.append(textoNome, campo);
-      lista.append(linha);
-      linhas.set(caixa, { linha, nome: textoNome, campo });
-    }
-
-    if (dicaAuto) dicaAuto.hidden = false;
-    recalcular();
-  }
-
-  caixas.forEach((caixa) => caixa.addEventListener("change", sincronizar));
+  /* mudar de idioma volta a escrever os rótulos, sem tocar nos números */
+  document.addEventListener("langchange", atualizar);
 
   const api = {
-    sincronizar,
+    atualizar,
     /* depois de um envio bem-sucedido o formulário é limpo */
     limpar() {
-      valorEscrito = "";
-      linhas.clear();
-      lista.textContent = "";
-      modoAuto = false;
-      if (campoTotal) campoTotal.readOnly = false;
+      for (const passo of passos) {
+        passo.numero.value = "0";
+        passo.numero.setCustomValidity("");
+      }
+      atualizar();
     },
     /* texto para o e-mail: "Soldadores (1), Montadores (2)" */
     detalhe: () =>
-      [...linhas.entries()]
-        .map(([caixa, registo]) => [
-          caixa.value,
-          Math.min(999, Math.max(1, parseInt(registo.campo.value, 10) || 1)),
-        ])
-        .map(([nome, n]) => `${nome} (${n})`)
+      passos
+        .filter((passo) => quantidade(passo) > 0)
+        .map((passo) => `${passo.vinculo.value} (${quantidade(passo)})`)
         .join(", "),
   };
-  gestoresServicos.set(f, api);
-  sincronizar();
+  gestoresProf.set(f, api);
+  atualizar();
   return api;
 }
 
@@ -1884,8 +1868,8 @@ function wire(formId, msgId, okKey) {
           if (chave === "servico") payload.servico.push(valor);
           else payload[chave] = valor;
         }
-        /* com vários serviços, quantos profissionais para cada um */
-        const detalhe = gestoresServicos.get(f)?.detalhe();
+        /* com contadores, quantos profissionais para cada profissão */
+        const detalhe = gestoresProf.get(f)?.detalhe();
         if (detalhe) payload.servicos_com_quantidade = detalhe;
         if (anexos.length) payload.anexos = anexos;
 
@@ -1955,11 +1939,7 @@ function wire(formId, msgId, okKey) {
         showOk("ok.odirect", anexos.length ? t("anx.ok") : "");
         f.reset();
         if (gestor) gestor.limpar();
-        gestoresServicos.get(f)?.limpar();
-        /* o reset não avisa os blocos dependentes: avisamos nós */
-        f.querySelectorAll('input[name="servico"]').forEach((caixa) =>
-          caixa.dispatchEvent(new Event("change", { bubbles: true })),
-        );
+        gestoresProf.get(f)?.limpar();
         repor();
       })();
       return;
@@ -1972,34 +1952,14 @@ wire("form-orc", "msg-orc", "ok.o");
 wire("form-ct", "msg-ct", "ok.form");
 wire("form-tw", "msg-tw", "ok.tw");
 
-/* orçamento: prepara os anexos logo no carregamento, para validar cada
-   ficheiro à medida que o visitante o escolhe (e não só ao enviar) */
+/* orçamento: prepara os anexos e os contadores logo no carregamento, para
+   validar cada ficheiro e cada número à medida que o visitante os escolhe
+   (e não só ao enviar) */
 const orcForm = document.getElementById("form-orc");
-if (orcForm) {
-  gestorAnexos(orcForm);
-  gestorServicosQtd(orcForm);
-}
-
-/* orçamento: "Outros" revela a caixa para a empresa especificar o serviço */
-const orcOther = document.querySelector(
-  '#form-orc input[name="servico"][value="Outros"]',
-);
-const orcOtherBox = document.getElementById("outros-extra");
-if (orcOther && orcOtherBox) {
-  const orcOtherInput = orcOtherBox.querySelector("input");
-  const syncOther = () => {
-    const on = orcOther.checked;
-    orcOtherBox.hidden = !on;
-    orcOtherInput.disabled = !on;
-    orcOtherInput.required = on;
-  };
-  orcOther.addEventListener("change", () => {
-    syncOther();
-    if (orcOther.checked) orcOtherInput.focus();
-  });
-  window.addEventListener("pageshow", syncOther);
-  syncOther();
-}
+const gestorProf = orcForm ? gestorProfissoes(orcForm) : null;
+if (orcForm) gestorAnexos(orcForm);
+/* voltar atrás no navegador devolve os valores: voltamos a somar */
+if (gestorProf) window.addEventListener("pageshow", gestorProf.atualizar);
 
 /* revelação */
 const io = new IntersectionObserver(
