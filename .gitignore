@@ -15,3 +15,13 @@ serve_dev.py
 # Originais/fontes pesadas (não usados pelo site publicado)
 assets/Projeto-Portuga/
 assets/fotos-profissional/
+
+# Artefatos de ferramentas (não vão para produção)
+.playwright-mcp/
+__pycache__/
+*.pyc
+_envcheck.txt
+_lh_before.err
+
+# Testes locais do formulário (amostras pesadas)
+_testes/

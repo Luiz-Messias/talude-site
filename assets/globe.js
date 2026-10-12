@@ -30,8 +30,7 @@
     return;
   }
 
-  const labelOf = (m) =>
-    legend[m.i] ? legend[m.i].textContent.trim() : "";
+  const labelOf = (m) => (legend[m.i] ? legend[m.i].textContent.trim() : "");
 
   let started = false;
   let world = null;
@@ -63,7 +62,8 @@
     loadVendor()
       .then(() => {
         const Globe = window.Globe;
-        if (typeof Globe !== "function") throw new Error("globe.gl indisponível");
+        if (typeof Globe !== "function")
+          throw new Error("globe.gl indisponível");
         world = new Globe(host, { animateIn: true })
           .globeImageUrl("assets/img/earth-1024.jpg")
           .bumpImageUrl("assets/img/earth-topo-1024.jpg")
@@ -90,7 +90,8 @@
         });
 
         const c = world.controls();
-        c.autoRotate = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        c.autoRotate = !window.matchMedia("(prefers-reduced-motion: reduce)")
+          .matches;
         c.autoRotateSpeed = 0.5;
         c.enableZoom = false; /* mantém o scroll da página */
         c.enablePan = false;
@@ -99,10 +100,10 @@
         world.pointOfView({ lat: 38, lng: -6, altitude: 1.7 });
 
         frame.addEventListener("pointerdown", () =>
-          frame.classList.add("is-dragging")
+          frame.classList.add("is-dragging"),
         );
         window.addEventListener("pointerup", () =>
-          frame.classList.remove("is-dragging")
+          frame.classList.remove("is-dragging"),
         );
 
         /* as etiquetas dos marcadores acompanham o idioma do site */
@@ -114,8 +115,8 @@
                 const sp = el.querySelector("span");
                 if (sp && labels[i]) sp.textContent = labels[i];
               });
-            }, 0)
-          )
+            }, 0),
+          ),
         );
       })
       .catch(() => frame.classList.add("no-webgl"));
@@ -129,7 +130,7 @@
           start();
         }
       },
-      { rootMargin: "400px 0px" }
+      { rootMargin: "400px 0px" },
     );
     io.observe(frame);
   } else {
