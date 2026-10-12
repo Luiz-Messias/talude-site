@@ -11,14 +11,16 @@
  * Variáveis de ambiente (Vercel → Settings → Environment Variables):
  *   RESEND_API_KEY   obrigatória
  *   ORCAMENTO_TO     opcional — destino. Predefinido: comercial@solutionmetal.com
- *   ORCAMENTO_FROM   opcional — remetente verificado no Resend.
- *                    Predefinido: SMG site <formulario@solutionmetal.com>
+ *   ORCAMENTO_FROM   opcional — remetente verificado no Resend. TEM de ser do
+ *                    domínio verificado (solutionmetalgroup.com, o domínio
+ *                    oficial do site) — o e-mail da empresa está noutro domínio.
+ *                    Predefinido: SMG site <formulario@solutionmetalgroup.com>
  *   RESEND_BASE      opcional — só para testes locais (aponta para um stub).
  */
 
 const DESTINO = process.env.ORCAMENTO_TO || "comercial@solutionmetal.com";
 const REMETENTE =
-  process.env.ORCAMENTO_FROM || "SMG site <formulario@solutionmetal.com>";
+  process.env.ORCAMENTO_FROM || "SMG site <formulario@solutionmetalgroup.com>";
 const LIMITE_CORPO = 256 * 1024;
 
 /* diagnóstico: aparece em Vercel → Deployments → Functions (Runtime Logs).
