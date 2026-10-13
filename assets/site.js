@@ -167,7 +167,8 @@ const I18N = {
     "cred.h2": "Public works contractor",
     "cred.n2": "159355 - PUB",
     "globe.eyebrow": "Countries of operation",
-    "globe.h": "Present across Europe.",
+    "globe.h1": "Present across",
+    "globe.h2": "Europe.",
     "globe.p":
       "Based in Portugal, we mobilise equipment and professionals for projects across different European countries.",
     "globe.hint": "Drag to rotate",
@@ -618,7 +619,8 @@ const I18N = {
     "cred.h2": "Contratista de obras públicas",
     "cred.n2": "159355 - PUB",
     "globe.eyebrow": "Países de actuación",
-    "globe.h": "Presencia en toda Europa.",
+    "globe.h1": "Presencia en toda",
+    "globe.h2": "Europa.",
     "globe.p":
       "Con base en Portugal, movilizamos equipos y profesionales para proyectos en diferentes países de Europa.",
     "globe.hint": "Arrastra para girar",
@@ -929,7 +931,8 @@ I18N.fr = {
   "cred.h2": "Entrepreneur de travaux publics",
   "cred.n2": "159355 - PUB",
   "globe.eyebrow": "Pays d'intervention",
-  "globe.h": "Présence dans toute l'Europe.",
+  "globe.h1": "Présence dans toute",
+  "globe.h2": "l'Europe.",
   "globe.p":
     "Basés au Portugal, nous mobilisons des équipements et des professionnels pour des projets dans différents pays d'Europe.",
   "globe.hint": "Glissez pour faire tourner",

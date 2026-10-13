@@ -373,7 +373,7 @@ module.exports = async (req, res) => {
   ].join("\n");
 
   const cabecalhoLogo = LOGO
-    ? `<img src="${escapar(LOGO)}" alt="Solution Metal Group" width="180" style="display:block;width:180px;max-width:180px;height:auto;margin:0 auto;border:0;outline:none;text-decoration:none">`
+    ? `<img src="${escapar(LOGO)}" alt="Solution Metal Group" width="140" style="display:block;width:140px;max-width:140px;height:auto;margin:0 auto;border:0;outline:none;text-decoration:none">`
     : `<div style="font-size:20px;font-weight:bold;letter-spacing:0.06em;color:#282220">SOLUTION <span style="color:#a8602f">METAL</span> GROUP</div>`;
 
   const corpoHtml = `<!doctype html><html lang="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pedido de proposta</title></head><body style="margin:0;padding:0;background:#f4f1ee;font-family:Arial,Helvetica,sans-serif;color:#282220">

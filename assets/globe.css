@@ -8,6 +8,11 @@
 .globe-band {
   background: var(--paper);
 }
+/* mesma solução de destaque usada nos outros títulos do site: a segunda
+   parte da frase em cobre, que dá o brilho ao conjunto */
+.globe-band .accent {
+  color: var(--brand);
+}
 .globe-layout {
   display: grid;
   grid-template-columns: 0.92fr 1.08fr;
