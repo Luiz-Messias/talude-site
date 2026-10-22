@@ -1101,7 +1101,7 @@
       }
       .proposal-form fieldset > .field:first-of-type,
       .proposal-form fieldset > .two:first-of-type,
-      .proposal-form fieldset > .choice-grid:first-of-type {
+      .proposal-form fieldset > .three:first-of-type {
         margin-top: 20px;
       }
       .proposal-form .field {
@@ -1110,39 +1110,141 @@
       .proposal-form .two {
         gap: 0 14px;
       }
-      .choice-grid {
+      .prof-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 8px;
       }
-      .choice {
+      .prof {
         display: flex;
         align-items: center;
-        min-height: 48px;
-        gap: 8px;
-        padding: 10px 12px;
+        gap: 10px;
+        min-height: 52px;
+        padding: 8px 10px;
         border: 1px solid var(--hair);
         border-radius: 8px;
         background: var(--paper-2);
-        color: var(--ink-2);
-        font-size: 0.88rem;
-        line-height: 1.25;
-        text-transform: none;
-        cursor: pointer;
         transition:
           border-color 0.16s,
-          background 0.16s,
-          color 0.16s;
+          background 0.16s;
       }
-      .choice:has(input:checked) {
+      .prof.activo {
         border-color: var(--brand);
-        background: rgba(168, 96, 47, 0.08);
-        color: var(--ink);
+        background: rgba(168, 96, 47, 0.07);
       }
-      .choice input {
-        width: auto;
+      .prof-ico {
+        flex: 0 0 auto;
+        display: grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        border: 1px solid var(--hair);
+        border-radius: 8px;
+        background: var(--paper);
+        color: var(--brand);
+      }
+      .prof-ico img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+      }
+      .prof-nome {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: var(--ink);
+        font-size: 0.88rem;
+      }
+      .passo {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .passo-btn {
+        display: grid;
+        place-items: center;
+        width: 26px;
+        height: 26px;
+        padding: 0;
+        border: 1px solid var(--hair);
+        border-radius: 7px;
+        background: var(--paper);
+        color: var(--brand);
+        font-size: 1rem;
+        line-height: 1;
+        cursor: pointer;
+      }
+      .passo-btn:hover {
+        border-color: var(--brand);
+      }
+      .passo-num {
+        width: 42px;
+        padding: 4px 0;
+        border: 1px solid var(--hair);
+        border-radius: 7px;
+        background: var(--paper);
+        color: var(--ink-2);
+        font-size: 0.92rem;
+        text-align: center;
+        -moz-appearance: textfield;
+      }
+      .passo-num.activo {
+        border-color: var(--brand);
+        color: var(--brand);
+        font-weight: 700;
+      }
+      .passo-num::-webkit-outer-spin-button,
+      .passo-num::-webkit-inner-spin-button {
+        -webkit-appearance: none;
         margin: 0;
-        accent-color: var(--brand);
+      }
+      .choice-extra {
+        margin-top: 10px;
+        padding: 14px 16px 16px;
+        border: 1px solid var(--hair);
+        border-radius: 8px;
+        background: var(--paper-2);
+      }
+      .choice-extra[hidden] {
+        display: none;
+      }
+      /* ---------- quantidades por serviço ---------- */
+      .sec-hint {
+        margin: 18px 0 16px;
+        color: var(--ink-2);
+        font-size: 0.88rem;
+        line-height: 1.5;
+      }
+      .total-prof {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        padding: 8px 10px;
+        border: 1px solid var(--hair);
+        border-radius: 8px;
+        background: var(--paper-2);
+        color: var(--ink);
+        font-size: 0.92rem;
+      }
+      .total-prof b {
+        margin-left: auto;
+        min-width: 46px;
+        padding: 5px 12px;
+        border: 2px solid var(--brand);
+        border-radius: 8px;
+        background: var(--paper);
+        color: var(--brand);
+        font-size: 1.05rem;
+        text-align: center;
+      }
+      .three {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0 18px;
       }
       .proposal-aside {
         position: sticky;
@@ -1229,13 +1331,141 @@
         margin-bottom: 18px;
       }
       .consent {
-        margin-top: 18px;
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin: 26px 0 0;
+        padding: 14px 16px;
+        border: 1px solid var(--hair);
+        border-radius: 8px;
+        background: var(--paper-2);
         color: var(--ink-2);
+        font-family: inherit;
+        font-size: 0.86rem;
+        letter-spacing: 0;
+        text-transform: none;
+        line-height: 1.45;
+        cursor: pointer;
+        transition:
+          border-color 0.16s,
+          background 0.16s,
+          color 0.16s;
+      }
+      .consent:has(input:checked) {
+        border-color: var(--brand);
+        background: rgba(168, 96, 47, 0.08);
+        color: var(--ink);
+      }
+      .consent input {
+        flex: 0 0 auto;
+        width: 18px;
+        height: 18px;
+        margin: 1px 0 0;
+        padding: 0;
+        accent-color: var(--brand);
       }
       .form-note {
         margin: 14px 0 0;
         color: var(--steel);
         font-size: 0.82rem;
+      }
+      /* ---------- anexos do formulário ---------- */
+      .field .hint {
+        margin: 8px 0 0;
+      }
+      .lista-anexos {
+        display: grid;
+        gap: 6px;
+        margin: 10px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+      .lista-anexos[hidden] {
+        display: none;
+      }
+      .lista-anexos li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 10px;
+        border: 1px solid var(--hair);
+        border-radius: 8px;
+        background: var(--paper);
+        font-size: 0.86rem;
+      }
+      .anexo-nome {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: var(--ink);
+      }
+      .anexo-peso {
+        flex: 0 0 auto;
+        color: var(--steel);
+        font-size: 0.78rem;
+        font-variant-numeric: tabular-nums;
+      }
+      .anexo-remover {
+        flex: 0 0 auto;
+        padding: 5px 9px;
+        border: 1px solid var(--hair);
+        border-radius: 6px;
+        background: transparent;
+        color: var(--ink-2);
+        font: inherit;
+        font-size: 0.78rem;
+        line-height: 1;
+        cursor: pointer;
+      }
+      .anexo-remover:hover,
+      .anexo-remover:focus-visible {
+        border-color: var(--brand);
+        color: var(--brand);
+      }
+      .anexos-erros {
+        display: grid;
+        gap: 6px;
+        margin-top: 10px;
+      }
+      .anexos-erros:empty {
+        display: none;
+      }
+      .anexo-erro {
+        margin: 0;
+        padding: 10px 12px;
+        border-left: 4px solid var(--color-accent-deep);
+        border-radius: 0 8px 8px 0;
+        background: var(--err-bg);
+        color: var(--ink-2);
+        font-size: 0.86rem;
+        line-height: 1.5;
+      }
+      .anexo-erro strong {
+        color: var(--ink);
+      }
+      .anexo-simbolo {
+        display: inline-block;
+        margin-right: 4px;
+        color: var(--color-accent-deep);
+        font-weight: 700;
+      }
+      .anexo-erro a {
+        color: var(--brand);
+        font-weight: 700;
+      }
+      .anexo-remover--aviso {
+        display: inline-block;
+        margin-top: 6px;
+      }
+      .anexo-erro .anexo-remover {
+        border-color: rgba(124, 69, 31, 0.4);
+        background: var(--paper);
+      }
+      .anexo-erro .anexo-dica {
+        display: block;
+        margin-top: 4px;
       }
       .trap {
         position: absolute;
@@ -1255,8 +1485,8 @@
         .proposal-form fieldset {
           padding: 20px 16px 16px;
         }
-        .choice-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+        .prof-grid {
+          grid-template-columns: 1fr;
         }
       }
       label {
@@ -1301,7 +1531,8 @@
         gap: 0 18px;
       }
       @media (max-width: 700px) {
-        .two {
+        .two,
+        .three {
           grid-template-columns: 1fr;
         }
       }
@@ -1325,6 +1556,26 @@
       }
       .msg.on {
         display: block;
+      }
+      .msg.ok {
+        border-left-width: 6px;
+        background: rgba(168, 96, 47, 0.09);
+      }
+      .msg.ok strong {
+        display: block;
+        color: var(--ink);
+      }
+      .msg-hint {
+        display: block;
+        margin-top: 7px;
+        color: var(--ink-2);
+        font-size: 0.86rem;
+        line-height: 1.5;
+      }
+      .msg a {
+        color: var(--brand);
+        font-weight: 700;
+        overflow-wrap: anywhere;
       }
 
       /* ---------- contactos ---------- */
@@ -1773,10 +2024,10 @@
       <nav class="wrap nav" aria-label="Principal" data-i18n-aria="aria.nav">
         <a class="logo" href="index.html"
           ><img
-            src="assets/img/logo-topo.webp"
+            src="assets/img/logo-sm.webp"
             alt="Solution Metal Group"
-            width="3840"
-            height="2698"
+            width="800"
+            height="800"
         /></a>
         <div class="links" id="links">
           <a href="index.html" data-i18n="nav.home">Início</a>
@@ -1841,11 +2092,15 @@
       <section class="band rv">
         <div class="wrap">
           <div class="proposal-layout">
+            <!-- Envio direto: /api/orcamento entrega o e-mail pelo Resend.
+                 Se o serviço não estiver configurado, o formulário volta
+                 automaticamente a abrir o programa de e-mail do visitante. -->
             <form
               class="proposal-form"
               id="form-orc"
               novalidate
               data-mailto="comercial@solutionmetal.com"
+              data-endpoint="/api/orcamento"
             >
               <input
                 class="trap"
@@ -1877,6 +2132,7 @@
                       <option data-i18n="q.pt">Portugal</option>
                       <option data-i18n="q.es">Espanha</option>
                       <option data-i18n="q.fr">França</option>
+                      <option data-i18n="q.nl">Holanda</option>
                       <option data-i18n="q.outro">Outro</option>
                     </select>
                   </div>
@@ -1884,71 +2140,404 @@
               </fieldset>
               <fieldset>
                 <legend data-i18n="q.s2">2. O que precisa?</legend>
-                <div class="choice-grid">
-                  <label class="choice"
-                    ><input type="checkbox" name="servico" value="Soldadores" />
-                    <span data-i18n="q.c1">Soldadores</span></label
-                  >
-                  <label class="choice"
-                    ><input type="checkbox" name="servico" value="Montadores" />
-                    <span data-i18n="q.c2">Montadores</span></label
-                  >
-                  <label class="choice"
-                    ><input
+                <p class="sec-hint" data-i18n="q.s2h">
+                  Indique as profissões pretendidas e a quantidade de
+                  profissionais para cada uma.
+                </p>
+                <div class="prof-grid">
+                  <div class="prof">
+                    <input
+                      type="checkbox"
+                      name="servico"
+                      value="Soldadores"
+                      hidden
+                    />
+                    <span class="prof-ico" aria-hidden="true">
+                      <img src="assets/img/icones/soldadores.png" alt="" />
+                    </span>
+                    <span class="prof-nome" data-i18n="q.c1">Soldadores</span>
+                    <span class="passo">
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="-1"
+                        aria-label="Menos"
+                      >
+                        &#8722;
+                      </button>
+                      <input
+                        class="passo-num"
+                        type="number"
+                        min="0"
+                        max="999"
+                        value="0"
+                        inputmode="numeric"
+                        aria-label="Soldadores"
+                        data-i18n-aria="q.c1"
+                      />
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="1"
+                        aria-label="Mais"
+                      >
+                        &#43;
+                      </button>
+                    </span>
+                  </div>
+                  <div class="prof">
+                    <input
+                      type="checkbox"
+                      name="servico"
+                      value="Montadores"
+                      hidden
+                    />
+                    <span class="prof-ico" aria-hidden="true">
+                      <img src="assets/img/icones/montadores.png" alt="" />
+                    </span>
+                    <span class="prof-nome" data-i18n="q.c2">Montadores</span>
+                    <span class="passo">
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="-1"
+                        aria-label="Menos"
+                      >
+                        &#8722;
+                      </button>
+                      <input
+                        class="passo-num"
+                        type="number"
+                        min="0"
+                        max="999"
+                        value="0"
+                        inputmode="numeric"
+                        aria-label="Montadores"
+                        data-i18n-aria="q.c2"
+                      />
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="1"
+                        aria-label="Mais"
+                      >
+                        &#43;
+                      </button>
+                    </span>
+                  </div>
+                  <div class="prof">
+                    <input
                       type="checkbox"
                       name="servico"
                       value="Caldeireiros"
+                      hidden
                     />
-                    <span data-i18n="q.c3">Caldeireiros</span></label
-                  >
-                  <label class="choice"
-                    ><input type="checkbox" name="servico" value="Tubistas" />
-                    <span data-i18n="q.c4">Tubistas</span></label
-                  >
-                  <label class="choice"
-                    ><input type="checkbox" name="servico" value="Pintores" />
-                    <span data-i18n="q.c5">Pintores</span></label
-                  >
-                  <label class="choice"
-                    ><input
+                    <span class="prof-ico" aria-hidden="true">
+                      <img src="assets/img/icones/caldeireiros.png" alt="" />
+                    </span>
+                    <span class="prof-nome" data-i18n="q.c3">Caldeireiros</span>
+                    <span class="passo">
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="-1"
+                        aria-label="Menos"
+                      >
+                        &#8722;
+                      </button>
+                      <input
+                        class="passo-num"
+                        type="number"
+                        min="0"
+                        max="999"
+                        value="0"
+                        inputmode="numeric"
+                        aria-label="Caldeireiros"
+                        data-i18n-aria="q.c3"
+                      />
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="1"
+                        aria-label="Mais"
+                      >
+                        &#43;
+                      </button>
+                    </span>
+                  </div>
+                  <div class="prof">
+                    <input
+                      type="checkbox"
+                      name="servico"
+                      value="Tubistas"
+                      hidden
+                    />
+                    <span class="prof-ico" aria-hidden="true">
+                      <img src="assets/img/icones/tubistas.png" alt="" />
+                    </span>
+                    <span class="prof-nome" data-i18n="q.c4">Tubistas</span>
+                    <span class="passo">
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="-1"
+                        aria-label="Menos"
+                      >
+                        &#8722;
+                      </button>
+                      <input
+                        class="passo-num"
+                        type="number"
+                        min="0"
+                        max="999"
+                        value="0"
+                        inputmode="numeric"
+                        aria-label="Tubistas"
+                        data-i18n-aria="q.c4"
+                      />
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="1"
+                        aria-label="Mais"
+                      >
+                        &#43;
+                      </button>
+                    </span>
+                  </div>
+                  <div class="prof">
+                    <input
+                      type="checkbox"
+                      name="servico"
+                      value="Pintores"
+                      hidden
+                    />
+                    <span class="prof-ico" aria-hidden="true">
+                      <img src="assets/img/icones/pintores.png" alt="" />
+                    </span>
+                    <span class="prof-nome" data-i18n="q.c5">Pintores</span>
+                    <span class="passo">
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="-1"
+                        aria-label="Menos"
+                      >
+                        &#8722;
+                      </button>
+                      <input
+                        class="passo-num"
+                        type="number"
+                        min="0"
+                        max="999"
+                        value="0"
+                        inputmode="numeric"
+                        aria-label="Pintores"
+                        data-i18n-aria="q.c5"
+                      />
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="1"
+                        aria-label="Mais"
+                      >
+                        &#43;
+                      </button>
+                    </span>
+                  </div>
+                  <div class="prof">
+                    <input
                       type="checkbox"
                       name="servico"
                       value="Chefe de equipa"
+                      hidden
                     />
-                    <span data-i18n="q.c6">Chefe de equipa</span></label
-                  >
-                  <label class="choice"
-                    ><input type="checkbox" name="servico" value="Picheleiro" />
-                    <span data-i18n="q.c7">Picheleiro</span></label
-                  >
-                  <label class="choice"
-                    ><input
+                    <span class="prof-ico" aria-hidden="true">
+                      <img src="assets/img/icones/chefe-de-equipa.png" alt="" />
+                    </span>
+                    <span class="prof-nome" data-i18n="q.c6"
+                      >Chefe de equipa</span
+                    >
+                    <span class="passo">
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="-1"
+                        aria-label="Menos"
+                      >
+                        &#8722;
+                      </button>
+                      <input
+                        class="passo-num"
+                        type="number"
+                        min="0"
+                        max="999"
+                        value="0"
+                        inputmode="numeric"
+                        aria-label="Chefe de equipa"
+                        data-i18n-aria="q.c6"
+                      />
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="1"
+                        aria-label="Mais"
+                      >
+                        &#43;
+                      </button>
+                    </span>
+                  </div>
+                  <div class="prof">
+                    <input
+                      type="checkbox"
+                      name="servico"
+                      value="Picheleiro"
+                      hidden
+                    />
+                    <span class="prof-ico" aria-hidden="true">
+                      <img src="assets/img/icones/picheleiros.png" alt="" />
+                    </span>
+                    <span class="prof-nome" data-i18n="q.c7">Picheleiro</span>
+                    <span class="passo">
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="-1"
+                        aria-label="Menos"
+                      >
+                        &#8722;
+                      </button>
+                      <input
+                        class="passo-num"
+                        type="number"
+                        min="0"
+                        max="999"
+                        value="0"
+                        inputmode="numeric"
+                        aria-label="Picheleiro"
+                        data-i18n-aria="q.c7"
+                      />
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="1"
+                        aria-label="Mais"
+                      >
+                        &#43;
+                      </button>
+                    </span>
+                  </div>
+                  <div class="prof">
+                    <input
                       type="checkbox"
                       name="servico"
                       value="Serralheiro"
+                      hidden
                     />
-                    <span data-i18n="q.c8">Serralheiro</span></label
-                  >
-                  <label class="choice"
-                    ><input type="checkbox" name="servico" value="Outros" />
-                    <span data-i18n="q.c9">Outros</span></label
-                  >
+                    <span class="prof-ico" aria-hidden="true">
+                      <img src="assets/img/icones/serralheiros.png" alt="" />
+                    </span>
+                    <span class="prof-nome" data-i18n="q.c8">Serralheiro</span>
+                    <span class="passo">
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="-1"
+                        aria-label="Menos"
+                      >
+                        &#8722;
+                      </button>
+                      <input
+                        class="passo-num"
+                        type="number"
+                        min="0"
+                        max="999"
+                        value="0"
+                        inputmode="numeric"
+                        aria-label="Serralheiro"
+                        data-i18n-aria="q.c8"
+                      />
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="1"
+                        aria-label="Mais"
+                      >
+                        &#43;
+                      </button>
+                    </span>
+                  </div>
+                  <div class="prof">
+                    <input
+                      type="checkbox"
+                      name="servico"
+                      value="Outros"
+                      hidden
+                    />
+                    <span class="prof-ico" aria-hidden="true">
+                      <img src="assets/img/icones/outros.png" alt="" />
+                    </span>
+                    <span class="prof-nome" data-i18n="q.c9">Outros</span>
+                    <span class="passo">
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="-1"
+                        aria-label="Menos"
+                      >
+                        &#8722;
+                      </button>
+                      <input
+                        class="passo-num"
+                        type="number"
+                        min="0"
+                        max="999"
+                        value="0"
+                        inputmode="numeric"
+                        aria-label="Outros"
+                        data-i18n-aria="q.c9"
+                      />
+                      <button
+                        type="button"
+                        class="passo-btn"
+                        data-passo="1"
+                        aria-label="Mais"
+                      >
+                        &#43;
+                      </button>
+                    </span>
+                  </div>
+                </div>
+                <div class="choice-extra" id="outros-extra" hidden>
+                  <label for="o17" data-i18n="q.c9l"
+                    >Especificar serviço *</label
+                  ><input
+                    id="o17"
+                    name="outro_servico"
+                    data-i18n-ph="q.c9ph"
+                    placeholder="Ex.: Andaimistas, isolamento térmico, inox"
+                    disabled
+                  />
+                </div>
+                <div class="total-prof">
+                  <span class="prof-ico" aria-hidden="true">
+                    <img
+                      src="assets/img/icones/total-profissionais.png"
+                      alt=""
+                    />
+                  </span>
+                  <span data-i18n="q.svcTotal">Total de profissionais</span>
+                  <b id="prof-total">0</b>
+                  <input
+                    type="hidden"
+                    name="profissionais"
+                    id="profissionais"
+                  />
                 </div>
               </fieldset>
               <fieldset>
                 <legend data-i18n="q.s3">3. Dimensão do trabalho</legend>
-                <div class="two">
-                  <div class="field">
-                    <label for="o5" data-i18n="q.f5"
-                      >Número de profissionais *</label
-                    ><input
-                      id="o5"
-                      name="profissionais"
-                      type="number"
-                      min="1"
-                      required
-                    />
-                  </div>
+                <div class="three">
                   <div class="field">
                     <label for="o6" data-i18n="q.f6"
                       >Data prevista de início</label
@@ -2032,14 +2621,25 @@
                 </div>
                 <div class="field">
                   <label for="o16" data-i18n="q.f16"
-                    >Projeto ou caderno de encargos (PDF, DWG)</label
+                    >Projeto ou caderno de encargos (PDF, DWG, ZIP, DOCX, XLSX,
+                    JPG, PNG)</label
                   ><input
                     id="o16"
                     name="ficheiros"
                     type="file"
                     multiple
-                    accept=".pdf,.dwg,.zip"
+                    accept=".pdf,.dwg,.zip,.docx,.xlsx,.jpg,.jpeg,.png"
+                    aria-describedby="anexos-info anexos-erros"
                   />
+                  <p class="hint" id="anexos-info" data-i18n="q.f16h">
+                    Até 3 ficheiros · 3 MB no total.
+                  </p>
+                  <ul class="lista-anexos" id="anexos-lista" hidden></ul>
+                  <div
+                    class="anexos-erros"
+                    id="anexos-erros"
+                    role="alert"
+                  ></div>
                 </div>
                 <label class="consent"
                   ><input type="checkbox" name="consentimento" required />
@@ -2050,13 +2650,13 @@
                 >
               </fieldset>
               <button class="btn btn--lg" type="submit" data-i18n="form.sendq">
-                Pedir orçamento
+                Enviar pedido
               </button>
+              <p class="msg" id="msg-orc" role="status" aria-live="polite"></p>
               <p class="form-note" data-i18n="q.note">
                 Proteção anti-spam ativa. Os dados serão enviados diretamente
                 para o e-mail comercial.
               </p>
-              <p class="msg" id="msg-orc"></p>
             </form>
             <aside class="proposal-aside">
               <div class="contact-panel">

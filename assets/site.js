@@ -166,8 +166,9 @@ const I18N = {
     "cred.t2": "Certificate",
     "cred.h2": "Public works contractor",
     "cred.n2": "159355 - PUB",
-    "globe.eyebrow": "Regions of activity",
-    "globe.h": "Present across Europe.",
+    "globe.eyebrow": "Countries of operation",
+    "globe.h1": "Present across",
+    "globe.h2": "Europe.",
     "globe.p":
       "Based in Portugal, we mobilise equipment and professionals for projects across different European countries.",
     "globe.hint": "Drag to rotate",
@@ -204,7 +205,7 @@ const I18N = {
     /* formulários */
     "form.eyebrow": "Form",
     "form.send": "Send message",
-    "form.sendq": "Request a quote",
+    "form.sendq": "Send request",
     "form.quote.heading": "Request a quote for your project.",
     "form.company": "Company",
     "form.person": "Contact person",
@@ -231,6 +232,7 @@ const I18N = {
     "q.pt": "Portugal",
     "q.es": "Spain",
     "q.fr": "France",
+    "q.nl": "Netherlands",
     "q.outro": "Other",
     "q.s2": "2. What do you need?",
     "q.c1": "Welders",
@@ -242,6 +244,8 @@ const I18N = {
     "q.c7": "Plumber",
     "q.c8": "Metalworker",
     "q.c9": "Other",
+    "q.c9l": "Specify the service *",
+    "q.c9ph": "E.g.: scaffolders, thermal insulation, stainless steel",
     "q.s3": "3. Scope of work",
     "q.f5": "Number of workers *",
     "q.f6": "Expected start date",
@@ -265,7 +269,38 @@ const I18N = {
     "q.f13": "Role",
     "q.f14": "E-mail *",
     "q.f15": "Phone / WhatsApp",
-    "q.f16": "Project or specifications (PDF, DWG)",
+    "q.f16": "Project or specifications (PDF, DWG, ZIP, DOCX, XLSX, JPG, PNG)",
+    "q.s2h":
+      "Tell us the trades you need and how many professionals for each one.",
+    "q.mais": "More",
+    "q.menos": "Fewer",
+    "q.zero":
+      "Choose at least one trade and set how many professionals you need.",
+    "q.svcTotal": "Total professionals",
+    "q.f16h": "Up to 3 files · 3 MB in total.",
+    "anx.qtd":
+      "You can attach a maximum of 3 files. Remove one to add another.",
+    "anx.grande":
+      "This file ({detalhe}) is over the 3 MB limit. Compress it or reduce its size, then select it again in the form.",
+    "anx.total":
+      "The attached files together are over the 3 MB limit ({detalhe}). Compress or remove one and try again.",
+    "anx.formato":
+      "File format not accepted. Use PDF, DWG, ZIP, DOCX, XLSX, JPG or PNG.",
+    "anx.remover": "Remove",
+    "anx.dispensar": "Dismiss warning",
+    "anx.enviando": "Sending…",
+    "anx.ler": "One of the files could not be read. Select it again and retry.",
+    "anx.bloqueio": "Fix the flagged files before sending the request.",
+    "anx.falhaAnexos":
+      "Automatic sending is unavailable and the files are not sent by e-mail. Write to {email} and attach them to that message.",
+    "anx.avisoAnexos":
+      "The files do not follow by e-mail — send them separately.",
+    "anx.ok": "The attached files were received.",
+    "anx.compPdf": "Compress PDF",
+    "anx.compImg": "Reduce image size",
+    "anx.compZip": "Compress ZIP file",
+    "anx.compGen":
+      "Compress the file or reduce its size, then select it again.",
     "q.consent":
       "I authorise the processing of these data in order to answer the request.",
     "q.note":
@@ -348,7 +383,13 @@ const I18N = {
     "crumb.home": "Home",
     /* mensagens */
     "ok.form": "Message sent. We will reply shortly.",
-    "ok.o": "Request sent. We reply within 2 working days.",
+    "ok.o": "Request sent successfully.",
+    "ok.ohint":
+      "We opened your e-mail app with the request details — please confirm sending. If it doesn't open, write to",
+    "ok.odirect": "We will reply to the e-mail provided within 2 working days.",
+    "err.send": "The request could not be sent.",
+    "err.sendhint":
+      "Check your connection and try again. If it persists, send the details to",
     "ok.tw":
       "Application received. We keep your contact for future opportunities.",
     /* portfólio — títulos e galeria */
@@ -385,6 +426,8 @@ const I18N = {
     "obr.catS": "Welding",
     "obr.catM": "Industrial maintenance",
     "obr.s1": "Fabrication and assembly of industrial structures.",
+    "obr.svideo": "Video of steel structure assembly.",
+    "obr.svideoPiping": "Video of industrial piping assembly.",
     "obr.s2": "Fabrication, assembly and installation of piping.",
     "obr.s3": "Fabrication and assembly of metal components.",
     "obr.s4": "Welding of structures, piping and equipment.",
@@ -575,8 +618,9 @@ const I18N = {
     "cred.t2": "Certificado",
     "cred.h2": "Contratista de obras públicas",
     "cred.n2": "159355 - PUB",
-    "globe.eyebrow": "Regiones de actuación",
-    "globe.h": "Presencia en toda Europa.",
+    "globe.eyebrow": "Países de actuación",
+    "globe.h1": "Presencia en toda",
+    "globe.h2": "Europa.",
     "globe.p":
       "Con base en Portugal, movilizamos equipos y profesionales para proyectos en diferentes países de Europa.",
     "globe.hint": "Arrastra para girar",
@@ -613,7 +657,7 @@ const I18N = {
     /* formularios */
     "form.eyebrow": "Formulario",
     "form.send": "Enviar mensaje",
-    "form.sendq": "Pedir presupuesto",
+    "form.sendq": "Enviar solicitud",
     "form.quote.heading": "Solicite un presupuesto para su proyecto.",
     "form.company": "Empresa",
     "form.person": "Persona de contacto",
@@ -640,6 +684,7 @@ const I18N = {
     "q.pt": "Portugal",
     "q.es": "España",
     "q.fr": "Francia",
+    "q.nl": "Países Bajos",
     "q.outro": "Otro",
     "q.s2": "2. ¿Qué necesita?",
     "q.c1": "Soldadores",
@@ -651,6 +696,8 @@ const I18N = {
     "q.c7": "Fontanero",
     "q.c8": "Cerrajero",
     "q.c9": "Otros",
+    "q.c9l": "Especificar el servicio *",
+    "q.c9ph": "Ej.: andamieros, aislamiento térmico, inox",
     "q.s3": "3. Dimensión del trabajo",
     "q.f5": "Número de profesionales *",
     "q.f6": "Fecha prevista de inicio",
@@ -674,7 +721,40 @@ const I18N = {
     "q.f13": "Cargo",
     "q.f14": "Correo *",
     "q.f15": "Teléfono / WhatsApp",
-    "q.f16": "Proyecto o pliego (PDF, DWG)",
+    "q.f16": "Proyecto o pliego (PDF, DWG, ZIP, DOCX, XLSX, JPG, PNG)",
+    "q.s2h":
+      "Indique los oficios que necesita y cuántos profesionales de cada uno.",
+    "q.mais": "Más",
+    "q.menos": "Menos",
+    "q.zero":
+      "Elija al menos un oficio e indique cuántos profesionales necesita.",
+    "q.svcTotal": "Total de profesionales",
+    "q.f16h": "Hasta 3 archivos · 3 MB en total.",
+    "anx.qtd":
+      "Puede adjuntar un máximo de 3 archivos. Elimine uno para añadir otro.",
+    "anx.grande":
+      "Este archivo ({detalhe}) supera el límite de 3 MB. Comprímalo o reduzca su tamaño y vuelva a seleccionarlo en el formulario.",
+    "anx.total":
+      "El conjunto de archivos adjuntos supera el límite de 3 MB ({detalhe}). Comprima o elimine alguno y vuelva a intentarlo.",
+    "anx.formato":
+      "Formato de archivo no aceptado. Utilice PDF, DWG, ZIP, DOCX, XLSX, JPG o PNG.",
+    "anx.remover": "Eliminar",
+    "anx.dispensar": "Descartar aviso",
+    "anx.enviando": "Enviando…",
+    "anx.ler":
+      "No se pudo leer uno de los archivos. Vuelva a seleccionarlo e inténtelo de nuevo.",
+    "anx.bloqueio":
+      "Corrija los archivos señalados antes de enviar la solicitud.",
+    "anx.falhaAnexos":
+      "El envío automático no está disponible y los archivos no se envían por correo. Escriba a {email} y adjúntelos en ese mensaje.",
+    "anx.avisoAnexos":
+      "Los archivos no se envían por correo — envíelos por separado.",
+    "anx.ok": "Se han recibido los archivos adjuntos.",
+    "anx.compPdf": "Comprimir PDF",
+    "anx.compImg": "Reducir imagen",
+    "anx.compZip": "Comprimir archivo ZIP",
+    "anx.compGen":
+      "Comprima el archivo o reduzca su tamaño y vuelva a seleccionarlo.",
     "q.consent":
       "Autorizo el tratamiento de estos datos para responder a la solicitud.",
     "q.note":
@@ -757,7 +837,13 @@ const I18N = {
     "crumb.home": "Inicio",
     /* mensajes */
     "ok.form": "Mensaje enviado. Responderemos en breve.",
-    "ok.o": "Solicitud enviada. Respondemos en 2 días laborables.",
+    "ok.o": "Solicitud enviada correctamente.",
+    "ok.ohint":
+      "Hemos abierto su programa de correo con los datos de la solicitud; confirme el envío. Si no se abre, escriba a",
+    "ok.odirect": "Responderemos al correo indicado en 2 días laborables.",
+    "err.send": "No se ha podido enviar la solicitud.",
+    "err.sendhint":
+      "Compruebe la conexión e inténtelo de nuevo. Si persiste, envíe los datos a",
     "ok.tw":
       "Candidatura recibida. Guardamos su contacto para futuras oportunidades.",
     /* portafolio — títulos y galería */
@@ -794,6 +880,8 @@ const I18N = {
     "obr.catS": "Soldadura",
     "obr.catM": "Mantenimiento industrial",
     "obr.s1": "Fabricación y montaje de estructuras industriales.",
+    "obr.svideo": "Vídeo de montaje de estructura metálica.",
+    "obr.svideoPiping": "Vídeo de montaje de tuberías industriales.",
     "obr.s2": "Fabricación, montaje e instalación de tuberías.",
     "obr.s3": "Fabricación y montaje de componentes metálicos.",
     "obr.s4": "Soldadura de estructuras, tuberías y equipos.",
@@ -842,8 +930,9 @@ I18N.fr = {
   "cred.t2": "Certificat",
   "cred.h2": "Entrepreneur de travaux publics",
   "cred.n2": "159355 - PUB",
-  "globe.eyebrow": "Zones d'intervention",
-  "globe.h": "Présence dans toute l'Europe.",
+  "globe.eyebrow": "Pays d'intervention",
+  "globe.h1": "Présence dans toute",
+  "globe.h2": "l'Europe.",
   "globe.p":
     "Basés au Portugal, nous mobilisons des équipements et des professionnels pour des projets dans différents pays d'Europe.",
   "globe.hint": "Glissez pour faire tourner",
@@ -982,7 +1071,7 @@ I18N.fr = {
   "ct.offices": "Bureaux",
   "form.eyebrow": "Formulaire",
   "form.send": "Envoyer le message",
-  "form.sendq": "Demander un devis",
+  "form.sendq": "Envoyer la demande",
   "form.quote.heading": "Demandez un devis pour votre projet.",
   "form.company": "Entreprise",
   "form.person": "Personne à contacter",
@@ -1005,6 +1094,7 @@ I18N.fr = {
   "q.pt": "Portugal",
   "q.es": "Espagne",
   "q.fr": "France",
+  "q.nl": "Pays-Bas",
   "q.outro": "Autre",
   "q.s2": "2. De quoi avez-vous besoin ?",
   "q.c1": "Soudeurs",
@@ -1016,6 +1106,8 @@ I18N.fr = {
   "q.c7": "Plombier",
   "q.c8": "Serrurier",
   "q.c9": "Autres",
+  "q.c9l": "Préciser le service *",
+  "q.c9ph": "Ex. : échafaudeurs, calorifugeage, inox",
   "q.s3": "3. Ampleur des travaux",
   "q.f5": "Nombre de professionnels *",
   "q.f6": "Date de début prévue",
@@ -1039,7 +1131,39 @@ I18N.fr = {
   "q.f13": "Fonction",
   "q.f14": "E-mail *",
   "q.f15": "Téléphone / WhatsApp",
-  "q.f16": "Projet ou cahier des charges (PDF, DWG)",
+  "q.f16": "Projet ou cahier des charges (PDF, DWG, ZIP, DOCX, XLSX, JPG, PNG)",
+  "q.s2h":
+    "Indiquez les métiers dont vous avez besoin et combien de professionnels pour chacun.",
+  "q.mais": "Plus",
+  "q.menos": "Moins",
+  "q.zero":
+    "Choisissez au moins un métier et indiquez combien de professionnels vous voulez.",
+  "q.svcTotal": "Total de professionnels",
+  "q.f16h": "Jusqu'à 3 fichiers · 3 Mo au total.",
+  "anx.qtd":
+    "Vous pouvez joindre 3 fichiers au maximum. Supprimez-en un pour en ajouter un autre.",
+  "anx.grande":
+    "Ce fichier ({detalhe}) dépasse la limite de 3 Mo. Compressez-le ou réduisez sa taille, puis sélectionnez-le à nouveau dans le formulaire.",
+  "anx.total":
+    "L'ensemble des fichiers joints dépasse la limite de 3 Mo ({detalhe}). Compressez ou supprimez un fichier, puis réessayez.",
+  "anx.formato":
+    "Format de fichier non accepté. Utilisez PDF, DWG, ZIP, DOCX, XLSX, JPG ou PNG.",
+  "anx.remover": "Supprimer",
+  "anx.dispensar": "Ignorer l'avertissement",
+  "anx.enviando": "Envoi…",
+  "anx.ler":
+    "Un des fichiers n'a pas pu être lu. Sélectionnez-le à nouveau et réessayez.",
+  "anx.bloqueio": "Corrigez les fichiers signalés avant d'envoyer la demande.",
+  "anx.falhaAnexos":
+    "L'envoi automatique est indisponible et les fichiers ne sont pas envoyés par e-mail. Écrivez à {email} et joignez-les à ce message.",
+  "anx.avisoAnexos":
+    "Les fichiers ne sont pas envoyés par e-mail — envoyez-les séparément.",
+  "anx.ok": "Les fichiers joints ont bien été reçus.",
+  "anx.compPdf": "Compresser le PDF",
+  "anx.compImg": "Réduire l'image",
+  "anx.compZip": "Compresser le fichier ZIP",
+  "anx.compGen":
+    "Compressez le fichier ou réduisez sa taille, puis sélectionnez-le à nouveau.",
   "q.consent":
     "J'autorise le traitement de ces données afin de répondre à la demande.",
   "q.note":
@@ -1077,16 +1201,58 @@ I18N.fr = {
   "next.k6": "Nous contacter",
   "crumb.home": "Accueil",
   "ok.form": "Message envoyé. Nous vous répondrons rapidement.",
-  "ok.o": "Demande envoyée. Nous répondons sous 2 jours ouvrés.",
+  "ok.o": "Demande envoyée avec succès.",
+  "ok.ohint":
+    "Nous avons ouvert votre messagerie avec les données de la demande — confirmez l'envoi. Si elle ne s'ouvre pas, écrivez à",
+  "ok.odirect": "Nous répondrons à l'adresse indiquée sous 2 jours ouvrés.",
+  "err.send": "La demande n'a pas pu être envoyée.",
+  "err.sendhint":
+    "Vérifiez votre connexion et réessayez. Si le problème persiste, envoyez les données à",
   err: "Vérifiez les champs obligatoires.",
 };
 
 /* ---------------- motor ---------------- */
 const PT_FALLBACK = {
   "ok.form": "Mensagem enviada. Responderemos em breve.",
-  "ok.o": "Pedido enviado. Respondemos em 2 dias úteis.",
+  "ok.o": "Pedido enviado com sucesso.",
+  "ok.ohint":
+    "Abrimos o seu programa de e-mail com os dados do pedido — confirme o envio. Se não abrir, escreva para",
+  "ok.odirect": "Respondemos ao e-mail indicado em até 2 dias úteis.",
+  "err.send": "Não foi possível enviar o pedido.",
+  "err.sendhint":
+    "Verifique a ligação e tente novamente. Se persistir, envie os dados para",
   "ok.tw":
     "Candidatura recebida. Guardamos o seu contacto para futuras oportunidades.",
+  "q.s2h":
+    "Indique as profissões pretendidas e a quantidade de profissionais para cada uma.",
+  "q.mais": "Mais",
+  "q.menos": "Menos",
+  "q.zero":
+    "Escolha pelo menos uma profissão e indique quantos profissionais precisa.",
+  "q.svcTotal": "Total de profissionais",
+  "anx.qtd":
+    "Pode anexar no máximo 3 ficheiros. Remova um deles para adicionar outro.",
+  "anx.grande":
+    "Este ficheiro ({detalhe}) excede o limite de 3 MB. Comprima-o ou reduza o tamanho e volte a selecioná-lo no formulário.",
+  "anx.total":
+    "O conjunto de anexos excede o limite de 3 MB ({detalhe}). Comprima ou remova algum ficheiro e tente novamente.",
+  "anx.formato":
+    "Formato não aceite. Use PDF, DWG, ZIP, DOCX, XLSX, JPG ou PNG.",
+  "anx.remover": "Remover",
+  "anx.dispensar": "Dispensar aviso",
+  "anx.enviando": "A enviar…",
+  "anx.ler":
+    "Não foi possível ler um dos ficheiros. Volte a selecioná-lo e tente novamente.",
+  "anx.bloqueio": "Corrija os ficheiros assinalados antes de enviar o pedido.",
+  "anx.falhaAnexos":
+    "O envio automático está indisponível e os ficheiros não seguem por e-mail. Escreva para {email} e anexe-os nessa mensagem.",
+  "anx.avisoAnexos": "Os ficheiros não seguem por e-mail — envie-os à parte.",
+  "anx.ok": "Os ficheiros anexados foram recebidos.",
+  "anx.compPdf": "Comprimir PDF",
+  "anx.compImg": "Reduzir imagem",
+  "anx.compZip": "Comprimir ficheiro ZIP",
+  "anx.compGen":
+    "Comprima o ficheiro ou reduza o tamanho e volte a selecioná-lo.",
   err: "Verifique os campos obrigatórios.",
 };
 const nodes = document.querySelectorAll("[data-i18n]");
@@ -1139,6 +1305,7 @@ function setLang(l) {
   try {
     localStorage.setItem("lang", l);
   } catch (e) {}
+  document.dispatchEvent(new CustomEvent("langchange", { detail: l }));
 }
 const t = (k) =>
   lang === "pt" ? PT_FALLBACK[k] : I18N[lang][k] || PT_FALLBACK[k];
@@ -1207,14 +1374,399 @@ if (burger) {
   });
 }
 
+/* ---------------- anexos do formulário de orçamento --------------
+   Os limites são os mesmos da função api/orcamento.js. O browser valida para
+   avisar cedo, com uma mensagem clara; a função valida tudo outra vez, porque
+   o browser não é fronteira de segurança. */
+const ANEXO_MAX = 3; /* ficheiros */
+const ANEXO_BYTES = 3 * 1024 * 1024; /* 3 MB por ficheiro */
+const ANEXO_TOTAL = 3 * 1024 * 1024; /* 3 MB somando todos */
+const ANEXO_LIVRES = ["", "application/octet-stream", "binary/octet-stream"];
+const ANEXO_TIPOS = {
+  pdf: ["application/pdf"],
+  dwg: [
+    "image/vnd.dwg",
+    "image/x-dwg",
+    "application/acad",
+    "application/x-acad",
+    "application/dwg",
+  ],
+  zip: [
+    "application/zip",
+    "application/x-zip-compressed",
+    "multipart/x-zip",
+    "application/x-compressed",
+  ],
+  docx: [
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "application/zip",
+  ],
+  xlsx: [
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "application/zip",
+  ],
+  jpg: ["image/jpeg"],
+  jpeg: ["image/jpeg"],
+  png: ["image/png"],
+};
+/* ferramentas de compactação por tipo de ficheiro */
+const ANEXO_AJUDA = {
+  pdf: { url: "https://www.ilovepdf.com/compress_pdf", rotulo: "anx.compPdf" },
+  jpg: { url: "https://tinypng.com/", rotulo: "anx.compImg" },
+  jpeg: { url: "https://tinypng.com/", rotulo: "anx.compImg" },
+  png: { url: "https://tinypng.com/", rotulo: "anx.compImg" },
+  zip: { url: "https://www.ezyzip.com/", rotulo: "anx.compZip" },
+};
+
+const extensaoFicheiro = (nome) => {
+  const m = /\.([a-z0-9]+)$/i.exec(String(nome || "").trim());
+  return m ? m[1].toLowerCase() : "";
+};
+
+/* arredonda para cima: um ficheiro de 3,01 MB não pode aparecer como "3 MB"
+   ao lado de "excede o limite de 3 MB" */
+const pesoFicheiro = (bytes) => {
+  if (bytes >= 1048576) {
+    const mb = Math.ceil((bytes / 1048576) * 100) / 100;
+    return `${mb.toLocaleString("pt-PT", { maximumFractionDigits: 2 })} MB`;
+  }
+  return `${Math.max(1, Math.round(bytes / 1024))} KB`;
+};
+
+/* o lugar {detalhe} é opcional: sem detalhe, o parêntese sai inteiro */
+function textoAnexo(chave, detalhe) {
+  const base = t(chave);
+  const texto = detalhe
+    ? base.replace("{detalhe}", detalhe)
+    : base.replace(/\s*\(\{detalhe\}\)/, "");
+  return texto.replace(/\s{2,}/g, " ");
+}
+
+function ficheiroEmBase64(ficheiro) {
+  return new Promise((resolver, rejeitar) => {
+    const leitor = new FileReader();
+    leitor.onerror = () => rejeitar(new Error("leitura"));
+    leitor.onload = () => {
+      const resultado = String(leitor.result || "");
+      const corte = resultado.indexOf(",");
+      if (corte < 0) {
+        rejeitar(new Error("leitura"));
+        return;
+      }
+      resolver({
+        nome: ficheiro.name,
+        tipo: ficheiro.type || "",
+        conteudo: resultado.slice(corte + 1),
+      });
+    };
+    leitor.readAsDataURL(ficheiro);
+  });
+}
+
+/* um de cada vez: evita ter vários ficheiros grandes em memória ao mesmo tempo */
+async function anexosEmBase64(lista) {
+  const saida = [];
+  for (const ficheiro of lista) saida.push(await ficheiroEmBase64(ficheiro));
+  return saida;
+}
+
+function botaoRemover(rotulo, nome, aoClicar) {
+  const botao = document.createElement("button");
+  botao.type = "button";
+  botao.className = "anexo-remover";
+  botao.textContent = rotulo;
+  botao.setAttribute("aria-label", `${rotulo}: ${nome}`);
+  botao.addEventListener("click", aoClicar);
+  return botao;
+}
+
+const gestoresAnexos = new WeakMap();
+
+function gestorAnexos(f) {
+  if (gestoresAnexos.has(f)) return gestoresAnexos.get(f);
+  const input = f.elements.ficheiros;
+  const listaBox = document.getElementById("anexos-lista");
+  const errosBox = document.getElementById("anexos-erros");
+  if (!input || !listaBox || !errosBox) return null;
+
+  let aceites = [];
+  let rejeitados = [];
+
+  /* o mesmo ficheiro rejeitado duas vezes não gera dois avisos */
+  const rejeitar = (ficheiro, motivo, detalhe) => {
+    const repetido = rejeitados.some(
+      (r) =>
+        r.nome === ficheiro.name &&
+        r.tamanho === ficheiro.size &&
+        r.motivo === motivo,
+    );
+    if (!repetido) {
+      rejeitados.push({
+        nome: ficheiro.name,
+        tamanho: ficheiro.size,
+        motivo,
+        detalhe: detalhe || pesoFicheiro(ficheiro.size),
+      });
+    }
+  };
+
+  const lerNovos = () => {
+    const novos = [...(input.files || [])];
+    input.value = ""; /* permite voltar a escolher o mesmo ficheiro */
+    for (const ficheiro of novos) {
+      const mimes = ANEXO_TIPOS[extensaoFicheiro(ficheiro.name)];
+      if (!mimes) {
+        rejeitar(ficheiro, "anx.formato");
+        continue;
+      }
+      if (
+        ficheiro.type &&
+        !ANEXO_LIVRES.includes(ficheiro.type) &&
+        !mimes.includes(ficheiro.type)
+      ) {
+        rejeitar(ficheiro, "anx.formato");
+        continue;
+      }
+      if (ficheiro.size > ANEXO_BYTES) {
+        rejeitar(ficheiro, "anx.grande");
+        continue;
+      }
+      /* escolher o mesmo nome substitui o anterior em vez de duplicar */
+      const outros = aceites.filter((x) => x.name !== ficheiro.name);
+      if (outros.length >= ANEXO_MAX) {
+        rejeitar(ficheiro, "anx.qtd");
+        continue;
+      }
+      const soma = outros.reduce((s, x) => s + x.size, 0) + ficheiro.size;
+      if (soma > ANEXO_TOTAL) {
+        const lista = [...outros, ficheiro]
+          .map((x) => `${x.name} (${pesoFicheiro(x.size)})`)
+          .join(" · ");
+        rejeitar(ficheiro, "anx.total", lista);
+        continue;
+      }
+      aceites = [...outros, ficheiro];
+      /* ficheiro válido: o aviso anterior do mesmo nome deixa de fazer sentido */
+      rejeitados = rejeitados.filter((r) => r.nome !== ficheiro.name);
+    }
+    pintar();
+  };
+
+  function pintar() {
+    listaBox.textContent = "";
+    listaBox.hidden = aceites.length === 0;
+    aceites.forEach((ficheiro) => {
+      const linha = document.createElement("li");
+      const nome = document.createElement("span");
+      nome.className = "anexo-nome";
+      nome.textContent = ficheiro.name;
+      const peso = document.createElement("span");
+      peso.className = "anexo-peso";
+      peso.textContent = pesoFicheiro(ficheiro.size);
+      linha.append(
+        nome,
+        peso,
+        botaoRemover(t("anx.remover"), ficheiro.name, () => {
+          aceites = aceites.filter((x) => x !== ficheiro);
+          pintar();
+          input.focus();
+        }),
+      );
+      listaBox.append(linha);
+    });
+
+    errosBox.textContent = "";
+    rejeitados.forEach((r) => {
+      const aviso = document.createElement("p");
+      aviso.className = "anexo-erro";
+      const simbolo = document.createElement("span");
+      simbolo.className = "anexo-simbolo";
+      simbolo.setAttribute("aria-hidden", "true");
+      simbolo.textContent = "!";
+      const nome = document.createElement("strong");
+      nome.textContent = r.nome;
+      aviso.append(
+        simbolo,
+        nome,
+        document.createTextNode(` — ${textoAnexo(r.motivo, r.detalhe)}`),
+      );
+      /* só os problemas de tamanho dão direito a ferramenta de compactação */
+      const ajuda = ANEXO_AJUDA[extensaoFicheiro(r.nome)];
+      if (r.motivo === "anx.grande" || r.motivo === "anx.total") {
+        if (ajuda) {
+          const ligacao = document.createElement("a");
+          ligacao.href = ajuda.url;
+          ligacao.target = "_blank";
+          ligacao.rel = "noopener noreferrer";
+          ligacao.textContent = t(ajuda.rotulo);
+          aviso.append(document.createTextNode(" "), ligacao);
+        } else {
+          const dica = document.createElement("span");
+          dica.className = "anexo-dica";
+          /* o espaço evita "limite 3 MB.Comprima" nos leitores de ecrã */
+          dica.textContent = ` ${t("anx.compGen")}`;
+          aviso.append(dica);
+        }
+      }
+      const remover = botaoRemover(t("anx.dispensar"), r.nome, () => {
+        rejeitados = rejeitados.filter((x) => x !== r);
+        pintar();
+      });
+      remover.classList.add("anexo-remover--aviso");
+      aviso.append(remover);
+      errosBox.append(aviso);
+    });
+
+    input.setAttribute("aria-invalid", rejeitados.length ? "true" : "false");
+  }
+
+  input.addEventListener("change", lerNovos);
+  pintar();
+
+  const api = {
+    aceites: () => aceites,
+    temErros: () => rejeitados.length > 0,
+    focar: () => input.focus(),
+    limpar: () => {
+      aceites = [];
+      rejeitados = [];
+      input.value = "";
+      pintar();
+    },
+  };
+  gestoresAnexos.set(f, api);
+  return api;
+}
+
+/* ---------------- profissões e quantidades ----------------
+   Cada profissão tem um contador (− n +). O número escolhido é o número de
+   profissionais pedidos dessa profissão, e a soma aparece em "Total de
+   profissionais", que é o valor enviado no pedido. */
+const gestoresProf = new WeakMap();
+
+function gestorProfissoes(f) {
+  if (gestoresProf.has(f)) return gestoresProf.get(f);
+  const cartoes = [...f.querySelectorAll(".prof")];
+  if (!cartoes.length) return null;
+  const total = document.getElementById("prof-total");
+  const campoTotal = f.elements.profissionais;
+  const caixaOutros = document.getElementById("outros-extra");
+  const campoOutros = caixaOutros ? caixaOutros.querySelector("input") : null;
+
+  const passos = cartoes.map((cartao) => {
+    const vinculo = cartao.querySelector('input[name="servico"]');
+    const numero = cartao.querySelector(".passo-num");
+    const nome = cartao.querySelector(".prof-nome");
+    const texto = () => nome?.textContent.trim() || vinculo?.value || "";
+    return { cartao, vinculo, numero, nome, texto };
+  });
+
+  const quantidade = (passo) =>
+    Math.min(999, Math.max(0, parseInt(passo.numero.value, 10) || 0));
+
+  function atualizar() {
+    let soma = 0;
+    for (const passo of passos) soma += quantidade(passo);
+    /* sem ninguém pedido, o formulário não pode seguir */
+    const aviso = soma ? "" : t("q.zero");
+    for (const passo of passos) {
+      const n = quantidade(passo);
+      /* a caixa escondida é que faz chegar o serviço ao e-mail */
+      if (passo.vinculo) passo.vinculo.checked = n > 0;
+      passo.cartao.classList.toggle("activo", n > 0);
+      passo.numero.classList.toggle("activo", n > 0);
+      /* botões e campo com o nome da profissão, no idioma em uso */
+      const nome = passo.texto();
+      passo.cartao
+        .querySelectorAll(".passo-btn")
+        .forEach((b) =>
+          b.setAttribute(
+            "aria-label",
+            `${t(b.dataset.passo === "1" ? "q.mais" : "q.menos")} ${nome}`,
+          ),
+        );
+      passo.numero.setAttribute("aria-label", nome);
+      passo.numero.setCustomValidity(aviso);
+    }
+    if (total) total.textContent = String(soma);
+    if (campoTotal) campoTotal.value = soma ? String(soma) : "";
+
+    /* "Outros" pede sempre o nome do serviço */
+    if (caixaOutros && campoOutros) {
+      const outros = passos.find((p) => p.vinculo?.value === "Outros");
+      const pedido = outros ? quantidade(outros) > 0 : false;
+      caixaOutros.hidden = !pedido;
+      campoOutros.disabled = !pedido;
+      campoOutros.required = pedido;
+    }
+  }
+
+  function ajustar(passo, delta) {
+    const n = Math.min(999, Math.max(0, quantidade(passo) + delta));
+    passo.numero.value = String(n);
+    atualizar();
+  }
+
+  for (const passo of passos) {
+    passo.cartao
+      .querySelectorAll(".passo-btn")
+      .forEach((botao) =>
+        botao.addEventListener("click", () =>
+          ajustar(passo, Number(botao.dataset.passo)),
+        ),
+      );
+    passo.numero.addEventListener("input", atualizar);
+    /* ao sair do campo, um valor vazio ou estranho volta a ser um número */
+    passo.numero.addEventListener("change", () => {
+      passo.numero.value = String(quantidade(passo));
+      atualizar();
+    });
+    /* setas do teclado e roda do rato */
+    passo.numero.addEventListener(
+      "wheel",
+      (e) => {
+        e.preventDefault();
+        ajustar(passo, e.deltaY < 0 ? 1 : -1);
+      },
+      { passive: false },
+    );
+  }
+
+  /* mudar de idioma volta a escrever os rótulos, sem tocar nos números */
+  document.addEventListener("langchange", atualizar);
+
+  const api = {
+    atualizar,
+    /* depois de um envio bem-sucedido o formulário é limpo */
+    limpar() {
+      for (const passo of passos) {
+        passo.numero.value = "0";
+        passo.numero.setCustomValidity("");
+      }
+      atualizar();
+    },
+    /* texto para o e-mail: "Soldadores (1), Montadores (2)" */
+    detalhe: () =>
+      passos
+        .filter((passo) => quantidade(passo) > 0)
+        .map((passo) => `${passo.vinculo.value} (${quantidade(passo)})`)
+        .join(", "),
+  };
+  gestoresProf.set(f, api);
+  atualizar();
+  return api;
+}
+
 /* formulários: envio direto ao e-mail comercial, sem base de dados */
 function wire(formId, msgId, okKey) {
   const f = document.getElementById(formId);
   if (!f) return;
   const m = document.getElementById(msgId);
   const startedAt = Date.now();
+  let enviando = false;
   f.addEventListener("submit", (e) => {
     e.preventDefault();
+    if (enviando) return;
     m.className = "msg on";
     if (!f.checkValidity()) {
       m.classList.add("err");
@@ -1228,6 +1780,8 @@ function wire(formId, msgId, okKey) {
       return;
     }
     if (formId === "form-orc") {
+      const gestor = gestorAnexos(f);
+      const escolhidos = gestor ? gestor.aceites() : [];
       const data = new FormData(f);
       const lines = [];
       const services = [];
@@ -1241,11 +1795,156 @@ function wire(formId, msgId, okKey) {
         lines.push(`${key}: ${value}`);
       }
       if (services.length) lines.push(`Serviços: ${services.join(", ")}`);
-      const files = [...f.elements.ficheiros.files].map((file) => file.name);
-      if (files.length) lines.push(`Ficheiros: ${files.join(", ")}`);
+      if (escolhidos.length)
+        lines.push(`Ficheiros: ${escolhidos.map((x) => x.name).join(", ")}`);
       const subject = `Pedido de proposta — ${data.get("empresa") || "novo projeto"}`;
-      window.location.href = `mailto:${f.dataset.mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
-      m.textContent = t(okKey);
+      const mailto = f.dataset.mailto || "";
+      const endpoint = (f.dataset.endpoint || "").trim();
+      const link = `<a href="mailto:${mailto}">${mailto}</a>`;
+      const showOk = (hintKey, extra) => {
+        m.className = "msg on ok";
+        m.innerHTML = `<strong>&#10003; ${t(okKey)}</strong><span class="msg-hint">${t(hintKey)} ${link}</span>${extra ? `<span class="msg-hint">${extra}</span>` : ""}`;
+      };
+      const showErr = (html) => {
+        m.className = "msg on err";
+        m.innerHTML = html;
+      };
+      const avisoAnexos = escolhidos.length
+        ? `<span class="msg-hint">${t("anx.avisoAnexos")}</span>`
+        : "";
+
+      const enviarPorMailto = () => {
+        window.location.href = `mailto:${mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+        showOk("ok.ohint");
+      };
+
+      /* há ficheiros assinalados: explicar e não enviar nada */
+      if (gestor && gestor.temErros()) {
+        showErr(`<strong>${t("anx.bloqueio")}</strong>`);
+        gestor.focar();
+        return;
+      }
+
+      /* sem serviço configurado: o mailto só serve quando não há ficheiros,
+         porque não os consegue anexar */
+      if (!endpoint) {
+        if (escolhidos.length) {
+          showErr(
+            `<strong>${t("err.send")}</strong><span class="msg-hint">${t("anx.falhaAnexos").replace("{email}", link)}</span>`,
+          );
+          return;
+        }
+        enviarPorMailto();
+        return;
+      }
+
+      const btn = f.querySelector('button[type="submit"]');
+      const rotuloBtn = btn ? btn.textContent : "";
+      const repor = () => {
+        enviando = false;
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = rotuloBtn;
+        }
+      };
+
+      /* estado de carregamento durante a leitura dos ficheiros e o envio */
+      enviando = true;
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = t("anx.enviando");
+      }
+
+      (async () => {
+        let anexos = [];
+        try {
+          anexos = await anexosEmBase64(escolhidos);
+        } catch (e) {
+          showErr(`<strong>${t("anx.ler")}</strong>`);
+          repor();
+          return;
+        }
+
+        const payload = { servico: [] };
+        for (const [chave, valor] of data.entries()) {
+          if (chave === "ficheiros") continue;
+          if (chave === "servico") payload.servico.push(valor);
+          else payload[chave] = valor;
+        }
+        /* com contadores, quantos profissionais para cada profissão */
+        const detalhe = gestoresProf.get(f)?.detalhe();
+        if (detalhe) payload.servicos_com_quantidade = detalhe;
+        if (anexos.length) payload.anexos = anexos;
+
+        let resposta;
+        try {
+          resposta = await fetch(endpoint, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify(payload),
+          });
+        } catch (e) {
+          showErr(
+            `<strong>${t("err.send")}</strong><span class="msg-hint">${t("err.sendhint")} ${link}${avisoAnexos}</span>`,
+          );
+          repor();
+          return;
+        }
+
+        /* 503 = serviço ainda sem chave; 404 = função não publicada */
+        if (resposta.status === 503 || resposta.status === 404) {
+          if (anexos.length) {
+            showErr(
+              `<strong>${t("err.send")}</strong><span class="msg-hint">${t("anx.falhaAnexos").replace("{email}", link)}</span>`,
+            );
+          } else {
+            enviarPorMailto();
+          }
+          repor();
+          return;
+        }
+
+        if (!resposta.ok) {
+          let devolvido = null;
+          try {
+            devolvido = await resposta.json();
+          } catch (e) {
+            /* resposta sem JSON (por exemplo o 413 da própria Vercel) */
+          }
+          const codigo = devolvido && devolvido.error;
+          if (codigo === "campos_em_falta") {
+            showErr(`<strong>${t("err")}</strong>`);
+            repor();
+            return;
+          }
+          const chave =
+            {
+              anexo_muito_grande: "anx.grande",
+              anexo_total: "anx.total",
+              anexo_quantidade: "anx.qtd",
+              anexo_formato: "anx.formato",
+              anexo_invalido: "anx.formato",
+              anexos_invalidos: "anx.formato",
+              corpo_demasiado_grande: "anx.total",
+            }[codigo] || (resposta.status === 413 ? "anx.total" : null);
+          showErr(
+            chave
+              ? `<strong>${t("err.send")}</strong><span class="msg-hint">${textoAnexo(chave)}</span>`
+              : `<strong>${t("err.send")}</strong><span class="msg-hint">${t("err.sendhint")} ${link}${avisoAnexos}</span>`,
+          );
+          repor();
+          return;
+        }
+
+        showOk("ok.odirect", anexos.length ? t("anx.ok") : "");
+        f.reset();
+        if (gestor) gestor.limpar();
+        gestoresProf.get(f)?.limpar();
+        repor();
+      })();
       return;
     }
     m.textContent = t(okKey);
@@ -1255,6 +1954,15 @@ function wire(formId, msgId, okKey) {
 wire("form-orc", "msg-orc", "ok.o");
 wire("form-ct", "msg-ct", "ok.form");
 wire("form-tw", "msg-tw", "ok.tw");
+
+/* orçamento: prepara os anexos e os contadores logo no carregamento, para
+   validar cada ficheiro e cada número à medida que o visitante os escolhe
+   (e não só ao enviar) */
+const orcForm = document.getElementById("form-orc");
+const gestorProf = orcForm ? gestorProfissoes(orcForm) : null;
+if (orcForm) gestorAnexos(orcForm);
+/* voltar atrás no navegador devolve os valores: voltamos a somar */
+if (gestorProf) window.addEventListener("pageshow", gestorProf.atualizar);
 
 /* revelação */
 const io = new IntersectionObserver(
@@ -1377,60 +2085,208 @@ document.querySelectorAll(".rv").forEach((el) => io.observe(el));
   updateScrollButtons();
 })();
 
-/* lightbox — abre a foto em tamanho maior ao clicar */
+/* lightbox — abre a foto/vídeo em tamanho maior, com navegação */
 (function () {
-  const items = document.querySelectorAll(".gallery figure, .works .work");
+  const items = Array.from(
+    document.querySelectorAll(".gallery figure, .works .work"),
+  );
   if (!items.length) return;
   let box = null;
+  let list = [];
+  let index = 0;
+  let dragStart = null;
 
-  function close() {
-    if (!box) return;
-    box.classList.remove("on");
-    document.body.style.overflow = "";
+  function mediaOf(fig) {
+    return fig.querySelector("video, img");
   }
-  function open(fig) {
-    const img = fig.querySelector("img");
-    if (!img) return;
+
+  function visibleItems() {
+    return items.filter((el) => !el.hidden);
+  }
+
+  function pauseGridVideos() {
+    items.forEach((el) => {
+      const v = el.querySelector("video");
+      if (v) v.pause();
+    });
+  }
+
+  function resumeGridVideos() {
+    items.forEach((el) => {
+      const v = el.querySelector("video");
+      if (v) {
+        const p = v.play();
+        if (p && typeof p.catch === "function") p.catch(() => {});
+      }
+    });
+  }
+
+  function captionOf(fig) {
     const cap = fig.querySelector("figcaption") || fig.querySelector(".txt");
-    if (!box) {
-      box = document.createElement("div");
-      box.className = "lightbox";
-      box.setAttribute("role", "dialog");
-      box.setAttribute("aria-modal", "true");
-      box.innerHTML =
-        '<button class="lb-close" aria-label="Fechar">&times;</button>' +
-        '<figure class="lb-frame"><img alt="" /><figcaption class="lb-cap"></figcaption></figure>';
-      box.addEventListener("click", (e) => {
-        if (e.target === box || e.target.classList.contains("lb-close"))
-          close();
-      });
-      document.body.appendChild(box);
+    if (!cap) return { title: "", text: "" };
+    const titleEl = cap.querySelector("b, h3");
+    const textEl = cap.querySelector("span, p");
+    return {
+      title: titleEl ? titleEl.textContent.trim().replace(/\s+/g, " ") : "",
+      text: textEl ? textEl.textContent.trim().replace(/\s+/g, " ") : "",
+    };
+  }
+
+  function build() {
+    box = document.createElement("div");
+    box.className = "lightbox";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.innerHTML =
+      '<button class="lb-close" aria-label="Fechar">&times;</button>' +
+      '<button class="lb-nav lb-prev" aria-label="Anterior">&larr;</button>' +
+      '<button class="lb-nav lb-next" aria-label="Seguinte">&rarr;</button>' +
+      '<figure class="lb-frame"></figure>' +
+      '<span class="lb-count" aria-hidden="true"></span>';
+    box.addEventListener("click", (e) => {
+      if (e.target.closest(".lb-close")) {
+        close();
+        return;
+      }
+      const nav = e.target.closest(".lb-nav");
+      if (nav) {
+        step(nav.classList.contains("lb-next") ? 1 : -1);
+        return;
+      }
+      if (e.target === box) close();
+    });
+    document.body.appendChild(box);
+  }
+
+  function render() {
+    const fig = list[index];
+    if (!fig) return;
+    const frame = box.querySelector(".lb-frame");
+    frame.innerHTML = "";
+    const media = mediaOf(fig);
+    if (media && media.tagName === "VIDEO") {
+      const source = media.querySelector("source");
+      const video = document.createElement("video");
+      video.src = media.currentSrc || (source && source.src) || "";
+      if (media.poster) video.poster = media.poster;
+      video.controls = true;
+      video.autoplay = true;
+      video.loop = true;
+      video.muted = true;
+      video.playsInline = true;
+      frame.appendChild(video);
+      const p = video.play();
+      if (p && typeof p.catch === "function") p.catch(() => {});
+    } else if (media) {
+      const im = document.createElement("img");
+      im.src = media.currentSrc || media.src;
+      im.alt = media.alt || "";
+      frame.appendChild(im);
     }
-    const im = box.querySelector("img");
-    im.src = img.currentSrc || img.src;
-    im.alt = img.alt || "";
-    const capEl = box.querySelector(".lb-cap");
-    capEl.textContent = "";
-    if (cap) {
-      const title = cap.querySelector("b, h3");
-      const text = cap.querySelector("span, p");
+    const { title, text } = captionOf(fig);
+    if (title || text) {
+      const cap = document.createElement("figcaption");
+      cap.className = "lb-cap";
       if (title) {
         const strong = document.createElement("b");
-        strong.textContent = title.textContent.trim().replace(/\s+/g, " ");
-        capEl.appendChild(strong);
+        strong.textContent = title;
+        cap.appendChild(strong);
       }
       if (text) {
         const span = document.createElement("span");
-        span.textContent = text.textContent.trim().replace(/\s+/g, " ");
-        capEl.appendChild(span);
+        span.textContent = text;
+        cap.appendChild(span);
       }
-      if (!title && !text) capEl.textContent = cap.textContent.trim();
+      frame.appendChild(cap);
     }
+    const count = box.querySelector(".lb-count");
+    const prev = box.querySelector(".lb-prev");
+    const next = box.querySelector(".lb-next");
+    const many = list.length > 1;
+    count.textContent = many ? index + 1 + " / " + list.length : "";
+    prev.hidden = !many;
+    next.hidden = !many;
+    prev.disabled = index === 0;
+    next.disabled = index === list.length - 1;
+  }
+
+  function step(direction) {
+    const target = index + direction;
+    if (target < 0 || target > list.length - 1) return;
+    index = target;
+    render();
+  }
+
+  function open(fig) {
+    list = visibleItems();
+    index = list.indexOf(fig);
+    if (index < 0) {
+      list = [fig];
+      index = 0;
+    }
+    if (!box) build();
+    render();
     box.classList.add("on");
     document.body.style.overflow = "hidden";
+    pauseGridVideos();
   }
+
+  function close() {
+    if (!box) return;
+    const video = box.querySelector("video");
+    if (video) video.pause();
+    box.classList.remove("on");
+    box.querySelector(".lb-frame").innerHTML = "";
+    document.body.style.overflow = "";
+    resumeGridVideos();
+  }
+
   items.forEach((f) => f.addEventListener("click", () => open(f)));
+
   document.addEventListener("keydown", (e) => {
+    if (!box || !box.classList.contains("on")) return;
     if (e.key === "Escape") close();
+    else if (e.key === "ArrowRight") step(1);
+    else if (e.key === "ArrowLeft") step(-1);
+  });
+
+  /* arrastar / deslizar para o lado para ver o item seguinte */
+  document.addEventListener("pointerdown", (e) => {
+    if (!box || !box.classList.contains("on")) return;
+    if (e.target.closest(".lb-nav, .lb-close")) return;
+    const video = e.target.closest("video");
+    if (video) {
+      const rect = video.getBoundingClientRect();
+      if (e.clientY > rect.bottom - 56) return;
+    }
+    dragStart = { x: e.clientX, y: e.clientY };
+  });
+
+  document.addEventListener("pointerup", (e) => {
+    if (!dragStart) return;
+    const start = dragStart;
+    dragStart = null;
+    if (!box || !box.classList.contains("on")) return;
+    const dx = e.clientX - start.x;
+    const dy = e.clientY - start.y;
+    if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy)) return;
+    step(dx < 0 ? 1 : -1);
   });
 })();
+
+/* hero: garantir que o vídeo de fundo arranca e se mantém em loop */
+const heroVideo = document.querySelector(".hero-video");
+if (heroVideo) {
+  heroVideo.muted = true;
+  heroVideo.loop = true;
+  const startHeroVideo = () => {
+    const playing = heroVideo.play();
+    if (playing && typeof playing.catch === "function") playing.catch(() => {});
+  };
+  startHeroVideo();
+  heroVideo.addEventListener("loadeddata", startHeroVideo);
+  heroVideo.addEventListener("canplay", startHeroVideo);
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) startHeroVideo();
+  });
+}

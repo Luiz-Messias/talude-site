@@ -724,150 +724,6 @@
         line-height: 1.55;
       }
 
-      /* ===== globo de atuação — biblioteca cobe (09/2026) ===== */
-      .globe-layout {
-        display: grid;
-        grid-template-columns: 0.92fr 1.08fr;
-        gap: clamp(30px, 5vw, 72px);
-        align-items: center;
-      }
-      /* a cena do globo não pode esticar a coluna (evita overflow em mobile) */
-      .globe-layout > * {
-        min-width: 0;
-      }
-      @media (max-width: 860px) {
-        .globe-layout {
-          grid-template-columns: 1fr;
-        }
-      }
-      .globe-stage {
-        margin: 0 auto;
-        width: 100%;
-        max-width: 560px;
-        min-width: 0;
-      }
-      .globe-frame {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 1;
-        cursor: grab;
-        touch-action: pan-y;
-        overflow: hidden;
-      }
-      .globe-frame.is-dragging {
-        cursor: grabbing;
-      }
-      .globe-canvas {
-        position: relative;
-        display: block;
-        width: 100%;
-        height: 100%;
-      }
-      .globe-canvas canvas {
-        display: block;
-      }
-      /* marcadores (elementos HTML projetados sobre o globo) */
-      .gpin {
-        position: relative;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: #e08a4c;
-        box-shadow:
-          0 0 0 3px rgba(224, 138, 76, 0.3),
-          0 0 12px rgba(224, 138, 76, 0.85);
-        pointer-events: none;
-      }
-      .gpin span {
-        position: absolute;
-        left: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        white-space: nowrap;
-        font-family: "DM Mono", monospace;
-        font-size: 0.62rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: #fff;
-        text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);
-      }
-      .gpin.s-left span {
-        left: auto;
-        right: 15px;
-      }
-      .gpin.s-up span {
-        left: 50%;
-        top: auto;
-        bottom: 15px;
-        transform: translateX(-50%);
-      }
-      .gpin.s-down span {
-        left: 50%;
-        top: 15px;
-        transform: translateX(-50%);
-      }
-      /* marca SMG no globo (fallback sem WebGL) */
-      .globe-logo {
-        display: none;
-      }
-      .globe-frame.no-webgl .globe-logo {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 46%;
-        height: auto;
-        transform: translate(-50%, -50%);
-        opacity: 0.92;
-        filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.5));
-      }
-      .globe-frame.no-webgl {
-        cursor: default;
-        border-radius: 50%;
-        background: radial-gradient(
-          circle at 34% 26%,
-          #363b42 0%,
-          #1b1e22 48%,
-          #0d0f11 100%
-        );
-        box-shadow:
-          inset -16px -20px 44px rgba(0, 0, 0, 0.6),
-          0 24px 56px rgba(0, 0, 0, 0.45);
-      }
-      .globe-frame.no-webgl .globe-canvas {
-        display: none;
-      }
-      .globe-legend {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px 24px;
-        margin: 20px 0 0;
-        font-family: "DM Mono", monospace;
-        font-size: 0.62rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--on-dark);
-      }
-      .globe-key {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .globe-key::before {
-        content: "";
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: #d08a52;
-        box-shadow: 0 0 0 3px rgba(168, 96, 47, 0.22);
-      }
-      .globe-hint {
-        margin: 20px 0 0;
-        color: var(--on-dark);
-        opacity: 0.75;
-      }
-
       /* cartões (minimalistas) */
       .card {
         background: var(--paper);
@@ -1831,10 +1687,10 @@
       <nav class="wrap nav" aria-label="Principal" data-i18n-aria="aria.nav">
         <a class="logo" href="index.html"
           ><img
-            src="assets/img/logo-topo.webp"
+            src="assets/img/logo-sm.webp"
             alt="Solution Metal Group"
-            width="3840"
-            height="2698"
+            width="800"
+            height="800"
         /></a>
         <div class="links" id="links">
           <a href="index.html" data-i18n="nav.home">Início</a>
@@ -2017,43 +1873,6 @@
               >
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="band band--dark rv">
-        <div class="wrap globe-layout">
-          <div>
-            <p class="mono eyebrow" data-i18n="globe.eyebrow">
-              Regiões de atuação
-            </p>
-            <h2 data-i18n="globe.h">Presença em toda a Europa.</h2>
-            <p class="lede" data-i18n="globe.p">
-              Com base em Portugal, mobilizamos equipamentos e profissionais
-              para projetos em diferentes países da Europa.
-            </p>
-            <p class="mono globe-hint" data-i18n="globe.hint">
-              Arraste para girar
-            </p>
-          </div>
-          <figure class="globe-stage">
-            <div class="globe-frame">
-              <div class="globe-canvas" aria-hidden="true"></div>
-              <img
-                class="globe-logo"
-                src="assets/img/logo-mark.webp"
-                alt="Solution Metal Group"
-                width="248"
-                height="160"
-                loading="lazy"
-              />
-            </div>
-            <figcaption class="globe-legend">
-              <span class="globe-key" data-i18n="globe.c1">Portugal</span>
-              <span class="globe-key" data-i18n="globe.c2">Espanha</span>
-              <span class="globe-key" data-i18n="globe.c3">França</span>
-              <span class="globe-key" data-i18n="globe.c4">Holanda</span>
-            </figcaption>
-          </figure>
         </div>
       </section>
 
@@ -2340,6 +2159,5 @@
       ><span>WhatsApp</span></a
     >
     <script src="assets/site.js" defer></script>
-    <script src="assets/globe.js" defer></script>
   </body>
 </html>
