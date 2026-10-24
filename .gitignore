@@ -4,6 +4,9 @@
 # Dependências
 node_modules/
 
+# Build artifacts
+assets/speed-insights.js
+
 # Arquivos do sistema
 .DS_Store
 Thumbs.db
